@@ -103,31 +103,31 @@ function Signboard({
 
   return (
     <group
-      position={[0, 0, 0.86]}
-      scale={1.28}
+      position={[0.48, 0, 0.58]}
+      scale={0.72}
       onClick={(event) => {
         event.stopPropagation();
         onOpen();
       }}
     >
-      <mesh position={[0, 0.32, 0]}>
-        <cylinderGeometry args={[0.04, 0.05, 0.5, 7]} />
+      <mesh position={[0, 0.28, 0]}>
+        <cylinderGeometry args={[0.035, 0.045, 0.42, 7]} />
         <meshLambertMaterial color="#c49262" />
       </mesh>
-      <mesh position={[0, 0.58, -0.02]}>
-        <boxGeometry args={[1.12, 0.48, 0.06]} />
+      <mesh position={[0, 0.52, -0.02]}>
+        <boxGeometry args={[0.82, 0.34, 0.05]} />
         <meshLambertMaterial color="#e7d3ae" />
       </mesh>
-      <mesh position={[0, 0.58, 0.02]}>
-        <planeGeometry args={[1.02, 0.4]} />
+      <mesh position={[0, 0.52, 0.02]}>
+        <planeGeometry args={[0.74, 0.28]} />
         <meshBasicMaterial map={texture} transparent />
       </mesh>
-      <mesh position={[0, 0.58, -0.055]} rotation={[0, Math.PI, 0]}>
-        <planeGeometry args={[1.02, 0.4]} />
+      <mesh position={[0, 0.52, -0.05]} rotation={[0, Math.PI, 0]}>
+        <planeGeometry args={[0.74, 0.28]} />
         <meshBasicMaterial map={texture} transparent />
       </mesh>
-      <mesh position={[0, 0.58, 0]} visible={false}>
-        <boxGeometry args={[1.2, 0.7, 0.4]} />
+      <mesh position={[0, 0.52, 0]} visible={false}>
+        <boxGeometry args={[0.9, 0.5, 0.32]} />
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
     </group>
@@ -182,17 +182,22 @@ function SimplePlant({
       </mesh>
     );
   }
-  const radius = traits.size === "large" ? 0.32 : traits.size === "small" ? 0.18 : 0.24;
-  const height = traits.size === "large" ? 0.85 : traits.size === "small" ? 0.42 : 0.62;
+  const radius = traits.size === "large" ? 0.36 : traits.size === "small" ? 0.26 : 0.28;
+  const height = traits.size === "large" ? 1.05 : traits.size === "small" ? 0.36 : 0.72;
   return (
     <group>
-      <mesh position={[0, 0.2, 0]}>
-        <cylinderGeometry args={[0.05, 0.07, 0.3, 6]} />
+      <mesh position={[0, traits.size === "small" ? 0.12 : 0.22, 0]}>
+        <cylinderGeometry args={[0.05, 0.08, traits.size === "large" ? 0.55 : 0.28, 6]} />
         <meshLambertMaterial color={dark ? "#4a3428" : "#c4894f"} />
       </mesh>
       {traits.size === "large" ? (
         <mesh position={[0, height, 0]}>
-          <coneGeometry args={[radius, 0.5, 6]} />
+          <coneGeometry args={[radius, 0.72, 6]} />
+          <meshLambertMaterial color={color} />
+        </mesh>
+      ) : traits.size === "small" ? (
+        <mesh position={[0, height, 0]} scale={[1.25, 0.7, 1.15]}>
+          <sphereGeometry args={[radius, 8, 6]} />
           <meshLambertMaterial color={color} />
         </mesh>
       ) : (
@@ -300,9 +305,11 @@ function GardenPlant({
           </>
         )}
       </group>
-      {!reduced && plant.rangeEffect.kind === "fire" && <Flame effect={plant.rangeEffect} />}
-      {!reduced && plant.rangeEffect.kind === "aura" && (
-        <DarkAura intensity={plant.rangeEffect.intensity} />
+      {plant.rangeEffect.kind === "fire" && (
+        <Flame effect={plant.rangeEffect} reduced={reduced} />
+      )}
+      {plant.rangeEffect.kind === "aura" && (
+        <DarkAura intensity={plant.rangeEffect.intensity} reduced={reduced} />
       )}
     </group>
   );
@@ -357,21 +364,29 @@ function Island({ radius }: { radius: number }) {
 }
 
 function Fence({ radius }: { radius: number }) {
+  const reach = radius * 0.98;
   const posts = useMemo(() => {
     const spots: [number, number, number][] = [];
-    const reach = radius + 1.35;
-    const count = Math.max(10, Math.round(reach));
+    const count = Math.max(14, Math.round(reach * 2.4));
     for (let i = 0; i < count; i += 1) {
       const angle = (i / count) * Math.PI * 2;
-      spots.push([Math.cos(angle) * reach, 0.28, Math.sin(angle) * reach]);
+      spots.push([Math.cos(angle) * reach, 0.16, Math.sin(angle) * reach]);
     }
     return spots;
-  }, [radius]);
+  }, [reach]);
   return (
     <group>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.2, 0]}>
+        <torusGeometry args={[reach, 0.028, 6, 48]} />
+        <meshLambertMaterial color="#d7b48a" />
+      </mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.36, 0]}>
+        <torusGeometry args={[reach, 0.022, 6, 48]} />
+        <meshLambertMaterial color="#e4c49a" />
+      </mesh>
       {posts.map((position, index) => (
-        <mesh key={index} position={position} castShadow>
-          <cylinderGeometry args={[0.05, 0.06, 0.46, 6]} />
+        <mesh key={index} position={position}>
+          <cylinderGeometry args={[0.045, 0.055, 0.44, 6]} />
           <meshLambertMaterial color="#d7b48a" />
         </mesh>
       ))}
@@ -389,7 +404,7 @@ function Clouds({ regime, reduced }: { regime: WeatherRegime; reduced: boolean }
   return (
     <group ref={ref} position={[0, 6.2, -2]}>
       {Array.from({ length: count }, (_, index) => (
-        <mesh key={index} position={[-2.4 + index * 1.6, index % 2 ? 0.3 : 0, -index]}>
+        <mesh key={index} position={[-2.4 + index * 1.6, index % 2 ? 0.3 : 0, -index]} scale={[1.4, 0.55, 1]}>
           <sphereGeometry args={[0.55, 10, 8]} />
           <meshLambertMaterial color="#f7fbff" />
         </mesh>
