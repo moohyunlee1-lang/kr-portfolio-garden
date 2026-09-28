@@ -67,8 +67,8 @@ export function Hud({
       <div className="pointer-events-auto mx-auto flex max-w-3xl flex-col gap-3 rounded-[28px] border border-[#eadcc6] bg-[#fffaf2]/90 px-4 py-3 shadow-[0_10px_28px_rgba(92,64,36,0.12)] backdrop-blur-md">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <p className="text-xs tracking-wide text-[#8a7362]">이 정원</p>
-            <h1 className="text-xl font-semibold text-[#3e342b]">{garden.name}</h1>
+            <p className="font-display text-xs tracking-wide text-[#8a7362]">그루밭</p>
+            <h1 className="font-display text-2xl leading-none text-[#3e342b]">{garden.name}</h1>
           </div>
           <button
             type="button"
@@ -93,7 +93,7 @@ export function Hud({
           <Stat label="종목" value={`${totals.count}`} />
         </div>
         <p className="text-xs text-[#8a7362]">
-          코스피 5일 {formatSignedPct(weather.kospiReturn5d)} · {WEATHER_LABEL[weather.regime]}
+          코스피 1일 {formatSignedPct(weather.kospiReturn1d)} · {WEATHER_LABEL[weather.regime]}
         </p>
         {open && (
           <div className="flex max-h-[min(28rem,55dvh)] flex-col gap-2 overflow-auto border-t border-[#eadcc6] pt-3">

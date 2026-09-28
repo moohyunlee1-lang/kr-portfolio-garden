@@ -27,6 +27,7 @@ import {
   todayIso,
 } from "@/lib/garden-math";
 import { harvestKey } from "@/lib/storage";
+import { classifyTree } from "@/lib/tree-traits";
 
 const PlantHero = dynamic(() => import("@/components/plant-hero"), { ssr: false });
 
@@ -57,6 +58,7 @@ export function PositionCard({
     position.holdingDays,
     position.dividend,
   );
+  const traits = classifyTree(position.fundamentals);
   const tone = fruitTone(position.dividend, harvestedNow);
   const pnlClass =
     position.unrealizedPnlAmt > 0
@@ -84,13 +86,14 @@ export function PositionCard({
           stage={stage}
           tone={tone}
           saturation={fruitSaturation(position.dividend, harvestedNow)}
+          traits={traits}
         />
       </div>
       <header>
         <p className="text-sm text-[#8a7362]">
-          {position.sector} · {STAGE_LABEL[stage]}
+          {position.sector} · {STAGE_LABEL[stage]} · {traits.label}
         </p>
-        <h1 className="text-3xl font-semibold">{position.name}</h1>
+        <h1 className="font-display text-4xl">{position.name}</h1>
         <p className="text-[#8a7362]">{position.ticker}</p>
       </header>
       <section className="grid grid-cols-3 gap-3 rounded-[24px] bg-[#fffaf2] p-4">

@@ -10,25 +10,31 @@ const sans = IBM_Plex_Sans_KR({
   display: "swap",
 });
 
-const sign = Gaegu({
-  weight: ["700"],
+const display = Gaegu({
+  weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-sign",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "포트폴리오 정원",
-  description: "한국 주식 포트폴리오를 정원으로 봅니다.",
+  title: "그루밭",
+  description: "주식을 나무로 보는 밭",
+  icons: { icon: "/favicon.svg" },
+  openGraph: {
+    title: "그루밭",
+    description: "주식을 나무로 보는 밭",
+    images: ["/groubat.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className={`${sans.variable} ${sign.variable} h-full`}>
+    <html lang="ko" className={`${sans.variable} ${display.variable} h-full`}>
       <head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap"
         />
       </head>
       <body className="min-h-full antialiased">

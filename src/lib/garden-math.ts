@@ -26,6 +26,7 @@ export { type FruitTone } from "./types";
 
 import type { FruitTone, GrowthStage } from "./types";
 import { BASE_PLOTS, layoutFromPositions, layoutFor } from "./plots";
+import { KOSPI_WEATHER_RULES } from "./weather-rules";
 
 export const MIN_VISUAL_SCALE = 0.38;
 export const LAST_GARDEN_KEY = "kr-garden:lastGardenId";
@@ -242,10 +243,14 @@ export function isHarvestDue(
   return payDate <= today;
 }
 
-export function weatherFromKospi(kospiReturn5d: number): Weather {
+export function weatherFromKospi(kospiReturn1d: number): Weather {
   const regime: WeatherRegime =
-    kospiReturn5d >= 1.5 ? "bull" : kospiReturn5d <= -1.5 ? "bear" : "neutral";
-  return { regime, kospiReturn5d };
+    kospiReturn1d >= KOSPI_WEATHER_RULES.bullAtOrAbove
+      ? "bull"
+      : kospiReturn1d <= KOSPI_WEATHER_RULES.bearAtOrBelow
+        ? "bear"
+        : "neutral";
+  return { regime, kospiReturn1d };
 }
 
 type KeyValueStore = {

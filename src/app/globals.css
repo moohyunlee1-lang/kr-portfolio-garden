@@ -1,15 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background: #efe4d2;
-  --foreground: #3e342b;
+  --background: #f6efe2;
+  --foreground: #3a3228;
   color-scheme: light;
+}
+
+@theme {
+  --font-display: var(--font-sign), "Gaegu", "IBM Plex Sans KR", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-ibm), "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-sign), "Gaegu", "IBM Plex Sans KR", sans-serif;
+  font-weight: 700;
 }
 
 .pnl-up {

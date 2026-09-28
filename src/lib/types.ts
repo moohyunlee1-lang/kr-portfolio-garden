@@ -75,7 +75,7 @@ export type PlantInput = {
 
 export type Weather = {
   regime: WeatherRegime;
-  kospiReturn5d: number;
+  kospiReturn1d: number;
 };
 
 export type StoredPosition = {

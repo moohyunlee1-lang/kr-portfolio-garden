@@ -31,7 +31,7 @@ const ktgDividend: Dividend = {
   accruedHint: true,
 };
 
-export const KOSPI_RETURN_5D = 1.8;
+export const KOSPI_RETURN_1D = 0;
 
 const HAND_QUOTES: Quote[] = [
   {

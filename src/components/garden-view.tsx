@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BootScreen } from "@/components/boot";
@@ -19,8 +19,9 @@ import {
   todayIso,
   weatherFromKospi,
 } from "@/lib/garden-math";
-import { KOSPI_RETURN_5D } from "@/lib/quotes";
+import { KOSPI_RETURN_1D } from "@/lib/quotes";
 import { harvestKey } from "@/lib/storage";
+import { classifyTree } from "@/lib/tree-traits";
 
 const GardenScene = dynamic(() => import("@/components/garden-scene"), {
   ssr: false,
@@ -41,7 +42,23 @@ export function GardenView({
   const { ready, view, remember, createGarden, addSample, harvested, markHarvested } =
     useGardens();
   const garden = ready ? view(gardenId) : null;
-  const weather = weatherFromKospi(KOSPI_RETURN_5D);
+  const [kospi1d, setKospi1d] = useState(KOSPI_RETURN_1D);
+  const weather = weatherFromKospi(kospi1d);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/kospi")
+      .then((response) => response.json())
+      .then((data: { changePct?: number | null }) => {
+        if (!cancelled && typeof data.changePct === "number" && Number.isFinite(data.changePct)) {
+          setKospi1d(data.changePct);
+        }
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   useEffect(() => {
     if (ready) remember(gardenId);
@@ -78,6 +95,7 @@ export function GardenView({
       saturation: fruitSaturation(position.dividend, picked),
       highlight: position.id === focusId,
       harvestDue: isHarvestDue(position.dividend, today, picked),
+      traits: classifyTree(position.fundamentals),
     };
   });
 

@@ -289,15 +289,15 @@ describe("fruitTone and fruitSaturation", () => {
 });
 
 describe("weatherFromKospi", () => {
-  it("maps the last five sessions to one sky for every garden", () => {
-    expect(weatherFromKospi(1.5)).toEqual({ regime: "bull", kospiReturn5d: 1.5 });
+  it("maps the last session to one sky for every garden", () => {
+    expect(weatherFromKospi(1)).toEqual({ regime: "bull", kospiReturn1d: 1 });
     expect(weatherFromKospi(2)).toMatchObject({ regime: "bull" });
-    expect(weatherFromKospi(1.49).regime).toBe("neutral");
+    expect(weatherFromKospi(0.99).regime).toBe("neutral");
     expect(weatherFromKospi(0).regime).toBe("neutral");
-    expect(weatherFromKospi(-1.49).regime).toBe("neutral");
-    expect(weatherFromKospi(-1.5)).toEqual({
+    expect(weatherFromKospi(-0.99).regime).toBe("neutral");
+    expect(weatherFromKospi(-1)).toEqual({
       regime: "bear",
-      kospiReturn5d: -1.5,
+      kospiReturn1d: -1,
     });
   });
 });

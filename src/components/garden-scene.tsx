@@ -7,6 +7,7 @@ import { CanvasTexture, Object3D, SRGBColorSpace, type Group, type InstancedMesh
 import { PlantBody } from "@/components/plants";
 import { CELL, layoutFromPositions, plotPosition, type PlotLayout } from "@/lib/plots";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
+import type { TreeTraits } from "@/lib/tree-traits";
 
 export type ScenePlant = {
   id: string;
@@ -20,6 +21,7 @@ export type ScenePlant = {
   saturation: number;
   highlight: boolean;
   harvestDue: boolean;
+  traits: TreeTraits;
 };
 
 const LOD_DISTANCE = 18;
@@ -117,6 +119,10 @@ function Signboard({
         <planeGeometry args={[1.02, 0.4]} />
         <meshBasicMaterial map={texture} transparent />
       </mesh>
+      <mesh position={[0, 0.58, -0.055]} rotation={[0, Math.PI, 0]}>
+        <planeGeometry args={[1.02, 0.4]} />
+        <meshBasicMaterial map={texture} transparent />
+      </mesh>
       <mesh position={[0, 0.58, 0]} visible={false}>
         <boxGeometry args={[1.2, 0.7, 0.4]} />
         <meshBasicMaterial transparent opacity={0} />
@@ -155,14 +161,16 @@ function PlotBed({ highlight, onClick }: { highlight: boolean; onClick: () => vo
 }
 
 function SimplePlant({
-  sector,
   stage,
   tone,
+  traits,
 }: {
-  sector: string;
   stage: GrowthStage;
   tone: FruitTone;
+  traits: TreeTraits;
 }) {
+  const dark = traits.tone === "dark";
+  const color = dark ? "#3d5c42" : "#74c46c";
   if (stage === "seed") {
     return (
       <mesh position={[0, 0.12, 0]}>
@@ -171,24 +179,33 @@ function SimplePlant({
       </mesh>
     );
   }
-  const color = sector === "반도체" ? "#2f7d52" : sector === "필수소비재" ? "#9cba4e" : "#5f9a68";
-  const low = sector === "필수소비재" || sector === "유통" || stage === "sprout";
+  const radius = traits.size === "large" ? 0.32 : traits.size === "small" ? 0.18 : 0.24;
+  const height = traits.size === "large" ? 0.85 : traits.size === "small" ? 0.42 : 0.62;
   return (
     <group>
       <mesh position={[0, 0.2, 0]}>
         <cylinderGeometry args={[0.05, 0.07, 0.3, 6]} />
-        <meshLambertMaterial color="#c4894f" />
+        <meshLambertMaterial color={dark ? "#4a3428" : "#c4894f"} />
       </mesh>
-      <mesh position={[0, low ? 0.36 : 0.7, 0]}>
-        {sector === "반도체" ? (
-          <coneGeometry args={[0.28, 0.5, 6]} />
-        ) : (
-          <sphereGeometry args={[low ? 0.2 : 0.28, 8, 6]} />
-        )}
-        <meshLambertMaterial color={color} />
-      </mesh>
+      {traits.size === "large" ? (
+        <mesh position={[0, height, 0]}>
+          <coneGeometry args={[radius, 0.5, 6]} />
+          <meshLambertMaterial color={color} />
+        </mesh>
+      ) : (
+        <mesh position={[0, height, 0]}>
+          <sphereGeometry args={[radius, 8, 6]} />
+          <meshLambertMaterial color={color} />
+        </mesh>
+      )}
+      {traits.foliage === "dense" && (
+        <mesh position={[0.14, height + 0.12, 0.04]}>
+          <sphereGeometry args={[0.1, 6, 6]} />
+          <meshLambertMaterial color={dark ? "#4a6a50" : "#9dd87a"} />
+        </mesh>
+      )}
       {tone !== "none" && (
-        <mesh position={[0.12, low ? 0.5 : 0.95, 0.06]}>
+        <mesh position={[0.12, height + 0.18, 0.06]}>
           <sphereGeometry args={[0.06, 6, 6]} />
           <meshLambertMaterial color={tone === "vivid" ? "#e07a55" : "#e3c4b2"} />
         </mesh>
@@ -252,7 +269,7 @@ function GardenPlant({
         }}
       >
         {far ? (
-          <SimplePlant sector={plant.sector} stage={plant.stage} tone={plant.tone} />
+          <SimplePlant stage={plant.stage} tone={plant.tone} traits={plant.traits} />
         ) : (
           <>
             <PlantBody
@@ -264,6 +281,7 @@ function GardenPlant({
               reduced={reduced}
               phase={plant.plotIndex}
               hideFruit
+              traits={plant.traits}
             />
             <group ref={lift}>
               <PlantBody

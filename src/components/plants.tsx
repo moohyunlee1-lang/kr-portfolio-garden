@@ -5,6 +5,7 @@ import { useFrame } from "@react-three/fiber";
 import { RoundedBox } from "@react-three/drei";
 import type { Group } from "three";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
+import { classifyTree, type TreeTraits } from "@/lib/tree-traits";
 
 const TRUNK = "#c4894f";
 const LEAF: Record<string, string> = {
@@ -39,8 +40,80 @@ function fruitHeight(stage: GrowthStage, sector: string): number {
   return { seed: 0.24, sprout: 0.5, sapling: 0.78, tree: 1.18, lush: 1.42 }[stage];
 }
 
+function palette(traits: TreeTraits) {
+  if (traits.tone === "dark") {
+    return { trunk: "#4a3428", leaf: "#2f4a34", leaf2: "#3d5c42", leaf3: "#4a6a50" };
+  }
+  return { trunk: "#c4894f", leaf: "#74c46c", leaf2: "#9dd87a", leaf3: "#c5ea9a" };
+}
+
+const SIZE_SCALE = { small: 0.72, mid: 1, large: 1.22 } as const;
+
+const FOLIAGE_SPOTS: Record<TreeTraits["foliage"], [number, number, number, number][]> = {
+  sparse: [[0, 0.88, 0, 0.3]],
+  medium: [
+    [0, 0.92, 0, 0.34],
+    [-0.22, 0.74, 0.1, 0.2],
+    [0.2, 0.78, -0.08, 0.18],
+  ],
+  dense: [
+    [0, 0.95, 0, 0.36],
+    [-0.26, 0.78, 0.12, 0.2],
+    [0.24, 0.8, -0.1, 0.2],
+    [0.04, 1.14, 0.06, 0.16],
+    [-0.12, 1.02, -0.16, 0.15],
+    [0.18, 0.7, 0.16, 0.14],
+  ],
+};
+
 function Mat({ color }: { color: string }) {
   return <meshLambertMaterial color={color} />;
+}
+
+function TraitTree({ traits }: { traits: TreeTraits }) {
+  const colors = palette(traits);
+  const trunkH = traits.size === "small" ? 0.42 : traits.size === "large" ? 0.72 : 0.56;
+  const spots = FOLIAGE_SPOTS[traits.foliage];
+  return (
+    <group>
+      <mesh position={[0, trunkH / 2, 0]}>
+        <cylinderGeometry args={[0.06, traits.size === "large" ? 0.12 : 0.09, trunkH, 7]} />
+        <Mat color={colors.trunk} />
+      </mesh>
+      {traits.size === "large" ? (
+        <>
+          <mesh position={[0, 0.82, 0]}>
+            <coneGeometry args={[0.42, 0.5, 8]} />
+            <Mat color={colors.leaf} />
+          </mesh>
+          <mesh position={[0, 1.14, 0]}>
+            <coneGeometry args={[0.3, 0.42, 8]} />
+            <Mat color={colors.leaf2} />
+          </mesh>
+          {traits.foliage !== "sparse" && (
+            <mesh position={[0, 1.4, 0]}>
+              <coneGeometry args={[0.18, 0.32, 8]} />
+              <Mat color={colors.leaf3} />
+            </mesh>
+          )}
+          {traits.foliage === "dense" &&
+            spots.slice(3).map((spot, index) => (
+              <mesh key={index} position={[spot[0], spot[1] + 0.2, spot[2]]}>
+                <sphereGeometry args={[spot[3] * 0.7, 10, 8]} />
+                <Mat color={colors.leaf3} />
+              </mesh>
+            ))}
+        </>
+      ) : (
+        spots.map((spot, index) => (
+          <mesh key={index} position={[spot[0], spot[1] * (traits.size === "small" ? 0.78 : 1), spot[2]]}>
+            <sphereGeometry args={[spot[3] * (traits.size === "small" ? 0.85 : 1), 12, 10]} />
+            <Mat color={index === 0 ? colors.leaf : index % 2 ? colors.leaf2 : colors.leaf3} />
+          </mesh>
+        ))
+      )}
+    </group>
+  );
 }
 
 function Seed() {
@@ -261,14 +334,13 @@ function Species({ sector, lush }: { sector: string; lush: boolean }) {
   return <RoundTree color={leaf(sector)} lush={lush} />;
 }
 
-function StageShape({ sector, stage }: { sector: string; stage: GrowthStage }) {
+function StageShape({ stage, traits }: { stage: GrowthStage; traits: TreeTraits }) {
   if (stage === "seed") return <Seed />;
-  if (stage === "sprout") return <Sprout color={leaf(sector)} />;
-  const lush = stage === "lush";
-  const shapeScale = stage === "sapling" ? 0.78 : lush ? 1.12 : 1;
+  if (stage === "sprout") return <Sprout color={palette(traits).leaf} />;
+  const stageScale = stage === "sapling" ? 0.78 : stage === "lush" ? 1.08 : 1;
   return (
-    <group scale={shapeScale}>
-      <Species sector={sector} lush={lush} />
+    <group scale={stageScale * SIZE_SCALE[traits.size]}>
+      <TraitTree traits={traits} />
     </group>
   );
 }
@@ -326,6 +398,7 @@ export function PlantBody({
   phase = 0,
   fruitOnly = false,
   hideFruit = false,
+  traits,
 }: {
   sector: string;
   stage: GrowthStage;
@@ -336,7 +409,9 @@ export function PlantBody({
   phase?: number;
   fruitOnly?: boolean;
   hideFruit?: boolean;
+  traits?: TreeTraits;
 }) {
+  const look = traits ?? classifyTree({});
   const ref = useRef<Group>(null);
   useFrame((state) => {
     if (fruitOnly) return;
@@ -356,7 +431,7 @@ export function PlantBody({
 
   return (
     <group ref={fruitOnly ? undefined : ref}>
-      {!fruitOnly && <StageShape sector={sector} stage={stage} />}
+      {!fruitOnly && <StageShape stage={stage} traits={look} />}
       {!hideFruit && (
         <Fruits tone={tone} saturation={saturation} stage={stage} sector={sector} />
       )}

@@ -3,17 +3,20 @@
 import { Canvas } from "@react-three/fiber";
 import { PlantBody } from "@/components/plants";
 import type { FruitTone, GrowthStage } from "@/lib/types";
+import type { TreeTraits } from "@/lib/tree-traits";
 
 export default function PlantHero({
   sector,
   stage,
   tone,
   saturation,
+  traits,
 }: {
   sector: string;
   stage: GrowthStage;
   tone: FruitTone;
   saturation: number;
+  traits?: TreeTraits;
 }) {
   return (
     <Canvas
@@ -36,6 +39,7 @@ export default function PlantHero({
           saturation={saturation}
           weather="neutral"
           reduced
+          traits={traits}
         />
       </group>
     </Canvas>
