@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   formatMoney,
   formatSignedMoney,
@@ -59,6 +60,7 @@ export function Hud({
   onSample: () => void;
 }) {
   const { gardens, renameGarden } = useGardens();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const quotes = useMemo(() => quoteRecord(), []);
   const totals = gardenSnapshot(garden.positions);
@@ -73,13 +75,22 @@ export function Hud({
             <p className="font-display text-xs tracking-wide text-[#8a7362]">그루밭</p>
             <h1 className="font-display text-2xl leading-none text-[#3e342b]">{garden.name}</h1>
           </div>
-          <button
-            type="button"
-            className="min-h-11 rounded-full bg-[#f3e4cc] px-4 text-sm font-medium text-[#5c4332]"
-            onClick={() => setOpen((value) => !value)}
-          >
-            정원 바꾸기
-          </button>
+          <div className="flex shrink-0 gap-2">
+            <button
+              type="button"
+              className="min-h-11 rounded-full bg-[#f3e4cc] px-4 text-sm font-medium text-[#5c4332]"
+              onClick={() => router.push("/rank")}
+            >
+              순위
+            </button>
+            <button
+              type="button"
+              className="min-h-11 rounded-full bg-[#f3e4cc] px-4 text-sm font-medium text-[#5c4332]"
+              onClick={() => setOpen((value) => !value)}
+            >
+              정원 바꾸기
+            </button>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4">
           <Stat label="총평가" value={formatMoney(totals.marketValue)} />
