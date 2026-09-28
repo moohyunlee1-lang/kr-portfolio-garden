@@ -9,6 +9,15 @@ export type Issue = {
   publishedAt: string;
 };
 
+export type RangeCandle = {
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  yearHigh: number;
+  yearLow: number;
+};
+
 export type Fundamentals = {
   marketCap?: number | null;
   per?: number | null;
@@ -49,6 +58,7 @@ export type Position = {
   dividend?: Dividend;
   issues?: Issue[];
   fundamentals?: Fundamentals;
+  range?: RangeCandle;
 };
 
 export type Garden = {
@@ -76,6 +86,7 @@ export type PlantInput = {
 export type Weather = {
   regime: WeatherRegime;
   kospiReturn1d: number;
+  kosdaqReturn1d: number;
 };
 
 export type StoredPosition = {

@@ -94,6 +94,9 @@ export function Hud({
         </div>
         <p className="text-xs text-[#8a7362]">
           코스피 1일 {formatSignedPct(weather.kospiReturn1d)} · {WEATHER_LABEL[weather.regime]}
+          {" · "}
+          코스닥 1일 {formatSignedPct(weather.kosdaqReturn1d)}
+          {weather.kosdaqReturn1d > 0 ? " · 나비" : weather.kosdaqReturn1d < 0 ? " · 천둥" : ""}
         </p>
         {open && (
           <div className="flex max-h-[min(28rem,55dvh)] flex-col gap-2 overflow-auto border-t border-[#eadcc6] pt-3">

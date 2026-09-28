@@ -1,4 +1,4 @@
-import type { Dividend, Fundamentals, Issue } from "./types";
+import type { Dividend, Fundamentals, Issue, RangeCandle } from "./types";
 import { debtPerShare } from "./garden-math";
 import generatedQuotes from "../data/quotes.generated.json";
 
@@ -12,6 +12,7 @@ export type Quote = {
   dividend?: Dividend;
   issues?: Issue[];
   fundamentals?: Fundamentals;
+  range?: RangeCandle;
 };
 
 const samsungDividend: Dividend = {
@@ -163,6 +164,33 @@ function asFundamentals(item: Record<string, unknown>): Fundamentals {
   };
 }
 
+function asRange(item: Record<string, unknown>): RangeCandle | undefined {
+  const nested = item.range && typeof item.range === "object" ? (item.range as RangeCandle) : null;
+  const open = (item.monthOpen as number | undefined) ?? nested?.open;
+  const high = (item.monthHigh as number | undefined) ?? nested?.high;
+  const low = (item.monthLow as number | undefined) ?? nested?.low;
+  const close = (item.monthClose as number | undefined) ?? nested?.close;
+  const yearHigh = (item.yearHigh as number | undefined) ?? nested?.yearHigh;
+  const yearLow = (item.yearLow as number | undefined) ?? nested?.yearLow;
+  if (
+    typeof open !== "number" ||
+    typeof high !== "number" ||
+    typeof low !== "number" ||
+    typeof close !== "number" ||
+    typeof yearHigh !== "number" ||
+    typeof yearLow !== "number" ||
+    open <= 0 ||
+    high <= 0 ||
+    low <= 0 ||
+    close <= 0 ||
+    yearHigh <= 0 ||
+    yearLow <= 0
+  ) {
+    return undefined;
+  }
+  return { open, high, low, close, yearHigh, yearLow };
+}
+
 function mergeQuotes(): Quote[] {
   const byTicker = new Map<string, Quote>();
   for (const item of generatedQuotes as Array<Quote & Fundamentals>) {
@@ -174,6 +202,7 @@ function mergeQuotes(): Quote[] {
       changePct: item.changePct,
       volume: item.volume,
       fundamentals: asFundamentals(item as unknown as Record<string, unknown>),
+      range: asRange(item as unknown as Record<string, unknown>),
     });
   }
   for (const item of HAND_QUOTES) {
@@ -187,6 +216,7 @@ function mergeQuotes(): Quote[] {
             dividend: item.dividend,
             issues: item.issues,
             fundamentals: current.fundamentals ?? item.fundamentals,
+            range: current.range ?? item.range,
           }
         : item,
     );

@@ -4,6 +4,7 @@ import type {
   Garden,
   PlantInput,
   Position,
+  RangeCandle,
   StoredGarden,
   StoredPosition,
   Weather,
@@ -243,14 +244,14 @@ export function isHarvestDue(
   return payDate <= today;
 }
 
-export function weatherFromKospi(kospiReturn1d: number): Weather {
+export function weatherFromKospi(kospiReturn1d: number, kosdaqReturn1d = 0): Weather {
   const regime: WeatherRegime =
     kospiReturn1d >= KOSPI_WEATHER_RULES.bullAtOrAbove
       ? "bull"
       : kospiReturn1d <= KOSPI_WEATHER_RULES.bearAtOrBelow
         ? "bear"
         : "neutral";
-  return { regime, kospiReturn1d };
+  return { regime, kospiReturn1d, kosdaqReturn1d };
 }
 
 type KeyValueStore = {
@@ -302,6 +303,7 @@ export function materializePosition(
     dividend?: Dividend;
     issues?: Position["issues"];
     fundamentals?: Fundamentals;
+    range?: RangeCandle;
   },
   now: Date,
   totalMarketValue: number,
@@ -328,6 +330,7 @@ export function materializePosition(
       dividend: quote.dividend,
       issues: quote.issues,
       fundamentals: quote.fundamentals,
+      range: quote.range,
     },
     now,
     totalMarketValue,
@@ -345,6 +348,7 @@ export function materializeGarden(
       dividend?: Dividend;
       issues?: Position["issues"];
       fundamentals?: Fundamentals;
+      range?: RangeCandle;
     }
   >,
   now: Date,

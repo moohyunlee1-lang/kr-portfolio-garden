@@ -5,9 +5,11 @@ import { OrbitControls } from "@react-three/drei";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CanvasTexture, Object3D, SRGBColorSpace, type Group, type InstancedMesh } from "three";
 import { PlantBody } from "@/components/plants";
+import { Butterflies, DarkAura, Flame, Thunder } from "@/components/garden-fx";
 import { CELL, layoutFromPositions, plotPosition, type PlotLayout } from "@/lib/plots";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
 import type { TreeTraits } from "@/lib/tree-traits";
+import type { RangeEffect } from "@/lib/range-effects";
 
 export type ScenePlant = {
   id: string;
@@ -22,6 +24,7 @@ export type ScenePlant = {
   highlight: boolean;
   harvestDue: boolean;
   traits: TreeTraits;
+  rangeEffect: RangeEffect;
 };
 
 const LOD_DISTANCE = 18;
@@ -297,6 +300,10 @@ function GardenPlant({
           </>
         )}
       </group>
+      {!far && !reduced && plant.rangeEffect.kind === "fire" && <Flame effect={plant.rangeEffect} />}
+      {!far && !reduced && plant.rangeEffect.kind === "aura" && (
+        <DarkAura intensity={plant.rangeEffect.intensity} />
+      )}
     </group>
   );
 }
@@ -454,6 +461,7 @@ function Lights({ regime }: { regime: WeatherRegime }) {
 function Scene({
   plants,
   weather,
+  kosdaqReturn1d,
   reduced,
   onOpen,
   onEmpty,
@@ -461,6 +469,7 @@ function Scene({
 }: {
   plants: ScenePlant[];
   weather: WeatherRegime;
+  kosdaqReturn1d: number;
   reduced: boolean;
   onOpen: (id: string) => void;
   onEmpty: (index: number) => void;
@@ -489,6 +498,8 @@ function Scene({
       <Fence radius={radius} />
       <Clouds regime={weather} reduced={reduced} />
       {weather === "bear" && !reduced && <Rain />}
+      {kosdaqReturn1d > 0 && !reduced && <Butterflies reduced={reduced} radius={radius} />}
+      {kosdaqReturn1d < 0 && !reduced && <Thunder reduced={reduced} />}
       {plots.map((index) => {
         const plant = occupied.get(index);
         if (!plant) {
@@ -531,6 +542,7 @@ function Scene({
 export default function GardenScene(props: {
   plants: ScenePlant[];
   weather: WeatherRegime;
+  kosdaqReturn1d: number;
   reduced: boolean;
   onOpen: (id: string) => void;
   onEmpty: (index: number) => void;

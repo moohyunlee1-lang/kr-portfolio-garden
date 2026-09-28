@@ -22,6 +22,7 @@ import {
 import { KOSPI_RETURN_1D } from "@/lib/quotes";
 import { harvestKey } from "@/lib/storage";
 import { classifyTree } from "@/lib/tree-traits";
+import { classifyRangeEffect } from "@/lib/range-effects";
 
 const GardenScene = dynamic(() => import("@/components/garden-scene"), {
   ssr: false,
@@ -43,16 +44,17 @@ export function GardenView({
     useGardens();
   const garden = ready ? view(gardenId) : null;
   const [kospi1d, setKospi1d] = useState(KOSPI_RETURN_1D);
-  const weather = weatherFromKospi(kospi1d);
+  const [kosdaq1d, setKosdaq1d] = useState(0);
+  const weather = weatherFromKospi(kospi1d, kosdaq1d);
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/kospi")
+    fetch("/api/market")
       .then((response) => response.json())
-      .then((data: { changePct?: number | null }) => {
-        if (!cancelled && typeof data.changePct === "number" && Number.isFinite(data.changePct)) {
-          setKospi1d(data.changePct);
-        }
+      .then((data: { kospi?: number | null; kosdaq?: number | null }) => {
+        if (cancelled) return;
+        if (typeof data.kospi === "number" && Number.isFinite(data.kospi)) setKospi1d(data.kospi);
+        if (typeof data.kosdaq === "number" && Number.isFinite(data.kosdaq)) setKosdaq1d(data.kosdaq);
       })
       .catch(() => undefined);
     return () => {
@@ -96,6 +98,7 @@ export function GardenView({
       highlight: position.id === focusId,
       harvestDue: isHarvestDue(position.dividend, today, picked),
       traits: classifyTree(position.fundamentals),
+      rangeEffect: classifyRangeEffect(position.range),
     };
   });
 
@@ -104,6 +107,7 @@ export function GardenView({
       <GardenScene
         plants={plants}
         weather={weather.regime}
+        kosdaqReturn1d={weather.kosdaqReturn1d}
         reduced={reduced}
         onOpen={(positionId) => router.push(`/garden/${gardenId}/plant/${positionId}`)}
         onEmpty={(plotIndex) =>
