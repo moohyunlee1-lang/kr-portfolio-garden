@@ -1,6 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { GARDENS_KEY, ensureEntry, loadGardens } from "./storage";
+import {
+  GARDENS_KEY,
+  applyHidden,
+  dropGarden,
+  ensureEntry,
+  loadGardens,
+  saveHidden,
+} from "./storage";
 import { LAST_GARDEN_KEY } from "./garden-math";
+import { mergeValueChainGardens } from "./valuechain-seed";
 
 function memoryStorage() {
   const saved = new Map<string, string>();
@@ -45,4 +53,66 @@ describe("ensureEntry", () => {
     expect(entry.gardens.length).toBeGreaterThan(130);
     expect(entry.gardens.map((garden) => garden.id).slice(0, 2)).toEqual(["a", "b"]);
   });
+
+  it("does not restore a hidden value-chain garden", () => {
+    const storage = memoryStorage();
+    const seeded = mergeValueChainGardens([{ id: "mine", name: "내 밭", positions: [] }]);
+    const hide = seeded.find((garden) => garden.id.startsWith("vc_"));
+    expect(hide).toBeTruthy();
+    storage.setItem(GARDENS_KEY, JSON.stringify(seeded));
+    saveHidden(storage, [hide!.id]);
+    storage.setItem(LAST_GARDEN_KEY, "mine");
+    const entry = ensureEntry(storage, () => "new");
+    expect(entry.gardens.some((garden) => garden.id === hide!.id)).toBe(false);
+    expect(entry.gardens.some((garden) => garden.id === "mine")).toBe(true);
+  });
 });
+
+describe("dropGarden", () => {
+  it("removes the garden and points at the next one", () => {
+    const result = dropGarden(
+      [
+        { id: "a", name: "가", positions: [] },
+        { id: "b", name: "나", positions: [] },
+      ],
+      "a",
+    );
+    expect(result).toEqual({
+      gardens: [{ id: "b", name: "나", positions: [] }],
+      nextId: "b",
+      hidden: false,
+    });
+  });
+
+  it("marks value-chain ids as hidden", () => {
+    const result = dropGarden(
+      [
+        { id: "mine", name: "내 밭", positions: [] },
+        { id: "vc_semiconductor-sobujang_01", name: "소부장", positions: [] },
+      ],
+      "vc_semiconductor-sobujang_01",
+    );
+    expect(result?.hidden).toBe(true);
+    expect(result?.nextId).toBe("mine");
+    expect(result?.gardens.map((garden) => garden.id)).toEqual(["mine"]);
+  });
+
+  it("refuses to drop the last garden", () => {
+    expect(dropGarden([{ id: "a", name: "가", positions: [] }], "a")).toBeNull();
+  });
+});
+
+describe("applyHidden", () => {
+  it("filters hidden ids", () => {
+    expect(
+      applyHidden(
+        [
+          { id: "a", name: "가", positions: [] },
+          { id: "b", name: "나", positions: [] },
+        ],
+        ["b"],
+      ).map((garden) => garden.id),
+    ).toEqual(["a"]);
+  });
+});
+

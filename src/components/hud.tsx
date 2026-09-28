@@ -59,7 +59,7 @@ export function Hud({
   onCreate: () => void;
   onSample: () => void;
 }) {
-  const { gardens, renameGarden } = useGardens();
+  const { gardens, renameGarden, deleteGarden } = useGardens();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const quotes = useMemo(() => quoteRecord(), []);
@@ -142,6 +142,22 @@ export function Hud({
                       }}
                     >
                       입장
+                    </button>
+                    <button
+                      type="button"
+                      className="min-h-11 rounded-2xl bg-[#f3e4cc] px-3 text-sm text-[#c44848] disabled:opacity-40"
+                      disabled={gardens.length <= 1}
+                      onClick={() => {
+                        if (gardens.length <= 1) return;
+                        if (!window.confirm(`${item.name} 정원을 삭제할까요?`)) return;
+                        const next = deleteGarden(item.id);
+                        if (next && next !== garden.id) {
+                          setOpen(false);
+                          onSwitch(next);
+                        }
+                      }}
+                    >
+                      삭제
                     </button>
                   </div>
                   );

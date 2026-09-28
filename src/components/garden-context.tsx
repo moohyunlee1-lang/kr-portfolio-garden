@@ -20,10 +20,13 @@ import { applyLiveQuotes } from "@/lib/market/chain";
 import type { LiveQuote } from "@/lib/market/types";
 import { quoteRecord } from "@/lib/quotes";
 import {
+  dropGarden,
   ensureEntry,
   loadHarvested,
+  loadHidden,
   saveGardens,
   saveHarvested,
+  saveHidden,
 } from "@/lib/storage";
 import type { Garden, StoredGarden } from "@/lib/types";
 
@@ -45,6 +48,7 @@ type GardenContextValue = {
   createGarden: (name?: string) => string;
   renameGarden: (gardenId: string, name: string) => void;
   addSample: () => string;
+  deleteGarden: (gardenId: string) => string | null;
   plant: (gardenId: string, draft: PlantDraft) => { merged: boolean; positionId: string };
   markHarvested: (key: string) => void;
   applyLive: (rows: LiveQuote[]) => void;
@@ -138,6 +142,21 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
     return id;
   }, [gardens, persist, remember]);
 
+  const deleteGarden = useCallback(
+    (gardenId: string) => {
+      const result = dropGarden(gardens, gardenId);
+      if (!result) return null;
+      if (result.hidden) {
+        saveHidden(localStorage, [...loadHidden(localStorage), gardenId]);
+      }
+      persist(result.gardens);
+      const stay = result.gardens.some((garden) => garden.id === entryId) ? entryId : result.nextId;
+      remember(stay!);
+      return stay;
+    },
+    [entryId, gardens, persist, remember],
+  );
+
   const applyLive = useCallback((rows: LiveQuote[]) => {
     setLive((current) => {
       const map = new Map(current.map((row) => [row.ticker, row]));
@@ -211,6 +230,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       createGarden,
       renameGarden,
       addSample,
+      deleteGarden,
       plant,
       markHarvested,
       applyLive,
@@ -225,6 +245,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       createGarden,
       renameGarden,
       addSample,
+      deleteGarden,
       plant,
       markHarvested,
       applyLive,

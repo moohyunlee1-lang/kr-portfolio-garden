@@ -4,6 +4,7 @@ import { mergeValueChainGardens } from "./valuechain-seed";
 
 export const GARDENS_KEY = "kr-garden:gardens";
 export const HARVEST_KEY = "kr-garden:harvested";
+export const HIDDEN_KEY = "kr-garden:hidden";
 
 type Store = {
   getItem(key: string): string | null;
@@ -42,6 +43,35 @@ export function harvestKey(positionId: string, payDate: string): string {
   return `${positionId}:${payDate}`;
 }
 
+export function loadHidden(storage: Pick<Store, "getItem">): string[] {
+  const parsed = readJson<string[]>(storage, HIDDEN_KEY);
+  return Array.isArray(parsed) ? parsed.filter((id) => typeof id === "string") : [];
+}
+
+export function saveHidden(storage: Pick<Store, "setItem">, ids: string[]): void {
+  storage.setItem(HIDDEN_KEY, JSON.stringify([...new Set(ids)]));
+}
+
+export function applyHidden(gardens: StoredGarden[], hidden: string[]): StoredGarden[] {
+  if (!hidden.length) return gardens;
+  const skip = new Set(hidden);
+  return gardens.filter((garden) => !skip.has(garden.id));
+}
+
+export function dropGarden(
+  gardens: StoredGarden[],
+  gardenId: string,
+): { gardens: StoredGarden[]; nextId: string; hidden: boolean } | null {
+  if (gardens.length <= 1) return null;
+  const remaining = gardens.filter((garden) => garden.id !== gardenId);
+  if (remaining.length === gardens.length || remaining.length === 0) return null;
+  return {
+    gardens: remaining,
+    nextId: remaining[0].id,
+    hidden: gardenId.startsWith("vc_"),
+  };
+}
+
 export function ensureEntry(
   storage: Store,
   createId: () => string = () => `garden_${crypto.randomUUID()}`,
@@ -60,6 +90,18 @@ export function ensureEntry(
   if (merged !== gardens) {
     saveGardens(storage, merged);
     gardens = merged;
+  }
+  gardens = applyHidden(gardens, loadHidden(storage));
+  if (gardens.length === 0) {
+    gardens = [
+      {
+        id: createId(),
+        name: "나의 정원",
+        positions: [],
+      },
+    ];
+    saveGardens(storage, mergeValueChainGardens(gardens));
+    gardens = applyHidden(mergeValueChainGardens(gardens), loadHidden(storage));
   }
 
   const last = readLastGardenId(storage);
