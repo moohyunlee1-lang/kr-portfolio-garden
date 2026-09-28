@@ -1,6 +1,7 @@
 import type { Dividend, Fundamentals, Issue, RangeCandle } from "./types";
 import { debtPerShare } from "./garden-math";
 import generatedQuotes from "../data/quotes.generated.json";
+import canonicalSectors from "../data/canonical-sectors.generated.json";
 
 export type Quote = {
   ticker: string;
@@ -191,13 +192,17 @@ function asRange(item: Record<string, unknown>): RangeCandle | undefined {
   return { open, high, low, close, yearHigh, yearLow };
 }
 
+function sectorOf(ticker: string, fallback: string): string {
+  return (canonicalSectors as Record<string, string>)[ticker] ?? fallback;
+}
+
 function mergeQuotes(): Quote[] {
   const byTicker = new Map<string, Quote>();
   for (const item of generatedQuotes as Array<Quote & Fundamentals>) {
     byTicker.set(item.ticker, {
       ticker: item.ticker,
       name: item.name,
-      sector: item.sector,
+      sector: sectorOf(item.ticker, item.sector),
       lastPrice: item.lastPrice,
       changePct: item.changePct,
       volume: item.volume,
@@ -221,7 +226,10 @@ function mergeQuotes(): Quote[] {
         : item,
     );
   }
-  return [...byTicker.values()];
+  return [...byTicker.values()].map((item) => ({
+    ...item,
+    sector: sectorOf(item.ticker, item.sector),
+  }));
 }
 
 export const QUOTES: Quote[] = mergeQuotes();
@@ -242,12 +250,23 @@ export function getQuote(ticker: string): Quote | undefined {
   return QUOTES.find((item) => item.ticker === ticker.trim());
 }
 
+function matchRank(item: Quote, text: string): number {
+  if (item.ticker === text) return 0;
+  if (item.name === text) return 1;
+  if (item.name.startsWith(text)) return 2;
+  if (item.ticker.startsWith(text)) return 3;
+  if (item.name.includes(text) || item.ticker.includes(text)) return 4;
+  return 99;
+}
+
 export function searchQuotes(query: string): Quote[] {
   const text = query.trim();
   if (!text) return QUOTES.slice(0, 8);
-  return QUOTES.filter(
-    (item) => item.ticker.includes(text) || item.name.includes(text),
-  ).slice(0, 12);
+  return QUOTES.map((item) => ({ item, rank: matchRank(item, text) }))
+    .filter((row) => row.rank < 99)
+    .sort((a, b) => a.rank - b.rank || a.item.name.localeCompare(b.item.name, "ko"))
+    .slice(0, 12)
+    .map((row) => row.item);
 }
 
 export function quoteRecord(): Record<string, Quote> {

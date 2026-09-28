@@ -310,7 +310,7 @@ def main() -> None:
                 }
             )
 
-    # unique quotes: last write wins; prefer first sector assignment by keeping first
+    # unique quotes: first wiki hit is often a 지분·간접 garden (삼성전자→바이오).
     seen = {}
     unique_quotes = []
     for q in quotes:
@@ -318,6 +318,52 @@ def main() -> None:
             continue
         seen[q["ticker"]] = True
         unique_quotes.append(q)
+
+    from collections import defaultdict
+
+    by_garden: dict[str, list[str]] = defaultdict(list)
+    for garden in gardens:
+        for plant in garden["positions"]:
+            by_garden[plant["ticker"]].append(garden["name"])
+    HOME = {
+        "005930": "반도체",
+        "005935": "반도체",
+        "000660": "반도체",
+        "006400": "2차전지",
+        "051910": "2차전지",
+        "373220": "2차전지",
+        "096770": "2차전지",
+        "207940": "바이오",
+        "068270": "바이오",
+        "326030": "바이오",
+        "005380": "자동차",
+        "000270": "자동차",
+        "012330": "자동차",
+        "009540": "조선",
+        "010140": "조선",
+        "329180": "조선",
+        "267250": "조선",
+        "012450": "방산",
+        "047810": "방산",
+        "079550": "방산",
+    }
+    ORDER = [name for _, name in SECTORS]
+    INDIRECT = re.compile(r"지분|간접|확인보류|코넥스|KONEX")
+
+    def pick_sector(ticker: str, fallback: str) -> str:
+        if ticker in HOME:
+            return HOME[ticker]
+        names = by_garden.get(ticker, [])
+        core = [n.split(" · ", 1)[0].strip() for n in names if not INDIRECT.search(n)]
+        pool = core or [n.split(" · ", 1)[0].strip() for n in names]
+        for sector in ORDER:
+            if sector in pool:
+                return sector
+        return fallback
+
+    for q in unique_quotes:
+        q["sector"] = pick_sector(q["ticker"], q["sector"])
+    canonical = {q["ticker"]: q["sector"] for q in unique_quotes}
 
     report = {
         "seedKrw": SEED_KRW,
@@ -340,6 +386,9 @@ def main() -> None:
         "planted": sum(len(g["positions"]) for g in gardens),
     }
     OUT.joinpath("quotes.generated.json").write_text(json.dumps(unique_quotes, ensure_ascii=False, indent=2), encoding="utf-8")
+    OUT.joinpath("canonical-sectors.generated.json").write_text(
+        json.dumps(canonical, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     OUT.joinpath("chain-gardens.generated.json").write_text(json.dumps(gardens, ensure_ascii=False, indent=2), encoding="utf-8")
     OUT.joinpath("valuechain-build-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({k: report[k] for k in ("uniqueTickers", "priced", "gardens", "planted")}, ensure_ascii=False))
