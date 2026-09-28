@@ -46,6 +46,20 @@ export function classifyRangeEffect(candle?: RangeCandle | null): RangeEffect {
   return { kind: "none", fireColor: "orange", intensity: 0 };
 }
 
+export function countRangeEffects(
+  tickers: string[],
+  lookup: (ticker: string) => RangeCandle | undefined,
+): { fire: number; aura: number } {
+  let fire = 0;
+  let aura = 0;
+  for (const ticker of tickers) {
+    const kind = classifyRangeEffect(lookup(ticker)).kind;
+    if (kind === "fire") fire += 1;
+    if (kind === "aura") aura += 1;
+  }
+  return { fire, aura };
+}
+
 export function intensityFromGap(gapPct: number): number {
   if (!Number.isFinite(gapPct) || gapPct < 0) return RANGE_EFFECT_RULES.minIntensity;
   const steps = Math.floor(gapPct / RANGE_EFFECT_RULES.stepPct);

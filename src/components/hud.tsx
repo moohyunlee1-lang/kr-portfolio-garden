@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   formatMoney,
   formatSignedMoney,
@@ -10,6 +10,8 @@ import {
 import { gardenSnapshot } from "@/lib/garden-math";
 import type { Garden, StoredGarden, Weather } from "@/lib/types";
 import { useGardens } from "@/components/garden-context";
+import { quoteRecord } from "@/lib/quotes";
+import { countRangeEffects } from "@/lib/range-effects";
 
 const SECTOR_ORDER = [
   "반도체",
@@ -58,6 +60,7 @@ export function Hud({
 }) {
   const { gardens, renameGarden } = useGardens();
   const [open, setOpen] = useState(false);
+  const quotes = useMemo(() => quoteRecord(), []);
   const totals = gardenSnapshot(garden.positions);
   const pnlClass =
     totals.unrealizedPnlAmt > 0 ? "pnl-up" : totals.unrealizedPnlAmt < 0 ? "pnl-down" : "";
@@ -105,7 +108,9 @@ export function Hud({
                 <p className="px-1 pt-1 text-xs font-medium tracking-wide text-[#8a7362]">
                   {section.label}
                 </p>
-                {section.items.map((item) => (
+                {section.items.map((item) => {
+                  const marks = countRangeEffects(item.positions.map((position) => position.ticker), (ticker) => quotes[ticker]?.range);
+                  return (
                   <div key={item.id} className="flex items-center gap-2">
                     <input
                       aria-label={`${item.name} 이름`}
@@ -116,6 +121,7 @@ export function Hud({
                         if (event.key === "Enter") event.currentTarget.blur();
                       }}
                     />
+                    <RangeBadges fire={marks.fire} aura={marks.aura} />
                     <button
                       type="button"
                       className="min-h-11 rounded-2xl bg-[#6f9a58] px-3 text-sm text-white"
@@ -127,7 +133,8 @@ export function Hud({
                       입장
                     </button>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             ))}
             <div className="flex gap-2">
@@ -150,6 +157,24 @@ export function Hud({
         )}
       </div>
     </header>
+  );
+}
+
+function RangeBadges({ fire, aura }: { fire: number; aura: number }) {
+  if (!fire && !aura) return null;
+  return (
+    <span className="flex shrink-0 items-center gap-1 text-xs font-semibold">
+      {fire > 0 && (
+        <span className="rounded-full bg-[#ff7a3a] px-2 py-1 text-white" title="52주 신고가">
+          불 {fire}
+        </span>
+      )}
+      {aura > 0 && (
+        <span className="rounded-full bg-[#2a1638] px-2 py-1 text-[#e8d7ff]" title="52주 신저가">
+          아우라 {aura}
+        </span>
+      )}
+    </span>
   );
 }
 

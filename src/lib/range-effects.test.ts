@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { classifyRangeEffect, intensityFromGap, rangeFromMonths } from "./range-effects";
+import { classifyRangeEffect, countRangeEffects, intensityFromGap, rangeFromMonths } from "./range-effects";
 
 describe("intensityFromGap", () => {
   it("is strongest near 0% and drops every 10%", () => {
@@ -65,5 +65,19 @@ describe("rangeFromMonths", () => {
       { open: 100, high: 140, low: 95, close: 130 },
     ]);
     expect(range).toMatchObject({ open: 100, high: 140, low: 95, close: 130, yearHigh: 140, yearLow: 70 });
+  });
+});
+
+describe("countRangeEffects", () => {
+  it("counts fire and aura trees by ticker", () => {
+    const candles = {
+      high: { open: 100, high: 120, low: 90, close: 118, yearHigh: 120, yearLow: 50 },
+      low: { open: 52, high: 60, low: 50, close: 51, yearHigh: 200, yearLow: 50 },
+      mid: { open: 100, high: 110, low: 90, close: 105, yearHigh: 200, yearLow: 40 },
+    };
+    expect(countRangeEffects(["high", "low", "mid", "high"], (ticker) => candles[ticker as keyof typeof candles])).toEqual({
+      fire: 2,
+      aura: 1,
+    });
   });
 });
