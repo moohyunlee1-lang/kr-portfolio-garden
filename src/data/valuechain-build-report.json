@@ -1,0 +1,125 @@
+{
+  "seedKrw": 10000000,
+  "seedDate": "2026-01-02",
+  "sectors": [
+    {
+      "slug": "semiconductor-sobujang",
+      "name": "반도체",
+      "chains": 10,
+      "members": 225,
+      "unparsed": []
+    },
+    {
+      "slug": "battery-valuechain",
+      "name": "2차전지",
+      "chains": 18,
+      "members": 275,
+      "unparsed": []
+    },
+    {
+      "slug": "bio-valuechain",
+      "name": "바이오",
+      "chains": 19,
+      "members": 433,
+      "unparsed": []
+    },
+    {
+      "slug": "robot-valuechain",
+      "name": "로봇",
+      "chains": 13,
+      "members": 132,
+      "unparsed": []
+    },
+    {
+      "slug": "ship-valuechain",
+      "name": "조선",
+      "chains": 13,
+      "members": 67,
+      "unparsed": []
+    },
+    {
+      "slug": "defense-valuechain",
+      "name": "방산",
+      "chains": 11,
+      "members": 73,
+      "unparsed": []
+    },
+    {
+      "slug": "nuclear-valuechain",
+      "name": "원전",
+      "chains": 12,
+      "members": 59,
+      "unparsed": []
+    },
+    {
+      "slug": "automotive-valuechain",
+      "name": "자동차",
+      "chains": 22,
+      "members": 456,
+      "unparsed": []
+    },
+    {
+      "slug": "cosmetics-valuechain",
+      "name": "화장품",
+      "chains": 13,
+      "members": 164,
+      "unparsed": []
+    }
+  ],
+  "uniqueTickers": 1285,
+  "priced": 1282,
+  "failed": [
+    {
+      "ticker": "268600",
+      "error": "yahoo:local variable 'quote' referenced before assignment",
+      "name": "셀리버리",
+      "market": "KOSDAQ"
+    },
+    {
+      "ticker": "285770",
+      "error": "yahoo:local variable 'quote' referenced before assignment",
+      "name": "라이프사이언스테크놀로지",
+      "market": "KONEX"
+    },
+    {
+      "ticker": "419700",
+      "error": "yahoo:local variable 'quote' referenced before assignment",
+      "name": "이브이파킹서비스",
+      "market": "KONEX"
+    }
+  ],
+  "skipped": [
+    {
+      "ticker": "268600",
+      "name": "셀리버리",
+      "market": "KOSDAQ",
+      "status": "NONCURRENT_LISTING",
+      "chainLabel": "18 현재상태 추가확인",
+      "chainSlug": "18-현재상태-추가확인",
+      "sector": "바이오",
+      "reason": "no-price"
+    },
+    {
+      "ticker": "285770",
+      "name": "라이프사이언스테크놀로지",
+      "market": "KONEX",
+      "status": "NONCURRENT_LISTING",
+      "chainLabel": "19 코넥스",
+      "chainSlug": "19-코넥스",
+      "sector": "바이오",
+      "reason": "no-price"
+    },
+    {
+      "ticker": "419700",
+      "name": "이브이파킹서비스",
+      "market": "KONEX",
+      "status": "NONCURRENT_LISTING",
+      "chainLabel": "22 상태·사업 확인보류",
+      "chainSlug": "22-상태-사업-확인보류",
+      "sector": "자동차",
+      "reason": "no-price"
+    }
+  ],
+  "gardens": 131,
+  "planted": 1881
+}
