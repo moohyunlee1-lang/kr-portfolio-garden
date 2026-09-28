@@ -163,15 +163,23 @@ export function Hud({
 function RangeBadges({ fire, aura }: { fire: number; aura: number }) {
   if (!fire && !aura) return null;
   return (
-    <span className="flex shrink-0 items-center gap-1 text-xs font-semibold">
+    <span className="flex shrink-0 items-center gap-1">
       {fire > 0 && (
-        <span className="rounded-full bg-[#ff7a3a] px-2 py-1 text-white" title="52주 신고가">
-          불 {fire}
+        <span
+          className="inline-flex min-h-8 items-center gap-1 rounded-full bg-[#ff7a3a] px-2 py-1 text-white"
+          title={`52주 신고가 ${fire}그루`}
+        >
+          <img src="/fx-fire.svg" alt="" className="h-5 w-5" />
+          <span className="text-xs font-semibold tabular-nums">{fire}</span>
         </span>
       )}
       {aura > 0 && (
-        <span className="rounded-full bg-[#2a1638] px-2 py-1 text-[#e8d7ff]" title="52주 신저가">
-          아우라 {aura}
+        <span
+          className="inline-flex min-h-8 items-center gap-1 rounded-full bg-[#2a1638] px-2 py-1 text-[#e8d7ff]"
+          title={`52주 신저가 ${aura}그루`}
+        >
+          <img src="/fx-aura.svg" alt="" className="h-5 w-5" />
+          <span className="text-xs font-semibold tabular-nums">{aura}</span>
         </span>
       )}
     </span>

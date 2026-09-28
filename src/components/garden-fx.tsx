@@ -2,7 +2,7 @@
 
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
-import { Object3D, type Group, type InstancedMesh, type PointLight } from "three";
+import { type Group, type PointLight } from "three";
 import type { RangeEffect } from "@/lib/range-effects";
 
 export function Butterflies({ reduced, radius }: { reduced: boolean; radius: number }) {
@@ -80,39 +80,35 @@ export function Thunder({ reduced }: { reduced: boolean }) {
 }
 
 export function Flame({ effect }: { effect: RangeEffect }) {
-  const mesh = useRef<InstancedMesh>(null);
-  const dummy = useMemo(() => new Object3D(), []);
-  const count = Math.max(4, Math.round(8 * effect.intensity));
-  const sparks = useMemo(
-    () =>
-      Array.from({ length: count }, (_, index) => ({
-        x: (index % 3) * 0.08 - 0.08,
-        y: 0.2 + (index % 5) * 0.12,
-        z: (index % 2) * 0.06 - 0.03,
-        speed: 0.7 + (index % 4) * 0.2,
-      })),
-    [count],
-  );
-  const color = effect.fireColor === "blue" ? "#7ec8ff" : "#ff7a3a";
+  const group = useRef<Group>(null);
+  const color = effect.fireColor === "blue" ? "#7ec8ff" : "#ff6a22";
+  const hot = effect.fireColor === "blue" ? "#d7f1ff" : "#ffd36a";
+  const height = 0.7 + effect.intensity * 0.9;
   useFrame((state) => {
-    const instanced = mesh.current;
-    if (!instanced) return;
-    const t = state.clock.elapsedTime;
-    sparks.forEach((spark, index) => {
-      const y = ((spark.y + t * spark.speed) % 1.15) * (0.7 + effect.intensity * 0.7);
-      dummy.position.set(spark.x + Math.sin(t * 3 + index) * 0.04, 0.9 + y, spark.z);
-      const s = (0.08 + effect.intensity * 0.12) * (1 - y / 1.6);
-      dummy.scale.setScalar(Math.max(0.02, s));
-      dummy.updateMatrix();
-      instanced.setMatrixAt(index, dummy.matrix);
-    });
-    instanced.instanceMatrix.needsUpdate = true;
+    if (!group.current) return;
+    const flicker = 0.88 + Math.sin(state.clock.elapsedTime * 11) * 0.12 * effect.intensity;
+    group.current.scale.set(flicker, 0.92 + Math.sin(state.clock.elapsedTime * 7) * 0.1, flicker);
   });
   return (
-    <instancedMesh ref={mesh} args={[undefined, undefined, sparks.length]}>
-      <coneGeometry args={[0.08, 0.18, 5]} />
-      <meshBasicMaterial color={color} transparent opacity={0.85} />
-    </instancedMesh>
+    <group ref={group} position={[0, 0.55, 0]} renderOrder={2}>
+      <pointLight color={color} intensity={1.8 + effect.intensity * 2.4} distance={4.5} />
+      <mesh position={[0, height * 0.28, 0]}>
+        <coneGeometry args={[0.22 + effect.intensity * 0.16, height, 6]} />
+        <meshBasicMaterial color={color} transparent opacity={0.92} depthWrite={false} />
+      </mesh>
+      <mesh position={[0.08, height * 0.18, 0.04]} rotation={[0, 0, -0.25]}>
+        <coneGeometry args={[0.14, height * 0.7, 5]} />
+        <meshBasicMaterial color={hot} transparent opacity={0.8} depthWrite={false} />
+      </mesh>
+      <mesh position={[-0.1, height * 0.16, -0.03]} rotation={[0, 0, 0.28]}>
+        <coneGeometry args={[0.12, height * 0.62, 5]} />
+        <meshBasicMaterial color={color} transparent opacity={0.75} depthWrite={false} />
+      </mesh>
+      <mesh position={[0, 0.12, 0]}>
+        <sphereGeometry args={[0.22 + effect.intensity * 0.12, 10, 8]} />
+        <meshBasicMaterial color={hot} transparent opacity={0.55} depthWrite={false} />
+      </mesh>
+    </group>
   );
 }
 

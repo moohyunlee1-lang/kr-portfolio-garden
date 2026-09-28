@@ -300,8 +300,8 @@ function GardenPlant({
           </>
         )}
       </group>
-      {!far && !reduced && plant.rangeEffect.kind === "fire" && <Flame effect={plant.rangeEffect} />}
-      {!far && !reduced && plant.rangeEffect.kind === "aura" && (
+      {!reduced && plant.rangeEffect.kind === "fire" && <Flame effect={plant.rangeEffect} />}
+      {!reduced && plant.rangeEffect.kind === "aura" && (
         <DarkAura intensity={plant.rangeEffect.intensity} />
       )}
     </group>
