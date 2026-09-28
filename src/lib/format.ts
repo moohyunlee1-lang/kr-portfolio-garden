@@ -37,6 +37,29 @@ export function formatWhen(iso: string): string {
   }).format(date);
 }
 
+export function formatMarketCap(won: number | null | undefined): string {
+  if (won == null || !Number.isFinite(won) || won <= 0) return "—";
+  if (won >= 1e12) {
+    const jo = won / 1e12;
+    return `${(jo >= 100 ? jo.toFixed(0) : jo.toFixed(1)).replace(/\.0$/, "")}조원`;
+  }
+  if (won >= 1e8) {
+    const eok = won / 1e8;
+    return `${(eok >= 100 ? eok.toFixed(0) : eok.toFixed(1)).replace(/\.0$/, "")}억원`;
+  }
+  return `${Math.round(won).toLocaleString("ko-KR")}원`;
+}
+
+export function formatMultiple(value: number | null | undefined): string {
+  if (value == null || !Number.isFinite(value)) return "—";
+  return `${value.toFixed(2)}배`;
+}
+
+export function formatWonOrDash(value: number | null | undefined): string {
+  if (value == null || !Number.isFinite(value)) return "—";
+  return `${Math.round(value).toLocaleString("ko-KR")}원`;
+}
+
 export const STAGE_LABEL = {
   seed: "씨앗",
   sprout: "새싹",

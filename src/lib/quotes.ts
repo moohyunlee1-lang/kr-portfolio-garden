@@ -1,4 +1,5 @@
-import type { Dividend, Issue } from "./types";
+import type { Dividend, Fundamentals, Issue } from "./types";
+import { debtPerShare } from "./garden-math";
 import generatedQuotes from "../data/quotes.generated.json";
 
 export type Quote = {
@@ -10,6 +11,7 @@ export type Quote = {
   volume: number;
   dividend?: Dividend;
   issues?: Issue[];
+  fundamentals?: Fundamentals;
 };
 
 const samsungDividend: Dividend = {
@@ -141,12 +143,53 @@ const HAND_QUOTES: Quote[] = [
   quote("097950", "CJ제일제당", "필수소비재", 246000, -0.5, 77220),
 ];
 
+function asFundamentals(item: Record<string, unknown>): Fundamentals {
+  const bps = typeof item.bps === "number" ? item.bps : null;
+  const debtRatioPct = typeof item.debtRatioPct === "number" ? item.debtRatioPct : null;
+  const nested = item.fundamentals && typeof item.fundamentals === "object"
+    ? (item.fundamentals as Fundamentals)
+    : {};
+  return {
+    marketCap: (item.marketCap as number | null | undefined) ?? nested.marketCap ?? null,
+    per: (item.per as number | null | undefined) ?? nested.per ?? null,
+    pbr: (item.pbr as number | null | undefined) ?? nested.pbr ?? null,
+    eps: (item.eps as number | null | undefined) ?? nested.eps ?? null,
+    bps: bps ?? nested.bps ?? null,
+    debtRatioPct: debtRatioPct ?? nested.debtRatioPct ?? null,
+    debtPerShare:
+      (item.debtPerShare as number | null | undefined) ??
+      nested.debtPerShare ??
+      debtPerShare(bps ?? nested.bps, debtRatioPct ?? nested.debtRatioPct),
+  };
+}
+
 function mergeQuotes(): Quote[] {
   const byTicker = new Map<string, Quote>();
-  for (const item of generatedQuotes as Quote[]) byTicker.set(item.ticker, item);
+  for (const item of generatedQuotes as Array<Quote & Fundamentals>) {
+    byTicker.set(item.ticker, {
+      ticker: item.ticker,
+      name: item.name,
+      sector: item.sector,
+      lastPrice: item.lastPrice,
+      changePct: item.changePct,
+      volume: item.volume,
+      fundamentals: asFundamentals(item as unknown as Record<string, unknown>),
+    });
+  }
   for (const item of HAND_QUOTES) {
     const current = byTicker.get(item.ticker);
-    byTicker.set(item.ticker, current ? { ...item, ...current, dividend: item.dividend, issues: item.issues } : item);
+    byTicker.set(
+      item.ticker,
+      current
+        ? {
+            ...item,
+            ...current,
+            dividend: item.dividend,
+            issues: item.issues,
+            fundamentals: current.fundamentals ?? item.fundamentals,
+          }
+        : item,
+    );
   }
   return [...byTicker.values()];
 }

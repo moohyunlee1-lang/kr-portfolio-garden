@@ -1,5 +1,6 @@
 import type {
   Dividend,
+  Fundamentals,
   Garden,
   PlantInput,
   Position,
@@ -33,6 +34,12 @@ export const PLOT_COUNT = BASE_PLOTS;
 export function pnlPct(lastPrice: number, avgCost: number): number {
   if (!(avgCost > 0) || !Number.isFinite(lastPrice)) return 0;
   return ((lastPrice - avgCost) / avgCost) * 100;
+}
+
+export function debtPerShare(bps: number | null | undefined, debtRatioPct: number | null | undefined): number | null {
+  if (!(typeof bps === "number") || !(typeof debtRatioPct === "number")) return null;
+  if (!(bps > 0) || !(debtRatioPct >= 0) || !Number.isFinite(bps) || !Number.isFinite(debtRatioPct)) return null;
+  return bps * (debtRatioPct / 100);
 }
 
 export function marketValue(quantity: number, lastPrice: number): number {
@@ -289,6 +296,7 @@ export function materializePosition(
     volume: number;
     dividend?: Dividend;
     issues?: Position["issues"];
+    fundamentals?: Fundamentals;
   },
   now: Date,
   totalMarketValue: number,
@@ -314,6 +322,7 @@ export function materializePosition(
       holdingDays: 0,
       dividend: quote.dividend,
       issues: quote.issues,
+      fundamentals: quote.fundamentals,
     },
     now,
     totalMarketValue,
@@ -330,6 +339,7 @@ export function materializeGarden(
       volume: number;
       dividend?: Dividend;
       issues?: Position["issues"];
+      fundamentals?: Fundamentals;
     }
   >,
   now: Date,

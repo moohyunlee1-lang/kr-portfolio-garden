@@ -8,6 +8,7 @@ import {
   marketValue,
   plantIntoGarden,
   pnlPct,
+  debtPerShare,
   readLastGardenId,
   sizeScale,
   unrealizedPnlAmt,
@@ -340,5 +341,18 @@ describe("sample garden criteria", () => {
     expect(viewed[2].scale).toBeLessThan(viewed[0].scale);
     expect(viewed[2].tone).toBe("muted");
     expect(fruitSaturation(rows[2].dividend)).toBeLessThan(0.6);
+  });
+});
+
+describe("debtPerShare", () => {
+  it("is BPS * debt ratio / 100", () => {
+    expect(debtPerShare(63997, 29.94)).toBeCloseTo(19160.7, 1);
+  });
+
+  it("returns null when inputs are missing or invalid", () => {
+    expect(debtPerShare(null, 30)).toBeNull();
+    expect(debtPerShare(1000, undefined)).toBeNull();
+    expect(debtPerShare(0, 20)).toBeNull();
+    expect(debtPerShare(1000, -1)).toBeNull();
   });
 });

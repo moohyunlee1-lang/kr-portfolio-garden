@@ -9,11 +9,14 @@ import { useGardens } from "@/components/garden-context";
 import {
   STAGE_LABEL,
   formatDate,
+  formatMarketCap,
   formatMoney,
+  formatMultiple,
   formatSignedMoney,
   formatSignedPct,
   formatVolume,
   formatWhen,
+  formatWonOrDash,
 } from "@/lib/format";
 import {
   dividendPayDate,
@@ -94,6 +97,21 @@ export function PositionCard({
         <Field label="현재가" value={formatMoney(position.lastPrice)} />
         <Field label="등락률" value={formatSignedPct(position.changePct)} />
         <Field label="거래량" value={formatVolume(position.volume)} />
+      </section>
+      <section className="grid grid-cols-2 gap-3 rounded-[24px] bg-[#fffaf2] p-4 sm:grid-cols-3">
+        <Field label="시가총액" value={formatMarketCap(position.fundamentals?.marketCap)} />
+        <Field label="PBR" value={formatMultiple(position.fundamentals?.pbr)} />
+        <Field label="PER" value={formatMultiple(position.fundamentals?.per)} />
+        <Field label="EPS" value={formatWonOrDash(position.fundamentals?.eps)} />
+        <Field label="주당부채" value={formatWonOrDash(position.fundamentals?.debtPerShare)} />
+        <Field
+          label="부채비율"
+          value={
+            position.fundamentals?.debtRatioPct == null || !Number.isFinite(position.fundamentals.debtRatioPct)
+              ? "—"
+              : `${position.fundamentals.debtRatioPct.toFixed(1)}%`
+          }
+        />
       </section>
       <section className="grid grid-cols-2 gap-3 rounded-[24px] bg-white p-4">
         <Field label="수량" value={`${position.quantity.toLocaleString("ko-KR")}주`} />

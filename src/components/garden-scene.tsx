@@ -3,7 +3,7 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { CanvasTexture, Object3D, PCFSoftShadowMap, SRGBColorSpace, type Group, type InstancedMesh, Vector3 } from "three";
+import { CanvasTexture, Object3D, SRGBColorSpace, type Group, type InstancedMesh } from "three";
 import { PlantBody } from "@/components/plants";
 import { CELL, layoutFromPositions, plotPosition, type PlotLayout } from "@/lib/plots";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
@@ -22,47 +22,42 @@ export type ScenePlant = {
   harvestDue: boolean;
 };
 
-const LOD_DISTANCE = 22;
+const LOD_DISTANCE = 18;
 
-function useFar(threshold: number) {
-  const ref = useRef<Group>(null);
+function useSceneFar(threshold: number) {
   const camera = useThree((state) => state.camera);
   const [far, setFar] = useState(false);
-  const tmp = useMemo(() => new Vector3(), []);
   useFrame(() => {
-    const group = ref.current;
-    if (!group) return;
-    group.getWorldPosition(tmp);
-    const next = camera.position.distanceTo(tmp) > threshold;
+    const next = camera.position.length() > threshold;
     setFar((current) => (current === next ? current : next));
   });
-  return { ref, far };
+  return far;
 }
 
 function makeSignTexture(label: string): HTMLCanvasElement {
   const canvas = document.createElement("canvas");
-  canvas.width = 1024;
-  canvas.height = 512;
+  canvas.width = 512;
+  canvas.height = 256;
   const ctx = canvas.getContext("2d");
   if (!ctx) return canvas;
-  ctx.clearRect(0, 0, 1024, 512);
-  roundRect(ctx, 36, 72, 952, 368, 72);
+  ctx.clearRect(0, 0, 512, 256);
+  roundRect(ctx, 18, 36, 476, 184, 36);
   ctx.fillStyle = "#f6e6c8";
   ctx.fill();
-  ctx.lineWidth = 16;
+  ctx.lineWidth = 8;
   ctx.strokeStyle = "#d7b48a";
   ctx.stroke();
   ctx.fillStyle = "#5c3b24";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  let size = 168;
+  let size = 84;
   const family = 'Gaegu, "Apple SD Gothic Neo", sans-serif';
   ctx.font = `700 ${size}px ${family}`;
-  while (ctx.measureText(label).width > 860 && size > 64) {
-    size -= 6;
+  while (ctx.measureText(label).width > 430 && size > 32) {
+    size -= 4;
     ctx.font = `700 ${size}px ${family}`;
   }
-  ctx.fillText(label, 512, 268);
+  ctx.fillText(label, 256, 134);
   return canvas;
 }
 
@@ -83,7 +78,15 @@ function roundRect(
   ctx.closePath();
 }
 
-function Signboard({ label, fontReady }: { label: string; fontReady: boolean }) {
+function Signboard({
+  label,
+  fontReady,
+  onOpen,
+}: {
+  label: string;
+  fontReady: boolean;
+  onOpen: () => void;
+}) {
   const texture = useMemo(() => {
     const map = new CanvasTexture(makeSignTexture(label));
     map.colorSpace = SRGBColorSpace;
@@ -94,18 +97,29 @@ function Signboard({ label, fontReady }: { label: string; fontReady: boolean }) 
   useEffect(() => () => texture.dispose(), [texture]);
 
   return (
-    <group position={[0, 0, 0.86]} scale={1.28}>
-      <mesh position={[0, 0.32, 0]} castShadow>
+    <group
+      position={[0, 0, 0.86]}
+      scale={1.28}
+      onClick={(event) => {
+        event.stopPropagation();
+        onOpen();
+      }}
+    >
+      <mesh position={[0, 0.32, 0]}>
         <cylinderGeometry args={[0.04, 0.05, 0.5, 7]} />
         <meshLambertMaterial color="#c49262" />
       </mesh>
-      <mesh position={[0, 0.58, -0.02]} castShadow>
+      <mesh position={[0, 0.58, -0.02]}>
         <boxGeometry args={[1.12, 0.48, 0.06]} />
         <meshLambertMaterial color="#e7d3ae" />
       </mesh>
       <mesh position={[0, 0.58, 0.02]}>
         <planeGeometry args={[1.02, 0.4]} />
         <meshBasicMaterial map={texture} transparent />
+      </mesh>
+      <mesh position={[0, 0.58, 0]} visible={false}>
+        <boxGeometry args={[1.2, 0.7, 0.4]} />
+        <meshBasicMaterial transparent opacity={0} />
       </mesh>
     </group>
   );
@@ -187,6 +201,7 @@ function GardenPlant({
   plant,
   weather,
   reduced,
+  far,
   fontReady,
   layout,
   onOpen,
@@ -195,12 +210,12 @@ function GardenPlant({
   plant: ScenePlant;
   weather: WeatherRegime;
   reduced: boolean;
+  far: boolean;
   fontReady: boolean;
   layout: PlotLayout;
   onOpen: (id: string) => void;
   onHarvested: (id: string) => void;
 }) {
-  const { ref, far } = useFar(LOD_DISTANCE);
   const harvested = useRef(false);
   const lift = useRef<Group>(null);
   const started = useRef(0);
@@ -225,9 +240,9 @@ function GardenPlant({
   }, [plant.harvestDue, plant.id, reduced, onHarvested]);
 
   return (
-    <group ref={ref} position={plotPosition(plant.plotIndex, layout.cols, layout.rows)}>
+    <group position={plotPosition(plant.plotIndex, layout.cols, layout.rows)}>
       <PlotBed highlight={plant.highlight} onClick={() => onOpen(plant.id)} />
-      <Signboard label={far ? plant.ticker : plant.name} fontReady={fontReady} />
+      <Signboard label={far ? plant.ticker : plant.name} fontReady={fontReady} onOpen={() => onOpen(plant.id)} />
       <group
         scale={plant.scale * 1.35}
         position={[0, 0.24, 0]}
@@ -407,15 +422,6 @@ function Lights({ regime }: { regime: WeatherRegime }) {
         position={[5.5, 9.5, 3.2]}
         intensity={regime === "bull" ? 1.25 : regime === "bear" ? 0.88 : 1.02}
         color={regime === "bear" ? "#e8eef3" : "#fff1d2"}
-        castShadow
-        shadow-mapSize={[1024, 1024]}
-        shadow-camera-near={1}
-        shadow-camera-far={24}
-        shadow-camera-left={-8}
-        shadow-camera-right={8}
-        shadow-camera-top={8}
-        shadow-camera-bottom={-8}
-        shadow-bias={-0.0005}
       />
       {regime === "bull" && (
         <mesh position={[5.2, 7.4, -3.5]}>
@@ -448,6 +454,7 @@ function Scene({
   const radius = ((Math.max(layout.cols, layout.rows) - 1) * CELL) / 2 + 1.2;
   const span = Math.max(layout.cols, layout.rows) * CELL;
   const [fontReady, setFontReady] = useState(false);
+  const far = useSceneFar(LOD_DISTANCE);
   useEffect(() => {
     let cancelled = false;
     document.fonts.load('700 64px Gaegu').finally(() => {
@@ -467,6 +474,7 @@ function Scene({
       {plots.map((index) => {
         const plant = occupied.get(index);
         if (!plant) {
+          if (plants.length >= 16) return null;
           return <EmptyPlot key={index} index={index} layout={layout} onEmpty={onEmpty} />;
         }
         return (
@@ -475,6 +483,7 @@ function Scene({
             plant={plant}
             weather={weather}
             reduced={reduced}
+            far={far || reduced}
             fontReady={fontReady}
             layout={layout}
             onOpen={onOpen}
@@ -484,15 +493,18 @@ function Scene({
       })}
       <OrbitControls
         makeDefault
-        enableRotate={false}
+        enableRotate
         enablePan
         enableZoom
-        minDistance={4.8}
-        maxDistance={Math.max(14, span * 1.15)}
-        target={[0, 0.3, 0.2]}
-        maxPolarAngle={0.9}
-        minPolarAngle={0.9}
-        screenSpacePanning
+        enableDamping
+        dampingFactor={0.12}
+        rotateSpeed={0.7}
+        zoomSpeed={0.85}
+        minDistance={3.2}
+        maxDistance={Math.max(22, span * 1.4)}
+        target={[0, 0.35, 0]}
+        minPolarAngle={0.18}
+        maxPolarAngle={Math.PI / 2 - 0.08}
       />
     </>
   );
@@ -510,19 +522,15 @@ export default function GardenScene(props: {
   const span = Math.max(layout.cols, layout.rows) * CELL;
   return (
     <Canvas
-      shadows
-      dpr={[1, 1.6]}
+      dpr={[1, 1.2]}
       camera={{
         position: [0.1, Math.max(6.8, span * 0.38), Math.max(8.6, span * 0.5)],
         fov: 42,
         near: 0.1,
-        far: Math.max(60, span * 4),
+        far: Math.max(80, span * 5),
       }}
-      gl={{ antialias: true }}
+      gl={{ antialias: false, powerPreference: "high-performance" }}
       style={{ width: "100%", height: "100%", touchAction: "none" }}
-      onCreated={({ gl }) => {
-        gl.shadowMap.type = PCFSoftShadowMap;
-      }}
     >
       <Scene {...props} />
     </Canvas>

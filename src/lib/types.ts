@@ -9,6 +9,16 @@ export type Issue = {
   publishedAt: string;
 };
 
+export type Fundamentals = {
+  marketCap?: number | null;
+  per?: number | null;
+  pbr?: number | null;
+  eps?: number | null;
+  bps?: number | null;
+  debtRatioPct?: number | null;
+  debtPerShare?: number | null;
+};
+
 export type Dividend = {
   expectedDate?: string;
   confirmedDate?: string;
@@ -38,6 +48,7 @@ export type Position = {
   plotIndex: number;
   dividend?: Dividend;
   issues?: Issue[];
+  fundamentals?: Fundamentals;
 };
 
 export type Garden = {
