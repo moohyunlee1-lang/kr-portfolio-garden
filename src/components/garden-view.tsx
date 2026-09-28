@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BootScreen } from "@/components/boot";
@@ -19,6 +19,8 @@ import {
   todayIso,
   weatherFromKospi,
 } from "@/lib/garden-math";
+import { POLL_MS, shouldPoll } from "@/lib/market/session";
+import type { LiveQuote } from "@/lib/market/types";
 import { KOSPI_RETURN_1D } from "@/lib/quotes";
 import { harvestKey } from "@/lib/storage";
 import { classifyTree } from "@/lib/tree-traits";
@@ -40,27 +42,69 @@ export function GardenView({
 }) {
   const router = useRouter();
   const reduced = useReducedMotion() ?? false;
-  const { ready, view, remember, createGarden, addSample, harvested, markHarvested } =
+  const { ready, view, remember, createGarden, addSample, harvested, markHarvested, applyLive } =
     useGardens();
   const garden = ready ? view(gardenId) : null;
   const [kospi1d, setKospi1d] = useState(KOSPI_RETURN_1D);
   const [kosdaq1d, setKosdaq1d] = useState(0);
   const weather = weatherFromKospi(kospi1d, kosdaq1d);
+  const tickerKey = (garden?.positions ?? []).map((position) => position.ticker).join(",");
+  const tickers = useMemo(
+    () => (tickerKey ? [...new Set(tickerKey.split(","))] : []),
+    [tickerKey],
+  );
 
   useEffect(() => {
     let cancelled = false;
-    fetch("/api/market")
-      .then((response) => response.json())
-      .then((data: { kospi?: number | null; kosdaq?: number | null }) => {
+    let first = true;
+
+    async function loadQuotes(codes: string[]) {
+      const live: LiveQuote[] = [];
+      for (let index = 0; index < codes.length; index += 20) {
+        const chunk = codes.slice(index, index + 20);
+        const response = await fetch(`/api/quotes?tickers=${chunk.join(",")}`);
+        if (!response.ok) continue;
+        const data = (await response.json()) as { quotes?: LiveQuote[] };
+        live.push(...(data.quotes ?? []));
+      }
+      if (!cancelled && live.length) applyLive(live);
+    }
+
+    async function tick() {
+      const hidden = typeof document !== "undefined" && document.hidden;
+      if (!first && !shouldPoll(new Date(), hidden)) return;
+      first = false;
+      try {
+        const response = await fetch("/api/market");
+        const data = (await response.json()) as { kospi?: number | null; kosdaq?: number | null };
         if (cancelled) return;
         if (typeof data.kospi === "number" && Number.isFinite(data.kospi)) setKospi1d(data.kospi);
         if (typeof data.kosdaq === "number" && Number.isFinite(data.kosdaq)) setKosdaq1d(data.kosdaq);
-      })
-      .catch(() => undefined);
+      } catch {
+        /* keep last */
+      }
+      if (cancelled) return;
+      if (tickers.length) {
+        try {
+          await loadQuotes(tickers);
+        } catch {
+          /* keep last */
+        }
+      }
+    }
+
+    void tick();
+    const id = window.setInterval(() => void tick(), POLL_MS);
+    const onVis = () => {
+      if (!document.hidden) void tick();
+    };
+    document.addEventListener("visibilitychange", onVis);
     return () => {
       cancelled = true;
+      window.clearInterval(id);
+      document.removeEventListener("visibilitychange", onVis);
     };
-  }, []);
+  }, [applyLive, tickers]);
 
   useEffect(() => {
     if (ready) remember(gardenId);

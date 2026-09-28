@@ -16,7 +16,9 @@ import {
   toStoredGarden,
   writeLastGardenId,
 } from "@/lib/garden-math";
-import { getQuote, quoteRecord } from "@/lib/quotes";
+import { applyLiveQuotes } from "@/lib/market/chain";
+import type { LiveQuote } from "@/lib/market/types";
+import { quoteRecord } from "@/lib/quotes";
 import {
   ensureEntry,
   loadHarvested,
@@ -45,6 +47,7 @@ type GardenContextValue = {
   addSample: () => string;
   plant: (gardenId: string, draft: PlantDraft) => { merged: boolean; positionId: string };
   markHarvested: (key: string) => void;
+  applyLive: (rows: LiveQuote[]) => void;
 };
 
 const GardenContext = createContext<GardenContextValue | null>(null);
@@ -62,7 +65,8 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
   const [harvested, setHarvested] = useState<string[]>([]);
   const [entryId, setEntryId] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
-  const quotes = useMemo(() => quoteRecord(), []);
+  const [live, setLive] = useState<LiveQuote[]>([]);
+  const quotes = useMemo(() => applyLiveQuotes(quoteRecord(), live), [live]);
 
   useEffect(() => {
     const entry = ensureEntry(localStorage);
@@ -134,9 +138,19 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
     return id;
   }, [gardens, persist, remember]);
 
+  const applyLive = useCallback((rows: LiveQuote[]) => {
+    setLive((current) => {
+      const map = new Map(current.map((row) => [row.ticker, row]));
+      for (const row of rows) {
+        if (row.lastPrice > 0) map.set(row.ticker, row);
+      }
+      return [...map.values()];
+    });
+  }, []);
+
   const plant = useCallback(
     (gardenId: string, draft: PlantDraft) => {
-      const quote = getQuote(draft.ticker);
+      const quote = quotes[draft.ticker.trim()];
       if (!quote) throw new Error("한국 상장 종목만 심을 수 있습니다");
       if (!(draft.quantity > 0)) throw new Error("수량은 0보다 커야 합니다");
       if (!(draft.avgCost > 0)) throw new Error("평단은 0보다 커야 합니다");
@@ -199,6 +213,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       addSample,
       plant,
       markHarvested,
+      applyLive,
     }),
     [
       ready,
@@ -212,6 +227,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       addSample,
       plant,
       markHarvested,
+      applyLive,
     ],
   );
 

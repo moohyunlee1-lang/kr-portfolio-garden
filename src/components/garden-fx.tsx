@@ -101,7 +101,15 @@ export function Thunder({ reduced }: { reduced: boolean }) {
   );
 }
 
-export function Flame({ effect, reduced = false }: { effect: RangeEffect; reduced?: boolean }) {
+export function Flame({
+  effect,
+  reduced = false,
+  y = 0.72,
+}: {
+  effect: RangeEffect;
+  reduced?: boolean;
+  y?: number;
+}) {
   const group = useRef<Group>(null);
   const color = effect.fireColor === "blue" ? "#7ec8ff" : "#ff6a22";
   const hot = effect.fireColor === "blue" ? "#d7f1ff" : "#ffd36a";
@@ -116,7 +124,7 @@ export function Flame({ effect, reduced = false }: { effect: RangeEffect; reduce
     group.current.scale.set(flicker, 0.92 + Math.sin(state.clock.elapsedTime * 7) * 0.1, flicker);
   });
   return (
-    <group ref={group} position={[0, 0.72, 0]} renderOrder={2}>
+    <group ref={group} position={[0, y, 0]} renderOrder={2}>
       <pointLight color={color} intensity={1.8 + effect.intensity * 2.4} distance={4.5} />
       <mesh position={[0, height * 0.32, 0]}>
         <coneGeometry args={[0.26 + effect.intensity * 0.18, height, 6]} />

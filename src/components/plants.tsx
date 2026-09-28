@@ -186,15 +186,36 @@ function Sprout({ color }: { color: string }) {
   );
 }
 
+function stageScaleOf(stage: GrowthStage): number {
+  if (stage === "sapling") return 0.78;
+  if (stage === "lush") return 1.08;
+  return 1;
+}
+
 function StageShape({ stage, traits }: { stage: GrowthStage; traits: TreeTraits }) {
   if (stage === "seed") return <Seed />;
   if (stage === "sprout") return <Sprout color={palette(traits).leaf} />;
-  const stageScale = stage === "sapling" ? 0.78 : stage === "lush" ? 1.08 : 1;
   return (
-    <group scale={stageScale}>
+    <group scale={stageScaleOf(stage)}>
       <TraitTree traits={traits} />
     </group>
   );
+}
+
+/** Local Y of the crown, slightly inside so fire is not a hat. Matches StageShape scale. */
+export function canopyPeakY(traits: TreeTraits, stage: GrowthStage): number {
+  if (stage === "seed") return 0.16;
+  if (stage === "sprout") return 0.32;
+  let peak = 1.16;
+  if (traits.size === "small") {
+    peak = 0.44;
+  } else if (traits.size === "large") {
+    const lastY = traits.foliage === "sparse" ? 1.32 : traits.foliage === "medium" ? 1.58 : 1.78;
+    peak = lastY + 0.15;
+  } else {
+    peak = traits.foliage === "dense" ? 1.28 : 1.16;
+  }
+  return peak * stageScaleOf(stage);
 }
 
 function Fruits({

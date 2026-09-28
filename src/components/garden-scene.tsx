@@ -4,7 +4,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CanvasTexture, Object3D, SRGBColorSpace, type Group, type InstancedMesh } from "three";
-import { PlantBody } from "@/components/plants";
+import { PlantBody, canopyPeakY } from "@/components/plants";
 import { Butterflies, DarkAura, Flame, Thunder } from "@/components/garden-fx";
 import { CELL, layoutFromPositions, plotPosition, type PlotLayout } from "@/lib/plots";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
@@ -39,7 +39,38 @@ function useSceneFar(threshold: number) {
   return far;
 }
 
-function makeSignTexture(label: string): HTMLCanvasElement {
+const SIGN_FAMILY = 'Gaegu, "Apple SD Gothic Neo", sans-serif';
+const SIGN_FILL = "#3e342b";
+const SIGN_HALO = "#fff8ea";
+const SIGN_MAX_WIDTH = 430;
+const SIGN_MIN_SIZE = 40;
+
+function fitSignFont(ctx: CanvasRenderingContext2D, text: string, start: number, min = SIGN_MIN_SIZE) {
+  let size = start;
+  ctx.font = `700 ${size}px ${SIGN_FAMILY}`;
+  while (ctx.measureText(text).width > SIGN_MAX_WIDTH && size > min) {
+    size -= 2;
+    ctx.font = `700 ${size}px ${SIGN_FAMILY}`;
+  }
+  while (ctx.measureText(text).width > SIGN_MAX_WIDTH && size > 24) {
+    size -= 2;
+    ctx.font = `700 ${size}px ${SIGN_FAMILY}`;
+  }
+  return size;
+}
+
+function paintGlyph(ctx: CanvasRenderingContext2D, text: string, x: number, y: number, size: number) {
+  ctx.font = `700 ${size}px ${SIGN_FAMILY}`;
+  ctx.lineJoin = "round";
+  ctx.miterLimit = 2;
+  ctx.lineWidth = Math.max(6, Math.round(size * 0.14));
+  ctx.strokeStyle = SIGN_HALO;
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = SIGN_FILL;
+  ctx.fillText(text, x, y);
+}
+
+function makeSignTexture(name: string, ticker: string, twoLine: boolean): HTMLCanvasElement {
   const canvas = document.createElement("canvas");
   canvas.width = 512;
   canvas.height = 256;
@@ -52,17 +83,17 @@ function makeSignTexture(label: string): HTMLCanvasElement {
   ctx.lineWidth = 8;
   ctx.strokeStyle = "#d7b48a";
   ctx.stroke();
-  ctx.fillStyle = "#5c3b24";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  let size = 84;
-  const family = 'Gaegu, "Apple SD Gothic Neo", sans-serif';
-  ctx.font = `700 ${size}px ${family}`;
-  while (ctx.measureText(label).width > 430 && size > 32) {
-    size -= 4;
-    ctx.font = `700 ${size}px ${family}`;
+  if (twoLine) {
+    const nameSize = fitSignFont(ctx, name, 56);
+    const tickerSize = fitSignFont(ctx, ticker, Math.max(SIGN_MIN_SIZE, Math.min(44, nameSize - 8)));
+    paintGlyph(ctx, name, 256, 112, nameSize);
+    paintGlyph(ctx, ticker, 256, 162, tickerSize);
+  } else {
+    const size = fitSignFont(ctx, ticker, 84);
+    paintGlyph(ctx, ticker, 256, 134, size);
   }
-  ctx.fillText(label, 256, 134);
   return canvas;
 }
 
@@ -84,20 +115,24 @@ function roundRect(
 }
 
 function Signboard({
-  label,
+  name,
+  ticker,
+  far,
   fontReady,
   onOpen,
 }: {
-  label: string;
+  name: string;
+  ticker: string;
+  far: boolean;
   fontReady: boolean;
   onOpen: () => void;
 }) {
   const texture = useMemo(() => {
-    const map = new CanvasTexture(makeSignTexture(label));
+    const map = new CanvasTexture(makeSignTexture(name, ticker, !far));
     map.colorSpace = SRGBColorSpace;
     map.needsUpdate = true;
     return map;
-  }, [label, fontReady]);
+  }, [name, ticker, far, fontReady]);
 
   useEffect(() => () => texture.dispose(), [texture]);
 
@@ -267,7 +302,13 @@ function GardenPlant({
   return (
     <group position={plotPosition(plant.plotIndex, layout.cols, layout.rows)}>
       <PlotBed highlight={plant.highlight} onClick={() => onOpen(plant.id)} />
-      <Signboard label={far ? plant.ticker : plant.name} fontReady={fontReady} onOpen={() => onOpen(plant.id)} />
+      <Signboard
+        name={plant.name}
+        ticker={plant.ticker}
+        far={far}
+        fontReady={fontReady}
+        onOpen={() => onOpen(plant.id)}
+      />
       <group
         scale={plant.scale * 1.35}
         position={[0, 0.24, 0]}
@@ -306,7 +347,11 @@ function GardenPlant({
         )}
       </group>
       {plant.rangeEffect.kind === "fire" && (
-        <Flame effect={plant.rangeEffect} reduced={reduced} />
+        <Flame
+          effect={plant.rangeEffect}
+          reduced={reduced}
+          y={0.24 + plant.scale * 1.35 * canopyPeakY(plant.traits, plant.stage)}
+        />
       )}
       {plant.rangeEffect.kind === "aura" && (
         <DarkAura intensity={plant.rangeEffect.intensity} reduced={reduced} />
