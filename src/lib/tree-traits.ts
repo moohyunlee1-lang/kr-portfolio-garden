@@ -43,14 +43,14 @@ export const FOLIAGE_LABEL: Record<FoliageDensity, string> = {
   dense: "잎 많음",
 };
 
-export function classifyTree(input: {
+export function classifyTree(input?: {
   marketCap?: number | null;
   eps?: number | null;
   debtRatioPct?: number | null;
-}): TreeTraits {
-  const size = sizeFromCap(input.marketCap);
-  const tone: EarningsTone = typeof input.eps === "number" && input.eps < 0 ? "dark" : "bright";
-  const foliage = foliageFromDebt(input.debtRatioPct);
+} | null): TreeTraits {
+  const size = sizeFromCap(input?.marketCap);
+  const tone: EarningsTone = typeof input?.eps === "number" && input.eps < 0 ? "dark" : "bright";
+  const foliage = foliageFromDebt(input?.debtRatioPct);
   return {
     size,
     tone,
