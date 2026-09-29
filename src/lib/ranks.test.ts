@@ -35,6 +35,10 @@ function garden(id: string, name: string, positions: Position[]): Garden {
 }
 
 describe("periodReturnPct", () => {
+  it("uses daily change for the day period", () => {
+    expect(periodReturnPct(position({ changePct: -1.5 }), "day")).toBe(-1.5);
+  });
+
   it("uses daily change for the week period", () => {
     expect(periodReturnPct(position({ changePct: -1.5 }), "week")).toBe(-1.5);
   });
@@ -60,6 +64,14 @@ describe("periodReturnPct", () => {
 });
 
 describe("gardenPeriodReturnPct", () => {
+  it("value-weights daily changes for the day", () => {
+    const rows = [
+      position({ id: "a", lastPrice: 110, quantity: 10, changePct: 2, marketValue: 1100 }),
+      position({ id: "b", lastPrice: 80, quantity: 10, changePct: -10, marketValue: 800 }),
+    ];
+    expect(gardenPeriodReturnPct(rows, "day")).toBeCloseTo((1100 * 2 + 800 * -10) / 1900);
+  });
+
   it("value-weights daily changes for the week", () => {
     const rows = [
       position({ id: "a", lastPrice: 110, quantity: 10, changePct: 2, marketValue: 1100 }),

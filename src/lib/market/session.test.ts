@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { inKrxHours, shouldPoll } from "./session";
+import { inKrxHours, RANK_POLL_MS, shouldPoll } from "./session";
 
 function kst(iso: string): Date {
   return new Date(iso);
@@ -30,5 +30,11 @@ describe("shouldPoll", () => {
 
   it("polls when visible during the session", () => {
     expect(shouldPoll(kst("2026-09-29T01:00:00.000Z"), false)).toBe(true);
+  });
+});
+
+describe("RANK_POLL_MS", () => {
+  it("is ten minutes", () => {
+    expect(RANK_POLL_MS).toBe(10 * 60 * 1000);
   });
 });

@@ -28,4 +28,5 @@ export function shouldPoll(now: Date, hidden: boolean): boolean {
 }
 
 export const POLL_MS = 60_000;
+export const RANK_POLL_MS = 10 * 60 * 1000;
 export const QUOTE_BATCH_LIMIT = 80;

@@ -1,19 +1,79 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { BootScreen } from "@/components/boot";
 import { useGardens } from "@/components/garden-context";
 import { formatSignedPct } from "@/lib/format";
+import type { LiveQuote } from "@/lib/market/types";
+import { QUOTE_BATCH_LIMIT, RANK_POLL_MS, shouldPoll } from "@/lib/market/session";
 import { RANK_PERIODS, rankGardens, rankTrees, type RankPeriod } from "@/lib/ranks";
 
 type Scope = "garden" | "tree";
 
 export function RankBoard() {
   const router = useRouter();
-  const { ready, gardens, view, entryId } = useGardens();
+  const { ready, gardens, view, entryId, applyLive } = useGardens();
   const [scope, setScope] = useState<Scope>("garden");
-  const [period, setPeriod] = useState<RankPeriod>("week");
+  const [period, setPeriod] = useState<RankPeriod>("day");
+  const [updatedAt, setUpdatedAt] = useState<Date | null>(null);
+
+  const tickers = useMemo(() => {
+    const seen = new Set<string>();
+    for (const garden of gardens) {
+      for (const position of garden.positions) seen.add(position.ticker);
+    }
+    return [...seen];
+  }, [gardens]);
+
+  useEffect(() => {
+    let cancelled = false;
+    let first = true;
+    let inFlight = false;
+
+    async function loadQuotes(codes: string[]) {
+      const live: LiveQuote[] = [];
+      for (let index = 0; index < codes.length; index += QUOTE_BATCH_LIMIT) {
+        if (cancelled) return;
+        const chunk = codes.slice(index, index + QUOTE_BATCH_LIMIT);
+        const response = await fetch(`/api/quotes?tickers=${chunk.join(",")}`);
+        if (!response.ok) continue;
+        const data = (await response.json()) as { quotes?: LiveQuote[] };
+        live.push(...(data.quotes ?? []));
+      }
+      if (!cancelled && live.length) {
+        applyLive(live);
+        setUpdatedAt(new Date());
+      }
+    }
+
+    async function tick() {
+      const hidden = typeof document !== "undefined" && document.hidden;
+      if (!first && !shouldPoll(new Date(), hidden)) return;
+      if (inFlight || !tickers.length) return;
+      first = false;
+      inFlight = true;
+      try {
+        await loadQuotes(tickers);
+      } catch {
+        /* keep last */
+      } finally {
+        inFlight = false;
+      }
+    }
+
+    void tick();
+    const id = window.setInterval(() => void tick(), RANK_POLL_MS);
+    const onVis = () => {
+      if (!document.hidden) void tick();
+    };
+    document.addEventListener("visibilitychange", onVis);
+    return () => {
+      cancelled = true;
+      window.clearInterval(id);
+      document.removeEventListener("visibilitychange", onVis);
+    };
+  }, [applyLive, tickers]);
 
   const materialized = useMemo(
     () =>
@@ -38,7 +98,10 @@ export function RankBoard() {
         <div>
           <p className="font-display text-xs tracking-wide text-[#8a7362]">그루밭</p>
           <h1 className="font-display text-4xl leading-none text-[#3e342b]">순위</h1>
-          <p className="mt-2 text-sm text-[#8a7362]">{hint}</p>
+          <p className="mt-2 text-sm text-[#8a7362]">
+            {hint}
+            {updatedAt ? ` · ${formatSeoulTime(updatedAt)} 갱신` : ""}
+          </p>
         </div>
         <button
           type="button"
@@ -57,7 +120,7 @@ export function RankBoard() {
           나무
         </Tab>
       </div>
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         {RANK_PERIODS.map((item) => (
           <Tab key={item.id} active={period === item.id} onClick={() => setPeriod(item.id)}>
             {item.label}
@@ -173,4 +236,13 @@ function pnlClass(value: number) {
 
 function Empty() {
   return <li className="rounded-[22px] bg-[#fffaf2] px-4 py-8 text-center text-sm text-[#8a7362]">순위 데이터가 없습니다.</li>;
+}
+
+function formatSeoulTime(date: Date) {
+  return new Intl.DateTimeFormat("ko-KR", {
+    timeZone: "Asia/Seoul",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).format(date);
 }

@@ -1,7 +1,7 @@
 import { marketValue, pnlPct } from "./garden-math";
 import type { Garden, Position, RangeCandle } from "./types";
 
-export type RankPeriod = "week" | "month" | "year";
+export type RankPeriod = "day" | "week" | "month" | "year";
 
 export type RankedGarden = {
   rank: number;
@@ -23,6 +23,7 @@ export type RankedTree = {
 };
 
 export const RANK_PERIODS: Array<{ id: RankPeriod; label: string; hint: string }> = [
+  { id: "day", label: "일간", hint: "전일 대비 · 10분마다" },
   { id: "week", label: "주간", hint: "전일 대비" },
   { id: "month", label: "월간", hint: "당월 시가 대비" },
   { id: "year", label: "연간", hint: "심은 평단 대비" },
@@ -41,7 +42,7 @@ export function monthReturnPct(range?: RangeCandle | null): number | null {
 }
 
 export function periodReturnPct(position: PeriodPosition, period: RankPeriod): number | null {
-  if (period === "week") {
+  if (period === "day" || period === "week") {
     return Number.isFinite(position.changePct) ? position.changePct : null;
   }
   if (period === "month") {
