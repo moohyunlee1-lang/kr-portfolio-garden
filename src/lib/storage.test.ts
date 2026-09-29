@@ -84,17 +84,17 @@ describe("dropGarden", () => {
     });
   });
 
-  it("marks value-chain ids as hidden", () => {
+  it("marks generated garden ids as hidden", () => {
     const result = dropGarden(
       [
         { id: "mine", name: "내 밭", positions: [] },
         { id: "vc_semiconductor-sobujang_01", name: "소부장", positions: [] },
+        { id: "cb_kospi", name: "코스피", positions: [] },
       ],
-      "vc_semiconductor-sobujang_01",
+      "cb_kospi",
     );
     expect(result?.hidden).toBe(true);
-    expect(result?.nextId).toBe("mine");
-    expect(result?.gardens.map((garden) => garden.id)).toEqual(["mine"]);
+    expect(result?.gardens.map((garden) => garden.id)).toEqual(["mine", "vc_semiconductor-sobujang_01"]);
   });
 
   it("refuses to drop the last garden", () => {

@@ -24,6 +24,7 @@ const SECTOR_ORDER = [
   "원전",
   "자동차",
   "화장품",
+  "전환사채",
 ];
 
 function gardenGroups(gardens: StoredGarden[]) {

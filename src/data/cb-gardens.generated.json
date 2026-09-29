@@ -1,0 +1,1177 @@
+[
+  {
+    "id": "cb_kospi",
+    "name": "코스피 · 전환사채",
+    "sectorName": "전환사채",
+    "positions": [
+      {
+        "id": "cb_kospi_003620",
+        "ticker": "003620",
+        "name": "KG모빌리티",
+        "sector": "전환사채",
+        "quantity": 2861,
+        "avgCost": 3495,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "cb_kospi_007460",
+        "ticker": "007460",
+        "name": "에이프로젠",
+        "sector": "전환사채",
+        "quantity": 14084,
+        "avgCost": 710,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "cb_kospi_357120",
+        "ticker": "357120",
+        "name": "코람코라이프인프라리츠",
+        "sector": "전환사채",
+        "quantity": 2267,
+        "avgCost": 4410,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "cb_kospi_229640",
+        "ticker": "229640",
+        "name": "LS에코에너지",
+        "sector": "전환사채",
+        "quantity": 279,
+        "avgCost": 35750,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "cb_kospi_109070",
+        "ticker": "109070",
+        "name": "주성코퍼레이션",
+        "sector": "전환사채",
+        "quantity": 2500,
+        "avgCost": 4000,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "cb_kospi_004140",
+        "ticker": "004140",
+        "name": "동방",
+        "sector": "전환사채",
+        "quantity": 3875,
+        "avgCost": 2580,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "cb_kospi_034730",
+        "ticker": "034730",
+        "name": "SK",
+        "sector": "전환사채",
+        "quantity": 38,
+        "avgCost": 259000,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "cb_kospi_003580",
+        "ticker": "003580",
+        "name": "HLB글로벌",
+        "sector": "전환사채",
+        "quantity": 4115,
+        "avgCost": 2430,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "cb_kospi_001360",
+        "ticker": "001360",
+        "name": "삼성제약",
+        "sector": "전환사채",
+        "quantity": 6451,
+        "avgCost": 1550,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "cb_kospi_006740",
+        "ticker": "006740",
+        "name": "블루산업개발",
+        "sector": "전환사채",
+        "quantity": 1079,
+        "avgCost": 9260,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "cb_kospi_031820",
+        "ticker": "031820",
+        "name": "아이티센씨티에스",
+        "sector": "전환사채",
+        "quantity": 1663,
+        "avgCost": 6010,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "cb_kospi_009190",
+        "ticker": "009190",
+        "name": "대양금속",
+        "sector": "전환사채",
+        "quantity": 7604,
+        "avgCost": 1315,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "cb_kospi_001210",
+        "ticker": "001210",
+        "name": "금호전기",
+        "sector": "전환사채",
+        "quantity": 3669,
+        "avgCost": 2725,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "cb_kospi_074610",
+        "ticker": "074610",
+        "name": "이엔플러스",
+        "sector": "전환사채",
+        "quantity": 1956,
+        "avgCost": 5110,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "cb_kospi_071950",
+        "ticker": "071950",
+        "name": "코아스",
+        "sector": "전환사채",
+        "quantity": 2958,
+        "avgCost": 3380,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "cb_kospi_006490",
+        "ticker": "006490",
+        "name": "프리티",
+        "sector": "전환사채",
+        "quantity": 2249,
+        "avgCost": 4446,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      }
+    ]
+  },
+  {
+    "id": "cb_kosdaq_01",
+    "name": "코스닥 · 발행 상위",
+    "sectorName": "전환사채",
+    "positions": [
+      {
+        "id": "cb_kosdaq_01_178320",
+        "ticker": "178320",
+        "name": "서진시스템",
+        "sector": "전환사채",
+        "quantity": 388,
+        "avgCost": 25750,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "cb_kosdaq_01_043260",
+        "ticker": "043260",
+        "name": "성호전자",
+        "sector": "전환사채",
+        "quantity": 925,
+        "avgCost": 10800,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "cb_kosdaq_01_131290",
+        "ticker": "131290",
+        "name": "티에스이",
+        "sector": "전환사채",
+        "quantity": 157,
+        "avgCost": 63400,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "cb_kosdaq_01_107640",
+        "ticker": "107640",
+        "name": "한중엔시에스",
+        "sector": "전환사채",
+        "quantity": 223,
+        "avgCost": 44650,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "cb_kosdaq_01_489460",
+        "ticker": "489460",
+        "name": "바이오비쥬",
+        "sector": "전환사채",
+        "quantity": 733,
+        "avgCost": 13630,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "cb_kosdaq_01_025980",
+        "ticker": "025980",
+        "name": "아난티",
+        "sector": "전환사채",
+        "quantity": 1196,
+        "avgCost": 8360,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "cb_kosdaq_01_376270",
+        "ticker": "376270",
+        "name": "HEM파마",
+        "sector": "전환사채",
+        "quantity": 212,
+        "avgCost": 47100,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "cb_kosdaq_01_318060",
+        "ticker": "318060",
+        "name": "그래피",
+        "sector": "전환사채",
+        "quantity": 353,
+        "avgCost": 28300,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "cb_kosdaq_01_163730",
+        "ticker": "163730",
+        "name": "핑거",
+        "sector": "전환사채",
+        "quantity": 976,
+        "avgCost": 10240,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "cb_kosdaq_01_473980",
+        "ticker": "473980",
+        "name": "노머스",
+        "sector": "전환사채",
+        "quantity": 340,
+        "avgCost": 29400,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "cb_kosdaq_01_032820",
+        "ticker": "032820",
+        "name": "우리기술",
+        "sector": "전환사채",
+        "quantity": 2677,
+        "avgCost": 3735,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "cb_kosdaq_01_448900",
+        "ticker": "448900",
+        "name": "한국피아이엠",
+        "sector": "전환사채",
+        "quantity": 193,
+        "avgCost": 51600,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "cb_kosdaq_01_028300",
+        "ticker": "028300",
+        "name": "HLB",
+        "sector": "전환사채",
+        "quantity": 189,
+        "avgCost": 52900,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "cb_kosdaq_01_224060",
+        "ticker": "224060",
+        "name": "더코디",
+        "sector": "전환사채",
+        "quantity": 4115,
+        "avgCost": 2430,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "cb_kosdaq_01_474650",
+        "ticker": "474650",
+        "name": "링크솔루션",
+        "sector": "전환사채",
+        "quantity": 180,
+        "avgCost": 55500,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "cb_kosdaq_01_453450",
+        "ticker": "453450",
+        "name": "그리드위즈",
+        "sector": "전환사채",
+        "quantity": 695,
+        "avgCost": 14370,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      },
+      {
+        "id": "cb_kosdaq_01_203650",
+        "ticker": "203650",
+        "name": "드림시큐리티",
+        "sector": "전환사채",
+        "quantity": 6006,
+        "avgCost": 1665,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 16
+      },
+      {
+        "id": "cb_kosdaq_01_126340",
+        "ticker": "126340",
+        "name": "비나텍",
+        "sector": "전환사채",
+        "quantity": 126,
+        "avgCost": 78900,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 17
+      },
+      {
+        "id": "cb_kosdaq_01_095190",
+        "ticker": "095190",
+        "name": "신화프리텍",
+        "sector": "전환사채",
+        "quantity": 4651,
+        "avgCost": 2150,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 18
+      },
+      {
+        "id": "cb_kosdaq_01_089140",
+        "ticker": "089140",
+        "name": "넥스턴앤롤코리아",
+        "sector": "전환사채",
+        "quantity": 4608,
+        "avgCost": 2170,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 19
+      },
+      {
+        "id": "cb_kosdaq_01_388790",
+        "ticker": "388790",
+        "name": "라이콤",
+        "sector": "전환사채",
+        "quantity": 3656,
+        "avgCost": 2735,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 20
+      },
+      {
+        "id": "cb_kosdaq_01_226340",
+        "ticker": "226340",
+        "name": "본느",
+        "sector": "전환사채",
+        "quantity": 2898,
+        "avgCost": 3450,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 21
+      },
+      {
+        "id": "cb_kosdaq_01_084850",
+        "ticker": "084850",
+        "name": "아이티엠반도체",
+        "sector": "전환사채",
+        "quantity": 1012,
+        "avgCost": 9880,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 22
+      },
+      {
+        "id": "cb_kosdaq_01_062970",
+        "ticker": "062970",
+        "name": "한국첨단소재",
+        "sector": "전환사채",
+        "quantity": 3388,
+        "avgCost": 2951,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 23
+      },
+      {
+        "id": "cb_kosdaq_01_083660",
+        "ticker": "083660",
+        "name": "CSA 코스믹",
+        "sector": "전환사채",
+        "quantity": 2733,
+        "avgCost": 3658,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 24
+      },
+      {
+        "id": "cb_kosdaq_01_007390",
+        "ticker": "007390",
+        "name": "네이처셀",
+        "sector": "전환사채",
+        "quantity": 450,
+        "avgCost": 22200,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 25
+      },
+      {
+        "id": "cb_kosdaq_01_069540",
+        "ticker": "069540",
+        "name": "빛과전자",
+        "sector": "전환사채",
+        "quantity": 16025,
+        "avgCost": 624,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 26
+      },
+      {
+        "id": "cb_kosdaq_01_431190",
+        "ticker": "431190",
+        "name": "케이쓰리아이",
+        "sector": "전환사채",
+        "quantity": 1915,
+        "avgCost": 5220,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 27
+      },
+      {
+        "id": "cb_kosdaq_01_373200",
+        "ticker": "373200",
+        "name": "엑스플러스",
+        "sector": "전환사채",
+        "quantity": 3478,
+        "avgCost": 2875,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 28
+      },
+      {
+        "id": "cb_kosdaq_01_297570",
+        "ticker": "297570",
+        "name": "아틀라스링크",
+        "sector": "전환사채",
+        "quantity": 1769,
+        "avgCost": 5650,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 29
+      },
+      {
+        "id": "cb_kosdaq_01_049120",
+        "ticker": "049120",
+        "name": "파인디앤씨",
+        "sector": "전환사채",
+        "quantity": 2980,
+        "avgCost": 3355,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 30
+      }
+    ]
+  },
+  {
+    "id": "cb_kosdaq_02",
+    "name": "코스닥 · 발행 중위",
+    "sectorName": "전환사채",
+    "positions": [
+      {
+        "id": "cb_kosdaq_02_227950",
+        "ticker": "227950",
+        "name": "엔투텍",
+        "sector": "전환사채",
+        "quantity": 5970,
+        "avgCost": 1675,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "cb_kosdaq_02_060900",
+        "ticker": "060900",
+        "name": "에이전트AI",
+        "sector": "전환사채",
+        "quantity": 727,
+        "avgCost": 13739,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "cb_kosdaq_02_052900",
+        "ticker": "052900",
+        "name": "KX하이텍",
+        "sector": "전환사채",
+        "quantity": 10729,
+        "avgCost": 932,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "cb_kosdaq_02_309930",
+        "ticker": "309930",
+        "name": "조이웍스앤코",
+        "sector": "전환사채",
+        "quantity": 3837,
+        "avgCost": 2606,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "cb_kosdaq_02_054620",
+        "ticker": "054620",
+        "name": "APS",
+        "sector": "전환사채",
+        "quantity": 2442,
+        "avgCost": 4095,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "cb_kosdaq_02_413630",
+        "ticker": "413630",
+        "name": "씨피시스템",
+        "sector": "전환사채",
+        "quantity": 2207,
+        "avgCost": 4530,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "cb_kosdaq_02_261780",
+        "ticker": "261780",
+        "name": "아리바이오LAB",
+        "sector": "전환사채",
+        "quantity": 3472,
+        "avgCost": 2880,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "cb_kosdaq_02_451220",
+        "ticker": "451220",
+        "name": "아이엠티",
+        "sector": "전환사채",
+        "quantity": 973,
+        "avgCost": 10270,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "cb_kosdaq_02_026150",
+        "ticker": "026150",
+        "name": "특수건설",
+        "sector": "전환사채",
+        "quantity": 1587,
+        "avgCost": 6300,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "cb_kosdaq_02_061250",
+        "ticker": "061250",
+        "name": "화일약품",
+        "sector": "전환사채",
+        "quantity": 858,
+        "avgCost": 11650,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "cb_kosdaq_02_351320",
+        "ticker": "351320",
+        "name": "넥사다이내믹스",
+        "sector": "전환사채",
+        "quantity": 8006,
+        "avgCost": 1249,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "cb_kosdaq_02_261200",
+        "ticker": "261200",
+        "name": "덴티스",
+        "sector": "전환사채",
+        "quantity": 2344,
+        "avgCost": 4265,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "cb_kosdaq_02_307180",
+        "ticker": "307180",
+        "name": "아이엘",
+        "sector": "전환사채",
+        "quantity": 3241,
+        "avgCost": 3085,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "cb_kosdaq_02_101000",
+        "ticker": "101000",
+        "name": "KS인더스트리",
+        "sector": "전환사채",
+        "quantity": 5675,
+        "avgCost": 1762,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "cb_kosdaq_02_340810",
+        "ticker": "340810",
+        "name": "시선AI",
+        "sector": "전환사채",
+        "quantity": 3466,
+        "avgCost": 2885,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "cb_kosdaq_02_038880",
+        "ticker": "038880",
+        "name": "아이에이",
+        "sector": "전환사채",
+        "quantity": 1250,
+        "avgCost": 8000,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      },
+      {
+        "id": "cb_kosdaq_02_046120",
+        "ticker": "046120",
+        "name": "오르비텍",
+        "sector": "전환사채",
+        "quantity": 2484,
+        "avgCost": 4025,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 16
+      },
+      {
+        "id": "cb_kosdaq_02_333050",
+        "ticker": "333050",
+        "name": "이노테나",
+        "sector": "전환사채",
+        "quantity": 1544,
+        "avgCost": 6474,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 17
+      },
+      {
+        "id": "cb_kosdaq_02_023440",
+        "ticker": "023440",
+        "name": "제이스코홀딩스",
+        "sector": "전환사채",
+        "quantity": 13966,
+        "avgCost": 716,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 18
+      },
+      {
+        "id": "cb_kosdaq_02_355390",
+        "ticker": "355390",
+        "name": "크라우드웍스",
+        "sector": "전환사채",
+        "quantity": 2898,
+        "avgCost": 3450,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 19
+      },
+      {
+        "id": "cb_kosdaq_02_357880",
+        "ticker": "357880",
+        "name": "SKAI",
+        "sector": "전환사채",
+        "quantity": 5561,
+        "avgCost": 1798,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 20
+      },
+      {
+        "id": "cb_kosdaq_02_340360",
+        "ticker": "340360",
+        "name": "다보링크",
+        "sector": "전환사채",
+        "quantity": 7142,
+        "avgCost": 1400,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 21
+      },
+      {
+        "id": "cb_kosdaq_02_179900",
+        "ticker": "179900",
+        "name": "유티아이",
+        "sector": "전환사채",
+        "quantity": 416,
+        "avgCost": 24000,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 22
+      },
+      {
+        "id": "cb_kosdaq_02_009730",
+        "ticker": "009730",
+        "name": "이렘",
+        "sector": "전환사채",
+        "quantity": 1642,
+        "avgCost": 6090,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 23
+      },
+      {
+        "id": "cb_kosdaq_02_223310",
+        "ticker": "223310",
+        "name": "사토시홀딩스",
+        "sector": "전환사채",
+        "quantity": 894,
+        "avgCost": 11179,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 24
+      },
+      {
+        "id": "cb_kosdaq_02_018700",
+        "ticker": "018700",
+        "name": "졸스",
+        "sector": "전환사채",
+        "quantity": 3637,
+        "avgCost": 2749,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 25
+      },
+      {
+        "id": "cb_kosdaq_02_294090",
+        "ticker": "294090",
+        "name": "이오플로우",
+        "sector": "전환사채",
+        "quantity": 6711,
+        "avgCost": 1490,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 26
+      },
+      {
+        "id": "cb_kosdaq_02_396270",
+        "ticker": "396270",
+        "name": "넥스트칩",
+        "sector": "전환사채",
+        "quantity": 2457,
+        "avgCost": 4070,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 27
+      },
+      {
+        "id": "cb_kosdaq_02_159910",
+        "ticker": "159910",
+        "name": "에코글로우",
+        "sector": "전환사채",
+        "quantity": 2732,
+        "avgCost": 3660,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 28
+      },
+      {
+        "id": "cb_kosdaq_02_229000",
+        "ticker": "229000",
+        "name": "젠큐릭스",
+        "sector": "전환사채",
+        "quantity": 6333,
+        "avgCost": 1579,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 29
+      },
+      {
+        "id": "cb_kosdaq_02_115450",
+        "ticker": "115450",
+        "name": "HLB테라퓨틱스",
+        "sector": "전환사채",
+        "quantity": 3386,
+        "avgCost": 2953,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 30
+      }
+    ]
+  },
+  {
+    "id": "cb_kosdaq_03",
+    "name": "코스닥 · 발행 하위",
+    "sectorName": "전환사채",
+    "positions": [
+      {
+        "id": "cb_kosdaq_03_123010",
+        "ticker": "123010",
+        "name": "MSDI",
+        "sector": "전환사채",
+        "quantity": 4384,
+        "avgCost": 2281,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "cb_kosdaq_03_026910",
+        "ticker": "026910",
+        "name": "광진실업",
+        "sector": "전환사채",
+        "quantity": 3710,
+        "avgCost": 2695,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "cb_kosdaq_03_286750",
+        "ticker": "286750",
+        "name": "나노실리칸첨단소재",
+        "sector": "전환사채",
+        "quantity": 2865,
+        "avgCost": 3490,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "cb_kosdaq_03_393970",
+        "ticker": "393970",
+        "name": "대진첨단소재",
+        "sector": "전환사채",
+        "quantity": 2257,
+        "avgCost": 4430,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "cb_kosdaq_03_412350",
+        "ticker": "412350",
+        "name": "레이저쎌",
+        "sector": "전환사채",
+        "quantity": 4866,
+        "avgCost": 2055,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "cb_kosdaq_03_141080",
+        "ticker": "141080",
+        "name": "리가켐바이오",
+        "sector": "전환사채",
+        "quantity": 58,
+        "avgCost": 170800,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "cb_kosdaq_03_142760",
+        "ticker": "142760",
+        "name": "모아라이프플러스",
+        "sector": "전환사채",
+        "quantity": 2941,
+        "avgCost": 3400,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "cb_kosdaq_03_086820",
+        "ticker": "086820",
+        "name": "바이오솔루션",
+        "sector": "전환사채",
+        "quantity": 1189,
+        "avgCost": 8410,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "cb_kosdaq_03_419540",
+        "ticker": "419540",
+        "name": "비스토스",
+        "sector": "전환사채",
+        "quantity": 1823,
+        "avgCost": 5485,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "cb_kosdaq_03_068940",
+        "ticker": "068940",
+        "name": "셀피글로벌",
+        "sector": "전환사채",
+        "quantity": 12853,
+        "avgCost": 778,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "cb_kosdaq_03_258790",
+        "ticker": "258790",
+        "name": "소프트캠프",
+        "sector": "전환사채",
+        "quantity": 1358,
+        "avgCost": 7360,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "cb_kosdaq_03_115530",
+        "ticker": "115530",
+        "name": "씨엔플러스",
+        "sector": "전환사채",
+        "quantity": 2967,
+        "avgCost": 3370,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "cb_kosdaq_03_043100",
+        "ticker": "043100",
+        "name": "알파AI",
+        "sector": "전환사채",
+        "quantity": 5899,
+        "avgCost": 1695,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "cb_kosdaq_03_179530",
+        "ticker": "179530",
+        "name": "애드바이오텍",
+        "sector": "전환사채",
+        "quantity": 4662,
+        "avgCost": 2145,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "cb_kosdaq_03_270520",
+        "ticker": "270520",
+        "name": "앱튼",
+        "sector": "전환사채",
+        "quantity": 2762,
+        "avgCost": 3620,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "cb_kosdaq_03_317770",
+        "ticker": "317770",
+        "name": "엑스페릭스",
+        "sector": "전환사채",
+        "quantity": 3565,
+        "avgCost": 2805,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      },
+      {
+        "id": "cb_kosdaq_03_105550",
+        "ticker": "105550",
+        "name": "엣지파운드리",
+        "sector": "전환사채",
+        "quantity": 1289,
+        "avgCost": 7755,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 16
+      },
+      {
+        "id": "cb_kosdaq_03_083640",
+        "ticker": "083640",
+        "name": "인콘",
+        "sector": "전환사채",
+        "quantity": 1555,
+        "avgCost": 6430,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 17
+      },
+      {
+        "id": "cb_kosdaq_03_060230",
+        "ticker": "060230",
+        "name": "제이케이시냅스",
+        "sector": "전환사채",
+        "quantity": 3514,
+        "avgCost": 2845,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 18
+      },
+      {
+        "id": "cb_kosdaq_03_216080",
+        "ticker": "216080",
+        "name": "제테마",
+        "sector": "전환사채",
+        "quantity": 1605,
+        "avgCost": 6230,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 19
+      },
+      {
+        "id": "cb_kosdaq_03_051980",
+        "ticker": "051980",
+        "name": "중앙첨단소재",
+        "sector": "전환사채",
+        "quantity": 4048,
+        "avgCost": 2470,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 20
+      },
+      {
+        "id": "cb_kosdaq_03_210120",
+        "ticker": "210120",
+        "name": "캔버스엔",
+        "sector": "전환사채",
+        "quantity": 3906,
+        "avgCost": 2560,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 21
+      },
+      {
+        "id": "cb_kosdaq_03_093640",
+        "ticker": "093640",
+        "name": "케이알엠",
+        "sector": "전환사채",
+        "quantity": 2577,
+        "avgCost": 3880,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 22
+      },
+      {
+        "id": "cb_kosdaq_03_043710",
+        "ticker": "043710",
+        "name": "코스리거글로벌",
+        "sector": "전환사채",
+        "quantity": 2450,
+        "avgCost": 4080,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 23
+      },
+      {
+        "id": "cb_kosdaq_03_070300",
+        "ticker": "070300",
+        "name": "퀀텀레일",
+        "sector": "전환사채",
+        "quantity": 7256,
+        "avgCost": 1378,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 24
+      },
+      {
+        "id": "cb_kosdaq_03_256940",
+        "ticker": "256940",
+        "name": "킵스파마",
+        "sector": "전환사채",
+        "quantity": 867,
+        "avgCost": 11530,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 25
+      },
+      {
+        "id": "cb_kosdaq_03_033540",
+        "ticker": "033540",
+        "name": "파라텍",
+        "sector": "전환사채",
+        "quantity": 1800,
+        "avgCost": 5555,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 26
+      },
+      {
+        "id": "cb_kosdaq_03_900100",
+        "ticker": "900100",
+        "name": "파이온엑스",
+        "sector": "전환사채",
+        "quantity": 1724,
+        "avgCost": 5800,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 27
+      },
+      {
+        "id": "cb_kosdaq_03_271830",
+        "ticker": "271830",
+        "name": "팸텍",
+        "sector": "전환사채",
+        "quantity": 5586,
+        "avgCost": 1790,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 28
+      },
+      {
+        "id": "cb_kosdaq_03_276730",
+        "ticker": "276730",
+        "name": "한울앤제주",
+        "sector": "전환사채",
+        "quantity": 2973,
+        "avgCost": 3363,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 29
+      }
+    ]
+  },
+  {
+    "id": "cb_konex",
+    "name": "코넥스 · 전환사채",
+    "sectorName": "전환사채",
+    "positions": [
+      {
+        "id": "cb_konex_317860",
+        "ticker": "317860",
+        "name": "노드메이슨",
+        "sector": "전환사채",
+        "quantity": 2083,
+        "avgCost": 4800,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "cb_konex_199290",
+        "ticker": "199290",
+        "name": "바이오프로테크",
+        "sector": "전환사채",
+        "quantity": 23419,
+        "avgCost": 427,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "cb_konex_337840",
+        "ticker": "337840",
+        "name": "유엑스엔",
+        "sector": "전환사채",
+        "quantity": 1067,
+        "avgCost": 9370,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "cb_konex_215570",
+        "ticker": "215570",
+        "name": "크로넥스",
+        "sector": "전환사채",
+        "quantity": 9661,
+        "avgCost": 1035,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "cb_konex_180060",
+        "ticker": "180060",
+        "name": "탑선",
+        "sector": "전환사채",
+        "quantity": 1392,
+        "avgCost": 7180,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "cb_konex_296160",
+        "ticker": "296160",
+        "name": "프로젠",
+        "sector": "전환사채",
+        "quantity": 1326,
+        "avgCost": 7540,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  }
+]

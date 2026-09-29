@@ -37712,5 +37712,45 @@
     "lastPrice": 38750.0,
     "changePct": -1.65,
     "volume": 0
+  },
+  {
+    "ticker": "317860",
+    "name": "노드메이슨",
+    "sector": "기타",
+    "lastPrice": 4400,
+    "changePct": 0.0,
+    "volume": 0
+  },
+  {
+    "ticker": "199290",
+    "name": "바이오프로테크",
+    "sector": "기타",
+    "lastPrice": 349,
+    "changePct": -14.88,
+    "volume": 122
+  },
+  {
+    "ticker": "337840",
+    "name": "유엑스엔",
+    "sector": "기타",
+    "lastPrice": 6260,
+    "changePct": -0.48,
+    "volume": 242
+  },
+  {
+    "ticker": "215570",
+    "name": "크로넥스",
+    "sector": "기타",
+    "lastPrice": 600,
+    "changePct": 0.0,
+    "volume": 733
+  },
+  {
+    "ticker": "180060",
+    "name": "탑선",
+    "sector": "기타",
+    "lastPrice": 4360,
+    "changePct": -1.91,
+    "volume": 396
   }
 ]
