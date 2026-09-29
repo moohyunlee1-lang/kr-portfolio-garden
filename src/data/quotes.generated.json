@@ -37752,5 +37752,27 @@
     "lastPrice": 4360,
     "changePct": -1.91,
     "volume": 396
+  },
+  {
+    "ticker": "011160",
+    "name": "두산건설",
+    "sector": "기타",
+    "lastPrice": 1240,
+    "changePct": 0.0,
+    "volume": 110127
+  },
+  {
+    "ticker": "102280",
+    "name": "쌍방울",
+    "sector": "기타",
+    "lastPrice": 450,
+    "changePct": -34.78,
+    "volume": 8737644,
+    "monthOpen": 1212.0,
+    "monthHigh": 1212.0,
+    "monthLow": 385.0,
+    "monthClose": 450.0,
+    "yearHigh": 2690.0,
+    "yearLow": 385.0
   }
 ]

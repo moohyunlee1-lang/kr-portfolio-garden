@@ -25,6 +25,16 @@
         "plotIndex": 1
       },
       {
+        "id": "cb_kospi_011160",
+        "ticker": "011160",
+        "name": "두산건설",
+        "sector": "전환사채",
+        "quantity": 8064,
+        "avgCost": 1240,
+        "purchasedAt": "2020-03-05",
+        "plotIndex": 2
+      },
+      {
         "id": "cb_kospi_357120",
         "ticker": "357120",
         "name": "코람코라이프인프라리츠",
@@ -32,7 +42,7 @@
         "quantity": 2267,
         "avgCost": 4410,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 2
+        "plotIndex": 3
       },
       {
         "id": "cb_kospi_229640",
@@ -42,7 +52,7 @@
         "quantity": 279,
         "avgCost": 35750,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 3
+        "plotIndex": 4
       },
       {
         "id": "cb_kospi_109070",
@@ -52,7 +62,7 @@
         "quantity": 2500,
         "avgCost": 4000,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 4
+        "plotIndex": 5
       },
       {
         "id": "cb_kospi_004140",
@@ -62,7 +72,7 @@
         "quantity": 3875,
         "avgCost": 2580,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 5
+        "plotIndex": 6
       },
       {
         "id": "cb_kospi_034730",
@@ -72,7 +82,7 @@
         "quantity": 38,
         "avgCost": 259000,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 6
+        "plotIndex": 7
       },
       {
         "id": "cb_kospi_003580",
@@ -82,7 +92,7 @@
         "quantity": 4115,
         "avgCost": 2430,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 7
+        "plotIndex": 8
       },
       {
         "id": "cb_kospi_001360",
@@ -92,7 +102,7 @@
         "quantity": 6451,
         "avgCost": 1550,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 8
+        "plotIndex": 9
       },
       {
         "id": "cb_kospi_006740",
@@ -102,7 +112,7 @@
         "quantity": 1079,
         "avgCost": 9260,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 9
+        "plotIndex": 10
       },
       {
         "id": "cb_kospi_031820",
@@ -112,7 +122,7 @@
         "quantity": 1663,
         "avgCost": 6010,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 10
+        "plotIndex": 11
       },
       {
         "id": "cb_kospi_009190",
@@ -122,7 +132,7 @@
         "quantity": 7604,
         "avgCost": 1315,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 11
+        "plotIndex": 12
       },
       {
         "id": "cb_kospi_001210",
@@ -132,7 +142,17 @@
         "quantity": 3669,
         "avgCost": 2725,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 12
+        "plotIndex": 13
+      },
+      {
+        "id": "cb_kospi_102280",
+        "ticker": "102280",
+        "name": "쌍방울",
+        "sector": "전환사채",
+        "quantity": 22222,
+        "avgCost": 450,
+        "purchasedAt": "2025-11-27",
+        "plotIndex": 14
       },
       {
         "id": "cb_kospi_074610",
@@ -142,7 +162,7 @@
         "quantity": 1956,
         "avgCost": 5110,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 13
+        "plotIndex": 15
       },
       {
         "id": "cb_kospi_071950",
@@ -152,7 +172,7 @@
         "quantity": 2958,
         "avgCost": 3380,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 14
+        "plotIndex": 16
       },
       {
         "id": "cb_kospi_006490",
@@ -162,7 +182,7 @@
         "quantity": 2249,
         "avgCost": 4446,
         "purchasedAt": "2026-01-02",
-        "plotIndex": 15
+        "plotIndex": 17
       }
     ]
   },

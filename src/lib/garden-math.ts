@@ -402,6 +402,37 @@ export function todayIso(now = new Date()): string {
   return `${year}-${month}-${day}`;
 }
 
+export type GardenHome = {
+  id: string;
+  name: string;
+  group?: string;
+  positionId: string;
+};
+
+export function gardensHoldingTicker(
+  gardens: Array<{
+    id: string;
+    name: string;
+    group?: string;
+    positions: Array<{ id: string; ticker: string }>;
+  }>,
+  ticker: string,
+): GardenHome[] {
+  const code = ticker.trim();
+  const homes: GardenHome[] = [];
+  for (const garden of gardens) {
+    const position = garden.positions.find((item) => item.ticker === code);
+    if (!position) continue;
+    homes.push({
+      id: garden.id,
+      name: garden.name,
+      group: garden.group,
+      positionId: position.id,
+    });
+  }
+  return homes;
+}
+
 export function firstFreePlot(
   positions: Array<{ plotIndex: number }>,
   preferred?: number,

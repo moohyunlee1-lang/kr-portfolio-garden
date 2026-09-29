@@ -1,0 +1,47 @@
+{
+  "gardens": [
+    {
+      "id": "cb_kospi",
+      "name": "코스피 · 전환사채",
+      "plants": 18
+    },
+    {
+      "id": "cb_kosdaq_01",
+      "name": "코스닥 · 발행 상위",
+      "plants": 31
+    },
+    {
+      "id": "cb_kosdaq_02",
+      "name": "코스닥 · 발행 중위",
+      "plants": 31
+    },
+    {
+      "id": "cb_kosdaq_03",
+      "name": "코스닥 · 발행 하위",
+      "plants": 30
+    },
+    {
+      "id": "cb_konex",
+      "name": "코넥스 · 전환사채",
+      "plants": 6
+    }
+  ],
+  "planted": 116,
+  "skipped": [],
+  "quotes_added": 2,
+  "failed": [],
+  "lastTape": [
+    {
+      "ticker": "011160",
+      "name": "두산건설",
+      "lastDate": "2020-03-05",
+      "lastPrice": 1240
+    },
+    {
+      "ticker": "102280",
+      "name": "쌍방울",
+      "lastDate": "2025-11-27",
+      "lastPrice": 450
+    }
+  ]
+}

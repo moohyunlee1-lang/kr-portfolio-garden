@@ -4,7 +4,8 @@
 KOSPI and KONEX are one garden each. KOSDAQ is three equal-count bands
 ranked by structured face amount (unknown amount sinks to the lowest band).
 Quantity is floor(10_000_000 / first 2026 session close). Names with no
-quote are omitted.
+2026 bar use the last traded close (not an invented price) and that
+session as the seed date. Names with no quote at all are omitted.
 """
 
 from __future__ import annotations
@@ -58,11 +59,15 @@ def parse_naver_rows(raw: bytes) -> list[dict]:
 
 
 def fetch_naver(ticker: str) -> list[dict]:
-    url = (
-        "https://fchart.stock.naver.com/siseJson.nhn"
-        f"?symbol={quote(ticker)}&requestType=1&startTime=20260102&endTime=20261231&timeframe=day"
-    )
-    return parse_naver_rows(fetch(url))
+    for start in ("20260102", "20190101"):
+        url = (
+            "https://fchart.stock.naver.com/siseJson.nhn"
+            f"?symbol={quote(ticker)}&requestType=1&startTime={start}&endTime=20261231&timeframe=day"
+        )
+        rows = parse_naver_rows(fetch(url))
+        if rows:
+            return rows
+    return []
 
 
 def yahoo_symbol(ticker: str, market: str) -> str:
@@ -193,13 +198,19 @@ def main() -> None:
             if not rows:
                 failed.append({"ticker": ticker, "error": source})
                 continue
-            first = next((item for item in rows if item["date"] >= SEED_DATE), rows[0])
-            last = rows[-1]
-            prev = rows[-2]["close"] if len(rows) >= 2 else last["close"]
+            first = next((item for item in rows if item["date"] >= SEED_DATE), None)
+            traded = [item for item in rows if item["close"] > 0 and item["volume"] > 0]
+            tape = traded or [item for item in rows if item["close"] > 0]
+            if not tape:
+                failed.append({"ticker": ticker, "error": source or "empty"})
+                continue
+            last = tape[-1]
+            seed = first if first and first["close"] > 0 else last
+            prev = tape[-2]["close"] if len(tape) >= 2 else last["close"]
             change = 0.0 if prev <= 0 else round((last["close"] - prev) / prev * 100, 2)
             prices[ticker] = {
-                "seedDate": first["date"],
-                "seedClose": first["close"],
+                "seedDate": seed["date"],
+                "seedClose": seed["close"],
                 "lastPrice": last["close"],
                 "changePct": change,
                 "volume": last["volume"],

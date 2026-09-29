@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { BootScreen } from "@/components/boot";
 import { useGardens } from "@/components/garden-context";
 import { formatSignedPct } from "@/lib/format";
+import { gardensHoldingTicker } from "@/lib/garden-math";
 import type { LiveQuote } from "@/lib/market/types";
 import { QUOTE_BATCH_LIMIT, RANK_POLL_MS, shouldPoll } from "@/lib/market/session";
 import { RANK_PERIODS, rankGardens, rankTrees, type RankPeriod } from "@/lib/ranks";
@@ -181,14 +182,17 @@ export function RankBoard() {
               <p className={`shrink-0 font-semibold tabular-nums ${pnlClass(row.returnPct)}`}>
                 {formatSignedPct(row.returnPct)}
               </p>
-              <div className="flex shrink-0 flex-col gap-1 sm:flex-row">
-                <button
-                  type="button"
-                  className="min-h-11 rounded-2xl bg-[#6f9a58] px-3 text-sm text-white"
-                  onClick={() => router.push(`/garden/${row.gardenId}?focus=${row.positionId}`)}
-                >
-                  입장
-                </button>
+              <div className="flex shrink-0 flex-col gap-1 sm:flex-row sm:flex-wrap sm:justify-end">
+                {enterHomes(gardens, row).map((home) => (
+                  <button
+                    key={home.id}
+                    type="button"
+                    className="min-h-11 rounded-2xl bg-[#6f9a58] px-3 text-sm text-white"
+                    onClick={() => router.push(`/garden/${home.id}?focus=${home.positionId}`)}
+                  >
+                    {home.id === row.gardenId ? "입장" : home.name}
+                  </button>
+                ))}
                 <button
                   type="button"
                   className="min-h-11 rounded-2xl bg-[#f3e4cc] px-3 text-sm text-[#5c4332]"
@@ -208,6 +212,14 @@ export function RankBoard() {
       </ol>
     </main>
   );
+}
+
+function enterHomes(
+  gardens: Parameters<typeof gardensHoldingTicker>[0],
+  row: { gardenId: string; gardenName: string; positionId: string; ticker: string },
+) {
+  const homes = gardensHoldingTicker(gardens, row.ticker);
+  return homes.length ? homes : [{ id: row.gardenId, name: row.gardenName, positionId: row.positionId }];
 }
 
 function Tab({

@@ -15,7 +15,10 @@ describe("cb issuance gardens", () => {
     ]);
     expect(gardens.every((garden) => garden.group === "전환사채")).toBe(true);
     expect(gardens.every((garden) => /^[\x00-\x7F]+$/.test(garden.id))).toBe(true);
-    expect(gardens.find((garden) => garden.id === "cb_kospi")?.positions.length).toBe(16);
+    expect(gardens.find((garden) => garden.id === "cb_kospi")?.positions.length).toBe(18);
+    expect(gardens.find((garden) => garden.id === "cb_kospi")?.positions.map((position) => position.ticker)).toEqual(
+      expect.arrayContaining(["011160", "102280"]),
+    );
     expect(gardens.filter((garden) => garden.id.startsWith("cb_kosdaq_")).map((garden) => garden.positions.length)).toEqual([
       31, 31, 30,
     ]);
@@ -27,7 +30,7 @@ describe("cb issuance gardens", () => {
       for (const position of garden.positions) {
         expect(position.quantity * position.avgCost).toBeLessThanOrEqual(10_000_000);
         expect(position.quantity * position.avgCost).toBeGreaterThan(10_000_000 - position.avgCost);
-        expect(position.purchasedAt >= "2026-01-02").toBe(true);
+        expect(/^\d{4}-\d{2}-\d{2}$/.test(position.purchasedAt)).toBe(true);
         expect(position.sector).toBe("전환사채");
       }
     }

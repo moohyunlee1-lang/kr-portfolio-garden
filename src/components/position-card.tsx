@@ -22,6 +22,7 @@ import {
   dividendPayDate,
   fruitSaturation,
   fruitTone,
+  gardensHoldingTicker,
   growthStage,
   isHarvestDue,
   todayIso,
@@ -40,9 +41,10 @@ export function PositionCard({
 }) {
   const router = useRouter();
   const reduced = useReducedMotion();
-  const { ready, view, harvested, markHarvested } = useGardens();
+  const { ready, view, gardens, harvested, markHarvested } = useGardens();
   const garden = ready ? view(gardenId) : null;
   const position = garden?.positions.find((item) => item.id === positionId);
+  const homes = position ? gardensHoldingTicker(gardens, position.ticker) : [];
   const [picking, setPicking] = useState(false);
   const payDate = dividendPayDate(position?.dividend);
   const harvestedNow = payDate ? harvested.includes(harvestKey(positionId, payDate)) : false;
@@ -96,6 +98,27 @@ export function PositionCard({
         <h1 className="font-display text-4xl">{position.name}</h1>
         <p className="text-[#8a7362]">{position.ticker}</p>
       </header>
+      <section className="rounded-[24px] bg-white p-4">
+        <h2 className="font-semibold">심긴 정원</h2>
+        <ul className="mt-3 flex flex-col gap-2">
+          {homes.map((home) => (
+            <li key={home.id} className="flex items-center gap-2">
+              <div className="min-w-0 flex-1">
+                <p className="truncate font-medium text-[#3e342b]">{home.name}</p>
+                {home.group ? <p className="truncate text-xs text-[#8a7362]">{home.group}</p> : null}
+              </div>
+              <button
+                type="button"
+                className="min-h-11 shrink-0 rounded-2xl bg-[#6f9a58] px-3 text-sm text-white"
+                onClick={() => router.push(`/garden/${home.id}?focus=${home.positionId}`)}
+              >
+                입장
+              </button>
+            </li>
+          ))}
+          {homes.length === 0 && <li className="text-sm text-[#8a7362]">심긴 정원이 없습니다.</li>}
+        </ul>
+      </section>
       <section className="grid grid-cols-3 gap-3 rounded-[24px] bg-[#fffaf2] p-4">
         <Field label="현재가" value={formatMoney(position.lastPrice)} />
         <Field label="등락률" value={formatSignedPct(position.changePct)} />

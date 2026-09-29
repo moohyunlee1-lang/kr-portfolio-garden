@@ -3,6 +3,7 @@ import {
   MIN_VISUAL_SCALE,
   fruitSaturation,
   fruitTone,
+  gardensHoldingTicker,
   growthStage,
   holdingDays,
   marketValue,
@@ -342,6 +343,43 @@ describe("sample garden criteria", () => {
     expect(viewed[2].scale).toBeLessThan(viewed[0].scale);
     expect(viewed[2].tone).toBe("muted");
     expect(fruitSaturation(rows[2].dividend)).toBeLessThan(0.6);
+  });
+});
+
+describe("gardensHoldingTicker", () => {
+  it("lists every garden that holds the ticker, with 입장 targets", () => {
+    expect(
+      gardensHoldingTicker(
+        [
+          {
+            id: "cb_kospi",
+            name: "코스피 · 전환사채",
+            group: "전환사채",
+            positions: [{ id: "cb_kospi_011160", ticker: "011160" }],
+          },
+          {
+            id: "mine",
+            name: "내 밭",
+            positions: [{ id: "pos_samsung", ticker: "005930" }],
+          },
+          {
+            id: "vc_other",
+            name: "다른 사슬",
+            group: "건설",
+            positions: [{ id: "vc_011160", ticker: "011160" }],
+          },
+        ],
+        "011160",
+      ),
+    ).toEqual([
+      {
+        id: "cb_kospi",
+        name: "코스피 · 전환사채",
+        group: "전환사채",
+        positionId: "cb_kospi_011160",
+      },
+      { id: "vc_other", name: "다른 사슬", group: "건설", positionId: "vc_011160" },
+    ]);
   });
 });
 
