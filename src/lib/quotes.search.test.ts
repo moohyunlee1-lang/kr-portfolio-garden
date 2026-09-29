@@ -16,4 +16,10 @@ describe("searchQuotes sectors", () => {
     expect(getQuote("006400")?.sector).toBe("2차전지");
     expect(getQuote("012450")?.sector).toBe("방산");
   });
+
+  it("finds KR-Market Brain names outside the nine chain gardens", () => {
+    const hits = searchQuotes("카카오뱅크");
+    expect(hits[0]?.ticker).toBe("323410");
+    expect(getQuote("323410")?.name).toBe("카카오뱅크");
+  });
 });
