@@ -23,7 +23,7 @@ export type RankedTree = {
 };
 
 export const RANK_PERIODS: Array<{ id: RankPeriod; label: string; hint: string }> = [
-  { id: "day", label: "일간", hint: "전일 대비 · 10분마다" },
+  { id: "day", label: "일간", hint: "당일 기준 · 10분마다" },
   { id: "week", label: "주간", hint: "전일 대비" },
   { id: "month", label: "월간", hint: "당월 시가 대비" },
   { id: "year", label: "연간", hint: "심은 평단 대비" },

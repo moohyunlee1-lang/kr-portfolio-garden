@@ -3,6 +3,7 @@ import type { Garden, Position } from "./types";
 import {
   gardenPeriodReturnPct,
   periodReturnPct,
+  RANK_PERIODS,
   rankGardens,
   rankTrees,
 } from "./ranks";
@@ -33,6 +34,12 @@ function position(overrides: Partial<Position> = {}): Position {
 function garden(id: string, name: string, positions: Position[]): Garden {
   return { id, name, positions };
 }
+
+describe("RANK_PERIODS", () => {
+  it("labels the day tab as today's session", () => {
+    expect(RANK_PERIODS[0]).toMatchObject({ id: "day", label: "일간", hint: "당일 기준 · 10분마다" });
+  });
+});
 
 describe("periodReturnPct", () => {
   it("uses daily change for the day period", () => {
