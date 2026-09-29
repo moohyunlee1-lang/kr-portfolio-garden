@@ -52,6 +52,7 @@ type GardenContextValue = {
   plant: (gardenId: string, draft: PlantDraft) => { merged: boolean; positionId: string };
   markHarvested: (key: string) => void;
   applyLive: (rows: LiveQuote[]) => void;
+  liveTickers: ReadonlySet<string>;
 };
 
 const GardenContext = createContext<GardenContextValue | null>(null);
@@ -71,6 +72,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
   const [live, setLive] = useState<LiveQuote[]>([]);
   const quotes = useMemo(() => applyLiveQuotes(quoteRecord(), live), [live]);
+  const liveTickers = useMemo(() => new Set(live.map((row) => row.ticker)), [live]);
 
   useEffect(() => {
     const entry = ensureEntry(localStorage);
@@ -234,6 +236,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       plant,
       markHarvested,
       applyLive,
+      liveTickers,
     }),
     [
       ready,
@@ -249,6 +252,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       plant,
       markHarvested,
       applyLive,
+      liveTickers,
     ],
   );
 

@@ -13,7 +13,7 @@ type Scope = "garden" | "tree";
 
 export function RankBoard() {
   const router = useRouter();
-  const { ready, gardens, view, entryId, applyLive } = useGardens();
+  const { ready, gardens, view, entryId, applyLive, liveTickers } = useGardens();
   const [scope, setScope] = useState<Scope>("garden");
   const [period, setPeriod] = useState<RankPeriod>("day");
   const [updatedAt, setUpdatedAt] = useState<Date | null>(null);
@@ -32,18 +32,17 @@ export function RankBoard() {
     let inFlight = false;
 
     async function loadQuotes(codes: string[]) {
-      const live: LiveQuote[] = [];
       for (let index = 0; index < codes.length; index += QUOTE_BATCH_LIMIT) {
         if (cancelled) return;
         const chunk = codes.slice(index, index + QUOTE_BATCH_LIMIT);
         const response = await fetch(`/api/quotes?tickers=${chunk.join(",")}`);
         if (!response.ok) continue;
         const data = (await response.json()) as { quotes?: LiveQuote[] };
-        live.push(...(data.quotes ?? []));
-      }
-      if (!cancelled && live.length) {
-        applyLive(live);
-        setUpdatedAt(new Date());
+        const rows = data.quotes ?? [];
+        if (!cancelled && rows.length) {
+          applyLive(rows);
+          setUpdatedAt(new Date());
+        }
       }
     }
 
@@ -86,9 +85,19 @@ export function RankBoard() {
     [gardens, view],
   );
 
-  const gardenRows = useMemo(() => rankGardens(materialized, period), [materialized, period]);
-  const treeRows = useMemo(() => rankTrees(materialized, period), [materialized, period]);
+  const gardenRows = useMemo(
+    () => rankGardens(materialized, period, liveTickers),
+    [materialized, period, liveTickers],
+  );
+  const treeRows = useMemo(
+    () => rankTrees(materialized, period, liveTickers),
+    [materialized, period, liveTickers],
+  );
   const hint = RANK_PERIODS.find((item) => item.id === period)?.hint ?? "";
+  const liveHint =
+    period === "day" && tickers.length
+      ? ` · 시세 ${liveTickers.size}/${tickers.length}`
+      : "";
 
   if (!ready) return <BootScreen />;
 
@@ -100,6 +109,7 @@ export function RankBoard() {
           <h1 className="font-display text-4xl leading-none text-[#3e342b]">순위</h1>
           <p className="mt-2 text-sm text-[#8a7362]">
             {hint}
+            {liveHint}
             {updatedAt ? ` · ${formatSeoulTime(updatedAt)} 갱신` : ""}
           </p>
         </div>
@@ -189,8 +199,12 @@ export function RankBoard() {
               </div>
             </li>
           ))}
-        {scope === "garden" && gardenRows.length === 0 && <Empty />}
-        {scope === "tree" && treeRows.length === 0 && <Empty />}
+        {scope === "garden" && gardenRows.length === 0 && (
+          <Empty waiting={period === "day" && liveTickers.size === 0} />
+        )}
+        {scope === "tree" && treeRows.length === 0 && (
+          <Empty waiting={period === "day" && liveTickers.size === 0} />
+        )}
       </ol>
     </main>
   );
@@ -234,8 +248,12 @@ function pnlClass(value: number) {
   return "";
 }
 
-function Empty() {
-  return <li className="rounded-[22px] bg-[#fffaf2] px-4 py-8 text-center text-sm text-[#8a7362]">순위 데이터가 없습니다.</li>;
+function Empty({ waiting }: { waiting?: boolean }) {
+  return (
+    <li className="rounded-[22px] bg-[#fffaf2] px-4 py-8 text-center text-sm text-[#8a7362]">
+      {waiting ? "당일 시세를 불러오는 중입니다." : "순위 데이터가 없습니다."}
+    </li>
+  );
 }
 
 function formatSeoulTime(date: Date) {

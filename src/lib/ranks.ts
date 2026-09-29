@@ -31,14 +31,16 @@ export const RANK_PERIODS: Array<{ id: RankPeriod; label: string; hint: string }
 
 type PeriodPosition = Pick<
   Position,
-  "changePct" | "lastPrice" | "avgCost" | "quantity" | "marketValue" | "unrealizedPnlAmt"
+  "ticker" | "changePct" | "lastPrice" | "avgCost" | "quantity" | "marketValue" | "unrealizedPnlAmt"
 > & { range?: RangeCandle | null };
 
-export function monthReturnPct(range?: RangeCandle | null): number | null {
-  if (!range || !(range.open > 0) || !Number.isFinite(range.open) || !Number.isFinite(range.close)) {
+export function monthReturnPct(range?: RangeCandle | null, lastPrice?: number): number | null {
+  if (!range || !(range.open > 0) || !Number.isFinite(range.open)) {
     return null;
   }
-  return ((range.close - range.open) / range.open) * 100;
+  const close = lastPrice != null && lastPrice > 0 && Number.isFinite(lastPrice) ? lastPrice : range.close;
+  if (!Number.isFinite(close)) return null;
+  return ((close - range.open) / range.open) * 100;
 }
 
 export function periodReturnPct(position: PeriodPosition, period: RankPeriod): number | null {
@@ -46,7 +48,7 @@ export function periodReturnPct(position: PeriodPosition, period: RankPeriod): n
     return Number.isFinite(position.changePct) ? position.changePct : null;
   }
   if (period === "month") {
-    return monthReturnPct(position.range);
+    return monthReturnPct(position.range, position.lastPrice);
   }
   if (!(position.avgCost > 0) || !Number.isFinite(position.lastPrice)) return null;
   return pnlPct(position.lastPrice, position.avgCost);
@@ -90,10 +92,12 @@ export function gardenPeriodReturnPct(
 export function rankGardens(
   gardens: Array<Pick<Garden, "id" | "name"> & { group?: string; positions: PeriodPosition[] }>,
   period: RankPeriod,
+  liveTickers?: ReadonlySet<string>,
 ): RankedGarden[] {
   const scored = gardens
     .map((garden) => {
-      const returnPct = gardenPeriodReturnPct(garden.positions, period);
+      const positions = positionsForPeriod(garden.positions, period, liveTickers);
+      const returnPct = gardenPeriodReturnPct(positions, period);
       if (returnPct == null) return null;
       return {
         id: garden.id,
@@ -110,10 +114,11 @@ export function rankGardens(
 export function rankTrees(
   gardens: Array<Pick<Garden, "id" | "name"> & { positions: Position[] }>,
   period: RankPeriod,
+  liveTickers?: ReadonlySet<string>,
 ): RankedTree[] {
   const scored: Array<Omit<RankedTree, "rank">> = [];
   for (const garden of gardens) {
-    for (const position of garden.positions) {
+    for (const position of positionsForPeriod(garden.positions, period, liveTickers)) {
       const returnPct = periodReturnPct(position, period);
       if (returnPct == null) continue;
       scored.push({
@@ -131,6 +136,16 @@ export function rankTrees(
     (row) => row.returnPct,
     (a, b) => a.name.localeCompare(b.name, "ko") || a.positionId.localeCompare(b.positionId),
   );
+}
+
+function positionsForPeriod<T extends { ticker: string }>(
+  positions: T[],
+  period: RankPeriod,
+  liveTickers?: ReadonlySet<string>,
+): T[] {
+  if (period !== "day") return positions;
+  if (!liveTickers) return [];
+  return positions.filter((position) => liveTickers.has(position.ticker));
 }
 
 function sameReturn(left: number, right: number): boolean {

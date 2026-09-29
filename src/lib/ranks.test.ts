@@ -50,15 +50,16 @@ describe("periodReturnPct", () => {
     expect(periodReturnPct(position({ changePct: -1.5 }), "week")).toBe(-1.5);
   });
 
-  it("uses month open to close for the month period", () => {
+  it("uses the live last price against month open when ranking the month", () => {
     expect(
       periodReturnPct(
         position({
+          lastPrice: 130,
           range: { open: 100, high: 120, low: 90, close: 110, yearHigh: 120, yearLow: 80 },
         }),
         "month",
       ),
-    ).toBe(10);
+    ).toBe(30);
   });
 
   it("returns null when the month candle is missing", () => {
@@ -100,7 +101,8 @@ describe("gardenPeriodReturnPct", () => {
       position({
         id: "a",
         quantity: 1,
-        range: { open: 100, high: 110, low: 90, close: 120, yearHigh: 120, yearLow: 80 },
+        lastPrice: 120,
+        range: { open: 100, high: 110, low: 90, close: 110, yearHigh: 120, yearLow: 80 },
       }),
       position({ id: "b", quantity: 99, range: undefined }),
     ];
@@ -164,5 +166,26 @@ describe("rankTrees", () => {
       positionId: "pos-a",
       returnPct: 3,
     });
+  });
+
+  it("ranks the day tab only after a live quote overlay", () => {
+    const gardens = [
+      garden("g1", "반도체 밭", [
+        position({ id: "pos-a", name: "삼성전자", ticker: "005930", changePct: -5.76 }),
+      ]),
+      garden("g2", "자동차 밭", [
+        position({
+          id: "pos-b",
+          gardenId: "g2",
+          name: "현대차",
+          ticker: "005380",
+          changePct: 8,
+        }),
+      ]),
+    ];
+    expect(rankTrees(gardens, "day", new Set())).toEqual([]);
+    const ranked = rankTrees(gardens, "day", new Set(["005930"]));
+    expect(ranked).toHaveLength(1);
+    expect(ranked[0]).toMatchObject({ ticker: "005930", returnPct: -5.76 });
   });
 });
