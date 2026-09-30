@@ -15,6 +15,8 @@ async function chart(symbol: string, fetchImpl: typeof fetch): Promise<Record<st
 }
 
 function quoteFromMeta(ticker: string, meta: Record<string, unknown>): LiveQuote | null {
+  const kind = String(meta.instrumentType ?? "EQUITY").toUpperCase();
+  if (kind && kind !== "EQUITY") return null;
   const lastPrice = asNumber(meta.regularMarketPrice);
   const prev = asNumber(meta.chartPreviousClose) ?? asNumber(meta.previousClose);
   const volume = asNumber(meta.regularMarketVolume) ?? 0;
