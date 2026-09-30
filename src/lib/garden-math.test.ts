@@ -5,6 +5,7 @@ import {
   fruitTone,
   gardensHoldingTicker,
   growthStage,
+  searchPlantedTrees,
   holdingDays,
   marketValue,
   plantIntoGarden,
@@ -380,6 +381,49 @@ describe("gardensHoldingTicker", () => {
       },
       { id: "vc_other", name: "다른 사슬", group: "건설", positionId: "vc_011160" },
     ]);
+  });
+});
+
+describe("searchPlantedTrees", () => {
+  const gardens = [
+    {
+      id: "vc_semi",
+      name: "반도체 소부장",
+      group: "반도체",
+      positions: [
+        { id: "p-samsung", ticker: "005930", name: "삼성전자" },
+        { id: "p-pharm", ticker: "001360", name: "삼성제약" },
+      ],
+    },
+    {
+      id: "cb_kospi",
+      name: "코스피 · 전환사채",
+      group: "전환사채",
+      positions: [{ id: "p-pharm-cb", ticker: "001360", name: "삼성제약" }],
+    },
+  ];
+
+  it("returns nothing until the query has text", () => {
+    expect(searchPlantedTrees(gardens, "  ")).toEqual([]);
+  });
+
+  it("ranks exact name first and only includes-matching names", () => {
+    const exact = searchPlantedTrees(gardens, "삼성전자");
+    expect(exact).toHaveLength(1);
+    expect(exact[0]).toMatchObject({
+      ticker: "005930",
+      name: "삼성전자",
+      gardenId: "vc_semi",
+      positionId: "p-samsung",
+    });
+    const pharm = searchPlantedTrees(gardens, "삼성제약");
+    expect(pharm.map((hit) => hit.gardenId)).toEqual(["vc_semi", "cb_kospi"]);
+  });
+
+  it("does not rank 삼성제약 ahead of 삼성전자 on a prefix query", () => {
+    const hits = searchPlantedTrees(gardens, "삼성");
+    expect(hits[0]?.ticker).toBe("005930");
+    expect(hits.filter((hit) => hit.ticker === "001360")).toHaveLength(2);
   });
 });
 

@@ -433,6 +433,63 @@ export function gardensHoldingTicker(
   return homes;
 }
 
+export function nameTickerRank(name: string, ticker: string, text: string): number {
+  if (ticker === text) return 0;
+  if (name === text) return 1;
+  if (name.startsWith(text)) return 2;
+  if (ticker.startsWith(text)) return 3;
+  if (name.includes(text) || ticker.includes(text)) return 4;
+  return 99;
+}
+
+export type PlantedTreeHit = {
+  gardenId: string;
+  gardenName: string;
+  group?: string;
+  positionId: string;
+  ticker: string;
+  name: string;
+};
+
+export function searchPlantedTrees(
+  gardens: Array<{
+    id: string;
+    name: string;
+    group?: string;
+    positions: Array<{ id: string; ticker: string; name: string }>;
+  }>,
+  query: string,
+  limit = 24,
+): PlantedTreeHit[] {
+  const text = query.trim();
+  if (!text) return [];
+  const hits: Array<PlantedTreeHit & { rank: number }> = [];
+  for (const garden of gardens) {
+    for (const position of garden.positions) {
+      const rank = nameTickerRank(position.name, position.ticker, text);
+      if (rank >= 99) continue;
+      hits.push({
+        gardenId: garden.id,
+        gardenName: garden.name,
+        group: garden.group,
+        positionId: position.id,
+        ticker: position.ticker,
+        name: position.name,
+        rank,
+      });
+    }
+  }
+  return hits
+    .sort(
+      (a, b) =>
+        a.rank - b.rank ||
+        a.name.localeCompare(b.name, "ko") ||
+        a.gardenName.localeCompare(b.gardenName, "ko"),
+    )
+    .slice(0, limit)
+    .map(({ rank: _rank, ...hit }) => hit);
+}
+
 export function firstFreePlot(
   positions: Array<{ plotIndex: number }>,
   preferred?: number,
