@@ -1,5 +1,5 @@
 import type { StoredGarden, StoredPosition } from "./types";
-import raw from "../data/cb-gardens.generated.json";
+import raw from "../data/group-gardens.generated.json";
 
 type RawGarden = {
   id: string;
@@ -8,7 +8,7 @@ type RawGarden = {
   positions: Array<Omit<StoredPosition, "gardenId"> & { gardenId?: string }>;
 };
 
-export function cbIssuanceGardens(): StoredGarden[] {
+export function groupGardens(): StoredGarden[] {
   return (raw as RawGarden[]).map((garden) => ({
     id: garden.id,
     name: garden.name,
@@ -27,14 +27,10 @@ export function cbIssuanceGardens(): StoredGarden[] {
   }));
 }
 
-export function mergeCbGardens(
+export function mergeGroupGardens(
   existing: StoredGarden[],
-  seeded: StoredGarden[] = cbIssuanceGardens(),
+  seeded: StoredGarden[] = groupGardens(),
 ): StoredGarden[] {
-  const kept = existing.filter((garden) => !garden.id.startsWith("cb_"));
+  const kept = existing.filter((garden) => !garden.id.startsWith("grp_"));
   return [...kept, ...seeded];
-}
-
-export function isGeneratedGarden(gardenId: string): boolean {
-  return gardenId.startsWith("vc_") || gardenId.startsWith("cb_") || gardenId.startsWith("grp_");
 }

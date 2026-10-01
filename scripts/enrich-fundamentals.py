@@ -10,7 +10,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from urllib.parse import quote
 
-OUT = Path("/Users/moolee/projects/kr-portfolio-garden/src/data/quotes.generated.json")
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "src" / "data" / "quotes.generated.json"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 CTX = ssl.create_default_context()
 

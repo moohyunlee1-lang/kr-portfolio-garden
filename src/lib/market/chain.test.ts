@@ -73,6 +73,10 @@ describe("parseTickerQuery", () => {
   it("keeps unique 6-digit codes up to the limit", () => {
     expect(parseTickerQuery("005930,000660,005930,nope", 2)).toEqual(["005930", "000660"]);
   });
+
+  it("accepts new 6-character KRX short codes", () => {
+    expect(parseTickerQuery("0126Z0,0120G0,bad")).toEqual(["0126Z0", "0120G0"]);
+  });
 });
 
 describe("applyLiveQuotes", () => {

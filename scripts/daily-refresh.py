@@ -86,6 +86,8 @@ def yahoo_quote(ticker: str) -> dict | None:
         if not meta:
             continue
         info = meta[0].get("meta") or {}
+        if str(info.get("instrumentType") or "").upper() != "EQUITY":
+            continue
         last = num(info.get("regularMarketPrice"))
         prev = num(info.get("chartPreviousClose")) or num(info.get("previousClose"))
         volume = num(info.get("regularMarketVolume")) or 0

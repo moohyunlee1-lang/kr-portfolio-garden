@@ -1,0 +1,507 @@
+{
+  "builtAt": "2026-10-01T00:05:57.428687+00:00",
+  "section": "대기업·금융그룹",
+  "seedKrw": 10000000,
+  "sourceGroupCount": 102,
+  "gardens": 94,
+  "positions": 417,
+  "uniqueTickers": 416,
+  "omittedGroups": [
+    "쿠팡",
+    "부영",
+    "두나무",
+    "한국지엠",
+    "대방건설",
+    "라인",
+    "BS",
+    "한국교직원공제회",
+    "고려에이치씨",
+    "빗썸",
+    "오케이금융그룹",
+    "대광",
+    "쉴더스",
+    "신영",
+    "토스",
+    "유코카캐리어스",
+    "희성",
+    "일진글로벌"
+  ],
+  "explicitSupplements": [
+    "KB금융",
+    "신한금융",
+    "하나금융",
+    "우리금융",
+    "BNK금융",
+    "iM금융",
+    "JB금융",
+    "메리츠금융",
+    "한국투자금융",
+    "IBK금융"
+  ],
+  "sources": {
+    "naver": "https://stock.naver.com/api/stockSecurity/rankings/v2/domestic/groups?sortType=changeRate&size=100&period=daily",
+    "kftc2026": "https://www.ftc.go.kr/www/selectBbsNttView.do?bordCd=3&key=12&nttSn=47410"
+  },
+  "groups": [
+    {
+      "name": "삼성",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 1
+    },
+    {
+      "name": "SK",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 2
+    },
+    {
+      "name": "현대자동차",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 3
+    },
+    {
+      "name": "LG",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 4
+    },
+    {
+      "name": "한화",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 5
+    },
+    {
+      "name": "롯데",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 6
+    },
+    {
+      "name": "포스코",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 7
+    },
+    {
+      "name": "HD현대",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 8
+    },
+    {
+      "name": "농협",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 9
+    },
+    {
+      "name": "GS",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 10
+    },
+    {
+      "name": "신세계",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 11
+    },
+    {
+      "name": "한진",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 12
+    },
+    {
+      "name": "KT",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 13
+    },
+    {
+      "name": "LS",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 14
+    },
+    {
+      "name": "CJ",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 15
+    },
+    {
+      "name": "카카오",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 16
+    },
+    {
+      "name": "HMM",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 17
+    },
+    {
+      "name": "두산",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 18
+    },
+    {
+      "name": "셀트리온",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 19
+    },
+    {
+      "name": "NAVER",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 20
+    },
+    {
+      "name": "중흥건설",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 21
+    },
+    {
+      "name": "S-Oil",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 23
+    },
+    {
+      "name": "DL",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 24
+    },
+    {
+      "name": "영풍",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 25
+    },
+    {
+      "name": "미래에셋",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 26
+    },
+    {
+      "name": "현대백화점",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 27
+    },
+    {
+      "name": "효성",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 28
+    },
+    {
+      "name": "하림",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 29
+    },
+    {
+      "name": "한국앤컴퍼니그룹",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 31
+    },
+    {
+      "name": "장금상선",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 32
+    },
+    {
+      "name": "호반",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 33
+    },
+    {
+      "name": "케이씨씨",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 34
+    },
+    {
+      "name": "HDC",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 35
+    },
+    {
+      "name": "SM",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 36
+    },
+    {
+      "name": "DB",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 37
+    },
+    {
+      "name": "KT&G",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 38
+    },
+    {
+      "name": "코오롱",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 39
+    },
+    {
+      "name": "넥슨",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 40
+    },
+    {
+      "name": "교보생명보험",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 42
+    },
+    {
+      "name": "LX",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 43
+    },
+    {
+      "name": "OCI",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 44
+    },
+    {
+      "name": "넷마블",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 45
+    },
+    {
+      "name": "세아",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 46
+    },
+    {
+      "name": "다우키움",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 47
+    },
+    {
+      "name": "태광",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 48
+    },
+    {
+      "name": "이랜드",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 50
+    },
+    {
+      "name": "에코프로",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 51
+    },
+    {
+      "name": "소노인터내셔널",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 52
+    },
+    {
+      "name": "한국항공우주산업",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 53
+    },
+    {
+      "name": "금호석유화학",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 55
+    },
+    {
+      "name": "태영",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 56
+    },
+    {
+      "name": "삼천리",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 57
+    },
+    {
+      "name": "동원",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 58
+    },
+    {
+      "name": "HL",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 59
+    },
+    {
+      "name": "KG",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 60
+    },
+    {
+      "name": "크래프톤",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 62
+    },
+    {
+      "name": "LIG",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 63
+    },
+    {
+      "name": "아모레퍼시픽",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 64
+    },
+    {
+      "name": "엠디엠",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 65
+    },
+    {
+      "name": "글로벌세아",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 66
+    },
+    {
+      "name": "동국제강",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 68
+    },
+    {
+      "name": "대신",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 69
+    },
+    {
+      "name": "애경",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 70
+    },
+    {
+      "name": "유진",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 71
+    },
+    {
+      "name": "삼양",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 72
+    },
+    {
+      "name": "중앙",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 73
+    },
+    {
+      "name": "BGF",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 77
+    },
+    {
+      "name": "웅진",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 78
+    },
+    {
+      "name": "반도홀딩스",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 79
+    },
+    {
+      "name": "현대해상",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 82
+    },
+    {
+      "name": "농심",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 83
+    },
+    {
+      "name": "DN",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 85
+    },
+    {
+      "name": "사조",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 86
+    },
+    {
+      "name": "파라다이스",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 87
+    },
+    {
+      "name": "하이트진로",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 88
+    },
+    {
+      "name": "하이브",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 89
+    },
+    {
+      "name": "대명화학",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 90
+    },
+    {
+      "name": "한솔",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 91
+    },
+    {
+      "name": "삼표",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 93
+    },
+    {
+      "name": "한국콜마",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 96
+    },
+    {
+      "name": "원익",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 97
+    },
+    {
+      "name": "오리온",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 99
+    },
+    {
+      "name": "QCP그룹(舊 큐로홀딩스)",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 100
+    },
+    {
+      "name": "IS지주",
+      "source": "KFTC 2026 + listed-market resolution",
+      "rank": 101
+    },
+    {
+      "name": "KB금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "신한금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "하나금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "우리금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "BNK금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "iM금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "JB금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "메리츠금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "한국투자금융",
+      "source": "financial holding"
+    },
+    {
+      "name": "IBK금융",
+      "source": "financial group"
+    }
+  ]
+}

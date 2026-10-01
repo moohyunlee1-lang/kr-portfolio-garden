@@ -5,8 +5,8 @@ export function parseTickerQuery(raw: string | null | undefined, limit = QUOTE_B
   const seen = new Set<string>();
   const out: string[] = [];
   for (const part of String(raw ?? "").split(/[,\s]+/)) {
-    const ticker = part.trim();
-    if (!/^\d{6}$/.test(ticker) || seen.has(ticker)) continue;
+    const ticker = part.trim().toUpperCase();
+    if (!/^[0-9A-Z]{6}$/.test(ticker) || seen.has(ticker)) continue;
     seen.add(ticker);
     out.push(ticker);
     if (out.length >= limit) break;

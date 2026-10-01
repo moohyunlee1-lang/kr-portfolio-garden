@@ -1,4 +1,4 @@
-import type { Dividend, Fundamentals, Issue, RangeCandle } from "./types";
+import type { Dividend, Fundamentals, Issue, PeriodBaselines, RangeCandle } from "./types";
 import { debtPerShare } from "./garden-math";
 import generatedQuotes from "../data/quotes.generated.json";
 import canonicalSectors from "../data/canonical-sectors.generated.json";
@@ -14,6 +14,7 @@ export type Quote = {
   issues?: Issue[];
   fundamentals?: Fundamentals;
   range?: RangeCandle;
+  period?: PeriodBaselines;
 };
 
 const samsungDividend: Dividend = {
@@ -192,6 +193,20 @@ function asRange(item: Record<string, unknown>): RangeCandle | undefined {
   return { open, high, low, close, yearHigh, yearLow };
 }
 
+function asPeriod(item: Record<string, unknown>): PeriodBaselines | undefined {
+  const weekOpen = item.weekOpen;
+  const monthOpen = item.monthOpen;
+  const yearOpen = item.yearOpen;
+  const valid = (value: unknown): value is number =>
+    typeof value === "number" && Number.isFinite(value) && value > 0;
+  if (!valid(weekOpen) && !valid(monthOpen) && !valid(yearOpen)) return undefined;
+  return {
+    weekOpen: valid(weekOpen) ? weekOpen : null,
+    monthOpen: valid(monthOpen) ? monthOpen : null,
+    yearOpen: valid(yearOpen) ? yearOpen : null,
+  };
+}
+
 function sectorOf(ticker: string, fallback: string): string {
   return (canonicalSectors as Record<string, string>)[ticker] ?? fallback;
 }
@@ -208,6 +223,7 @@ function mergeQuotes(): Quote[] {
       volume: item.volume,
       fundamentals: asFundamentals(item as unknown as Record<string, unknown>),
       range: asRange(item as unknown as Record<string, unknown>),
+      period: asPeriod(item as unknown as Record<string, unknown>),
     });
   }
   for (const item of HAND_QUOTES) {

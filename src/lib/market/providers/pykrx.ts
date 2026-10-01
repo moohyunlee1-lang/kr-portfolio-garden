@@ -58,7 +58,7 @@ export function createPykrxProvider(): QuoteProvider {
             const lastPrice = asNumber(row.lastPrice);
             const changePct = asNumber(row.changePct);
             const volume = asNumber(row.volume) ?? 0;
-            if (!/^\d{6}$/.test(ticker) || !(lastPrice && lastPrice > 0) || changePct == null) return null;
+            if (!/^[0-9A-Z]{6}$/.test(ticker) || !(lastPrice && lastPrice > 0) || changePct == null) return null;
             return { ticker, lastPrice, changePct, volume } satisfies LiveQuote;
           })
           .filter((row): row is LiveQuote => Boolean(row));

@@ -1,6 +1,7 @@
 import type { StoredGarden } from "./types";
 import { readLastGardenId, writeLastGardenId } from "./garden-math";
 import { mergeCbGardens, isGeneratedGarden } from "./cb-issuance-seed";
+import { mergeGroupGardens } from "./group-seed";
 import { mergeValueChainGardens } from "./valuechain-seed";
 
 export const GARDENS_KEY = "kr-garden:gardens";
@@ -87,7 +88,7 @@ export function ensureEntry(
       },
     ];
   }
-  const merged = mergeCbGardens(mergeValueChainGardens(gardens));
+  const merged = mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens)));
   if (merged !== gardens) {
     saveGardens(storage, merged);
     gardens = merged;
@@ -101,8 +102,11 @@ export function ensureEntry(
         positions: [],
       },
     ];
-    saveGardens(storage, mergeCbGardens(mergeValueChainGardens(gardens)));
-    gardens = applyHidden(mergeCbGardens(mergeValueChainGardens(gardens)), loadHidden(storage));
+    saveGardens(storage, mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens))));
+    gardens = applyHidden(
+      mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens))),
+      loadHidden(storage),
+    );
   }
 
   const last = readLastGardenId(storage);

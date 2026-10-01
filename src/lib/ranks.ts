@@ -1,5 +1,5 @@
-import { marketValue, pnlPct } from "./garden-math";
-import type { Garden, Position, RangeCandle } from "./types";
+import { marketValue } from "./garden-math";
+import type { Garden, PeriodBaselines, Position } from "./types";
 
 export type RankPeriod = "day" | "week" | "month" | "year";
 
@@ -24,63 +24,50 @@ export type RankedTree = {
 
 export const RANK_PERIODS: Array<{ id: RankPeriod; label: string; hint: string }> = [
   { id: "day", label: "일간", hint: "당일 기준 · 10분마다" },
-  { id: "week", label: "주간", hint: "전일 대비" },
-  { id: "month", label: "월간", hint: "당월 시가 대비" },
-  { id: "year", label: "연간", hint: "심은 평단 대비" },
+  { id: "week", label: "주간", hint: "이번 주 시가 대비" },
+  { id: "month", label: "월간", hint: "이번 달 시가 대비" },
+  { id: "year", label: "연간", hint: "연초 시가 대비" },
 ];
 
 type PeriodPosition = Pick<
   Position,
   "ticker" | "changePct" | "lastPrice" | "avgCost" | "quantity" | "marketValue" | "unrealizedPnlAmt"
-> & { range?: RangeCandle | null };
+> & { period?: PeriodBaselines | null };
 
-export function monthReturnPct(range?: RangeCandle | null, lastPrice?: number): number | null {
-  if (!range || !(range.open > 0) || !Number.isFinite(range.open)) {
-    return null;
-  }
-  const close = lastPrice != null && lastPrice > 0 && Number.isFinite(lastPrice) ? lastPrice : range.close;
-  if (!Number.isFinite(close)) return null;
-  return ((close - range.open) / range.open) * 100;
+function baselineFor(position: PeriodPosition, period: Exclude<RankPeriod, "day">): number | null {
+  const baseline =
+    period === "week"
+      ? position.period?.weekOpen
+      : period === "month"
+        ? position.period?.monthOpen
+        : position.period?.yearOpen;
+  return typeof baseline === "number" && baseline > 0 && Number.isFinite(baseline)
+    ? baseline
+    : null;
 }
 
 export function periodReturnPct(position: PeriodPosition, period: RankPeriod): number | null {
-  if (period === "day" || period === "week") {
+  if (period === "day") {
     return Number.isFinite(position.changePct) ? position.changePct : null;
   }
-  if (period === "month") {
-    return monthReturnPct(position.range, position.lastPrice);
-  }
-  if (!(position.avgCost > 0) || !Number.isFinite(position.lastPrice)) return null;
-  return pnlPct(position.lastPrice, position.avgCost);
+  const baseline = baselineFor(position, period);
+  if (baseline == null || !(position.lastPrice > 0) || !Number.isFinite(position.lastPrice)) return null;
+  return ((position.lastPrice - baseline) / baseline) * 100;
 }
 
 export function gardenPeriodReturnPct(
   positions: PeriodPosition[],
   period: RankPeriod,
 ): number | null {
-  if (period === "year") {
-    let cost = 0;
-    let pnl = 0;
-    for (const position of positions) {
-      const line = position.quantity * position.avgCost;
-      if (!(line > 0)) continue;
-      cost += line;
-      pnl +=
-        position.unrealizedPnlAmt ??
-        marketValue(position.quantity, position.lastPrice) - line;
-    }
-    return cost > 0 ? (pnl / cost) * 100 : null;
-  }
-
   let weighted = 0;
   let mass = 0;
   for (const position of positions) {
     const ret = periodReturnPct(position, period);
     if (ret == null) continue;
-    const weight =
-      period === "month"
-        ? position.quantity * (position.range?.open ?? 0)
-        : marketValue(position.quantity, position.lastPrice);
+    const baseline = period === "day" ? null : baselineFor(position, period);
+    const weight = period === "day"
+      ? marketValue(position.quantity, position.lastPrice)
+      : position.quantity * (baseline ?? 0);
     if (!(weight > 0)) continue;
     weighted += weight * ret;
     mass += weight;

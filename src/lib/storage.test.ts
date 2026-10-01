@@ -30,6 +30,7 @@ describe("ensureEntry", () => {
     expect(first.gardens[0].positions).toEqual([]);
     expect(first.gardens.length).toBeGreaterThan(130);
     expect(first.gardens.filter((garden) => garden.group === "반도체").length).toBe(10);
+    expect(first.gardens.filter((garden) => garden.group === "대기업·금융그룹").length).toBeGreaterThanOrEqual(80);
     expect(storage.getItem(LAST_GARDEN_KEY)).toBe("garden-empty");
 
     const second = ensureEntry(storage, () => "should-not-create");
@@ -90,11 +91,16 @@ describe("dropGarden", () => {
         { id: "mine", name: "내 밭", positions: [] },
         { id: "vc_semiconductor-sobujang_01", name: "소부장", positions: [] },
         { id: "cb_kospi", name: "코스피", positions: [] },
+        { id: "grp_naver_096", name: "삼성그룹", positions: [] },
       ],
-      "cb_kospi",
+      "grp_naver_096",
     );
     expect(result?.hidden).toBe(true);
-    expect(result?.gardens.map((garden) => garden.id)).toEqual(["mine", "vc_semiconductor-sobujang_01"]);
+    expect(result?.gardens.map((garden) => garden.id)).toEqual([
+      "mine",
+      "vc_semiconductor-sobujang_01",
+      "cb_kospi",
+    ]);
   });
 
   it("refuses to drop the last garden", () => {

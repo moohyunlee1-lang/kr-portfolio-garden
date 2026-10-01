@@ -1,0 +1,4830 @@
+[
+  {
+    "id": "grp_ftc_001",
+    "name": "삼성그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_001_016360",
+        "ticker": "016360",
+        "name": "삼성증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 131,
+        "avgCost": 75900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_001_029780",
+        "ticker": "029780",
+        "name": "삼성카드",
+        "sector": "대기업·금융그룹",
+        "quantity": 184,
+        "avgCost": 54300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_001_067280",
+        "ticker": "067280",
+        "name": "멀티캠퍼스",
+        "sector": "대기업·금융그룹",
+        "quantity": 321,
+        "avgCost": 31100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_001_012750",
+        "ticker": "012750",
+        "name": "에스원",
+        "sector": "대기업·금융그룹",
+        "quantity": 140,
+        "avgCost": 71000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_001_030000",
+        "ticker": "030000",
+        "name": "제일기획",
+        "sector": "대기업·금융그룹",
+        "quantity": 479,
+        "avgCost": 20850.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_001_008770",
+        "ticker": "008770",
+        "name": "호텔신라",
+        "sector": "대기업·금융그룹",
+        "quantity": 219,
+        "avgCost": 45550.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_001_028260",
+        "ticker": "028260",
+        "name": "삼성물산",
+        "sector": "대기업·금융그룹",
+        "quantity": 40,
+        "avgCost": 245000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_001_207940",
+        "ticker": "207940",
+        "name": "삼성바이오로직스",
+        "sector": "대기업·금융그룹",
+        "quantity": 5,
+        "avgCost": 1683000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_001_018260",
+        "ticker": "018260",
+        "name": "삼성에스디에스",
+        "sector": "대기업·금융그룹",
+        "quantity": 57,
+        "avgCost": 175100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_001_0126Z0",
+        "ticker": "0126Z0",
+        "name": "삼성에피스홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 13,
+        "avgCost": 715000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_001_009150",
+        "ticker": "009150",
+        "name": "삼성전기",
+        "sector": "대기업·금융그룹",
+        "quantity": 37,
+        "avgCost": 270000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_001_005930",
+        "ticker": "005930",
+        "name": "삼성전자",
+        "sector": "대기업·금융그룹",
+        "quantity": 77,
+        "avgCost": 128500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "grp_ftc_001_010140",
+        "ticker": "010140",
+        "name": "삼성중공업",
+        "sector": "대기업·금융그룹",
+        "quantity": 414,
+        "avgCost": 24150.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "grp_ftc_001_032830",
+        "ticker": "032830",
+        "name": "삼성생명",
+        "sector": "대기업·금융그룹",
+        "quantity": 63,
+        "avgCost": 156300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "grp_ftc_001_006400",
+        "ticker": "006400",
+        "name": "삼성SDI",
+        "sector": "대기업·금융그룹",
+        "quantity": 38,
+        "avgCost": 262500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "grp_ftc_001_000810",
+        "ticker": "000810",
+        "name": "삼성화재",
+        "sector": "대기업·금융그룹",
+        "quantity": 20,
+        "avgCost": 497000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      },
+      {
+        "id": "grp_ftc_001_028050",
+        "ticker": "028050",
+        "name": "삼성E&A",
+        "sector": "대기업·금융그룹",
+        "quantity": 430,
+        "avgCost": 23250.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 16
+      },
+      {
+        "id": "grp_ftc_001_448730",
+        "ticker": "448730",
+        "name": "삼성FN리츠",
+        "sector": "대기업·금융그룹",
+        "quantity": 2111,
+        "avgCost": 4735.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 17
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_002",
+    "name": "SK그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_002_034730",
+        "ticker": "034730",
+        "name": "SK",
+        "sector": "대기업·금융그룹",
+        "quantity": 38,
+        "avgCost": 259000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_002_018670",
+        "ticker": "018670",
+        "name": "SK가스",
+        "sector": "대기업·금융그룹",
+        "quantity": 45,
+        "avgCost": 219000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_002_001740",
+        "ticker": "001740",
+        "name": "SK네트웍스",
+        "sector": "대기업·금융그룹",
+        "quantity": 2252,
+        "avgCost": 4440.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_002_006120",
+        "ticker": "006120",
+        "name": "SK디스커버리",
+        "sector": "대기업·금융그룹",
+        "quantity": 165,
+        "avgCost": 60500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_002_210980",
+        "ticker": "210980",
+        "name": "SK디앤디",
+        "sector": "대기업·금융그룹",
+        "quantity": 1082,
+        "avgCost": 9239.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_002_302440",
+        "ticker": "302440",
+        "name": "SK바이오사이언스",
+        "sector": "대기업·금융그룹",
+        "quantity": 208,
+        "avgCost": 48000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_002_326030",
+        "ticker": "326030",
+        "name": "SK바이오팜",
+        "sector": "대기업·금융그룹",
+        "quantity": 81,
+        "avgCost": 122900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_002_402340",
+        "ticker": "402340",
+        "name": "SK스퀘어",
+        "sector": "대기업·금융그룹",
+        "quantity": 25,
+        "avgCost": 392000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_002_361610",
+        "ticker": "361610",
+        "name": "SK아이이테크놀로지",
+        "sector": "대기업·금융그룹",
+        "quantity": 414,
+        "avgCost": 24150.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_002_100090",
+        "ticker": "100090",
+        "name": "SK오션플랜트",
+        "sector": "대기업·금융그룹",
+        "quantity": 508,
+        "avgCost": 19660.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_002_096770",
+        "ticker": "096770",
+        "name": "SK이노베이션",
+        "sector": "대기업·금융그룹",
+        "quantity": 100,
+        "avgCost": 99900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_002_475150",
+        "ticker": "475150",
+        "name": "SK이터닉스",
+        "sector": "대기업·금융그룹",
+        "quantity": 490,
+        "avgCost": 20400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "grp_ftc_002_285130",
+        "ticker": "285130",
+        "name": "SK케미칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 151,
+        "avgCost": 66100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "grp_ftc_002_017670",
+        "ticker": "017670",
+        "name": "SK텔레콤",
+        "sector": "대기업·금융그룹",
+        "quantity": 187,
+        "avgCost": 53300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "grp_ftc_002_000660",
+        "ticker": "000660",
+        "name": "SK하이닉스",
+        "sector": "대기업·금융그룹",
+        "quantity": 14,
+        "avgCost": 677000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "grp_ftc_002_216050",
+        "ticker": "216050",
+        "name": "인크로스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1483,
+        "avgCost": 6740.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      },
+      {
+        "id": "grp_ftc_002_011790",
+        "ticker": "011790",
+        "name": "SKC",
+        "sector": "대기업·금융그룹",
+        "quantity": 103,
+        "avgCost": 96813.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 16
+      },
+      {
+        "id": "grp_ftc_002_095340",
+        "ticker": "095340",
+        "name": "ISC",
+        "sector": "대기업·금융그룹",
+        "quantity": 83,
+        "avgCost": 120000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 17
+      },
+      {
+        "id": "grp_ftc_002_395400",
+        "ticker": "395400",
+        "name": "SK리츠",
+        "sector": "대기업·금융그룹",
+        "quantity": 1697,
+        "avgCost": 5890.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 18
+      },
+      {
+        "id": "grp_ftc_002_001510",
+        "ticker": "001510",
+        "name": "SK증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 7757,
+        "avgCost": 1289.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 19
+      },
+      {
+        "id": "grp_ftc_002_039860",
+        "ticker": "039860",
+        "name": "나노엔텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 1655,
+        "avgCost": 6040.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 20
+      },
+      {
+        "id": "grp_ftc_002_032620",
+        "ticker": "032620",
+        "name": "GC메디아이",
+        "sector": "대기업·금융그룹",
+        "quantity": 2677,
+        "avgCost": 3735.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 21
+      },
+      {
+        "id": "grp_ftc_002_007820",
+        "ticker": "007820",
+        "name": "에스엠코어",
+        "sector": "대기업·금융그룹",
+        "quantity": 2171,
+        "avgCost": 4605.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 22
+      },
+      {
+        "id": "grp_ftc_002_060570",
+        "ticker": "060570",
+        "name": "드림어스컴퍼니",
+        "sector": "대기업·금융그룹",
+        "quantity": 1310,
+        "avgCost": 7630.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 23
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_003",
+    "name": "현대자동차그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_003_001500",
+        "ticker": "001500",
+        "name": "현대차증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 1265,
+        "avgCost": 7900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_003_214320",
+        "ticker": "214320",
+        "name": "이노션",
+        "sector": "대기업·금융그룹",
+        "quantity": 546,
+        "avgCost": 18300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_003_000270",
+        "ticker": "000270",
+        "name": "기아",
+        "sector": "대기업·금융그룹",
+        "quantity": 82,
+        "avgCost": 120600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_003_000720",
+        "ticker": "000720",
+        "name": "현대건설",
+        "sector": "대기업·금융그룹",
+        "quantity": 144,
+        "avgCost": 69000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_003_086280",
+        "ticker": "086280",
+        "name": "현대글로비스",
+        "sector": "대기업·금융그룹",
+        "quantity": 55,
+        "avgCost": 180900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_003_064350",
+        "ticker": "064350",
+        "name": "현대로템",
+        "sector": "대기업·금융그룹",
+        "quantity": 51,
+        "avgCost": 193400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_003_012330",
+        "ticker": "012330",
+        "name": "현대모비스",
+        "sector": "대기업·금융그룹",
+        "quantity": 27,
+        "avgCost": 369000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_003_004560",
+        "ticker": "004560",
+        "name": "현대비앤지스틸",
+        "sector": "대기업·금융그룹",
+        "quantity": 922,
+        "avgCost": 10840.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_003_307950",
+        "ticker": "307950",
+        "name": "현대오토에버",
+        "sector": "대기업·금융그룹",
+        "quantity": 30,
+        "avgCost": 331500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_003_011210",
+        "ticker": "011210",
+        "name": "현대위아",
+        "sector": "대기업·금융그룹",
+        "quantity": 126,
+        "avgCost": 79300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_003_004020",
+        "ticker": "004020",
+        "name": "현대제철",
+        "sector": "대기업·금융그룹",
+        "quantity": 326,
+        "avgCost": 30600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_003_005380",
+        "ticker": "005380",
+        "name": "현대차",
+        "sector": "대기업·금융그룹",
+        "quantity": 33,
+        "avgCost": 298500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_004",
+    "name": "LG그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_004_090360",
+        "ticker": "090360",
+        "name": "로보스타",
+        "sector": "대기업·금융그룹",
+        "quantity": 125,
+        "avgCost": 79800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_004_003550",
+        "ticker": "003550",
+        "name": "LG",
+        "sector": "대기업·금융그룹",
+        "quantity": 123,
+        "avgCost": 81000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_004_051900",
+        "ticker": "051900",
+        "name": "LG생활건강",
+        "sector": "대기업·금융그룹",
+        "quantity": 37,
+        "avgCost": 270000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_004_064400",
+        "ticker": "064400",
+        "name": "LG씨엔에스",
+        "sector": "대기업·금융그룹",
+        "quantity": 159,
+        "avgCost": 62600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_004_373220",
+        "ticker": "373220",
+        "name": "LG에너지솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 27,
+        "avgCost": 361000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_004_032640",
+        "ticker": "032640",
+        "name": "LG유플러스",
+        "sector": "대기업·금융그룹",
+        "quantity": 693,
+        "avgCost": 14430.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_004_037560",
+        "ticker": "037560",
+        "name": "LG헬로비전",
+        "sector": "대기업·금융그룹",
+        "quantity": 4264,
+        "avgCost": 2345.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_004_051910",
+        "ticker": "051910",
+        "name": "LG화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 31,
+        "avgCost": 322500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_004_034220",
+        "ticker": "034220",
+        "name": "LG디스플레이",
+        "sector": "대기업·금융그룹",
+        "quantity": 845,
+        "avgCost": 11830.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_004_011070",
+        "ticker": "011070",
+        "name": "LG이노텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 37,
+        "avgCost": 267500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_004_066570",
+        "ticker": "066570",
+        "name": "LG전자",
+        "sector": "대기업·금융그룹",
+        "quantity": 109,
+        "avgCost": 91400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_004_035000",
+        "ticker": "035000",
+        "name": "HS애드",
+        "sector": "대기업·금융그룹",
+        "quantity": 1173,
+        "avgCost": 8520.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_005",
+    "name": "한화그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_005_000370",
+        "ticker": "000370",
+        "name": "한화손해보험",
+        "sector": "대기업·금융그룹",
+        "quantity": 1818,
+        "avgCost": 5500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_005_003530",
+        "ticker": "003530",
+        "name": "한화투자증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 2083,
+        "avgCost": 4800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_005_000880",
+        "ticker": "000880",
+        "name": "한화",
+        "sector": "대기업·금융그룹",
+        "quantity": 102,
+        "avgCost": 97478.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_005_452260",
+        "ticker": "452260",
+        "name": "한화갤러리아",
+        "sector": "대기업·금융그룹",
+        "quantity": 7575,
+        "avgCost": 1320.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_005_489790",
+        "ticker": "489790",
+        "name": "한화비전",
+        "sector": "대기업·금융그룹",
+        "quantity": 217,
+        "avgCost": 46050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_005_009830",
+        "ticker": "009830",
+        "name": "한화솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 396,
+        "avgCost": 25231.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_005_272210",
+        "ticker": "272210",
+        "name": "한화시스템",
+        "sector": "대기업·금융그룹",
+        "quantity": 180,
+        "avgCost": 55300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_005_012450",
+        "ticker": "012450",
+        "name": "한화에어로스페이스",
+        "sector": "대기업·금융그룹",
+        "quantity": 10,
+        "avgCost": 946000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_005_082740",
+        "ticker": "082740",
+        "name": "한화엔진",
+        "sector": "대기업·금융그룹",
+        "quantity": 237,
+        "avgCost": 42050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_005_042660",
+        "ticker": "042660",
+        "name": "한화오션",
+        "sector": "대기업·금융그룹",
+        "quantity": 87,
+        "avgCost": 114700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_005_088350",
+        "ticker": "088350",
+        "name": "한화생명",
+        "sector": "대기업·금융그룹",
+        "quantity": 3076,
+        "avgCost": 3250.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_005_451800",
+        "ticker": "451800",
+        "name": "한화리츠",
+        "sector": "대기업·금융그룹",
+        "quantity": 2406,
+        "avgCost": 4155.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_006",
+    "name": "롯데그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_006_089860",
+        "ticker": "089860",
+        "name": "롯데렌탈",
+        "sector": "대기업·금융그룹",
+        "quantity": 333,
+        "avgCost": 30000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_006_023530",
+        "ticker": "023530",
+        "name": "롯데쇼핑",
+        "sector": "대기업·금융그룹",
+        "quantity": 145,
+        "avgCost": 68600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_006_020150",
+        "ticker": "020150",
+        "name": "롯데에너지머티리얼즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 333,
+        "avgCost": 30000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_006_280360",
+        "ticker": "280360",
+        "name": "롯데웰푸드",
+        "sector": "대기업·금융그룹",
+        "quantity": 89,
+        "avgCost": 112100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_006_286940",
+        "ticker": "286940",
+        "name": "롯데이노베이트",
+        "sector": "대기업·금융그룹",
+        "quantity": 510,
+        "avgCost": 19580.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_006_004000",
+        "ticker": "004000",
+        "name": "롯데정밀화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 232,
+        "avgCost": 42950.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_006_004990",
+        "ticker": "004990",
+        "name": "롯데지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 383,
+        "avgCost": 26050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_006_011170",
+        "ticker": "011170",
+        "name": "롯데케미칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 148,
+        "avgCost": 67500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_006_071840",
+        "ticker": "071840",
+        "name": "롯데하이마트",
+        "sector": "대기업·금융그룹",
+        "quantity": 1328,
+        "avgCost": 7530.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_006_330590",
+        "ticker": "330590",
+        "name": "롯데리츠",
+        "sector": "대기업·금융그룹",
+        "quantity": 2500,
+        "avgCost": 4000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_006_005300",
+        "ticker": "005300",
+        "name": "롯데칠성",
+        "sector": "대기업·금융그룹",
+        "quantity": 74,
+        "avgCost": 134000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_006_000400",
+        "ticker": "000400",
+        "name": "롯데손해보험",
+        "sector": "대기업·금융그룹",
+        "quantity": 5750,
+        "avgCost": 1739.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_007",
+    "name": "포스코그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_007_009520",
+        "ticker": "009520",
+        "name": "포스코엠텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 653,
+        "avgCost": 15300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_007_047050",
+        "ticker": "047050",
+        "name": "포스코인터내셔널",
+        "sector": "대기업·금융그룹",
+        "quantity": 207,
+        "avgCost": 48300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_007_003670",
+        "ticker": "003670",
+        "name": "포스코퓨처엠",
+        "sector": "대기업·금융그룹",
+        "quantity": 56,
+        "avgCost": 176900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_007_058430",
+        "ticker": "058430",
+        "name": "포스코스틸리온",
+        "sector": "대기업·금융그룹",
+        "quantity": 2567,
+        "avgCost": 3895.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_007_005490",
+        "ticker": "005490",
+        "name": "POSCO홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 33,
+        "avgCost": 297500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_007_022100",
+        "ticker": "022100",
+        "name": "포스코DX",
+        "sector": "대기업·금융그룹",
+        "quantity": 344,
+        "avgCost": 29000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_008",
+    "name": "HD현대그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_008_329180",
+        "ticker": "329180",
+        "name": "HD현대중공업",
+        "sector": "대기업·금융그룹",
+        "quantity": 19,
+        "avgCost": 504000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_008_267260",
+        "ticker": "267260",
+        "name": "HD현대일렉트릭",
+        "sector": "대기업·금융그룹",
+        "quantity": 12,
+        "avgCost": 819000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_008_009540",
+        "ticker": "009540",
+        "name": "HD한국조선해양",
+        "sector": "대기업·금융그룹",
+        "quantity": 25,
+        "avgCost": 393500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_008_267250",
+        "ticker": "267250",
+        "name": "HD현대",
+        "sector": "대기업·금융그룹",
+        "quantity": 54,
+        "avgCost": 184200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_008_443060",
+        "ticker": "443060",
+        "name": "HD현대마린솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 51,
+        "avgCost": 193500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_008_267270",
+        "ticker": "267270",
+        "name": "HD건설기계",
+        "sector": "대기업·금융그룹",
+        "quantity": 102,
+        "avgCost": 97400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_008_071970",
+        "ticker": "071970",
+        "name": "HD현대마린엔진",
+        "sector": "대기업·금융그룹",
+        "quantity": 117,
+        "avgCost": 85000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_008_322000",
+        "ticker": "322000",
+        "name": "HD현대에너지솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 180,
+        "avgCost": 55300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_009",
+    "name": "농협그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_009_025860",
+        "ticker": "025860",
+        "name": "남해화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 1488,
+        "avgCost": 6720.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_009_005940",
+        "ticker": "005940",
+        "name": "NH투자증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 469,
+        "avgCost": 21300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_009_400760",
+        "ticker": "400760",
+        "name": "NH올원리츠",
+        "sector": "대기업·금융그룹",
+        "quantity": 2962,
+        "avgCost": 3375.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_009_054050",
+        "ticker": "054050",
+        "name": "NH농우바이오",
+        "sector": "대기업·금융그룹",
+        "quantity": 1254,
+        "avgCost": 7970.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_009_338100",
+        "ticker": "338100",
+        "name": "NH프라임리츠",
+        "sector": "대기업·금융그룹",
+        "quantity": 2237,
+        "avgCost": 4470.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_010",
+    "name": "GS그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_010_317400",
+        "ticker": "317400",
+        "name": "자이에스앤디",
+        "sector": "대기업·금융그룹",
+        "quantity": 2320,
+        "avgCost": 4310.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_010_145020",
+        "ticker": "145020",
+        "name": "휴젤",
+        "sector": "대기업·금융그룹",
+        "quantity": 42,
+        "avgCost": 235000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_010_078930",
+        "ticker": "078930",
+        "name": "GS",
+        "sector": "대기업·금융그룹",
+        "quantity": 180,
+        "avgCost": 55300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_010_006360",
+        "ticker": "006360",
+        "name": "GS건설",
+        "sector": "대기업·금융그룹",
+        "quantity": 531,
+        "avgCost": 18820.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_010_007070",
+        "ticker": "007070",
+        "name": "GS리테일",
+        "sector": "대기업·금융그룹",
+        "quantity": 506,
+        "avgCost": 19760.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_010_005070",
+        "ticker": "005070",
+        "name": "코스모신소재",
+        "sector": "대기업·금융그룹",
+        "quantity": 240,
+        "avgCost": 41650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_010_499790",
+        "ticker": "499790",
+        "name": "GS피앤엘",
+        "sector": "대기업·금융그룹",
+        "quantity": 240,
+        "avgCost": 41600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_010_005420",
+        "ticker": "005420",
+        "name": "코스모화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 718,
+        "avgCost": 13910.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_010_001250",
+        "ticker": "001250",
+        "name": "GS글로벌",
+        "sector": "대기업·금융그룹",
+        "quantity": 4347,
+        "avgCost": 2300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_010_002170",
+        "ticker": "002170",
+        "name": "SYTS",
+        "sector": "대기업·금융그룹",
+        "quantity": 181,
+        "avgCost": 55200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_011",
+    "name": "신세계그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_011_037710",
+        "ticker": "037710",
+        "name": "광주신세계",
+        "sector": "대기업·금융그룹",
+        "quantity": 317,
+        "avgCost": 31500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_011_004170",
+        "ticker": "004170",
+        "name": "신세계",
+        "sector": "대기업·금융그룹",
+        "quantity": 43,
+        "avgCost": 231000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_011_031430",
+        "ticker": "031430",
+        "name": "신세계인터내셔날",
+        "sector": "대기업·금융그룹",
+        "quantity": 942,
+        "avgCost": 10610.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_011_139480",
+        "ticker": "139480",
+        "name": "이마트",
+        "sector": "대기업·금융그룹",
+        "quantity": 124,
+        "avgCost": 80200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_011_035510",
+        "ticker": "035510",
+        "name": "신세계 I&C",
+        "sector": "대기업·금융그룹",
+        "quantity": 603,
+        "avgCost": 16580.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_012",
+    "name": "한진그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_012_003490",
+        "ticker": "003490",
+        "name": "대한항공",
+        "sector": "대기업·금융그룹",
+        "quantity": 450,
+        "avgCost": 22200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_012_272450",
+        "ticker": "272450",
+        "name": "진에어",
+        "sector": "대기업·금융그룹",
+        "quantity": 1447,
+        "avgCost": 6910.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_012_002320",
+        "ticker": "002320",
+        "name": "한진",
+        "sector": "대기업·금융그룹",
+        "quantity": 507,
+        "avgCost": 19700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_012_180640",
+        "ticker": "180640",
+        "name": "한진칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 82,
+        "avgCost": 121000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_012_020560",
+        "ticker": "020560",
+        "name": "아시아나항공",
+        "sector": "대기업·금융그룹",
+        "quantity": 1272,
+        "avgCost": 7860.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_012_298690",
+        "ticker": "298690",
+        "name": "에어부산",
+        "sector": "대기업·금융그룹",
+        "quantity": 5681,
+        "avgCost": 1760.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_012_005430",
+        "ticker": "005430",
+        "name": "한국공항",
+        "sector": "대기업·금융그룹",
+        "quantity": 156,
+        "avgCost": 64100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_012_000700",
+        "ticker": "000700",
+        "name": "유수홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1769,
+        "avgCost": 5650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_012_267850",
+        "ticker": "267850",
+        "name": "아시아나IDT",
+        "sector": "대기업·금융그룹",
+        "quantity": 881,
+        "avgCost": 11340.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_013",
+    "name": "KT그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_013_036030",
+        "ticker": "036030",
+        "name": "케이티알파",
+        "sector": "대기업·금융그룹",
+        "quantity": 1848,
+        "avgCost": 5410.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_013_030200",
+        "ticker": "030200",
+        "name": "KT",
+        "sector": "대기업·금융그룹",
+        "quantity": 194,
+        "avgCost": 51300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_013_053210",
+        "ticker": "053210",
+        "name": "스카이라이프",
+        "sector": "대기업·금융그룹",
+        "quantity": 2040,
+        "avgCost": 4900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_013_089600",
+        "ticker": "089600",
+        "name": "KT나스미디어",
+        "sector": "대기업·금융그룹",
+        "quantity": 767,
+        "avgCost": 13030.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_013_053350",
+        "ticker": "053350",
+        "name": "이니텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 2222,
+        "avgCost": 4500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_013_058850",
+        "ticker": "058850",
+        "name": "KTcs",
+        "sector": "대기업·금융그룹",
+        "quantity": 3552,
+        "avgCost": 2815.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_013_058860",
+        "ticker": "058860",
+        "name": "KTis",
+        "sector": "대기업·금융그룹",
+        "quantity": 3696,
+        "avgCost": 2705.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_013_418470",
+        "ticker": "418470",
+        "name": "KT밀리의서재",
+        "sector": "대기업·금융그룹",
+        "quantity": 719,
+        "avgCost": 13900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_013_043610",
+        "ticker": "043610",
+        "name": "KT지니뮤직",
+        "sector": "대기업·금융그룹",
+        "quantity": 5235,
+        "avgCost": 1910.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_013_237820",
+        "ticker": "237820",
+        "name": "플레이디",
+        "sector": "대기업·금융그룹",
+        "quantity": 2134,
+        "avgCost": 4685.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_014",
+    "name": "LS그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_014_000500",
+        "ticker": "000500",
+        "name": "가온전선",
+        "sector": "대기업·금융그룹",
+        "quantity": 215,
+        "avgCost": 46510.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_014_010120",
+        "ticker": "010120",
+        "name": "LS ELECTRIC",
+        "sector": "대기업·금융그룹",
+        "quantity": 101,
+        "avgCost": 98500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_014_006260",
+        "ticker": "006260",
+        "name": "LS",
+        "sector": "대기업·금융그룹",
+        "quantity": 47,
+        "avgCost": 208500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_014_229640",
+        "ticker": "229640",
+        "name": "LS에코에너지",
+        "sector": "대기업·금융그룹",
+        "quantity": 279,
+        "avgCost": 35750.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_014_060370",
+        "ticker": "060370",
+        "name": "LS마린솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 338,
+        "avgCost": 29500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_014_417200",
+        "ticker": "417200",
+        "name": "LS머트리얼즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 805,
+        "avgCost": 12420.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_014_017940",
+        "ticker": "017940",
+        "name": "E1",
+        "sector": "대기업·금융그룹",
+        "quantity": 123,
+        "avgCost": 80800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_014_015360",
+        "ticker": "015360",
+        "name": "INVENI",
+        "sector": "대기업·금융그룹",
+        "quantity": 765,
+        "avgCost": 13060.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_014_078020",
+        "ticker": "078020",
+        "name": "LS증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 2096,
+        "avgCost": 4770.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_014_000680",
+        "ticker": "000680",
+        "name": "LS네트웍스",
+        "sector": "대기업·금융그룹",
+        "quantity": 2873,
+        "avgCost": 3480.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_015",
+    "name": "CJ그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_015_253450",
+        "ticker": "253450",
+        "name": "스튜디오드래곤",
+        "sector": "대기업·금융그룹",
+        "quantity": 214,
+        "avgCost": 46550.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_015_001040",
+        "ticker": "001040",
+        "name": "CJ",
+        "sector": "대기업·금융그룹",
+        "quantity": 57,
+        "avgCost": 173300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_015_097950",
+        "ticker": "097950",
+        "name": "CJ제일제당",
+        "sector": "대기업·금융그룹",
+        "quantity": 48,
+        "avgCost": 207000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_015_000120",
+        "ticker": "000120",
+        "name": "CJ대한통운",
+        "sector": "대기업·금융그룹",
+        "quantity": 105,
+        "avgCost": 95000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_015_079160",
+        "ticker": "079160",
+        "name": "CJ CGV",
+        "sector": "대기업·금융그룹",
+        "quantity": 1718,
+        "avgCost": 5820.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_015_035760",
+        "ticker": "035760",
+        "name": "CJ ENM",
+        "sector": "대기업·금융그룹",
+        "quantity": 149,
+        "avgCost": 66700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_015_051500",
+        "ticker": "051500",
+        "name": "CJ프레시웨이",
+        "sector": "대기업·금융그룹",
+        "quantity": 382,
+        "avgCost": 26150.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_015_011150",
+        "ticker": "011150",
+        "name": "CJ씨푸드",
+        "sector": "대기업·금융그룹",
+        "quantity": 3472,
+        "avgCost": 2880.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_015_311690",
+        "ticker": "311690",
+        "name": "CJ 바이오사이언스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1084,
+        "avgCost": 9220.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_016",
+    "name": "카카오그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_016_323410",
+        "ticker": "323410",
+        "name": "카카오뱅크",
+        "sector": "대기업·금융그룹",
+        "quantity": 456,
+        "avgCost": 21900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_016_377300",
+        "ticker": "377300",
+        "name": "카카오페이",
+        "sector": "대기업·금융그룹",
+        "quantity": 196,
+        "avgCost": 50800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_016_376300",
+        "ticker": "376300",
+        "name": "디어유",
+        "sector": "대기업·금융그룹",
+        "quantity": 249,
+        "avgCost": 40100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_016_035720",
+        "ticker": "035720",
+        "name": "카카오",
+        "sector": "대기업·금융그룹",
+        "quantity": 161,
+        "avgCost": 62100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_016_293490",
+        "ticker": "293490",
+        "name": "카카오게임즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 649,
+        "avgCost": 15390.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_016_054780",
+        "ticker": "054780",
+        "name": "키이스트",
+        "sector": "대기업·금융그룹",
+        "quantity": 2877,
+        "avgCost": 3475.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_016_041510",
+        "ticker": "041510",
+        "name": "에스엠",
+        "sector": "대기업·금융그룹",
+        "quantity": 75,
+        "avgCost": 132400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_016_048550",
+        "ticker": "048550",
+        "name": "SM C&C",
+        "sector": "대기업·금융그룹",
+        "quantity": 7272,
+        "avgCost": 1375.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_016_063440",
+        "ticker": "063440",
+        "name": "SM Life Design",
+        "sector": "대기업·금융그룹",
+        "quantity": 5288,
+        "avgCost": 1891.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_017",
+    "name": "HMM그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_017_011200",
+        "ticker": "011200",
+        "name": "HMM",
+        "sector": "대기업·금융그룹",
+        "quantity": 495,
+        "avgCost": 20200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_018",
+    "name": "두산그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_018_000150",
+        "ticker": "000150",
+        "name": "두산",
+        "sector": "대기업·금융그룹",
+        "quantity": 13,
+        "avgCost": 763000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_018_131970",
+        "ticker": "131970",
+        "name": "두산테스나",
+        "sector": "대기업·금융그룹",
+        "quantity": 184,
+        "avgCost": 54100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_018_010470",
+        "ticker": "010470",
+        "name": "오리콤",
+        "sector": "대기업·금융그룹",
+        "quantity": 1686,
+        "avgCost": 5930.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_018_030520",
+        "ticker": "030520",
+        "name": "한컴",
+        "sector": "대기업·금융그룹",
+        "quantity": 423,
+        "avgCost": 23600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_018_454910",
+        "ticker": "454910",
+        "name": "두산로보틱스",
+        "sector": "대기업·금융그룹",
+        "quantity": 124,
+        "avgCost": 80300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_018_241560",
+        "ticker": "241560",
+        "name": "두산밥캣",
+        "sector": "대기업·금융그룹",
+        "quantity": 176,
+        "avgCost": 56800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_018_034020",
+        "ticker": "034020",
+        "name": "두산에너빌리티",
+        "sector": "대기업·금융그룹",
+        "quantity": 132,
+        "avgCost": 75200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_018_336260",
+        "ticker": "336260",
+        "name": "두산퓨얼셀",
+        "sector": "대기업·금융그룹",
+        "quantity": 344,
+        "avgCost": 29000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_018_336370",
+        "ticker": "336370",
+        "name": "솔루스첨단소재",
+        "sector": "대기업·금융그룹",
+        "quantity": 1406,
+        "avgCost": 7110.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_019",
+    "name": "셀트리온그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_019_068270",
+        "ticker": "068270",
+        "name": "셀트리온",
+        "sector": "대기업·금융그룹",
+        "quantity": 51,
+        "avgCost": 193016.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_019_068760",
+        "ticker": "068760",
+        "name": "셀트리온제약",
+        "sector": "대기업·금융그룹",
+        "quantity": 161,
+        "avgCost": 61900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_020",
+    "name": "NAVER그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_020_035420",
+        "ticker": "035420",
+        "name": "NAVER",
+        "sector": "대기업·금융그룹",
+        "quantity": 40,
+        "avgCost": 247000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_021",
+    "name": "중흥건설그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_021_047040",
+        "ticker": "047040",
+        "name": "대우건설",
+        "sector": "대기업·금융그룹",
+        "quantity": 2673,
+        "avgCost": 3740.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_023",
+    "name": "S-Oil그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_023_010950",
+        "ticker": "010950",
+        "name": "S-Oil",
+        "sector": "대기업·금융그룹",
+        "quantity": 124,
+        "avgCost": 80300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_024",
+    "name": "DL그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_024_375500",
+        "ticker": "375500",
+        "name": "DL이앤씨",
+        "sector": "대기업·금융그룹",
+        "quantity": 250,
+        "avgCost": 39900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_024_000210",
+        "ticker": "000210",
+        "name": "DL",
+        "sector": "대기업·금융그룹",
+        "quantity": 273,
+        "avgCost": 36500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_025",
+    "name": "영풍그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_025_000670",
+        "ticker": "000670",
+        "name": "영풍",
+        "sector": "대기업·금융그룹",
+        "quantity": 218,
+        "avgCost": 45700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_025_051370",
+        "ticker": "051370",
+        "name": "인터플렉스",
+        "sector": "대기업·금융그룹",
+        "quantity": 962,
+        "avgCost": 10390.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_025_007810",
+        "ticker": "007810",
+        "name": "코리아써키트",
+        "sector": "대기업·금융그룹",
+        "quantity": 209,
+        "avgCost": 47750.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_025_010130",
+        "ticker": "010130",
+        "name": "고려아연",
+        "sector": "대기업·금융그룹",
+        "quantity": 7,
+        "avgCost": 1287000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_025_033170",
+        "ticker": "033170",
+        "name": "시그네틱스",
+        "sector": "대기업·금융그룹",
+        "quantity": 2439,
+        "avgCost": 4100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_025_036560",
+        "ticker": "036560",
+        "name": "KZ정밀",
+        "sector": "대기업·금융그룹",
+        "quantity": 684,
+        "avgCost": 14600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_026",
+    "name": "미래에셋그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_026_100790",
+        "ticker": "100790",
+        "name": "미래에셋벤처투자",
+        "sector": "대기업·금융그룹",
+        "quantity": 735,
+        "avgCost": 13590.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_026_006800",
+        "ticker": "006800",
+        "name": "미래에셋증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 407,
+        "avgCost": 24543.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_026_085620",
+        "ticker": "085620",
+        "name": "미래에셋생명",
+        "sector": "대기업·금융그룹",
+        "quantity": 1067,
+        "avgCost": 9370.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_026_052770",
+        "ticker": "052770",
+        "name": "아이톡시",
+        "sector": "대기업·금융그룹",
+        "quantity": 15105,
+        "avgCost": 662.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_027",
+    "name": "현대백화점그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_027_023000",
+        "ticker": "023000",
+        "name": "삼원강재",
+        "sector": "대기업·금융그룹",
+        "quantity": 4166,
+        "avgCost": 2400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_027_013890",
+        "ticker": "013890",
+        "name": "지누스",
+        "sector": "대기업·금융그룹",
+        "quantity": 807,
+        "avgCost": 12390.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_027_020000",
+        "ticker": "020000",
+        "name": "한섬",
+        "sector": "대기업·금융그룹",
+        "quantity": 645,
+        "avgCost": 15500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_027_453340",
+        "ticker": "453340",
+        "name": "현대그린푸드",
+        "sector": "대기업·금융그룹",
+        "quantity": 649,
+        "avgCost": 15400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_027_079430",
+        "ticker": "079430",
+        "name": "현대리바트",
+        "sector": "대기업·금융그룹",
+        "quantity": 1481,
+        "avgCost": 6750.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_027_052260",
+        "ticker": "052260",
+        "name": "현대바이오랜드",
+        "sector": "대기업·금융그룹",
+        "quantity": 2306,
+        "avgCost": 4335.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_027_069960",
+        "ticker": "069960",
+        "name": "현대백화점",
+        "sector": "대기업·금융그룹",
+        "quantity": 117,
+        "avgCost": 84900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_027_041440",
+        "ticker": "041440",
+        "name": "현대에버다임",
+        "sector": "대기업·금융그룹",
+        "quantity": 1230,
+        "avgCost": 8130.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_027_090850",
+        "ticker": "090850",
+        "name": "현대이지웰",
+        "sector": "대기업·금융그룹",
+        "quantity": 1934,
+        "avgCost": 5170.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_027_005440",
+        "ticker": "005440",
+        "name": "현대지에프홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1246,
+        "avgCost": 8020.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_027_126560",
+        "ticker": "126560",
+        "name": "현대퓨처넷",
+        "sector": "대기업·금융그룹",
+        "quantity": 3246,
+        "avgCost": 3080.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_027_000430",
+        "ticker": "000430",
+        "name": "대원강업",
+        "sector": "대기업·금융그룹",
+        "quantity": 2506,
+        "avgCost": 3990.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_028",
+    "name": "효성그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_028_011420",
+        "ticker": "011420",
+        "name": "갤럭시아에스엠",
+        "sector": "대기업·금융그룹",
+        "quantity": 5211,
+        "avgCost": 1919.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_028_004800",
+        "ticker": "004800",
+        "name": "효성",
+        "sector": "대기업·금융그룹",
+        "quantity": 88,
+        "avgCost": 112500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_028_094480",
+        "ticker": "094480",
+        "name": "갤럭시아머니트리",
+        "sector": "대기업·금융그룹",
+        "quantity": 1084,
+        "avgCost": 9220.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_028_056700",
+        "ticker": "056700",
+        "name": "신화인터텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 5787,
+        "avgCost": 1728.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_028_002780",
+        "ticker": "002780",
+        "name": "진흥기업",
+        "sector": "대기업·금융그룹",
+        "quantity": 1362,
+        "avgCost": 7340.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_028_298040",
+        "ticker": "298040",
+        "name": "효성중공업",
+        "sector": "대기업·금융그룹",
+        "quantity": 5,
+        "avgCost": 1845000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_028_298020",
+        "ticker": "298020",
+        "name": "효성티앤씨",
+        "sector": "대기업·금융그룹",
+        "quantity": 46,
+        "avgCost": 214000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_028_298000",
+        "ticker": "298000",
+        "name": "효성화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 128,
+        "avgCost": 77800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_028_298050",
+        "ticker": "298050",
+        "name": "HS효성첨단소재",
+        "sector": "대기업·금융그룹",
+        "quantity": 55,
+        "avgCost": 179100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "grp_ftc_028_487570",
+        "ticker": "487570",
+        "name": "HS효성",
+        "sector": "대기업·금융그룹",
+        "quantity": 180,
+        "avgCost": 55500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "grp_ftc_028_094280",
+        "ticker": "094280",
+        "name": "효성ITX",
+        "sector": "대기업·금융그룹",
+        "quantity": 791,
+        "avgCost": 12630.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "grp_ftc_028_368970",
+        "ticker": "368970",
+        "name": "오에스피",
+        "sector": "대기업·금융그룹",
+        "quantity": 3802,
+        "avgCost": 2630.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "grp_ftc_028_018620",
+        "ticker": "018620",
+        "name": "우진비앤지",
+        "sector": "대기업·금융그룹",
+        "quantity": 2892,
+        "avgCost": 3457.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_029",
+    "name": "하림그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_029_136490",
+        "ticker": "136490",
+        "name": "선진",
+        "sector": "대기업·금융그룹",
+        "quantity": 1044,
+        "avgCost": 9570.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_029_036580",
+        "ticker": "036580",
+        "name": "팜스코",
+        "sector": "대기업·금융그룹",
+        "quantity": 4175,
+        "avgCost": 2395.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_029_136480",
+        "ticker": "136480",
+        "name": "하림",
+        "sector": "대기업·금융그룹",
+        "quantity": 3327,
+        "avgCost": 3005.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_029_003380",
+        "ticker": "003380",
+        "name": "하림지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 911,
+        "avgCost": 10970.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_029_028670",
+        "ticker": "028670",
+        "name": "팬오션",
+        "sector": "대기업·금융그룹",
+        "quantity": 2635,
+        "avgCost": 3795.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_031",
+    "name": "한국앤컴퍼니그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_031_417970",
+        "ticker": "417970",
+        "name": "모델솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 373,
+        "avgCost": 26800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_031_000240",
+        "ticker": "000240",
+        "name": "한국앤컴퍼니",
+        "sector": "대기업·금융그룹",
+        "quantity": 398,
+        "avgCost": 25100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_031_161390",
+        "ticker": "161390",
+        "name": "한국타이어앤테크놀로지",
+        "sector": "대기업·금융그룹",
+        "quantity": 175,
+        "avgCost": 57000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_031_018880",
+        "ticker": "018880",
+        "name": "한온시스템",
+        "sector": "대기업·금융그룹",
+        "quantity": 3407,
+        "avgCost": 2935.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_032",
+    "name": "장금상선그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_032_003280",
+        "ticker": "003280",
+        "name": "흥아해운",
+        "sector": "대기업·금융그룹",
+        "quantity": 6289,
+        "avgCost": 1590.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_033",
+    "name": "호반그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_033_001440",
+        "ticker": "001440",
+        "name": "대한전선",
+        "sector": "대기업·금융그룹",
+        "quantity": 420,
+        "avgCost": 23800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_034",
+    "name": "케이씨씨그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_034_002380",
+        "ticker": "002380",
+        "name": "KCC",
+        "sector": "대기업·금융그룹",
+        "quantity": 25,
+        "avgCost": 393000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_034_344820",
+        "ticker": "344820",
+        "name": "KCC글라스",
+        "sector": "대기업·금융그룹",
+        "quantity": 382,
+        "avgCost": 26150.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_034_021320",
+        "ticker": "021320",
+        "name": "KCC건설",
+        "sector": "대기업·금융그룹",
+        "quantity": 1834,
+        "avgCost": 5450.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_035",
+    "name": "HDC그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_035_294870",
+        "ticker": "294870",
+        "name": "IPARK현대산업개발",
+        "sector": "대기업·금융그룹",
+        "quantity": 478,
+        "avgCost": 20900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_035_012630",
+        "ticker": "012630",
+        "name": "HDC",
+        "sector": "대기업·금융그룹",
+        "quantity": 571,
+        "avgCost": 17500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_035_039570",
+        "ticker": "039570",
+        "name": "HDC랩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1194,
+        "avgCost": 8370.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_035_089470",
+        "ticker": "089470",
+        "name": "HDC현대EP",
+        "sector": "대기업·금융그룹",
+        "quantity": 2375,
+        "avgCost": 4210.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_036",
+    "name": "SM그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_036_008350",
+        "ticker": "008350",
+        "name": "남선알미늄",
+        "sector": "대기업·금융그룹",
+        "quantity": 7575,
+        "avgCost": 1320.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_036_010580",
+        "ticker": "010580",
+        "name": "에스엠벡셀",
+        "sector": "대기업·금융그룹",
+        "quantity": 3861,
+        "avgCost": 2590.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_036_104480",
+        "ticker": "104480",
+        "name": "티케이케미칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 6393,
+        "avgCost": 1564.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_036_078130",
+        "ticker": "078130",
+        "name": "국일제지",
+        "sector": "대기업·금융그룹",
+        "quantity": 2890,
+        "avgCost": 3460.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_036_005880",
+        "ticker": "005880",
+        "name": "대한해운",
+        "sector": "대기업·금융그룹",
+        "quantity": 5724,
+        "avgCost": 1747.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_037",
+    "name": "DB그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_037_005830",
+        "ticker": "005830",
+        "name": "DB손해보험",
+        "sector": "대기업·금융그룹",
+        "quantity": 78,
+        "avgCost": 127800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_037_000990",
+        "ticker": "000990",
+        "name": "DB하이텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 135,
+        "avgCost": 73700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_037_016610",
+        "ticker": "016610",
+        "name": "DB증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 914,
+        "avgCost": 10930.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_037_012030",
+        "ticker": "012030",
+        "name": "DB",
+        "sector": "대기업·금융그룹",
+        "quantity": 6609,
+        "avgCost": 1513.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_038",
+    "name": "KT&G그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_038_003520",
+        "ticker": "003520",
+        "name": "영진약품",
+        "sector": "대기업·금융그룹",
+        "quantity": 4938,
+        "avgCost": 2025.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_038_033780",
+        "ticker": "033780",
+        "name": "KT&G",
+        "sector": "대기업·금융그룹",
+        "quantity": 71,
+        "avgCost": 140400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_039",
+    "name": "코오롱그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_039_002020",
+        "ticker": "002020",
+        "name": "코오롱",
+        "sector": "대기업·금융그룹",
+        "quantity": 219,
+        "avgCost": 45650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_039_003070",
+        "ticker": "003070",
+        "name": "코오롱글로벌",
+        "sector": "대기업·금융그룹",
+        "quantity": 1117,
+        "avgCost": 8950.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_039_102940",
+        "ticker": "102940",
+        "name": "코오롱생명과학",
+        "sector": "대기업·금융그룹",
+        "quantity": 215,
+        "avgCost": 46500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_039_120110",
+        "ticker": "120110",
+        "name": "코오롱인더",
+        "sector": "대기업·금융그룹",
+        "quantity": 235,
+        "avgCost": 42500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_040",
+    "name": "넥슨그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_040_225570",
+        "ticker": "225570",
+        "name": "넥슨게임즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 804,
+        "avgCost": 12430.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_042",
+    "name": "교보생명보험그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_042_030610",
+        "ticker": "030610",
+        "name": "교보증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 1066,
+        "avgCost": 9380.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_043",
+    "name": "LX그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_043_001120",
+        "ticker": "001120",
+        "name": "LX인터내셔널",
+        "sector": "대기업·금융그룹",
+        "quantity": 312,
+        "avgCost": 32000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_043_383800",
+        "ticker": "383800",
+        "name": "LX홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1257,
+        "avgCost": 7950.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_043_108320",
+        "ticker": "108320",
+        "name": "LX세미콘",
+        "sector": "대기업·금융그룹",
+        "quantity": 198,
+        "avgCost": 50300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_043_108670",
+        "ticker": "108670",
+        "name": "LX하우시스",
+        "sector": "대기업·금융그룹",
+        "quantity": 350,
+        "avgCost": 28550.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_044",
+    "name": "OCI그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_044_014830",
+        "ticker": "014830",
+        "name": "유니드",
+        "sector": "대기업·금융그룹",
+        "quantity": 149,
+        "avgCost": 67000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_044_446070",
+        "ticker": "446070",
+        "name": "유니드비티플러스",
+        "sector": "대기업·금융그룹",
+        "quantity": 2911,
+        "avgCost": 3435.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_044_003000",
+        "ticker": "003000",
+        "name": "부광약품",
+        "sector": "대기업·금융그룹",
+        "quantity": 2610,
+        "avgCost": 3830.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_044_010060",
+        "ticker": "010060",
+        "name": "OCI홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 94,
+        "avgCost": 105500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_044_005090",
+        "ticker": "005090",
+        "name": "SGC에너지",
+        "sector": "대기업·금융그룹",
+        "quantity": 467,
+        "avgCost": 21400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_044_456040",
+        "ticker": "456040",
+        "name": "OCI",
+        "sector": "대기업·금융그룹",
+        "quantity": 170,
+        "avgCost": 58700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_044_016250",
+        "ticker": "016250",
+        "name": "SGC E&C",
+        "sector": "대기업·금융그룹",
+        "quantity": 671,
+        "avgCost": 14900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_044_000910",
+        "ticker": "000910",
+        "name": "유니온",
+        "sector": "대기업·금융그룹",
+        "quantity": 2364,
+        "avgCost": 4230.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_044_047400",
+        "ticker": "047400",
+        "name": "유니온머티리얼",
+        "sector": "대기업·금융그룹",
+        "quantity": 7283,
+        "avgCost": 1373.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_045",
+    "name": "넷마블그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_045_251270",
+        "ticker": "251270",
+        "name": "넷마블",
+        "sector": "대기업·금융그룹",
+        "quantity": 201,
+        "avgCost": 49550.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_045_021240",
+        "ticker": "021240",
+        "name": "코웨이",
+        "sector": "대기업·금융그룹",
+        "quantity": 116,
+        "avgCost": 85500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_046",
+    "name": "세아그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_046_001430",
+        "ticker": "001430",
+        "name": "세아베스틸지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 178,
+        "avgCost": 55900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_046_306200",
+        "ticker": "306200",
+        "name": "세아제강",
+        "sector": "대기업·금융그룹",
+        "quantity": 85,
+        "avgCost": 117100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_046_003030",
+        "ticker": "003030",
+        "name": "세아제강지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 78,
+        "avgCost": 126800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_046_058650",
+        "ticker": "058650",
+        "name": "세아홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 70,
+        "avgCost": 141300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_047",
+    "name": "다우키움그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_047_039490",
+        "ticker": "039490",
+        "name": "키움증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 33,
+        "avgCost": 301500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_047_023590",
+        "ticker": "023590",
+        "name": "다우기술",
+        "sector": "대기업·금융그룹",
+        "quantity": 252,
+        "avgCost": 39600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_047_032190",
+        "ticker": "032190",
+        "name": "다우데이타",
+        "sector": "대기업·금융그룹",
+        "quantity": 542,
+        "avgCost": 18450.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_047_143240",
+        "ticker": "143240",
+        "name": "사람인",
+        "sector": "대기업·금융그룹",
+        "quantity": 740,
+        "avgCost": 13500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_047_273060",
+        "ticker": "273060",
+        "name": "와이즈버즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 2237,
+        "avgCost": 4470.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_047_020120",
+        "ticker": "020120",
+        "name": "키다리스튜디오",
+        "sector": "대기업·금융그룹",
+        "quantity": 2766,
+        "avgCost": 3615.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_047_053300",
+        "ticker": "053300",
+        "name": "한국정보인증",
+        "sector": "대기업·금융그룹",
+        "quantity": 1618,
+        "avgCost": 6180.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_048",
+    "name": "태광그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_048_003830",
+        "ticker": "003830",
+        "name": "대한화섬",
+        "sector": "대기업·금융그룹",
+        "quantity": 84,
+        "avgCost": 117700.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_048_002210",
+        "ticker": "002210",
+        "name": "동성제약",
+        "sector": "대기업·금융그룹",
+        "quantity": 5138,
+        "avgCost": 1946.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_048_018250",
+        "ticker": "018250",
+        "name": "애경산업",
+        "sector": "대기업·금융그룹",
+        "quantity": 742,
+        "avgCost": 13470.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_048_003240",
+        "ticker": "003240",
+        "name": "태광산업",
+        "sector": "대기업·금융그룹",
+        "quantity": 13,
+        "avgCost": 751000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_048_000540",
+        "ticker": "000540",
+        "name": "흥국화재",
+        "sector": "대기업·금융그룹",
+        "quantity": 2805,
+        "avgCost": 3565.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_048_148930",
+        "ticker": "148930",
+        "name": "에이치와이티씨",
+        "sector": "대기업·금융그룹",
+        "quantity": 3284,
+        "avgCost": 3045.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_050",
+    "name": "이랜드그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_050_084680",
+        "ticker": "084680",
+        "name": "이월드",
+        "sector": "대기업·금융그룹",
+        "quantity": 6591,
+        "avgCost": 1517.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_050_088260",
+        "ticker": "088260",
+        "name": "이리츠코크렙",
+        "sector": "대기업·금융그룹",
+        "quantity": 2166,
+        "avgCost": 4615.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_051",
+    "name": "에코프로그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_051_086520",
+        "ticker": "086520",
+        "name": "에코프로",
+        "sector": "대기업·금융그룹",
+        "quantity": 113,
+        "avgCost": 88300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_051_247540",
+        "ticker": "247540",
+        "name": "에코프로비엠",
+        "sector": "대기업·금융그룹",
+        "quantity": 71,
+        "avgCost": 139469.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_051_383310",
+        "ticker": "383310",
+        "name": "에코프로에이치엔",
+        "sector": "대기업·금융그룹",
+        "quantity": 428,
+        "avgCost": 23350.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_051_450080",
+        "ticker": "450080",
+        "name": "에코프로머티",
+        "sector": "대기업·금융그룹",
+        "quantity": 198,
+        "avgCost": 50300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_052",
+    "name": "소노인터내셔널그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_052_007720",
+        "ticker": "007720",
+        "name": "소노스퀘어",
+        "sector": "대기업·금융그룹",
+        "quantity": 2808,
+        "avgCost": 3560.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_052_004870",
+        "ticker": "004870",
+        "name": "티웨이홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 4083,
+        "avgCost": 2449.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_053",
+    "name": "한국항공우주산업그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_053_047810",
+        "ticker": "047810",
+        "name": "한국항공우주",
+        "sector": "대기업·금융그룹",
+        "quantity": 85,
+        "avgCost": 116800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_055",
+    "name": "금호석유화학그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_055_011780",
+        "ticker": "011780",
+        "name": "금호석유화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 85,
+        "avgCost": 117200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_056",
+    "name": "태영그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_056_009410",
+        "ticker": "009410",
+        "name": "태영건설",
+        "sector": "대기업·금융그룹",
+        "quantity": 5910,
+        "avgCost": 1692.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_056_363280",
+        "ticker": "363280",
+        "name": "티와이홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 3773,
+        "avgCost": 2650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_056_034120",
+        "ticker": "034120",
+        "name": "SBS",
+        "sector": "대기업·금융그룹",
+        "quantity": 527,
+        "avgCost": 18960.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_057",
+    "name": "삼천리그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_057_004690",
+        "ticker": "004690",
+        "name": "삼천리",
+        "sector": "대기업·금융그룹",
+        "quantity": 79,
+        "avgCost": 125500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_058",
+    "name": "동원그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_058_006040",
+        "ticker": "006040",
+        "name": "동원산업",
+        "sector": "대기업·금융그룹",
+        "quantity": 240,
+        "avgCost": 41500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_058_014820",
+        "ticker": "014820",
+        "name": "동원시스템즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 401,
+        "avgCost": 24900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_059",
+    "name": "HL그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_059_204320",
+        "ticker": "204320",
+        "name": "HL만도",
+        "sector": "대기업·금융그룹",
+        "quantity": 152,
+        "avgCost": 65400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_059_060980",
+        "ticker": "060980",
+        "name": "HL홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 215,
+        "avgCost": 46350.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_059_014790",
+        "ticker": "014790",
+        "name": "HL D&I",
+        "sector": "대기업·금융그룹",
+        "quantity": 3824,
+        "avgCost": 2615.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_060",
+    "name": "KG그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_060_016380",
+        "ticker": "016380",
+        "name": "KG스틸",
+        "sector": "대기업·금융그룹",
+        "quantity": 1897,
+        "avgCost": 5270.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_060_003620",
+        "ticker": "003620",
+        "name": "KG모빌리티",
+        "sector": "대기업·금융그룹",
+        "quantity": 2861,
+        "avgCost": 3495.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_060_001390",
+        "ticker": "001390",
+        "name": "KG케미칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 1949,
+        "avgCost": 5130.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_060_035600",
+        "ticker": "035600",
+        "name": "KG이니시스",
+        "sector": "대기업·금융그룹",
+        "quantity": 983,
+        "avgCost": 10170.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_060_151860",
+        "ticker": "151860",
+        "name": "KG에코솔루션",
+        "sector": "대기업·금융그룹",
+        "quantity": 1818,
+        "avgCost": 5500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_060_046440",
+        "ticker": "046440",
+        "name": "KG파이낸셜",
+        "sector": "대기업·금융그룹",
+        "quantity": 2143,
+        "avgCost": 4665.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_062",
+    "name": "크래프톤그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_062_217270",
+        "ticker": "217270",
+        "name": "넵튠",
+        "sector": "대기업·금융그룹",
+        "quantity": 1865,
+        "avgCost": 5360.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_062_259960",
+        "ticker": "259960",
+        "name": "크래프톤",
+        "sector": "대기업·금융그룹",
+        "quantity": 40,
+        "avgCost": 248000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_063",
+    "name": "LIG그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_063_079550",
+        "ticker": "079550",
+        "name": "LIG디펜스앤에어로스페이스",
+        "sector": "대기업·금융그룹",
+        "quantity": 22,
+        "avgCost": 439000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_063_073490",
+        "ticker": "073490",
+        "name": "LIG아큐버",
+        "sector": "대기업·금융그룹",
+        "quantity": 406,
+        "avgCost": 24600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_064",
+    "name": "아모레퍼시픽그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_064_090430",
+        "ticker": "090430",
+        "name": "아모레퍼시픽",
+        "sector": "대기업·금융그룹",
+        "quantity": 78,
+        "avgCost": 126900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_064_002790",
+        "ticker": "002790",
+        "name": "아모레퍼시픽홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 344,
+        "avgCost": 29000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_065",
+    "name": "엠디엠그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_065_123890",
+        "ticker": "123890",
+        "name": "한국자산신탁",
+        "sector": "대기업·금융그룹",
+        "quantity": 4166,
+        "avgCost": 2400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_066",
+    "name": "글로벌세아그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_066_014990",
+        "ticker": "014990",
+        "name": "인디에프",
+        "sector": "대기업·금융그룹",
+        "quantity": 2232,
+        "avgCost": 4480.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_066_011280",
+        "ticker": "011280",
+        "name": "태림포장",
+        "sector": "대기업·금융그룹",
+        "quantity": 4819,
+        "avgCost": 2075.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_068",
+    "name": "동국제강그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_068_460850",
+        "ticker": "460850",
+        "name": "동국씨엠",
+        "sector": "대기업·금융그룹",
+        "quantity": 1904,
+        "avgCost": 5250.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_068_460860",
+        "ticker": "460860",
+        "name": "동국제강",
+        "sector": "대기업·금융그룹",
+        "quantity": 1230,
+        "avgCost": 8130.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_068_001230",
+        "ticker": "001230",
+        "name": "동국홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 6180,
+        "avgCost": 1618.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_068_139990",
+        "ticker": "139990",
+        "name": "아주스틸",
+        "sector": "대기업·금융그룹",
+        "quantity": 3003,
+        "avgCost": 3330.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_068_129260",
+        "ticker": "129260",
+        "name": "인터지스",
+        "sector": "대기업·금융그룹",
+        "quantity": 4175,
+        "avgCost": 2395.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_068_049520",
+        "ticker": "049520",
+        "name": "유아이엘",
+        "sector": "대기업·금융그룹",
+        "quantity": 3072,
+        "avgCost": 3255.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_069",
+    "name": "대신그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_069_003540",
+        "ticker": "003540",
+        "name": "대신증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 369,
+        "avgCost": 27050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_070",
+    "name": "애경그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_070_045660",
+        "ticker": "045660",
+        "name": "에이텍",
+        "sector": "대기업·금융그룹",
+        "quantity": 976,
+        "avgCost": 10240.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_070_089590",
+        "ticker": "089590",
+        "name": "제주항공",
+        "sector": "대기업·금융그룹",
+        "quantity": 1851,
+        "avgCost": 5400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_070_018250",
+        "ticker": "018250",
+        "name": "애경산업",
+        "sector": "대기업·금융그룹",
+        "quantity": 742,
+        "avgCost": 13470.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_070_161000",
+        "ticker": "161000",
+        "name": "애경케미칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 1090,
+        "avgCost": 9170.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_070_006840",
+        "ticker": "006840",
+        "name": "AK홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1161,
+        "avgCost": 8610.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_071",
+    "name": "유진그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_071_001200",
+        "ticker": "001200",
+        "name": "유진투자증권",
+        "sector": "대기업·금융그룹",
+        "quantity": 2886,
+        "avgCost": 3465.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_071_001520",
+        "ticker": "001520",
+        "name": "동양",
+        "sector": "대기업·금융그룹",
+        "quantity": 5820,
+        "avgCost": 1718.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_071_025900",
+        "ticker": "025900",
+        "name": "동화기업",
+        "sector": "대기업·금융그룹",
+        "quantity": 1193,
+        "avgCost": 8380.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_071_023410",
+        "ticker": "023410",
+        "name": "유진기업",
+        "sector": "대기업·금융그룹",
+        "quantity": 2758,
+        "avgCost": 3625.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_071_040300",
+        "ticker": "040300",
+        "name": "YTN",
+        "sector": "대기업·금융그룹",
+        "quantity": 2677,
+        "avgCost": 3735.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_072",
+    "name": "삼양그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_072_0120G0",
+        "ticker": "0120G0",
+        "name": "삼양바이오팜",
+        "sector": "대기업·금융그룹",
+        "quantity": 192,
+        "avgCost": 52000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_072_145990",
+        "ticker": "145990",
+        "name": "삼양사",
+        "sector": "대기업·금융그룹",
+        "quantity": 212,
+        "avgCost": 47050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_072_482630",
+        "ticker": "482630",
+        "name": "삼양엔씨켐",
+        "sector": "대기업·금융그룹",
+        "quantity": 858,
+        "avgCost": 11650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_072_036670",
+        "ticker": "036670",
+        "name": "삼양케이씨아이",
+        "sector": "대기업·금융그룹",
+        "quantity": 1562,
+        "avgCost": 6400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_072_272550",
+        "ticker": "272550",
+        "name": "삼양패키징",
+        "sector": "대기업·금융그룹",
+        "quantity": 747,
+        "avgCost": 13370.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_072_000070",
+        "ticker": "000070",
+        "name": "삼양홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 175,
+        "avgCost": 57000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_073",
+    "name": "중앙그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_073_036420",
+        "ticker": "036420",
+        "name": "콘텐트리중앙",
+        "sector": "대기업·금융그룹",
+        "quantity": 1006,
+        "avgCost": 9940.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_077",
+    "name": "BGF그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_077_105330",
+        "ticker": "105330",
+        "name": "케이엔더블유",
+        "sector": "대기업·금융그룹",
+        "quantity": 1785,
+        "avgCost": 5600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_077_282330",
+        "ticker": "282330",
+        "name": "BGF리테일",
+        "sector": "대기업·금융그룹",
+        "quantity": 95,
+        "avgCost": 104200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_077_027410",
+        "ticker": "027410",
+        "name": "BGF",
+        "sector": "대기업·금융그룹",
+        "quantity": 2590,
+        "avgCost": 3860.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_077_126600",
+        "ticker": "126600",
+        "name": "BGF에코머티리얼즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 2777,
+        "avgCost": 3600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_078",
+    "name": "웅진그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_078_016880",
+        "ticker": "016880",
+        "name": "웅진",
+        "sector": "대기업·금융그룹",
+        "quantity": 4405,
+        "avgCost": 2270.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_078_095720",
+        "ticker": "095720",
+        "name": "웅진씽크빅",
+        "sector": "대기업·금융그룹",
+        "quantity": 3915,
+        "avgCost": 2554.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_079",
+    "name": "반도홀딩스그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_079_023960",
+        "ticker": "023960",
+        "name": "에쓰씨엔지니어링",
+        "sector": "대기업·금융그룹",
+        "quantity": 7541,
+        "avgCost": 1326.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_082",
+    "name": "현대해상그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_082_001450",
+        "ticker": "001450",
+        "name": "현대해상",
+        "sector": "대기업·금융그룹",
+        "quantity": 327,
+        "avgCost": 30550.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_083",
+    "name": "농심그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_083_004370",
+        "ticker": "004370",
+        "name": "농심",
+        "sector": "대기업·금융그룹",
+        "quantity": 23,
+        "avgCost": 428500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_083_072710",
+        "ticker": "072710",
+        "name": "농심홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 110,
+        "avgCost": 90300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_083_008730",
+        "ticker": "008730",
+        "name": "율촌화학",
+        "sector": "대기업·금융그룹",
+        "quantity": 391,
+        "avgCost": 25550.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_085",
+    "name": "DN그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_085_007340",
+        "ticker": "007340",
+        "name": "DN오토모티브",
+        "sector": "대기업·금융그룹",
+        "quantity": 423,
+        "avgCost": 23600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_086",
+    "name": "사조그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_086_007330",
+        "ticker": "007330",
+        "name": "푸른저축은행",
+        "sector": "대기업·금융그룹",
+        "quantity": 1035,
+        "avgCost": 9653.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_086_003960",
+        "ticker": "003960",
+        "name": "사조대림",
+        "sector": "대기업·금융그룹",
+        "quantity": 269,
+        "avgCost": 37100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_086_006090",
+        "ticker": "006090",
+        "name": "사조오양",
+        "sector": "대기업·금융그룹",
+        "quantity": 1103,
+        "avgCost": 9060.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_086_008040",
+        "ticker": "008040",
+        "name": "사조동아원",
+        "sector": "대기업·금융그룹",
+        "quantity": 916,
+        "avgCost": 10910.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_086_007160",
+        "ticker": "007160",
+        "name": "사조산업",
+        "sector": "대기업·금융그룹",
+        "quantity": 180,
+        "avgCost": 55500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_086_014710",
+        "ticker": "014710",
+        "name": "사조씨푸드",
+        "sector": "대기업·금융그룹",
+        "quantity": 1076,
+        "avgCost": 9290.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_087",
+    "name": "파라다이스그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_087_034230",
+        "ticker": "034230",
+        "name": "파라다이스",
+        "sector": "대기업·금융그룹",
+        "quantity": 600,
+        "avgCost": 16660.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_088",
+    "name": "하이트진로그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_088_000080",
+        "ticker": "000080",
+        "name": "하이트진로",
+        "sector": "대기업·금융그룹",
+        "quantity": 547,
+        "avgCost": 18250.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_088_000140",
+        "ticker": "000140",
+        "name": "하이트진로홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1031,
+        "avgCost": 9690.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_089",
+    "name": "하이브그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_089_352820",
+        "ticker": "352820",
+        "name": "하이브",
+        "sector": "대기업·금융그룹",
+        "quantity": 28,
+        "avgCost": 346000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_090",
+    "name": "대명화학그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_090_066900",
+        "ticker": "066900",
+        "name": "디에이피",
+        "sector": "대기업·금융그룹",
+        "quantity": 5396,
+        "avgCost": 1853.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_090_080420",
+        "ticker": "080420",
+        "name": "모다이노칩",
+        "sector": "대기업·금융그룹",
+        "quantity": 4524,
+        "avgCost": 2210.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_090_033290",
+        "ticker": "033290",
+        "name": "로젠",
+        "sector": "대기업·금융그룹",
+        "quantity": 4629,
+        "avgCost": 2160.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_090_472850",
+        "ticker": "472850",
+        "name": "폰드그룹",
+        "sector": "대기업·금융그룹",
+        "quantity": 1886,
+        "avgCost": 5300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_091",
+    "name": "한솔그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_091_055490",
+        "ticker": "055490",
+        "name": "테이팩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 720,
+        "avgCost": 13870.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_091_014680",
+        "ticker": "014680",
+        "name": "한솔케미칼",
+        "sector": "대기업·금융그룹",
+        "quantity": 41,
+        "avgCost": 240000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_091_025750",
+        "ticker": "025750",
+        "name": "한솔홈데코",
+        "sector": "대기업·금융그룹",
+        "quantity": 3134,
+        "avgCost": 3190.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_091_009180",
+        "ticker": "009180",
+        "name": "한솔로지스틱스",
+        "sector": "대기업·금융그룹",
+        "quantity": 3669,
+        "avgCost": 2725.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_091_114810",
+        "ticker": "114810",
+        "name": "한솔아이원스",
+        "sector": "대기업·금융그룹",
+        "quantity": 803,
+        "avgCost": 12440.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_091_213500",
+        "ticker": "213500",
+        "name": "한솔제지",
+        "sector": "대기업·금융그룹",
+        "quantity": 1219,
+        "avgCost": 8200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_091_004710",
+        "ticker": "004710",
+        "name": "한솔테크닉스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1804,
+        "avgCost": 5541.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_091_004150",
+        "ticker": "004150",
+        "name": "한솔홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 3284,
+        "avgCost": 3045.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "grp_ftc_091_070590",
+        "ticker": "070590",
+        "name": "인티큐브",
+        "sector": "대기업·금융그룹",
+        "quantity": 4761,
+        "avgCost": 2100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_093",
+    "name": "삼표그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_093_038500",
+        "ticker": "038500",
+        "name": "삼표시멘트",
+        "sector": "대기업·금융그룹",
+        "quantity": 1886,
+        "avgCost": 5300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_096",
+    "name": "한국콜마그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_096_200130",
+        "ticker": "200130",
+        "name": "콜마비앤에이치",
+        "sector": "대기업·금융그룹",
+        "quantity": 761,
+        "avgCost": 13140.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_096_024720",
+        "ticker": "024720",
+        "name": "콜마홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1018,
+        "avgCost": 9820.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_096_161890",
+        "ticker": "161890",
+        "name": "한국콜마",
+        "sector": "대기업·금융그룹",
+        "quantity": 152,
+        "avgCost": 65400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_097",
+    "name": "원익그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_097_032940",
+        "ticker": "032940",
+        "name": "원익",
+        "sector": "대기업·금융그룹",
+        "quantity": 727,
+        "avgCost": 13750.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_097_104830",
+        "ticker": "104830",
+        "name": "원익머트리얼즈",
+        "sector": "대기업·금융그룹",
+        "quantity": 291,
+        "avgCost": 34350.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_097_014190",
+        "ticker": "014190",
+        "name": "원익큐브",
+        "sector": "대기업·금융그룹",
+        "quantity": 4761,
+        "avgCost": 2100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_097_217820",
+        "ticker": "217820",
+        "name": "원익피앤이",
+        "sector": "대기업·금융그룹",
+        "quantity": 2487,
+        "avgCost": 4020.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_097_030530",
+        "ticker": "030530",
+        "name": "원익홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 209,
+        "avgCost": 47650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_097_263700",
+        "ticker": "263700",
+        "name": "케어랩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 3442,
+        "avgCost": 2905.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "grp_ftc_097_240810",
+        "ticker": "240810",
+        "name": "원익IPS",
+        "sector": "대기업·금융그룹",
+        "quantity": 125,
+        "avgCost": 80000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "grp_ftc_097_074600",
+        "ticker": "074600",
+        "name": "원익QnC",
+        "sector": "대기업·금융그룹",
+        "quantity": 438,
+        "avgCost": 22800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_099",
+    "name": "오리온그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_099_086980",
+        "ticker": "086980",
+        "name": "쇼박스",
+        "sector": "대기업·금융그룹",
+        "quantity": 3984,
+        "avgCost": 2510.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_099_271560",
+        "ticker": "271560",
+        "name": "오리온",
+        "sector": "대기업·금융그룹",
+        "quantity": 96,
+        "avgCost": 103100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_099_001800",
+        "ticker": "001800",
+        "name": "오리온홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 501,
+        "avgCost": 19960.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_100",
+    "name": "QCP그룹(舊 큐로홀딩스)그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_100_018680",
+        "ticker": "018680",
+        "name": "서울제약",
+        "sector": "대기업·금융그룹",
+        "quantity": 3267,
+        "avgCost": 3060.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_100_065060",
+        "ticker": "065060",
+        "name": "지엔코",
+        "sector": "대기업·금융그룹",
+        "quantity": 2551,
+        "avgCost": 3920.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "grp_ftc_100_047820",
+        "ticker": "047820",
+        "name": "초록뱀미디어",
+        "sector": "대기업·금융그룹",
+        "quantity": 2047,
+        "avgCost": 4885.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "grp_ftc_100_051780",
+        "ticker": "051780",
+        "name": "큐로홀딩스",
+        "sector": "대기업·금융그룹",
+        "quantity": 1661,
+        "avgCost": 6020.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "grp_ftc_100_040350",
+        "ticker": "040350",
+        "name": "크레오에스지",
+        "sector": "대기업·금융그룹",
+        "quantity": 2006,
+        "avgCost": 4985.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "grp_ftc_100_131100",
+        "ticker": "131100",
+        "name": "티엔엔터테인먼트",
+        "sector": "대기업·금융그룹",
+        "quantity": 1536,
+        "avgCost": 6510.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      }
+    ]
+  },
+  {
+    "id": "grp_ftc_101",
+    "name": "IS지주그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_ftc_101_010780",
+        "ticker": "010780",
+        "name": "아이에스동서",
+        "sector": "대기업·금융그룹",
+        "quantity": 431,
+        "avgCost": 23200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_ftc_101_060150",
+        "ticker": "060150",
+        "name": "인선이엔티",
+        "sector": "대기업·금융그룹",
+        "quantity": 2267,
+        "avgCost": 4410.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_kb",
+    "name": "KB금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_kb_105560",
+        "ticker": "105560",
+        "name": "KB금융",
+        "sector": "대기업·금융그룹",
+        "quantity": 81,
+        "avgCost": 123300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_shinhan",
+    "name": "신한금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_shinhan_055550",
+        "ticker": "055550",
+        "name": "신한지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 130,
+        "avgCost": 76600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "grp_fin_shinhan_006220",
+        "ticker": "006220",
+        "name": "제주은행",
+        "sector": "대기업·금융그룹",
+        "quantity": 869,
+        "avgCost": 11500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_hana",
+    "name": "하나금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_hana_086790",
+        "ticker": "086790",
+        "name": "하나금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 107,
+        "avgCost": 93400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_woori",
+    "name": "우리금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_woori_316140",
+        "ticker": "316140",
+        "name": "우리금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 356,
+        "avgCost": 28050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_bnk",
+    "name": "BNK금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_bnk_138930",
+        "ticker": "138930",
+        "name": "BNK금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 635,
+        "avgCost": 15730.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_im",
+    "name": "iM금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_im_139130",
+        "ticker": "139130",
+        "name": "iM금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 653,
+        "avgCost": 15310.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_jb",
+    "name": "JB금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_jb_175330",
+        "ticker": "175330",
+        "name": "JB금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 396,
+        "avgCost": 25200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_meritz",
+    "name": "메리츠금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_meritz_138040",
+        "ticker": "138040",
+        "name": "메리츠금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 89,
+        "avgCost": 111600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_korea-investment",
+    "name": "한국투자금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_korea-investment_071050",
+        "ticker": "071050",
+        "name": "한국금융지주",
+        "sector": "대기업·금융그룹",
+        "quantity": 60,
+        "avgCost": 165000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  },
+  {
+    "id": "grp_fin_ibk",
+    "name": "IBK금융그룹",
+    "sectorName": "대기업·금융그룹",
+    "positions": [
+      {
+        "id": "grp_fin_ibk_024110",
+        "ticker": "024110",
+        "name": "기업은행",
+        "sector": "대기업·금융그룹",
+        "quantity": 481,
+        "avgCost": 20750.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      }
+    ]
+  }
+]

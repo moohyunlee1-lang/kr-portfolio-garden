@@ -18,6 +18,12 @@ export type RangeCandle = {
   yearLow: number;
 };
 
+export type PeriodBaselines = {
+  weekOpen?: number | null;
+  monthOpen?: number | null;
+  yearOpen?: number | null;
+};
+
 export type Fundamentals = {
   marketCap?: number | null;
   per?: number | null;
@@ -59,6 +65,7 @@ export type Position = {
   issues?: Issue[];
   fundamentals?: Fundamentals;
   range?: RangeCandle;
+  period?: PeriodBaselines;
 };
 
 export type Garden = {

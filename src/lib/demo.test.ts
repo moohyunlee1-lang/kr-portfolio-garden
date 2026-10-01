@@ -13,6 +13,9 @@ import { quoteRecord } from "./quotes";
 describe("sample garden data", () => {
   it("materializes three trees with different stages, sizes, and a muted dividend sapling", () => {
     const quotes = quoteRecord();
+    quotes["005930"] = { ...quotes["005930"], lastPrice: 90000 };
+    quotes["000660"] = { ...quotes["000660"], lastPrice: 180000 };
+    quotes["033780"] = { ...quotes["033780"], lastPrice: 90000 };
     const garden = materializeGarden(
       createSampleGarden("sample"),
       quotes,

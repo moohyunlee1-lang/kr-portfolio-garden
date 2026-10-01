@@ -3,6 +3,7 @@ import type {
   Fundamentals,
   Garden,
   PlantInput,
+  PeriodBaselines,
   Position,
   RangeCandle,
   StoredGarden,
@@ -304,6 +305,7 @@ export function materializePosition(
     issues?: Position["issues"];
     fundamentals?: Fundamentals;
     range?: RangeCandle;
+    period?: PeriodBaselines;
   },
   now: Date,
   totalMarketValue: number,
@@ -331,6 +333,7 @@ export function materializePosition(
       issues: quote.issues,
       fundamentals: quote.fundamentals,
       range: quote.range,
+      period: quote.period,
     },
     now,
     totalMarketValue,
@@ -349,6 +352,7 @@ export function materializeGarden(
       issues?: Position["issues"];
       fundamentals?: Fundamentals;
       range?: RangeCandle;
+      period?: PeriodBaselines;
     }
   >,
   now: Date,
