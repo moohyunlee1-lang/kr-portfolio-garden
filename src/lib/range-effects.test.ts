@@ -1,5 +1,22 @@
 import { describe, expect, it } from "vitest";
-import { classifyRangeEffect, countRangeEffects, intensityFromGap, rangeFromMonths } from "./range-effects";
+import { classifyRangeEffect, countRangeEffects, intensityFromGap, rangeFromMonths, rangeWithLivePrice } from "./range-effects";
+
+describe("rangeWithLivePrice", () => {
+  it("lights a new high on price update and updates intensity without changing the stored candle", () => {
+    const base = { open: 100, high: 110, low: 95, close: 105, yearHigh: 120, yearLow: 80 };
+    const newHigh = rangeWithLivePrice(base, 125)!;
+    expect(classifyRangeEffect(base).kind).toBe("none");
+    expect(classifyRangeEffect(newHigh)).toMatchObject({ kind: "fire", intensity: 1 });
+    expect(rangeWithLivePrice(newHigh, 115)?.high).toBe(125);
+    expect(rangeWithLivePrice(newHigh, 115)?.close).toBe(115);
+    expect(base.high).toBe(110);
+  });
+  it("lights a new low and ignores invalid prices", () => {
+    const base = { open: 100, high: 110, low: 95, close: 105, yearHigh: 120, yearLow: 80 };
+    expect(classifyRangeEffect(rangeWithLivePrice(base, 75)).kind).toBe("aura");
+    expect(rangeWithLivePrice(base, 0)).toBe(base);
+  });
+});
 
 describe("intensityFromGap", () => {
   it("is strongest near 0% and drops every 10%", () => {

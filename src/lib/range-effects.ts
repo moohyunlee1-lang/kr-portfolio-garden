@@ -46,6 +46,19 @@ export function classifyRangeEffect(candle?: RangeCandle | null): RangeEffect {
   return { kind: "none", fireColor: "orange", intensity: 0 };
 }
 
+/** Fold a live trade into the monthly candle before classifying fire/aura. */
+export function rangeWithLivePrice(candle: RangeCandle | undefined, price: number): RangeCandle | undefined {
+  if (!candle || !Number.isFinite(price) || price <= 0) return candle;
+  return {
+    ...candle,
+    high: Math.max(candle.high, price),
+    low: Math.min(candle.low, price),
+    close: price,
+    yearHigh: Math.max(candle.yearHigh, price),
+    yearLow: Math.min(candle.yearLow, price),
+  };
+}
+
 export function countRangeEffects(
   tickers: string[],
   lookup: (ticker: string) => RangeCandle | undefined,

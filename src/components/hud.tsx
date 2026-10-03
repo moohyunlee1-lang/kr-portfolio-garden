@@ -11,7 +11,6 @@ import {
 import { gardenSnapshot, searchPlantedTrees } from "@/lib/garden-math";
 import type { Garden, StoredGarden, Weather } from "@/lib/types";
 import { useGardens } from "@/components/garden-context";
-import { quoteRecord } from "@/lib/quotes";
 import { countRangeEffects } from "@/lib/range-effects";
 
 const SECTOR_ORDER = [
@@ -61,11 +60,10 @@ export function Hud({
   onCreate: () => void;
   onSample: () => void;
 }) {
-  const { gardens, renameGarden, deleteGarden } = useGardens();
+  const { gardens, renameGarden, deleteGarden, rangeFor } = useGardens();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [treeQuery, setTreeQuery] = useState("");
-  const quotes = useMemo(() => quoteRecord(), []);
   const totals = gardenSnapshot(garden.positions);
   const treeHits = useMemo(
     () => searchPlantedTrees(gardens, treeQuery),
@@ -169,7 +167,7 @@ export function Hud({
                     {section.items.map((item) => {
                       const marks = countRangeEffects(
                         item.positions.map((position) => position.ticker),
-                        (ticker) => quotes[ticker]?.range,
+                        rangeFor,
                       );
                       return (
                         <div key={item.id} className="flex items-center gap-2">

@@ -3,6 +3,7 @@ import { readLastGardenId, writeLastGardenId } from "./garden-math";
 import { mergeCbGardens, isGeneratedGarden } from "./cb-issuance-seed";
 import { mergeGroupGardens } from "./group-seed";
 import { mergeValueChainGardens } from "./valuechain-seed";
+import { FIRETREE_ID, seedFireTreeGarden } from "./firetree-seed";
 
 export const GARDENS_KEY = "kr-garden:gardens";
 export const HARVEST_KEY = "kr-garden:harvested";
@@ -107,6 +108,11 @@ export function ensureEntry(
       mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens))),
       loadHidden(storage),
     );
+  }
+
+  if (!gardens.some((garden) => garden.id === FIRETREE_ID) && !loadHidden(storage).includes(FIRETREE_ID)) {
+    gardens = [...gardens, seedFireTreeGarden(gardens)];
+    saveGardens(storage, gardens);
   }
 
   const last = readLastGardenId(storage);

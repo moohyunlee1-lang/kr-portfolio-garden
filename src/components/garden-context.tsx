@@ -19,6 +19,8 @@ import {
 import { applyLiveQuotes } from "@/lib/market/chain";
 import type { LiveQuote } from "@/lib/market/types";
 import { quoteRecord } from "@/lib/quotes";
+import { rangeWithLivePrice } from "@/lib/range-effects";
+import type { RangeCandle } from "@/lib/types";
 import {
   dropGarden,
   ensureEntry,
@@ -53,6 +55,7 @@ type GardenContextValue = {
   markHarvested: (key: string) => void;
   applyLive: (rows: LiveQuote[]) => void;
   liveTickers: ReadonlySet<string>;
+  rangeFor: (ticker: string) => RangeCandle | undefined;
 };
 
 const GardenContext = createContext<GardenContextValue | null>(null);
@@ -71,7 +74,17 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
   const [entryId, setEntryId] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
   const [live, setLive] = useState<LiveQuote[]>([]);
-  const quotes = useMemo(() => applyLiveQuotes(quoteRecord(), live), [live]);
+  const quotes = useMemo(() => {
+    const merged = applyLiveQuotes(quoteRecord(), live);
+    for (const row of live) {
+      const quote = merged[row.ticker];
+      if (quote && row.lastPrice > 0) {
+        merged[row.ticker] = { ...quote, range: rangeWithLivePrice(quote.range, row.lastPrice) };
+      }
+    }
+    return merged;
+  }, [live]);
+  const rangeFor = useCallback((ticker: string) => quotes[ticker]?.range, [quotes]);
   const liveTickers = useMemo(() => new Set(live.map((row) => row.ticker)), [live]);
 
   useEffect(() => {
@@ -237,6 +250,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       markHarvested,
       applyLive,
       liveTickers,
+      rangeFor,
     }),
     [
       ready,
@@ -253,6 +267,7 @@ export function GardenProvider({ children }: { children: React.ReactNode }) {
       markHarvested,
       applyLive,
       liveTickers,
+      rangeFor,
     ],
   );
 

@@ -8,6 +8,7 @@ import {
   saveHidden,
 } from "./storage";
 import { LAST_GARDEN_KEY } from "./garden-math";
+import { FIRETREE_ID } from "./firetree-seed";
 import { mergeValueChainGardens } from "./valuechain-seed";
 
 function memoryStorage() {
@@ -55,6 +56,20 @@ describe("ensureEntry", () => {
     expect(entry.gardens.map((garden) => garden.id).slice(0, 2)).toEqual(["a", "b"]);
   });
 
+  it("seeds the firetree snapshot once and keeps it deleted when hidden", () => {
+    const storage = memoryStorage();
+    const first = ensureEntry(storage, () => "mine");
+    const firetree = first.gardens.find((garden) => garden.id === FIRETREE_ID);
+    expect(firetree).toBeTruthy();
+    expect(firetree!.positions.length).toBeGreaterThan(0);
+    expect(firetree!.positions.every((position) => position.purchasedAt === "2026-10-01")).toBe(true);
+    firetree!.positions[0].quantity = 123;
+    storage.setItem(GARDENS_KEY, JSON.stringify(first.gardens));
+    expect(ensureEntry(storage).gardens.find((garden) => garden.id === FIRETREE_ID)?.positions[0].quantity).toBe(123);
+    saveHidden(storage, [FIRETREE_ID]);
+    expect(ensureEntry(storage).gardens.some((garden) => garden.id === FIRETREE_ID)).toBe(false);
+  });
+
   it("does not restore a hidden value-chain garden", () => {
     const storage = memoryStorage();
     const seeded = mergeValueChainGardens([{ id: "mine", name: "내 밭", positions: [] }]);
@@ -96,6 +111,7 @@ describe("dropGarden", () => {
       "grp_naver_096",
     );
     expect(result?.hidden).toBe(true);
+    expect(dropGarden(result!.gardens.concat({ id: FIRETREE_ID, name: "파이어트리", positions: [] }), FIRETREE_ID)?.hidden).toBe(true);
     expect(result?.gardens.map((garden) => garden.id)).toEqual([
       "mine",
       "vc_semiconductor-sobujang_01",

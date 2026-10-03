@@ -36,5 +36,5 @@ export function mergeCbGardens(
 }
 
 export function isGeneratedGarden(gardenId: string): boolean {
-  return gardenId.startsWith("vc_") || gardenId.startsWith("cb_") || gardenId.startsWith("grp_");
+  return gardenId.startsWith("vc_") || gardenId.startsWith("cb_") || gardenId.startsWith("grp_") || gardenId === "garden_firetree_20261001";
 }
