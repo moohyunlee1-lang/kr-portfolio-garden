@@ -4,10 +4,13 @@ import { mergeCbGardens, isGeneratedGarden } from "./cb-issuance-seed";
 import { mergeGroupGardens } from "./group-seed";
 import { mergeValueChainGardens } from "./valuechain-seed";
 import { FIRETREE_ID, seedFireTreeGarden } from "./firetree-seed";
+import { quoteRecord } from "./quotes";
+import { classifyRangeEffect } from "./range-effects";
 
 export const GARDENS_KEY = "kr-garden:gardens";
 export const HARVEST_KEY = "kr-garden:harvested";
 export const HIDDEN_KEY = "kr-garden:hidden";
+const FIRETREE_REVIEW_KEY = "kr-garden:firetree-range-reviewed-v2";
 
 type Store = {
   getItem(key: string): string | null;
@@ -113,6 +116,18 @@ export function ensureEntry(
   if (!gardens.some((garden) => garden.id === FIRETREE_ID) && !loadHidden(storage).includes(FIRETREE_ID)) {
     gardens = [...gardens, seedFireTreeGarden(gardens)];
     saveGardens(storage, gardens);
+    storage.setItem(FIRETREE_REVIEW_KEY, "1");
+  } else if (gardens.some((garden) => garden.id === FIRETREE_ID) && storage.getItem(FIRETREE_REVIEW_KEY) !== "1") {
+    // Correct the one-time snapshot from before stale candles were excluded.
+    const quotes = quoteRecord();
+    gardens = gardens.map((garden) => garden.id !== FIRETREE_ID ? garden : {
+      ...garden,
+      positions: garden.positions
+        .filter((position) => classifyRangeEffect(quotes[position.ticker]?.range).kind === "fire")
+        .map((position, plotIndex) => ({ ...position, plotIndex })),
+    });
+    saveGardens(storage, gardens);
+    storage.setItem(FIRETREE_REVIEW_KEY, "1");
   }
 
   const last = readLastGardenId(storage);

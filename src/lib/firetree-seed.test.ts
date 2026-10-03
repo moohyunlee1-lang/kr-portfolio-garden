@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { FIRETREE_DATE, FIRETREE_ID, seedFireTreeGarden } from "./firetree-seed";
+import { quoteRecord } from "./quotes";
 import type { StoredGarden } from "./types";
 
 const fire = { open: 90, high: 120, low: 80, close: 118, yearHigh: 120, yearLow: 70 };
@@ -25,5 +26,11 @@ describe("seedFireTreeGarden", () => {
     expect(result.positions.every((p) => p.purchasedAt === FIRETREE_DATE && p.gardenId === FIRETREE_ID)).toBe(true);
     expect(result.positions[0].quantity).toBe(10);
     expect(gardens[0].positions[0].purchasedAt).toBe("2026-01-02");
+  });
+  it("never treats PCL's 2025 candle as a current fire", () => {
+    const quotes = quoteRecord();
+    expect(quotes["241820"]?.range).toBeUndefined();
+    const garden: StoredGarden = { id: "mine", name: "내 정원", positions: [position("241820", "mine")] };
+    expect(seedFireTreeGarden([garden]).positions).toEqual([]);
   });
 });

@@ -166,7 +166,12 @@ function asFundamentals(item: Record<string, unknown>): Fundamentals {
   };
 }
 
+const LATEST_RANGE_DATE = (generatedQuotes as Array<{ periodAsOf?: string | null }>)
+  .reduce((latest, row) => row.periodAsOf && /^\d{4}-\d{2}-\d{2}$/.test(row.periodAsOf) && row.periodAsOf > latest ? row.periodAsOf : latest, "");
+
 function asRange(item: Record<string, unknown>): RangeCandle | undefined {
+  // A halted/delisted ticker's last candle is not a current 52-week high/low.
+  if (item.periodAsOf !== LATEST_RANGE_DATE) return undefined;
   const nested = item.range && typeof item.range === "object" ? (item.range as RangeCandle) : null;
   const open = (item.monthOpen as number | undefined) ?? nested?.open;
   const high = (item.monthHigh as number | undefined) ?? nested?.high;

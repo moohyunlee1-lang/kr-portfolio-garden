@@ -70,6 +70,25 @@ describe("ensureEntry", () => {
     expect(ensureEntry(storage).gardens.some((garden) => garden.id === FIRETREE_ID)).toBe(false);
   });
 
+  it("repairs an already-saved firetree garden without discarding valid holdings or repeating the repair", () => {
+    const storage = memoryStorage();
+    const old = {
+      id: FIRETREE_ID, name: "파이어트리", positions: [
+        { id: "firetree_241820", gardenId: FIRETREE_ID, ticker: "241820", name: "피씨엘", sector: "바이오", quantity: 10, avgCost: 300, purchasedAt: "2026-10-01", plotIndex: 0 },
+        { id: "firetree_159010", gardenId: FIRETREE_ID, ticker: "159010", name: "아스플로", sector: "반도체", quantity: 47, avgCost: 1000, purchasedAt: "2026-10-01", plotIndex: 1 },
+      ],
+    };
+    storage.setItem(GARDENS_KEY, JSON.stringify([{ id: "mine", name: "내 정원", positions: [] }, old]));
+    const repaired = ensureEntry(storage).gardens.find((garden) => garden.id === FIRETREE_ID)!;
+    expect(repaired.positions.map((p) => p.ticker)).toEqual(["159010"]);
+    expect(repaired.positions[0]).toMatchObject({ quantity: 47, plotIndex: 0, purchasedAt: "2026-10-01" });
+    repaired.positions[0].quantity = 99;
+    storage.setItem(GARDENS_KEY, JSON.stringify(ensureEntry(storage).gardens.map((garden) =>
+      garden.id === FIRETREE_ID ? repaired : garden,
+    )));
+    expect(ensureEntry(storage).gardens.find((garden) => garden.id === FIRETREE_ID)?.positions[0].quantity).toBe(99);
+  });
+
   it("does not restore a hidden value-chain garden", () => {
     const storage = memoryStorage();
     const seeded = mergeValueChainGardens([{ id: "mine", name: "내 밭", positions: [] }]);
