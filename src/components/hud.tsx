@@ -12,6 +12,7 @@ import { gardenSnapshot, searchPlantedTrees } from "@/lib/garden-math";
 import type { Garden, StoredGarden, Weather } from "@/lib/types";
 import { useGardens } from "@/components/garden-context";
 import { countRangeEffects } from "@/lib/range-effects";
+import { riskGardenNotice } from "@/lib/risk-caveat";
 
 const SECTOR_ORDER = [
   "반도체",
@@ -99,6 +100,11 @@ export function Hud({
             </button>
           </div>
         </div>
+        {riskGardenNotice(garden.id) && (
+          <p className="rounded-xl bg-amber-50 px-3 py-2 text-xs leading-snug text-amber-900" role="note">
+            {riskGardenNotice(garden.id)}
+          </p>
+        )}
         <div className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-4">
           <Stat label="총평가" value={formatMoney(totals.marketValue)} />
           <Stat

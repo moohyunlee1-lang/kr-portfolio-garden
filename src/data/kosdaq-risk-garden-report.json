@@ -1,0 +1,645 @@
+{
+  "reference_date": "2026-09-01",
+  "membership_as_of": "2026-10-06",
+  "membership_count": 60,
+  "planted": 37,
+  "designated_after_reference_day": [
+    "058450",
+    "087260",
+    "303030",
+    "006050",
+    "142760",
+    "377220",
+    "131760",
+    "354200",
+    "101000",
+    "306040"
+  ],
+  "membership": {
+    "032685": {
+      "name": "소프트센우",
+      "management_date": "2026-07-01",
+      "management_reason": "종류주식의 시가총액 요건 미달,종류주식의 상장주식수 요건 미달"
+    },
+    "312610": {
+      "name": "에이에프더블류",
+      "management_date": "2026-07-16",
+      "management_reason": "시가총액 미달,상장폐지사유 발생,주가 미달(동전주)"
+    },
+    "196490": {
+      "name": "디에이테크놀로지",
+      "management_date": "2024-04-24",
+      "management_reason": "상장적격성 실질심사 대상 결정,상장폐지사유 발생"
+    },
+    "035290": {
+      "name": "골드앤에스",
+      "management_date": "2026-07-13",
+      "management_reason": "시가총액 미달,상장폐지사유 발생"
+    },
+    "058450": {
+      "name": "한주에이알티",
+      "management_date": "2026-09-10",
+      "management_reason": "시가총액 미달"
+    },
+    "011080": {
+      "name": "형지I&C",
+      "management_date": "2026-08-04",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "199730": {
+      "name": "바이오인프라",
+      "management_date": "2026-07-31",
+      "management_reason": "시가총액 미달"
+    },
+    "250930": {
+      "name": "예선테크",
+      "management_date": "2026-07-31",
+      "management_reason": "시가총액 미달"
+    },
+    "900120": {
+      "name": "씨엑스아이",
+      "management_date": "2026-08-04",
+      "management_reason": "시가총액 미달"
+    },
+    "025870": {
+      "name": "신라에스지",
+      "management_date": "2026-07-09",
+      "management_reason": "시가총액 미달,상장폐지사유 발생"
+    },
+    "052770": {
+      "name": "아이톡시",
+      "management_date": "2025-03-26",
+      "management_reason": "시가총액 미달,상장적격성 실질심사 대상 결정,상장폐지사유 발생,자본잠식률 50% 이상"
+    },
+    "225430": {
+      "name": "케이엠제약",
+      "management_date": "2026-07-09",
+      "management_reason": "시가총액 미달,상장폐지사유 발생"
+    },
+    "313760": {
+      "name": "캐리",
+      "management_date": "2026-04-01",
+      "management_reason": "상장폐지사유 발생,상장적격성 실질심사 대상 결정"
+    },
+    "044180": {
+      "name": "KD",
+      "management_date": "2026-03-06",
+      "management_reason": "회생절차 개시신청,상장폐지사유 발생"
+    },
+    "291810": {
+      "name": "핀텔",
+      "management_date": "2026-07-24",
+      "management_reason": "시가총액 미달,상장폐지사유 발생"
+    },
+    "900100": {
+      "name": "파이온엑스",
+      "management_date": "2026-08-05",
+      "management_reason": "시가총액 미달"
+    },
+    "308100": {
+      "name": "형지글로벌",
+      "management_date": "2026-08-13",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "276040": {
+      "name": "스코넥",
+      "management_date": "2026-04-08",
+      "management_reason": "파산신청,회생절차 개시신청,상장적격성 실질심사 대상 결정,상장폐지사유 발생"
+    },
+    "240600": {
+      "name": "유진테크놀로지",
+      "management_date": "2026-08-05",
+      "management_reason": "시가총액 미달"
+    },
+    "079970": {
+      "name": "투비소프트",
+      "management_date": "2025-03-24",
+      "management_reason": "상장폐지사유 발생"
+    },
+    "288980": {
+      "name": "모아데이타",
+      "management_date": "2026-08-21",
+      "management_reason": "주가 미달(동전주)"
+    },
+    "087260": {
+      "name": "모바일어플라이언스",
+      "management_date": "2026-09-02",
+      "management_reason": "상장적격성 실질심사 대상 결정"
+    },
+    "001000": {
+      "name": "신라섬유",
+      "management_date": "2026-08-20",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "012340": {
+      "name": "뉴인텍",
+      "management_date": "2026-08-13",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "065770": {
+      "name": "CS",
+      "management_date": "2026-08-28",
+      "management_reason": "시가총액 미달"
+    },
+    "067770": {
+      "name": "세진티에스",
+      "management_date": "2026-07-21",
+      "management_reason": "시가총액 미달,상장폐지사유 발생"
+    },
+    "289010": {
+      "name": "아이스크림에듀",
+      "management_date": "2026-08-04",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "060480": {
+      "name": "국일신동",
+      "management_date": "2026-08-13",
+      "management_reason": "시가총액 미달"
+    },
+    "106080": {
+      "name": "케이이엠텍",
+      "management_date": "2026-04-20",
+      "management_reason": "상장폐지사유 발생"
+    },
+    "208640": {
+      "name": "썸에이지",
+      "management_date": "2026-08-07",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "303030": {
+      "name": "지니틱스",
+      "management_date": "2026-09-03",
+      "management_reason": "시가총액 미달"
+    },
+    "006050": {
+      "name": "국영지앤엠",
+      "management_date": "2026-09-23",
+      "management_reason": "시가총액 미달"
+    },
+    "103230": {
+      "name": "에스앤더블류",
+      "management_date": "2026-08-13",
+      "management_reason": "시가총액 미달"
+    },
+    "142760": {
+      "name": "모아라이프플러스",
+      "management_date": "2026-09-04",
+      "management_reason": "주가 미달(동전주)"
+    },
+    "043100": {
+      "name": "알파AI",
+      "management_date": "2026-04-08",
+      "management_reason": "회생절차 개시신청,상장폐지사유 발생"
+    },
+    "377220": {
+      "name": "프롬바이오",
+      "management_date": "2026-09-28",
+      "management_reason": "시가총액 미달"
+    },
+    "060260": {
+      "name": "뉴보텍",
+      "management_date": "2026-08-26",
+      "management_reason": "시가총액 미달"
+    },
+    "131760": {
+      "name": "파인텍",
+      "management_date": "2026-09-08",
+      "management_reason": "시가총액 미달"
+    },
+    "035620": {
+      "name": "바른손이앤에이",
+      "management_date": "2026-08-06",
+      "management_reason": "주가 미달(동전주),시가총액 미달"
+    },
+    "065570": {
+      "name": "삼영이엔씨",
+      "management_date": "2025-03-21",
+      "management_reason": "상장적격성 실질심사 대상 결정,상장폐지사유 발생"
+    },
+    "354200": {
+      "name": "엔젠바이오",
+      "management_date": "2026-10-02",
+      "management_reason": "시가총액 미달"
+    },
+    "028080": {
+      "name": "휴맥스홀딩스",
+      "management_date": "2026-08-03",
+      "management_reason": "시가총액 미달"
+    },
+    "054180": {
+      "name": "메디콕스",
+      "management_date": "2025-09-03",
+      "management_reason": "상장폐지사유 발생,상장적격성 실질심사 대상 결정"
+    },
+    "092600": {
+      "name": "앤씨앤",
+      "management_date": "2026-07-31",
+      "management_reason": "시가총액 미달"
+    },
+    "239340": {
+      "name": "이스트에이드",
+      "management_date": "2026-08-13",
+      "management_reason": "주가 미달(동전주)"
+    },
+    "418620": {
+      "name": "E8",
+      "management_date": "2026-08-13",
+      "management_reason": "주가 미달(동전주),시가총액 미달"
+    },
+    "244460": {
+      "name": "올리패스",
+      "management_date": "2024-03-20",
+      "management_reason": "최근3사업연도중 2사업연도 자기자본 50%초과 법인세비용차감전계속사업손실 발생,상장적격성 실질심사 대상 결정,상장폐지사유 발생,자본잠식률 50% 이상"
+    },
+    "352770": {
+      "name": "셀레스트라",
+      "management_date": "2025-04-07",
+      "management_reason": "회생절차 개시신청,파산신청,상장폐지사유 발생"
+    },
+    "225590": {
+      "name": "패션플랫폼",
+      "management_date": "2026-08-13",
+      "management_reason": "시가총액 미달"
+    },
+    "376930": {
+      "name": "노을",
+      "management_date": "2026-08-13",
+      "management_reason": "주가 미달(동전주)"
+    },
+    "101000": {
+      "name": "KS인더스트리",
+      "management_date": "2026-09-07",
+      "management_reason": "시가총액 미달"
+    },
+    "030350": {
+      "name": "드래곤플라이",
+      "management_date": "2025-04-11",
+      "management_reason": "상장적격성 실질심사 대상 결정,최근3사업연도중 2사업연도 자기자본 50%초과 법인세비용차감전계속사업손실 발생"
+    },
+    "050090": {
+      "name": "비케이홀딩스",
+      "management_date": "2026-08-04",
+      "management_reason": "시가총액 미달,주가 미달(동전주)"
+    },
+    "241820": {
+      "name": "피씨엘",
+      "management_date": "2025-03-25",
+      "management_reason": "상장적격성 실질심사 대상 결정,자본잠식률 50% 이상,매출액 30억원 미달,상장폐지사유 발생"
+    },
+    "037400": {
+      "name": "우리엔터프라이즈",
+      "management_date": "2026-08-13",
+      "management_reason": "주가 미달(동전주)"
+    },
+    "306040": {
+      "name": "에스제이그룹",
+      "management_date": "2026-09-04",
+      "management_reason": "시가총액 미달"
+    },
+    "195990": {
+      "name": "루트K",
+      "management_date": "2026-03-24",
+      "management_reason": "자본잠식률 50% 이상"
+    },
+    "031860": {
+      "name": "디에이치엑스컴퍼니",
+      "management_date": "2026-02-13",
+      "management_reason": "상장폐지사유 발생,시가총액 미달"
+    },
+    "214610": {
+      "name": "롤링스톤",
+      "management_date": "2026-03-24",
+      "management_reason": "상장폐지사유 발생"
+    },
+    "073190": {
+      "name": "듀오백",
+      "management_date": "2026-06-18",
+      "management_reason": "시가총액 미달,상장적격성 실질심사 대상 결정"
+    }
+  },
+  "observations": {
+    "032685": {
+      "observed_date": "2026-09-01",
+      "observed_close": "8700",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=032685&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "3053",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/032685.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "312610": {
+      "observed_date": "2026-09-01",
+      "observed_close": "324",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=312610&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "1552624",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/312610.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "035290": {
+      "observed_date": "2026-09-01",
+      "observed_close": "2705",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=035290&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "161577",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/035290.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "058450": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1724",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=058450&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "39642",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/058450.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "011080": {
+      "observed_date": "2026-09-01",
+      "observed_close": "885",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=011080&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "201444",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/011080.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "199730": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1620",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=199730&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "35373",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/199730.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "250930": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1869",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=250930&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "8317",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/250930.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "025870": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1993",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=025870&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "62247",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/025870.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "225430": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1330",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=225430&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "70931",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/225430.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "291810": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1307",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=291810&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "159967",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/291810.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "900100": {
+      "observed_date": "2026-09-01",
+      "observed_close": "2350",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=900100&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "299025",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/900100.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "308100": {
+      "observed_date": "2026-09-01",
+      "observed_close": "386",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=308100&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "409722",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/308100.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "240600": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1773",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=240600&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "13452",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/240600.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "288980": {
+      "observed_date": "2026-09-01",
+      "observed_close": "332",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=288980&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "11124963",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/288980.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "012340": {
+      "observed_date": "2026-09-01",
+      "observed_close": "578",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=012340&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "266405",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/012340.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "065770": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1247",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=065770&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "261423",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/065770.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "067770": {
+      "observed_date": "2026-09-01",
+      "observed_close": "2775",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=067770&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "48494",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/067770.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "289010": {
+      "observed_date": "2026-09-01",
+      "observed_close": "957",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=289010&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "123057",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/289010.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "060480": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1374",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=060480&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "58856",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/060480.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "208640": {
+      "observed_date": "2026-09-01",
+      "observed_close": "668",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=208640&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "72289",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/208640.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "303030": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1801",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=303030&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "247101",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/303030.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "006050": {
+      "observed_date": "2026-09-01",
+      "observed_close": "4880",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=006050&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "10335",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/006050.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "103230": {
+      "observed_date": "2026-09-01",
+      "observed_close": "2470",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=103230&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "41596",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/103230.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "142760": {
+      "observed_date": "2026-09-01",
+      "observed_close": "970",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=142760&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "6394025",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/142760.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "377220": {
+      "observed_date": "2026-09-01",
+      "observed_close": "3000",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=377220&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "150364",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/377220.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "060260": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1090",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=060260&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "49553",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/060260.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "131760": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1835",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=131760&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "57398",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/131760.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "035620": {
+      "observed_date": "2026-09-01",
+      "observed_close": "707",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=035620&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "43659",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/035620.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "354200": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1768",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=354200&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "90769",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/354200.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "028080": {
+      "observed_date": "2026-09-01",
+      "observed_close": "5080",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=028080&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "2952",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/028080.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "092600": {
+      "observed_date": "2026-09-01",
+      "observed_close": "2140",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=092600&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "308941",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/092600.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "418620": {
+      "observed_date": "2026-09-01",
+      "observed_close": "514",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=418620&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "539825",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/418620.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "225590": {
+      "observed_date": "2026-09-01",
+      "observed_close": "3255",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=225590&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "26719",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/225590.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "101000": {
+      "observed_date": "2026-09-01",
+      "observed_close": "783",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=101000&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "103876",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/101000.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "050090": {
+      "observed_date": "2026-09-01",
+      "observed_close": "771",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=050090&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "155096",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/050090.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "306040": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1963",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=306040&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "52612",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/306040.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    },
+    "195990": {
+      "observed_date": "2026-09-01",
+      "observed_close": "1341",
+      "source_url": "https://fchart.stock.naver.com/siseJson.nhn?symbol=195990&requestType=1&startTime=20260827&endTime=20260904&timeframe=day",
+      "verification_status": "independently_verified",
+      "volume": "12908",
+      "crosscheck_url": "https://query1.finance.yahoo.com/v8/finance/chart/195990.KQ?period1=1787875200&period2=1788566400&interval=1d"
+    }
+  },
+  "skipped": {
+    "196490": "no trade on reference day",
+    "900120": "no trade on reference day",
+    "052770": "no trade on reference day",
+    "313760": "no trade on reference day",
+    "044180": "no trade on reference day",
+    "276040": "no trade on reference day",
+    "079970": "no trade on reference day",
+    "087260": "no trade on reference day",
+    "001000": "no trade on reference day",
+    "106080": "no trade on reference day",
+    "043100": "no trade on reference day",
+    "065570": "no trade on reference day",
+    "054180": "no trade on reference day",
+    "239340": "no trade on reference day",
+    "244460": "no trade on reference day",
+    "352770": "no trade on reference day",
+    "376930": "no trade on reference day",
+    "030350": "no trade on reference day",
+    "241820": "no trade on reference day",
+    "037400": "no trade on reference day",
+    "031860": "no trade on reference day",
+    "214610": "no trade on reference day",
+    "073190": "no trade on reference day"
+  },
+  "verification_note": "Price provenance and verification status are supplied by the input CSV; this builder does not independently validate external historical bars.",
+  "execution_note": "Positions are hypothetical budget-based simulations; no historical trades or executions are asserted."
+}

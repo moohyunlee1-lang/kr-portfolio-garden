@@ -68586,5 +68586,14 @@
     "bps": null,
     "debtRatioPct": null,
     "debtPerShare": null
+  },
+  {
+    "ticker": "032685",
+    "name": "소프트센우",
+    "sector": "기타",
+    "lastPrice": 5730,
+    "changePct": -1.207,
+    "volume": 1020,
+    "periodAsOf": "2026-10-02"
   }
 ]

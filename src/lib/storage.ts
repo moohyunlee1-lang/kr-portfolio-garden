@@ -5,6 +5,7 @@ import { mergeGroupGardens } from "./group-seed";
 import { mergeValueChainGardens } from "./valuechain-seed";
 import { mergeMaGardens } from "./ma-seed";
 import { mergeCrossGardens } from "./cross-seed";
+import { mergeKosdaqRiskGardens } from "./kosdaq-risk-seed";
 import { FIRETREE_ID, migrateFireTreeGarden, seedFireTreeGarden } from "./firetree-seed";
 import { quoteRecord } from "./quotes";
 
@@ -94,7 +95,7 @@ export function ensureEntry(
       },
     ];
   }
-  const merged = mergeCrossGardens(mergeMaGardens(mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens)))));
+  const merged = mergeKosdaqRiskGardens(mergeCrossGardens(mergeMaGardens(mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens))))));
   if (merged !== gardens) {
     saveGardens(storage, merged);
     gardens = merged;
@@ -108,9 +109,9 @@ export function ensureEntry(
         positions: [],
       },
     ];
-    saveGardens(storage, mergeCrossGardens(mergeMaGardens(mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens))))));
+    saveGardens(storage, mergeKosdaqRiskGardens(mergeCrossGardens(mergeMaGardens(mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens)))))));
     gardens = applyHidden(
-      mergeCrossGardens(mergeMaGardens(mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens))))),
+      mergeKosdaqRiskGardens(mergeCrossGardens(mergeMaGardens(mergeGroupGardens(mergeCbGardens(mergeValueChainGardens(gardens)))))),
       loadHidden(storage),
     );
   }

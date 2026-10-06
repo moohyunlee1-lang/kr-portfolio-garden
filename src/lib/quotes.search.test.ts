@@ -22,4 +22,8 @@ describe("searchQuotes sectors", () => {
     expect(hits[0]?.ticker).toBe("323410");
     expect(getQuote("323410")?.name).toBe("카카오뱅크");
   });
+  it("has a baseline for the listed preferred share planted in the risk garden", () => {
+    expect(getQuote("032685")?.name).toBe("소프트센우");
+    expect(getQuote("032685")?.lastPrice).toBeGreaterThan(0);
+  });
 });

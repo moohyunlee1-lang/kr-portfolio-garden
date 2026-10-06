@@ -34,6 +34,11 @@ describe("ensureEntry", () => {
     expect(first.gardens.filter((garden) => garden.group === "반도체").length).toBe(10);
     expect(first.gardens.filter((garden) => garden.group === "대기업·금융그룹").length).toBeGreaterThanOrEqual(80);
     expect(first.gardens.find((garden) => garden.id === "cross_watch")?.positions).toEqual(crossGardens()[0].positions);
+    expect(first.gardens.find((garden) => garden.id === "kosdaq_delisting_risk")?.name).toBe("코스닥 상폐위기");
+    const risk = first.gardens.find((garden) => garden.id === "kosdaq_delisting_risk")!;
+    expect(risk.positions).toHaveLength(37);
+    expect(risk.positions.every((position) => position.purchasedAt === "2026-09-01")).toBe(true);
+    expect(risk.positions.find((position) => position.ticker === "032685")?.avgCost).toBe(8700);
     expect(storage.getItem(LAST_GARDEN_KEY)).toBe("garden-empty");
 
     const second = ensureEntry(storage, () => "should-not-create");
@@ -110,6 +115,12 @@ describe("ensureEntry", () => {
     saveHidden(storage, ["cross_watch"]);
     expect(ensureEntry(storage).gardens.some((garden) => garden.id === "cross_watch")).toBe(false);
   });
+  it("does not restore hidden delisting-risk garden", () => {
+    const storage = memoryStorage();
+    ensureEntry(storage, () => "mine");
+    saveHidden(storage, ["kosdaq_delisting_risk"]);
+    expect(ensureEntry(storage).gardens.some((garden) => garden.id === "kosdaq_delisting_risk")).toBe(false);
+  });
 });
 
 describe("dropGarden", () => {
@@ -139,6 +150,7 @@ describe("dropGarden", () => {
       "grp_naver_096",
     );
     expect(result?.hidden).toBe(true);
+    expect(dropGarden(result!.gardens.concat({ id: "kosdaq_delisting_risk", name: "코스닥 상폐위기", positions: [] }), "kosdaq_delisting_risk")?.hidden).toBe(true);
     expect(dropGarden(result!.gardens.concat({ id: FIRETREE_ID, name: "파이어트리", positions: [] }), FIRETREE_ID)?.hidden).toBe(true);
     expect(result?.gardens.map((garden) => garden.id)).toEqual([
       "mine",

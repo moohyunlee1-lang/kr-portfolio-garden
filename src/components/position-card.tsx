@@ -29,6 +29,7 @@ import {
 } from "@/lib/garden-math";
 import { harvestKey } from "@/lib/storage";
 import { classifyTree } from "@/lib/tree-traits";
+import { riskPositionNotice } from "@/lib/risk-caveat";
 
 const PlantHero = dynamic(() => import("@/components/plant-hero"), { ssr: false });
 
@@ -98,6 +99,11 @@ export function PositionCard({
         <h1 className="font-display text-4xl">{position.name}</h1>
         <p className="text-[#8a7362]">{position.ticker}</p>
       </header>
+      {riskPositionNotice(gardenId, position.ticker) && (
+        <p className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-900" role="note">
+          {riskPositionNotice(gardenId, position.ticker)}
+        </p>
+      )}
       <section className="rounded-[24px] bg-white p-4">
         <h2 className="font-semibold">심긴 정원</h2>
         <ul className="mt-3 flex flex-col gap-2">

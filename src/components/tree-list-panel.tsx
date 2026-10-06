@@ -8,6 +8,7 @@ import { crossMark } from "@/lib/cross-seed";
 import { filterTreeList, treeListPage } from "@/lib/tree-list";
 import crossReport from "@/data/cross-garden-report.json";
 import maReport from "@/data/ma-garden-report.json";
+import { riskGardenNotice } from "@/lib/risk-caveat";
 
 /** A right-hand inventory of planted trees. The large cross garden loads rows in pages. */
 export function TreeListPanel({ garden }: { garden: Garden }) {
@@ -57,6 +58,11 @@ export function TreeListPanel({ garden }: { garden: Garden }) {
           {garden.id === "ma_watch" && (
             <p className="mt-2 rounded-lg bg-amber-50 px-2 py-1 text-xs text-amber-900">
               이동평균 신호 {maReport.as_of} 기준 스냅샷 · 현재 신호로 해석하지 마세요.
+            </p>
+          )}
+          {riskGardenNotice(garden.id) && (
+            <p className="mt-2 rounded-lg bg-amber-50 px-2 py-1 text-xs text-amber-900">
+              {riskGardenNotice(garden.id)}
             </p>
           )}
           <label className="mt-4 block">

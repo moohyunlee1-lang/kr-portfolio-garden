@@ -14,6 +14,16 @@
 
 `python3 scripts/build-cross-garden.py`는 지정된 `kr-market-brain/.../ma-monitor/crossovers/latest.json`을 읽어 `cross_watch` 크로스트리 및 모든 정원의 종목별 골든/데드 표시를 생성합니다. 최초 입력이 없으면 빈 초기 정원을 만들지만, 이미 생성한 데이터가 있으면 입력 누락 시 덮어쓰지 않고 오류로 중단합니다. 마지막 20거래일(발생일 포함)의 교차 중 종목별 최근 신호를 유지하며, 수집 결손·제외 종목과 사유는 `src/data/cross-garden-report.json`에 기록됩니다. 두 정원 및 파이어트리는 2026-01-02 정확한 첫 세션 종가 대비 현재가로 크기를 계산하며 0.65–1.6배로 제한합니다. 파이어트리의 기존 스냅샷은 한 번만 첫 세션 종가로 재시드하고 해당 가격을 확인할 수 없는 종목은 제외합니다. 다른 정원의 기존 크기 계산은 유지됩니다. 생성 후 빌드·배포는 별개입니다.
 
+## 코스닥 상폐위기
+
+`kosdaq_delisting_risk`는 첨부 CSV에서 2026-10-06 KIND 관리종목 지정 `예`인 60개를 추려 만든 **가상 정원**입니다. 그중 2026-09-01 실제 거래량이 있는 종가를 Naver fchart와 Yahoo KOSDAQ 일봉에서 대조한 37개만 그 날짜에 심었습니다. 23개는 당일 거래가 없어 이월 가격을 시드 가격으로 쓰지 않았습니다. 종목마다 1천만 원 예산에서 정수 주를 산 것으로 가정하며 실제 거래내역은 아닙니다. 선정 명단은 10월 기준이므로 9월 1일 이후 관리종목으로 지정된 10개도 후보에 포함됩니다(식재 종목 중 9개). 또한 원본의 200억 미만 시총은 KIS 기준으로 KRX 공식 전종목 시총 검증이 완료되지 않았습니다.
+
+입력 및 증빙은 `scripts/data/kosdaq-risk-kind-membership-20261006.csv`, `scripts/data/kosdaq-risk-prices-20260901.csv`에 보관합니다. `src/data/kosdaq-risk-garden-report.json`에 식재·제외 종목과 날짜·가격 출처를 기록합니다. 다시 생성하려면:
+
+```bash
+python3 scripts/build_kosdaq_risk_garden.py --members scripts/data/kosdaq-risk-kind-membership-20261006.csv --prices scripts/data/kosdaq-risk-prices-20260901.csv
+```
+
 ## 로컬
 
 ```bash

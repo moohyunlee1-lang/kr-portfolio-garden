@@ -36,5 +36,5 @@ export function mergeCbGardens(
 }
 
 export function isGeneratedGarden(gardenId: string): boolean {
-  return gardenId.startsWith("vc_") || gardenId.startsWith("cb_") || gardenId.startsWith("grp_") || gardenId === "ma_watch" || gardenId === "cross_watch" || gardenId === "garden_firetree_20261001";
+  return gardenId.startsWith("vc_") || gardenId.startsWith("cb_") || gardenId.startsWith("grp_") || gardenId === "ma_watch" || gardenId === "cross_watch" || gardenId === "kosdaq_delisting_risk" || gardenId === "garden_firetree_20261001";
 }

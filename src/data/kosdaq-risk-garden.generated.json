@@ -1,0 +1,379 @@
+[
+  {
+    "id": "kosdaq_delisting_risk",
+    "name": "코스닥 상폐위기",
+    "sectorName": "코스닥 상폐위기",
+    "positions": [
+      {
+        "id": "kosdaq_delisting_risk_032685",
+        "ticker": "032685",
+        "name": "소프트센우",
+        "sector": "코스닥 상폐위기",
+        "quantity": 1149,
+        "avgCost": 8700,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 0
+      },
+      {
+        "id": "kosdaq_delisting_risk_312610",
+        "ticker": "312610",
+        "name": "에이에프더블류",
+        "sector": "코스닥 상폐위기",
+        "quantity": 30864,
+        "avgCost": 324,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 1
+      },
+      {
+        "id": "kosdaq_delisting_risk_035290",
+        "ticker": "035290",
+        "name": "골드앤에스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 3696,
+        "avgCost": 2705,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 2
+      },
+      {
+        "id": "kosdaq_delisting_risk_058450",
+        "ticker": "058450",
+        "name": "한주에이알티",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5800,
+        "avgCost": 1724,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 3
+      },
+      {
+        "id": "kosdaq_delisting_risk_011080",
+        "ticker": "011080",
+        "name": "형지I&C",
+        "sector": "코스닥 상폐위기",
+        "quantity": 11299,
+        "avgCost": 885,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 4
+      },
+      {
+        "id": "kosdaq_delisting_risk_199730",
+        "ticker": "199730",
+        "name": "바이오인프라",
+        "sector": "코스닥 상폐위기",
+        "quantity": 6172,
+        "avgCost": 1620,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 5
+      },
+      {
+        "id": "kosdaq_delisting_risk_250930",
+        "ticker": "250930",
+        "name": "예선테크",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5350,
+        "avgCost": 1869,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 6
+      },
+      {
+        "id": "kosdaq_delisting_risk_025870",
+        "ticker": "025870",
+        "name": "신라에스지",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5017,
+        "avgCost": 1993,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 7
+      },
+      {
+        "id": "kosdaq_delisting_risk_225430",
+        "ticker": "225430",
+        "name": "케이엠제약",
+        "sector": "코스닥 상폐위기",
+        "quantity": 7518,
+        "avgCost": 1330,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 8
+      },
+      {
+        "id": "kosdaq_delisting_risk_291810",
+        "ticker": "291810",
+        "name": "핀텔",
+        "sector": "코스닥 상폐위기",
+        "quantity": 7651,
+        "avgCost": 1307,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 9
+      },
+      {
+        "id": "kosdaq_delisting_risk_900100",
+        "ticker": "900100",
+        "name": "파이온엑스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 4255,
+        "avgCost": 2350,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 10
+      },
+      {
+        "id": "kosdaq_delisting_risk_308100",
+        "ticker": "308100",
+        "name": "형지글로벌",
+        "sector": "코스닥 상폐위기",
+        "quantity": 25906,
+        "avgCost": 386,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 11
+      },
+      {
+        "id": "kosdaq_delisting_risk_240600",
+        "ticker": "240600",
+        "name": "유진테크놀로지",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5640,
+        "avgCost": 1773,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 12
+      },
+      {
+        "id": "kosdaq_delisting_risk_288980",
+        "ticker": "288980",
+        "name": "모아데이타",
+        "sector": "코스닥 상폐위기",
+        "quantity": 30120,
+        "avgCost": 332,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 13
+      },
+      {
+        "id": "kosdaq_delisting_risk_012340",
+        "ticker": "012340",
+        "name": "뉴인텍",
+        "sector": "코스닥 상폐위기",
+        "quantity": 17301,
+        "avgCost": 578,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 14
+      },
+      {
+        "id": "kosdaq_delisting_risk_065770",
+        "ticker": "065770",
+        "name": "CS",
+        "sector": "코스닥 상폐위기",
+        "quantity": 8019,
+        "avgCost": 1247,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 15
+      },
+      {
+        "id": "kosdaq_delisting_risk_067770",
+        "ticker": "067770",
+        "name": "세진티에스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 3603,
+        "avgCost": 2775,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 16
+      },
+      {
+        "id": "kosdaq_delisting_risk_289010",
+        "ticker": "289010",
+        "name": "아이스크림에듀",
+        "sector": "코스닥 상폐위기",
+        "quantity": 10449,
+        "avgCost": 957,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 17
+      },
+      {
+        "id": "kosdaq_delisting_risk_060480",
+        "ticker": "060480",
+        "name": "국일신동",
+        "sector": "코스닥 상폐위기",
+        "quantity": 7278,
+        "avgCost": 1374,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 18
+      },
+      {
+        "id": "kosdaq_delisting_risk_208640",
+        "ticker": "208640",
+        "name": "썸에이지",
+        "sector": "코스닥 상폐위기",
+        "quantity": 14970,
+        "avgCost": 668,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 19
+      },
+      {
+        "id": "kosdaq_delisting_risk_303030",
+        "ticker": "303030",
+        "name": "지니틱스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5552,
+        "avgCost": 1801,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 20
+      },
+      {
+        "id": "kosdaq_delisting_risk_006050",
+        "ticker": "006050",
+        "name": "국영지앤엠",
+        "sector": "코스닥 상폐위기",
+        "quantity": 2049,
+        "avgCost": 4880,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 21
+      },
+      {
+        "id": "kosdaq_delisting_risk_103230",
+        "ticker": "103230",
+        "name": "에스앤더블류",
+        "sector": "코스닥 상폐위기",
+        "quantity": 4048,
+        "avgCost": 2470,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 22
+      },
+      {
+        "id": "kosdaq_delisting_risk_142760",
+        "ticker": "142760",
+        "name": "모아라이프플러스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 10309,
+        "avgCost": 970,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 23
+      },
+      {
+        "id": "kosdaq_delisting_risk_377220",
+        "ticker": "377220",
+        "name": "프롬바이오",
+        "sector": "코스닥 상폐위기",
+        "quantity": 3333,
+        "avgCost": 3000,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 24
+      },
+      {
+        "id": "kosdaq_delisting_risk_060260",
+        "ticker": "060260",
+        "name": "뉴보텍",
+        "sector": "코스닥 상폐위기",
+        "quantity": 9174,
+        "avgCost": 1090,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 25
+      },
+      {
+        "id": "kosdaq_delisting_risk_131760",
+        "ticker": "131760",
+        "name": "파인텍",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5449,
+        "avgCost": 1835,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 26
+      },
+      {
+        "id": "kosdaq_delisting_risk_035620",
+        "ticker": "035620",
+        "name": "바른손이앤에이",
+        "sector": "코스닥 상폐위기",
+        "quantity": 14144,
+        "avgCost": 707,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 27
+      },
+      {
+        "id": "kosdaq_delisting_risk_354200",
+        "ticker": "354200",
+        "name": "엔젠바이오",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5656,
+        "avgCost": 1768,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 28
+      },
+      {
+        "id": "kosdaq_delisting_risk_028080",
+        "ticker": "028080",
+        "name": "휴맥스홀딩스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 1968,
+        "avgCost": 5080,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 29
+      },
+      {
+        "id": "kosdaq_delisting_risk_092600",
+        "ticker": "092600",
+        "name": "앤씨앤",
+        "sector": "코스닥 상폐위기",
+        "quantity": 4672,
+        "avgCost": 2140,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 30
+      },
+      {
+        "id": "kosdaq_delisting_risk_418620",
+        "ticker": "418620",
+        "name": "E8",
+        "sector": "코스닥 상폐위기",
+        "quantity": 19455,
+        "avgCost": 514,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 31
+      },
+      {
+        "id": "kosdaq_delisting_risk_225590",
+        "ticker": "225590",
+        "name": "패션플랫폼",
+        "sector": "코스닥 상폐위기",
+        "quantity": 3072,
+        "avgCost": 3255,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 32
+      },
+      {
+        "id": "kosdaq_delisting_risk_101000",
+        "ticker": "101000",
+        "name": "KS인더스트리",
+        "sector": "코스닥 상폐위기",
+        "quantity": 12771,
+        "avgCost": 783,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 33
+      },
+      {
+        "id": "kosdaq_delisting_risk_050090",
+        "ticker": "050090",
+        "name": "비케이홀딩스",
+        "sector": "코스닥 상폐위기",
+        "quantity": 12970,
+        "avgCost": 771,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 34
+      },
+      {
+        "id": "kosdaq_delisting_risk_306040",
+        "ticker": "306040",
+        "name": "에스제이그룹",
+        "sector": "코스닥 상폐위기",
+        "quantity": 5094,
+        "avgCost": 1963,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 35
+      },
+      {
+        "id": "kosdaq_delisting_risk_195990",
+        "ticker": "195990",
+        "name": "루트K",
+        "sector": "코스닥 상폐위기",
+        "quantity": 7457,
+        "avgCost": 1341,
+        "purchasedAt": "2026-09-01",
+        "plotIndex": 36
+      }
+    ]
+  }
+]
