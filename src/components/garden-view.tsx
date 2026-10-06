@@ -7,6 +7,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BootScreen } from "@/components/boot";
 import { useGardens } from "@/components/garden-context";
 import { Hud } from "@/components/hud";
+import { TreeListPanel } from "@/components/tree-list-panel";
 import type { ScenePlant } from "@/components/garden-scene";
 import {
   dividendPayDate,
@@ -15,13 +16,15 @@ import {
   growthStage,
   isHarvestDue,
   maxMarketValue,
-  sizeScale,
   todayIso,
   weatherFromKospi,
 } from "@/lib/garden-math";
 import { POLL_MS, shouldPoll } from "@/lib/market/session";
 import type { LiveQuote } from "@/lib/market/types";
-import { KOSPI_RETURN_1D } from "@/lib/quotes";
+import { KOSPI_RETURN_1D, quoteRecord } from "@/lib/quotes";
+import { loadQuoteBatches } from "@/lib/quote-batches";
+import { crossMark } from "@/lib/cross-seed";
+import { sceneScale } from "@/lib/scene-signals";
 import { harvestKey } from "@/lib/storage";
 import { classifyTree } from "@/lib/tree-traits";
 import { classifyRangeEffect } from "@/lib/range-effects";
@@ -30,6 +33,7 @@ const GardenScene = dynamic(() => import("@/components/garden-scene"), {
   ssr: false,
   loading: () => <BootScreen label="밭을 고르는 중" />,
 });
+const SEED_QUOTES = quoteRecord();
 
 export function GardenView({
   gardenId,
@@ -57,39 +61,38 @@ export function GardenView({
   useEffect(() => {
     let cancelled = false;
     let first = true;
-
-    async function loadQuotes(codes: string[]) {
-      const live: LiveQuote[] = [];
-      for (let index = 0; index < codes.length; index += 20) {
-        const chunk = codes.slice(index, index + 20);
-        const response = await fetch(`/api/quotes?tickers=${chunk.join(",")}`);
-        if (!response.ok) continue;
-        const data = (await response.json()) as { quotes?: LiveQuote[] };
-        live.push(...(data.quotes ?? []));
-      }
-      if (!cancelled && live.length) applyLive(live);
-    }
+    let inFlight = false;
 
     async function tick() {
+      if (cancelled || inFlight) return;
       const hidden = typeof document !== "undefined" && document.hidden;
       if (!first && !shouldPoll(new Date(), hidden)) return;
       first = false;
+      inFlight = true;
       try {
-        const response = await fetch("/api/market");
-        const data = (await response.json()) as { kospi?: number | null; kosdaq?: number | null };
-        if (cancelled) return;
-        if (typeof data.kospi === "number" && Number.isFinite(data.kospi)) setKospi1d(data.kospi);
-        if (typeof data.kosdaq === "number" && Number.isFinite(data.kosdaq)) setKosdaq1d(data.kosdaq);
-      } catch {
-        /* keep last */
-      }
-      if (cancelled) return;
-      if (tickers.length) {
         try {
-          await loadQuotes(tickers);
+          const response = await fetch("/api/market");
+          const data = (await response.json()) as { kospi?: number | null; kosdaq?: number | null };
+          if (cancelled) return;
+          if (typeof data.kospi === "number" && Number.isFinite(data.kospi)) setKospi1d(data.kospi);
+          if (typeof data.kosdaq === "number" && Number.isFinite(data.kosdaq)) setKosdaq1d(data.kosdaq);
         } catch {
           /* keep last */
         }
+        if (cancelled || !tickers.length) return;
+        await loadQuoteBatches(
+          tickers,
+          async (chunk) => {
+            const response = await fetch(`/api/quotes?tickers=${chunk.join(",")}`);
+            if (!response.ok) throw new Error(`Quote batch failed: ${response.status}`);
+            const data = (await response.json()) as { quotes?: LiveQuote[] };
+            return data.quotes ?? [];
+          },
+          applyLive,
+          () => cancelled,
+        );
+      } finally {
+        inFlight = false;
       }
     }
 
@@ -136,7 +139,8 @@ export function GardenView({
       ticker: position.ticker,
       sector: position.sector,
       stage: growthStage(position.unrealizedPnlPct, position.holdingDays, position.dividend),
-      scale: sizeScale(position.marketValue, max),
+      scale: sceneScale(garden.id, position.lastPrice, position.marketValue, max, SEED_QUOTES[position.ticker]),
+      crossMark: crossMark(position.ticker),
       tone: fruitTone(position.dividend, picked),
       saturation: fruitSaturation(position.dividend, picked),
       highlight: position.id === focusId,
@@ -147,7 +151,8 @@ export function GardenView({
   });
 
   return (
-    <div className="relative h-dvh overflow-hidden bg-[#d7ebf6]">
+    <div className="relative flex h-dvh overflow-hidden bg-[#d7ebf6]">
+      <div className="relative min-w-0 flex-1">
       <GardenScene
         plants={plants}
         weather={weather.regime}
@@ -199,6 +204,8 @@ export function GardenView({
           </motion.p>
         )}
       </AnimatePresence>
+      </div>
+      <TreeListPanel key={garden.id} garden={garden} />
     </div>
   );
 }

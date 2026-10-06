@@ -1,0 +1,569 @@
+[
+  {
+    "id": "ma_watch",
+    "name": "라이딩트리",
+    "sectorName": "이동평균선",
+    "positions": [
+      {
+        "id": "ma_watch_303810",
+        "ticker": "303810",
+        "name": "동국생명과학",
+        "sector": "이동평균선",
+        "quantity": 2710,
+        "avgCost": 3690.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 0
+      },
+      {
+        "id": "ma_watch_001520",
+        "ticker": "001520",
+        "name": "동양",
+        "sector": "이동평균선",
+        "quantity": 5820,
+        "avgCost": 1718.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 1
+      },
+      {
+        "id": "ma_watch_424870",
+        "ticker": "424870",
+        "name": "이뮨온시아",
+        "sector": "이동평균선",
+        "quantity": 863,
+        "avgCost": 11583.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 2
+      },
+      {
+        "id": "ma_watch_478340",
+        "ticker": "478340",
+        "name": "나라스페이스테크놀로지",
+        "sector": "이동평균선",
+        "quantity": 354,
+        "avgCost": 28200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 3
+      },
+      {
+        "id": "ma_watch_042370",
+        "ticker": "042370",
+        "name": "비츠로테크",
+        "sector": "이동평균선",
+        "quantity": 1096,
+        "avgCost": 9120.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 4
+      },
+      {
+        "id": "ma_watch_393210",
+        "ticker": "393210",
+        "name": "토마토시스템",
+        "sector": "이동평균선",
+        "quantity": 1908,
+        "avgCost": 5240.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 5
+      },
+      {
+        "id": "ma_watch_234030",
+        "ticker": "234030",
+        "name": "싸이닉솔루션",
+        "sector": "이동평균선",
+        "quantity": 1101,
+        "avgCost": 9080.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 6
+      },
+      {
+        "id": "ma_watch_317850",
+        "ticker": "317850",
+        "name": "대모",
+        "sector": "이동평균선",
+        "quantity": 1280,
+        "avgCost": 7810.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 7
+      },
+      {
+        "id": "ma_watch_051630",
+        "ticker": "051630",
+        "name": "진양화학",
+        "sector": "이동평균선",
+        "quantity": 3603,
+        "avgCost": 2775.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 8
+      },
+      {
+        "id": "ma_watch_067310",
+        "ticker": "067310",
+        "name": "하나마이크론",
+        "sector": "이동평균선",
+        "quantity": 375,
+        "avgCost": 26650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 9
+      },
+      {
+        "id": "ma_watch_033170",
+        "ticker": "033170",
+        "name": "시그네틱스",
+        "sector": "이동평균선",
+        "quantity": 2439,
+        "avgCost": 4100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 10
+      },
+      {
+        "id": "ma_watch_274090",
+        "ticker": "274090",
+        "name": "켄코아에어로스페이스",
+        "sector": "이동평균선",
+        "quantity": 534,
+        "avgCost": 18710.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 11
+      },
+      {
+        "id": "ma_watch_092600",
+        "ticker": "092600",
+        "name": "앤씨앤",
+        "sector": "이동평균선",
+        "quantity": 3539,
+        "avgCost": 2825.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 12
+      },
+      {
+        "id": "ma_watch_122350",
+        "ticker": "122350",
+        "name": "삼기",
+        "sector": "이동평균선",
+        "quantity": 7806,
+        "avgCost": 1281.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 13
+      },
+      {
+        "id": "ma_watch_100790",
+        "ticker": "100790",
+        "name": "미래에셋벤처투자",
+        "sector": "이동평균선",
+        "quantity": 735,
+        "avgCost": 13590.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 14
+      },
+      {
+        "id": "ma_watch_098460",
+        "ticker": "098460",
+        "name": "고영",
+        "sector": "이동평균선",
+        "quantity": 368,
+        "avgCost": 27150.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 15
+      },
+      {
+        "id": "ma_watch_058470",
+        "ticker": "058470",
+        "name": "리노공업",
+        "sector": "이동평균선",
+        "quantity": 154,
+        "avgCost": 64900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 16
+      },
+      {
+        "id": "ma_watch_005290",
+        "ticker": "005290",
+        "name": "동진쎄미켐",
+        "sector": "이동평균선",
+        "quantity": 252,
+        "avgCost": 39650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 17
+      },
+      {
+        "id": "ma_watch_008350",
+        "ticker": "008350",
+        "name": "남선알미늄",
+        "sector": "이동평균선",
+        "quantity": 7575,
+        "avgCost": 1320.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 18
+      },
+      {
+        "id": "ma_watch_382150",
+        "ticker": "382150",
+        "name": "온코크로스",
+        "sector": "이동평균선",
+        "quantity": 1041,
+        "avgCost": 9600.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 19
+      },
+      {
+        "id": "ma_watch_900070",
+        "ticker": "900070",
+        "name": "글로벌에스엠",
+        "sector": "이동평균선",
+        "quantity": 11574,
+        "avgCost": 864.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 20
+      },
+      {
+        "id": "ma_watch_102120",
+        "ticker": "102120",
+        "name": "어보브반도체",
+        "sector": "이동평균선",
+        "quantity": 786,
+        "avgCost": 12720.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 21
+      },
+      {
+        "id": "ma_watch_010120",
+        "ticker": "010120",
+        "name": "LS ELECTRIC",
+        "sector": "이동평균선",
+        "quantity": 101,
+        "avgCost": 98500.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 22
+      },
+      {
+        "id": "ma_watch_290550",
+        "ticker": "290550",
+        "name": "디케이티",
+        "sector": "이동평균선",
+        "quantity": 1412,
+        "avgCost": 7080.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 23
+      },
+      {
+        "id": "ma_watch_117730",
+        "ticker": "117730",
+        "name": "티로보틱스",
+        "sector": "이동평균선",
+        "quantity": 493,
+        "avgCost": 20250.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 24
+      },
+      {
+        "id": "ma_watch_002360",
+        "ticker": "002360",
+        "name": "SH에너지화학",
+        "sector": "이동평균선",
+        "quantity": 2688,
+        "avgCost": 3720.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 25
+      },
+      {
+        "id": "ma_watch_101490",
+        "ticker": "101490",
+        "name": "에스앤에스텍",
+        "sector": "이동평균선",
+        "quantity": 194,
+        "avgCost": 51300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 26
+      },
+      {
+        "id": "ma_watch_482630",
+        "ticker": "482630",
+        "name": "삼양엔씨켐",
+        "sector": "이동평균선",
+        "quantity": 858,
+        "avgCost": 11650.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 27
+      },
+      {
+        "id": "ma_watch_046210",
+        "ticker": "046210",
+        "name": "HLB파나진",
+        "sector": "이동평균선",
+        "quantity": 5757,
+        "avgCost": 1737.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 28
+      },
+      {
+        "id": "ma_watch_003240",
+        "ticker": "003240",
+        "name": "태광산업",
+        "sector": "이동평균선",
+        "quantity": 13,
+        "avgCost": 751000.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 29
+      },
+      {
+        "id": "ma_watch_472850",
+        "ticker": "472850",
+        "name": "폰드그룹",
+        "sector": "이동평균선",
+        "quantity": 1886,
+        "avgCost": 5300.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 30
+      },
+      {
+        "id": "ma_watch_352480",
+        "ticker": "352480",
+        "name": "씨앤씨인터내셔널",
+        "sector": "이동평균선",
+        "quantity": 303,
+        "avgCost": 32900.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 31
+      },
+      {
+        "id": "ma_watch_034950",
+        "ticker": "034950",
+        "name": "한국기업평가",
+        "sector": "이동평균선",
+        "quantity": 101,
+        "avgCost": 98800.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 32
+      },
+      {
+        "id": "ma_watch_015890",
+        "ticker": "015890",
+        "name": "태경산업",
+        "sector": "이동평균선",
+        "quantity": 2034,
+        "avgCost": 4915.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 33
+      },
+      {
+        "id": "ma_watch_227840",
+        "ticker": "227840",
+        "name": "현대코퍼레이션홀딩스",
+        "sector": "이동평균선",
+        "quantity": 830,
+        "avgCost": 12040.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 34
+      },
+      {
+        "id": "ma_watch_192400",
+        "ticker": "192400",
+        "name": "쿠쿠홀딩스",
+        "sector": "이동평균선",
+        "quantity": 346,
+        "avgCost": 28850.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 35
+      },
+      {
+        "id": "ma_watch_002760",
+        "ticker": "002760",
+        "name": "보락",
+        "sector": "이동평균선",
+        "quantity": 9505,
+        "avgCost": 1052.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 36
+      },
+      {
+        "id": "ma_watch_123890",
+        "ticker": "123890",
+        "name": "한국자산신탁",
+        "sector": "이동평균선",
+        "quantity": 4166,
+        "avgCost": 2400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 37
+      },
+      {
+        "id": "ma_watch_435570",
+        "ticker": "435570",
+        "name": "에르코스",
+        "sector": "이동평균선",
+        "quantity": 678,
+        "avgCost": 14740.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 38
+      },
+      {
+        "id": "ma_watch_040420",
+        "ticker": "040420",
+        "name": "정상제이엘에스",
+        "sector": "이동평균선",
+        "quantity": 1677,
+        "avgCost": 5960.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 39
+      },
+      {
+        "id": "ma_watch_007370",
+        "ticker": "007370",
+        "name": "진양제약",
+        "sector": "이동평균선",
+        "quantity": 1972,
+        "avgCost": 5070.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 40
+      },
+      {
+        "id": "ma_watch_031510",
+        "ticker": "031510",
+        "name": "오스템",
+        "sector": "이동평균선",
+        "quantity": 9259,
+        "avgCost": 1080.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 41
+      },
+      {
+        "id": "ma_watch_368970",
+        "ticker": "368970",
+        "name": "오에스피",
+        "sector": "이동평균선",
+        "quantity": 3802,
+        "avgCost": 2630.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 42
+      },
+      {
+        "id": "ma_watch_440290",
+        "ticker": "440290",
+        "name": "HB인베스트먼트",
+        "sector": "이동평균선",
+        "quantity": 4773,
+        "avgCost": 2095.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 43
+      },
+      {
+        "id": "ma_watch_004770",
+        "ticker": "004770",
+        "name": "써니전자",
+        "sector": "이동평균선",
+        "quantity": 6353,
+        "avgCost": 1574.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 44
+      },
+      {
+        "id": "ma_watch_036640",
+        "ticker": "036640",
+        "name": "HRS",
+        "sector": "이동평균선",
+        "quantity": 1923,
+        "avgCost": 5200.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 45
+      },
+      {
+        "id": "ma_watch_383800",
+        "ticker": "383800",
+        "name": "LX홀딩스",
+        "sector": "이동평균선",
+        "quantity": 1257,
+        "avgCost": 7950.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 46
+      },
+      {
+        "id": "ma_watch_140520",
+        "ticker": "140520",
+        "name": "대창스틸",
+        "sector": "이동평균선",
+        "quantity": 4694,
+        "avgCost": 2130.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 47
+      },
+      {
+        "id": "ma_watch_143160",
+        "ticker": "143160",
+        "name": "아이디스",
+        "sector": "이동평균선",
+        "quantity": 567,
+        "avgCost": 17630.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 48
+      },
+      {
+        "id": "ma_watch_001790",
+        "ticker": "001790",
+        "name": "대한제당",
+        "sector": "이동평균선",
+        "quantity": 3597,
+        "avgCost": 2780.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 49
+      },
+      {
+        "id": "ma_watch_004990",
+        "ticker": "004990",
+        "name": "롯데지주",
+        "sector": "이동평균선",
+        "quantity": 383,
+        "avgCost": 26050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 50
+      },
+      {
+        "id": "ma_watch_192440",
+        "ticker": "192440",
+        "name": "슈피겐코리아",
+        "sector": "이동평균선",
+        "quantity": 452,
+        "avgCost": 22100.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 51
+      },
+      {
+        "id": "ma_watch_145990",
+        "ticker": "145990",
+        "name": "삼양사",
+        "sector": "이동평균선",
+        "quantity": 212,
+        "avgCost": 47050.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 52
+      },
+      {
+        "id": "ma_watch_267290",
+        "ticker": "267290",
+        "name": "경동도시가스",
+        "sector": "이동평균선",
+        "quantity": 490,
+        "avgCost": 20400.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 53
+      },
+      {
+        "id": "ma_watch_101240",
+        "ticker": "101240",
+        "name": "씨큐브",
+        "sector": "이동평균선",
+        "quantity": 2336,
+        "avgCost": 4280.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 54
+      },
+      {
+        "id": "ma_watch_032560",
+        "ticker": "032560",
+        "name": "황금에스티",
+        "sector": "이동평균선",
+        "quantity": 1700,
+        "avgCost": 5880.0,
+        "purchasedAt": "2026-01-02",
+        "plotIndex": 55
+      }
+    ]
+  }
+]

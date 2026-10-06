@@ -1,5 +1,5 @@
 import type { StoredGarden, StoredPosition } from "./types";
-import raw from "../data/cb-gardens.generated.json";
+import raw from "../data/ma-garden.generated.json";
 
 type RawGarden = {
   id: string;
@@ -8,10 +8,10 @@ type RawGarden = {
   positions: Array<Omit<StoredPosition, "gardenId"> & { gardenId?: string }>;
 };
 
-export function cbIssuanceGardens(): StoredGarden[] {
+export function maGardens(): StoredGarden[] {
   return (raw as RawGarden[]).map((garden) => ({
     id: garden.id,
-    name: garden.name,
+    name: "라이딩트리",
     group: garden.sectorName,
     positions: garden.positions.map((position) => ({
       id: position.id,
@@ -27,14 +27,9 @@ export function cbIssuanceGardens(): StoredGarden[] {
   }));
 }
 
-export function mergeCbGardens(
+export function mergeMaGardens(
   existing: StoredGarden[],
-  seeded: StoredGarden[] = cbIssuanceGardens(),
+  seeded: StoredGarden[] = maGardens(),
 ): StoredGarden[] {
-  const kept = existing.filter((garden) => !garden.id.startsWith("cb_"));
-  return [...kept, ...seeded];
-}
-
-export function isGeneratedGarden(gardenId: string): boolean {
-  return gardenId.startsWith("vc_") || gardenId.startsWith("cb_") || gardenId.startsWith("grp_") || gardenId === "ma_watch" || gardenId === "cross_watch" || gardenId === "garden_firetree_20261001";
+  return [...existing.filter((garden) => garden.id !== "ma_watch"), ...seeded];
 }

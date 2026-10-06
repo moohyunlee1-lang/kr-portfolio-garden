@@ -15,6 +15,8 @@ export type Quote = {
   fundamentals?: Fundamentals;
   range?: RangeCandle;
   period?: PeriodBaselines;
+  yearFirstDate?: string | null;
+  yearFirstClose?: number | null;
 };
 
 const samsungDividend: Dividend = {
@@ -229,6 +231,8 @@ function mergeQuotes(): Quote[] {
       fundamentals: asFundamentals(item as unknown as Record<string, unknown>),
       range: asRange(item as unknown as Record<string, unknown>),
       period: asPeriod(item as unknown as Record<string, unknown>),
+      yearFirstDate: (item as Quote).yearFirstDate,
+      yearFirstClose: (item as Quote).yearFirstClose,
     });
   }
   for (const item of HAND_QUOTES) {

@@ -11,7 +11,7 @@ export type PlotLayout = {
 
 export function layoutFor(needed: number): PlotLayout {
   const size = Math.max(BASE_PLOTS, needed);
-  const cols = COLS;
+  const cols = size > 100 ? Math.ceil(Math.sqrt(size)) : COLS;
   const rows = Math.max(ROWS, Math.ceil(size / cols));
   return { cols, rows, count: cols * rows };
 }

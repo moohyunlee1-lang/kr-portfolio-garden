@@ -9,6 +9,7 @@ import {
 } from "./storage";
 import { LAST_GARDEN_KEY } from "./garden-math";
 import { FIRETREE_ID } from "./firetree-seed";
+import { crossGardens } from "./cross-seed";
 import { mergeValueChainGardens } from "./valuechain-seed";
 
 function memoryStorage() {
@@ -32,6 +33,7 @@ describe("ensureEntry", () => {
     expect(first.gardens.length).toBeGreaterThan(130);
     expect(first.gardens.filter((garden) => garden.group === "반도체").length).toBe(10);
     expect(first.gardens.filter((garden) => garden.group === "대기업·금융그룹").length).toBeGreaterThanOrEqual(80);
+    expect(first.gardens.find((garden) => garden.id === "cross_watch")?.positions).toEqual(crossGardens()[0].positions);
     expect(storage.getItem(LAST_GARDEN_KEY)).toBe("garden-empty");
 
     const second = ensureEntry(storage, () => "should-not-create");
@@ -62,7 +64,7 @@ describe("ensureEntry", () => {
     const firetree = first.gardens.find((garden) => garden.id === FIRETREE_ID);
     expect(firetree).toBeTruthy();
     expect(firetree!.positions.length).toBeGreaterThan(0);
-    expect(firetree!.positions.every((position) => position.purchasedAt === "2026-10-01")).toBe(true);
+    expect(firetree!.positions.every((position) => position.purchasedAt === "2026-01-02")).toBe(true);
     firetree!.positions[0].quantity = 123;
     storage.setItem(GARDENS_KEY, JSON.stringify(first.gardens));
     expect(ensureEntry(storage).gardens.find((garden) => garden.id === FIRETREE_ID)?.positions[0].quantity).toBe(123);
@@ -70,7 +72,7 @@ describe("ensureEntry", () => {
     expect(ensureEntry(storage).gardens.some((garden) => garden.id === FIRETREE_ID)).toBe(false);
   });
 
-  it("repairs an already-saved firetree garden without discarding valid holdings or repeating the repair", () => {
+  it("reseeds existing snapshot once and excludes names without exact first-session prices", () => {
     const storage = memoryStorage();
     const old = {
       id: FIRETREE_ID, name: "파이어트리", positions: [
@@ -80,8 +82,9 @@ describe("ensureEntry", () => {
     };
     storage.setItem(GARDENS_KEY, JSON.stringify([{ id: "mine", name: "내 정원", positions: [] }, old]));
     const repaired = ensureEntry(storage).gardens.find((garden) => garden.id === FIRETREE_ID)!;
+    expect(repaired.name).toBe("파이어트리");
     expect(repaired.positions.map((p) => p.ticker)).toEqual(["159010"]);
-    expect(repaired.positions[0]).toMatchObject({ quantity: 47, plotIndex: 0, purchasedAt: "2026-10-01" });
+    expect(repaired.positions[0]).toMatchObject({ id: "firetree_159010", quantity: Math.floor(10_000_000 / 5110), avgCost: 5110, plotIndex: 0, purchasedAt: "2026-01-02" });
     repaired.positions[0].quantity = 99;
     storage.setItem(GARDENS_KEY, JSON.stringify(ensureEntry(storage).gardens.map((garden) =>
       garden.id === FIRETREE_ID ? repaired : garden,
@@ -100,6 +103,12 @@ describe("ensureEntry", () => {
     const entry = ensureEntry(storage, () => "new");
     expect(entry.gardens.some((garden) => garden.id === hide!.id)).toBe(false);
     expect(entry.gardens.some((garden) => garden.id === "mine")).toBe(true);
+  });
+  it("does not restore hidden cross garden", () => {
+    const storage = memoryStorage();
+    ensureEntry(storage, () => "mine");
+    saveHidden(storage, ["cross_watch"]);
+    expect(ensureEntry(storage).gardens.some((garden) => garden.id === "cross_watch")).toBe(false);
   });
 });
 

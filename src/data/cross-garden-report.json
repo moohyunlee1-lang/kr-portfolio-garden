@@ -1,0 +1,266 @@
+{
+  "snapshot_available": true,
+  "as_of": "2026-10-02",
+  "source": "ma-monitor-kis-20x60",
+  "status": {
+    "complete": false,
+    "scanned": 2670,
+    "successful": 2647,
+    "failed": [],
+    "stale": [
+      "006380",
+      "008290",
+      "046070",
+      "082660",
+      "084180",
+      "121850"
+    ],
+    "no_data": 17,
+    "crosses_on_date": 54
+  },
+  "planted": 933,
+  "skipped": {
+    "000087": {
+      "name": "하이트진로2우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "000155": {
+      "name": "두산우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "000157": {
+      "name": "두산2우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "000225": {
+      "name": "유유제약1우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "000227": {
+      "name": "유유제약2우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0004V0": {
+      "name": "엔비알모션",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "000545": {
+      "name": "흥국화재우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0007J0": {
+      "name": "인벤테라",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "00088K": {
+      "name": "한화3우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "001045": {
+      "name": "CJ우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0010F0": {
+      "name": "보원케미칼",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0011A0": {
+      "name": "액스비스",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0011T0": {
+      "name": "채비",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "001515": {
+      "name": "SK증권우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0015S0": {
+      "name": "페스카로",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "002355": {
+      "name": "넥센타이어1우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "003495": {
+      "name": "대한항공우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "004105": {
+      "name": "태양금속우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "004365": {
+      "name": "세방우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "004835": {
+      "name": "덕성우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "004985": {
+      "name": "성신양회우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "005030": {
+      "name": "부산주공",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "005110": {
+      "name": "한창",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "005257": {
+      "name": "녹십자홀딩스2우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "005725": {
+      "name": "넥센우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "005935": {
+      "name": "삼성전자우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "007815": {
+      "name": "코리아써우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "00781K": {
+      "name": "코리아써키트2우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0082N0": {
+      "name": "카나프테라퓨틱스",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "008355": {
+      "name": "남선알미우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "009155": {
+      "name": "삼성전기우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "0117P0": {
+      "name": "피스피스스튜디오",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "014285": {
+      "name": "금강공업우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "014915": {
+      "name": "성문전자우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "021045": {
+      "name": "대호특수강우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "02826K": {
+      "name": "삼성물산우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "03473K": {
+      "name": "SK우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "03481K": {
+      "name": "해성산업1우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "051905": {
+      "name": "LG생활건강우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "051915": {
+      "name": "LG화학우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "097955": {
+      "name": "CJ제일제당 우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "26490K": {
+      "name": "크라운제과우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "33626K": {
+      "name": "두산퓨얼셀1우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "33626L": {
+      "name": "두산퓨얼셀2우B",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "35320K": {
+      "name": "대덕전자1우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "36328K": {
+      "name": "티와이홀딩스우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "440110": {
+      "name": "파두",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "45226K": {
+      "name": "한화갤러리아우",
+      "reason": "missing exact 2026-01-02 positive first close"
+    },
+    "477850": {
+      "name": "마키나락스",
+      "reason": "missing exact 2026-01-02 positive first close"
+    }
+  },
+  "name_mismatches": {
+    "006490": {
+      "source_name": "프리티",
+      "quote_name": "인스코비"
+    },
+    "018500": {
+      "source_name": "동원모빌리티",
+      "quote_name": "동원금속"
+    },
+    "038870": {
+      "source_name": "에코심플렉스",
+      "quote_name": "에코바이오"
+    },
+    "048770": {
+      "source_name": "TPC로보틱스",
+      "quote_name": "TPC"
+    },
+    "083790": {
+      "source_name": "CG인바이츠",
+      "quote_name": "씨지인바이츠"
+    },
+    "159910": {
+      "source_name": "에코글로우",
+      "quote_name": "스킨앤스킨"
+    },
+    "196300": {
+      "source_name": "HLB펩",
+      "quote_name": "애니젠"
+    },
+    "261780": {
+      "source_name": "아리바이오랩",
+      "quote_name": "차백신연구소"
+    },
+    "282880": {
+      "source_name": "코윈테크",
+      "quote_name": "코윈로보틱스"
+    },
+    "291650": {
+      "source_name": "츌립앤사이언스",
+      "quote_name": "압타머사이언스"
+    },
+    "347890": {
+      "source_name": "엠엑스온",
+      "quote_name": "엠투아이"
+    }
+  }
+}

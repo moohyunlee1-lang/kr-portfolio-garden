@@ -1,0 +1,25 @@
+{
+  "source": "ma-monitor",
+  "as_of": "2026-10-02",
+  "scanned": 2670,
+  "targets": 60,
+  "planted": 56,
+  "skipped": [
+    {
+      "ticker": "0010F0",
+      "reason": "missing garden quote"
+    },
+    {
+      "ticker": "000725",
+      "reason": "missing garden quote"
+    },
+    {
+      "ticker": "002795",
+      "reason": "missing garden quote"
+    },
+    {
+      "ticker": "38380K",
+      "reason": "missing garden quote"
+    }
+  ]
+}

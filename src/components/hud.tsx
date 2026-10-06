@@ -25,6 +25,7 @@ const SECTOR_ORDER = [
   "화장품",
   "대기업·금융그룹",
   "전환사채",
+  "이동평균선",
 ];
 
 function gardenGroups(gardens: StoredGarden[]) {

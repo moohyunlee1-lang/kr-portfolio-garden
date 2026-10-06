@@ -2,8 +2,51 @@
 
 import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
-import { type Group, type PointLight } from "three";
+import { DoubleSide, Shape, type Group, type PointLight } from "three";
+import { Billboard } from "@react-three/drei";
 import type { RangeEffect } from "@/lib/range-effects";
+import type { CrossMark } from "@/lib/cross-seed";
+import { crossMarkerAppearance } from "@/lib/cross-marker";
+
+/** A static unlit signal: remains visible in far LOD, rain and reduced motion. */
+export function CrossCrownMark({ mark, y }: { mark: CrossMark; y: number }) {
+  const appearance = crossMarkerAppearance(mark);
+  const star = useMemo(() => {
+    const shape = new Shape();
+    for (let i = 0; i < 10; i++) {
+      const angle = Math.PI / 2 + i * Math.PI / 5;
+      const radius = i % 2 === 0 ? 0.34 : 0.15;
+      const x = Math.cos(angle) * radius;
+      const yy = Math.sin(angle) * radius;
+      if (i === 0) shape.moveTo(x, yy);
+      else shape.lineTo(x, yy);
+    }
+    shape.closePath();
+    return shape;
+  }, []);
+  if (!appearance) return null;
+  return (
+    <group position={[0, y + 0.45, 0]} renderOrder={4}>
+      <Billboard follow lockX={false} lockY={false} lockZ={false}>
+        <group>
+          {appearance.shape === "star" ? (
+            <>
+              <mesh><shapeGeometry args={[star]} /><meshBasicMaterial color={appearance.color} side={DoubleSide} depthWrite={false} /></mesh>
+              <mesh position={[0, 0, -0.025]} scale={1.25}><shapeGeometry args={[star]} /><meshBasicMaterial color="#704f15" side={DoubleSide} depthWrite={false} /></mesh>
+            </>
+          ) : (
+            <>
+              <mesh scale={[0.38, 0.34, 0.14]}><sphereGeometry args={[1, 12, 10]} /><meshBasicMaterial color={appearance.color} /></mesh>
+              <mesh position={[0, -0.27, 0.02]} scale={[0.23, 0.15, 0.12]}><boxGeometry args={[1, 1, 1]} /><meshBasicMaterial color={appearance.color} /></mesh>
+              {[-0.14, 0.14].map((x) => <mesh key={x} position={[x, 0.015, 0.13]} scale={[0.085, 0.09, 0.02]}><sphereGeometry args={[1, 8, 6]} /><meshBasicMaterial color="#28202c" /></mesh>)}
+              <mesh position={[0, -0.15, 0.14]} scale={[0.045, 0.065, 0.02]}><coneGeometry args={[1, 1, 3]} /><meshBasicMaterial color="#28202c" /></mesh>
+            </>
+          )}
+        </group>
+      </Billboard>
+    </group>
+  );
+}
 
 function ButterflyMesh({ color }: { color: string }) {
   return (

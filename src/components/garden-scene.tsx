@@ -4,8 +4,12 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { CanvasTexture, Object3D, SRGBColorSpace, type Group, type InstancedMesh } from "three";
+import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { PlantBody, canopyPeakY } from "@/components/plants";
-import { Butterflies, DarkAura, Flame, Thunder } from "@/components/garden-fx";
+import { Butterflies, CrossCrownMark, DarkAura, Flame, Thunder } from "@/components/garden-fx";
+import { sceneFogDistances } from "@/lib/scene-fog";
+import { focusCameraPose } from "@/lib/scene-focus";
+import type { CrossMark } from "@/lib/cross-seed";
 import { CELL, layoutFromPositions, plotPosition, type PlotLayout } from "@/lib/plots";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
 import type { TreeTraits } from "@/lib/tree-traits";
@@ -25,6 +29,7 @@ export type ScenePlant = {
   harvestDue: boolean;
   traits: TreeTraits;
   rangeEffect: RangeEffect;
+  crossMark: CrossMark | null;
 };
 
 const LOD_DISTANCE = 18;
@@ -356,6 +361,9 @@ function GardenPlant({
       {plant.rangeEffect.kind === "aura" && (
         <DarkAura intensity={plant.rangeEffect.intensity} reduced={reduced} />
       )}
+      {plant.crossMark && (
+        <CrossCrownMark mark={plant.crossMark} y={0.24 + plant.scale * 1.35 * canopyPeakY(plant.traits, plant.stage)} />
+      )}
     </group>
   );
 }
@@ -495,12 +503,12 @@ function Rain() {
   );
 }
 
-function Lights({ regime }: { regime: WeatherRegime }) {
+function Lights({ regime, span }: { regime: WeatherRegime; span: number }) {
   const sky = regime === "bull" ? "#c5e6f8" : regime === "bear" ? "#c9d8e4" : "#d7e6f0";
   return (
     <>
       <color attach="background" args={[sky]} />
-      <fog attach="fog" args={[sky, 18, 36]} />
+      <fog attach="fog" args={[sky, ...sceneFogDistances(span)]} />
       <ambientLight color="#fff6e8" intensity={regime === "bear" ? 0.8 : 0.64} />
       <hemisphereLight args={["#f7fbff", "#b7d59a", 0.42]} />
       <directionalLight
@@ -542,6 +550,19 @@ function Scene({
   const span = Math.max(layout.cols, layout.rows) * CELL;
   const [fontReady, setFontReady] = useState(false);
   const far = useSceneFar(LOD_DISTANCE);
+  const camera = useThree((state) => state.camera);
+  const controls = useRef<OrbitControlsImpl>(null);
+  const focused = plants.find((plant) => plant.highlight);
+  const focusId = focused?.id;
+  const focusPlotIndex = focused?.plotIndex;
+  useEffect(() => {
+    if (focusId === undefined || focusPlotIndex === undefined || !controls.current) return;
+    const orbit = controls.current;
+    const pose = focusCameraPose(focusPlotIndex, layout, camera.position, orbit.target);
+    orbit.target.copy(pose.target);
+    camera.position.copy(pose.position);
+    orbit.update();
+  }, [camera, focusId, focusPlotIndex, layout.cols, layout.rows]);
   useEffect(() => {
     let cancelled = false;
     document.fonts.load('700 64px Gaegu').finally(() => {
@@ -553,7 +574,7 @@ function Scene({
   }, []);
   return (
     <>
-      <Lights regime={weather} />
+      <Lights regime={weather} span={span} />
       <Island radius={radius} />
       <Fence radius={radius} />
       <Clouds regime={weather} reduced={reduced} />
@@ -581,6 +602,7 @@ function Scene({
         );
       })}
       <OrbitControls
+        ref={controls}
         makeDefault
         enableRotate
         enablePan
