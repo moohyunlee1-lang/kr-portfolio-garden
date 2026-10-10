@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import {
   formatMoney,
@@ -13,6 +14,8 @@ import type { Garden, StoredGarden, Weather } from "@/lib/types";
 import { useGardens } from "@/components/garden-context";
 import { countRangeEffects } from "@/lib/range-effects";
 import { riskGardenNotice } from "@/lib/risk-caveat";
+
+const GardenDashboard = dynamic(() => import("./garden-dashboard").then(m => m.GardenDashboard));
 
 const SECTOR_ORDER = [
   "반도체",
@@ -62,7 +65,7 @@ export function Hud({
   onCreate: () => void;
   onSample: () => void;
 }) {
-  const { gardens, renameGarden, deleteGarden, rangeFor } = useGardens();
+  const { gardens, renameGarden, deleteGarden, rangeFor, liveTickers } = useGardens();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [treeQuery, setTreeQuery] = useState("");
@@ -125,6 +128,7 @@ export function Hud({
           코스닥 1일 {formatSignedPct(weather.kosdaqReturn1d)}
           {weather.kosdaqReturn1d > 0 ? " · 나비" : weather.kosdaqReturn1d < 0 ? " · 천둥" : ""}
         </p>
+        <GardenDashboard key={garden.id} garden={garden} liveCount={garden.positions.filter(p => liveTickers.has(p.ticker)).length} />
         {open && (
           <div className="flex flex-col gap-2 border-t border-[#eadcc6] pt-3">
             <input

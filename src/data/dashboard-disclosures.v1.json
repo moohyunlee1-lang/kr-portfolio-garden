@@ -1,0 +1,2277 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-09T01:25:25.012094+00:00",
+  "sources": [
+    {
+      "name": "trading-analysis/dart_signals.db · filings",
+      "rowsExamined": 4562,
+      "matched": 568,
+      "latestFilingDate": "2026-05-22"
+    },
+    {
+      "name": "sector-monitor/sector_monitor.db · events",
+      "rowsExamined": 66,
+      "matched": 18,
+      "latestFilingDate": "2026-05-14"
+    }
+  ],
+  "policy": "제목 키워드 기반 중요공시 · 종목별 최신 5건 · 전 시장/최근 공시 완전성 보장 안 함",
+  "items": [
+    {
+      "ticker": "255220",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522900658",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "317870",
+      "title": "신규시설투자등",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522900650",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "161580",
+      "title": "[기재정정]신규시설투자등(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522900536",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "378340",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522900479",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "040350",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522900344",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000990",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800941",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "028050",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800689",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000210",
+      "title": "단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800478",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "375500",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800452",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "047040",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800424",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002020",
+      "title": "단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800397",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003070",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-22",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800384",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "126880",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521900962",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "045390",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521900816",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "046940",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521900523",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "195940",
+      "title": "신규시설투자등",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521900375",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095610",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521900315",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "008930",
+      "title": "단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800969",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "128940",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800956",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002880",
+      "title": "신규시설투자등",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800730",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002990",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800619",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "023350",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800601",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "006360",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800598",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "004540",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800522",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "161890",
+      "title": "신규시설투자등(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800376",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "180060",
+      "title": "[기재정정]단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521600914",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080220",
+      "title": "[기재정정]주요사항보고서(신주인수권부사채매수선택권행사자지정)",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000378",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080220",
+      "title": "[기재정정]주요사항보고서(전환사채매수선택권행사자지정)",
+      "publishedAt": "2026-05-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000324",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "066430",
+      "title": "불성실공시법인지정 (공시번복)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900792",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "043220",
+      "title": "주권매매거래정지기간변경 (회생절차 개시신청)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900789",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "348370",
+      "title": "불성실공시법인지정 (공시불이행)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900788",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "360350",
+      "title": "불성실공시법인미지정 (공시불이행)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900764",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "0011A0",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900760",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "032800",
+      "title": "기타시장안내 (최대주주의 의무보유 대상 확인 관련)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900757",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002290",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900723",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "069920",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900706",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "301300",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900695",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "032800",
+      "title": "최대주주변경",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900686",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "032800",
+      "title": "증권발행결과(자율공시) (제3자배정 유상증자)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900682",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "067310",
+      "title": "[기재정정]소송등의판결ㆍ결정 (주주총회결의취소)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900657",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "297090",
+      "title": "타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900621",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "307870",
+      "title": "[기재정정]최대주주변경을수반하는주식양수도계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900620",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "288980",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900607",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "046070",
+      "title": "회생계획인가",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900554",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "142280",
+      "title": "신주인수권행사",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900545",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "900300",
+      "title": "주권매매거래정지 (주식의 병합, 분할 등 전자등록 변경, 말소)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900441",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080720",
+      "title": "주권매매거래정지기간변경 (투자자 보호)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900434",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "018620",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900425",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "393210",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900410",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080720",
+      "title": "기타시장안내 (상장폐지 절차 관련 안내)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900409",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "265520",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900407",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "277880",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900382",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "490470",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900367",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "094820",
+      "title": "[기재정정]단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900365",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "065570",
+      "title": "투자판단관련주요경영사항 (회생회사 삼영이엔씨(주) M&A를 위한 투자계약 체결)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900341",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "147760",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900338",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "065570",
+      "title": "소송등의판결ㆍ결정 (공개매각절차 진행금지가처분)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900337",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "347700",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900264",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "041590",
+      "title": "기타시장안내 (정리매매 보류 관련)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900260",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "041590",
+      "title": "주권매매거래정지 (투자자 보호)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900259",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "060280",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900257",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "041590",
+      "title": "기타경영사항(자율공시) (상장폐지결정 효력정지 등 가처분 신청)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900254",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "458650",
+      "title": "신규시설투자등",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900251",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "065350",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900194",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "206400",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520900186",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001570",
+      "title": "기타시장안내 (상장·공시위원회 결과)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800808",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009440",
+      "title": "기타시장안내 (상장·공시위원회 결과)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800806",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003090",
+      "title": "[기재정정]투자판단관련주요경영사항(자회사의 주요경영사항) (mRNA 기반 Epigenetic Reprogramming of Aging (ERA) 기술이전 계약 지위 승계)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800786",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001260",
+      "title": "타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800784",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009420",
+      "title": "[기재정정]투자판단관련주요경영사항",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800768",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "069620",
+      "title": "[기재정정]투자판단관련주요경영사항 (mRNA 기반 Epigenetic Reprogramming of Aging (ERA) 기술이전 계약 지위 승계)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800756",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "010060",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800734",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002720",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800711",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "023800",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800675",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "004150",
+      "title": "[기재정정]주요사항보고서(유상증자결정)(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800644",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "097230",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800639",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "103590",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800633",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "210980",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800623",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "021240",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800616",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009830",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800615",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "034730",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800611",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "023800",
+      "title": "타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800606",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "010040",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800569",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "044820",
+      "title": "[기재정정]타인에대한채무보증결정(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800567",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "004150",
+      "title": "[기재정정]주요사항보고서(유상증자결정)(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800561",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "192820",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800546",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003240",
+      "title": "[기재정정]신규시설투자등(자율공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800534",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003240",
+      "title": "[기재정정]신규시설투자등(자율공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800525",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "071090",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800511",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "015590",
+      "title": "최대주주등소유주식변동신고서(최대주주변경시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800481",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009540",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800468",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009540",
+      "title": "영업(잠정)실적(공정공시)(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800458",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "109070",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800438",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000210",
+      "title": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800426",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "015590",
+      "title": "최대주주변경",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800418",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "329180",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800414",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002710",
+      "title": "유상증자또는주식관련사채등의발행결과(자율공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800401",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001520",
+      "title": "유상증자또는주식관련사채등의발행결과(자율공시)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800388",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "375500",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800376",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "210980",
+      "title": "[기재정정]타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800369",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "210980",
+      "title": "타인에대한채무보증결정",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800359",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "025560",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800349",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "025560",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800347",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009150",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800239",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000520",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800238",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "377190",
+      "title": "부동산투자회사자금차입",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800211",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "004710",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800190",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "097520",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800181",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "480370",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800171",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "448730",
+      "title": "부동산투자회사부동산임대",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800164",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "006360",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800080",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000100",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800079",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000210",
+      "title": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800005",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "375500",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800004",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "043220",
+      "title": "주요사항보고서(회생절차개시신청)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000394",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "039490",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000382",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "039490",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000378",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "039490",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000376",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "039490",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000371",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "060900",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000351",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "039490",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000346",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "900290",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000325",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "033540",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000310",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "004710",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000307",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "302550",
+      "title": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000306",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "073640",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000303",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "050090",
+      "title": "주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000300",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "004710",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000284",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "224060",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000275",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000180",
+      "title": "주요사항보고서(회사합병결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000274",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "046070",
+      "title": "주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000273",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "302550",
+      "title": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000269",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "419080",
+      "title": "주요사항보고서(신주인수권부사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000262",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003530",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000257",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "139050",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000256",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005940",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000251",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005940",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000250",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "002070",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000247",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "069540",
+      "title": "주요사항보고서(회사합병결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000246",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "032300",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000243",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003470",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000238",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "041830",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000230",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005940",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000218",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "059270",
+      "title": "[첨부정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000209",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005940",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000184",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005940",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000177",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "024880",
+      "title": "주요사항보고서(자기주식취득결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000175",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "017860",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000164",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "060280",
+      "title": "[첨부정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000137",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003530",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000133",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "393970",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000130",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "177350",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000102",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003530",
+      "title": "투자설명서(일괄신고)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000095",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "210120",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000080",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "210120",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000078",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "006740",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-19",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260519000318",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "096690",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-05-19",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260519000315",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "166090",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-05-18",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260518900580",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080220",
+      "title": "주요사항보고서(제3자의전환사채매수선택권행사)",
+      "publishedAt": "2026-05-15",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002385",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080220",
+      "title": "주요사항보고서(전환사채매수선택권행사자지정)",
+      "publishedAt": "2026-05-15",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002340",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "098460",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-05-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000772",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "403870",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-05-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000628",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "102120",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2026-05-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000576",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "025320",
+      "title": "[첨부정정]주요사항보고서(회사합병결정)",
+      "publishedAt": "2026-05-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000145",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "475830",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-05-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512900932",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "213420",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512900349",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "257720",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512900303",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "096760",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512800876",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001060",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512800799",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "388210",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511901020",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "327260",
+      "title": "권리락 (유상증자)",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511900970",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "327260",
+      "title": "유상증자1차발행가액결정",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511900697",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "257720",
+      "title": "결산실적공시예고",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511900450",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000990",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511800508",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "327260",
+      "title": "투자설명서",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511000716",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "040910",
+      "title": "주요사항보고서(신주인수권부사채권발행결정)",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511000677",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "327260",
+      "title": "[기재정정]주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511000654",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "403870",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2026-05-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511000480",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "240810",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260508900769",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005930",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260508801105",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "207940",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260508801105",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "102120",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-05-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260508001016",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005290",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507900214",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "222800",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260506900751",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000990",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-05-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260506800098",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "084370",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2026-05-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260506000553",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "166090",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-05-04",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260504900501",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009150",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-05-04",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260504800344",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "096760",
+      "title": "주요사항보고서(영업정지)(자회사의 주요경영사항)",
+      "publishedAt": "2026-04-30",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260430801716",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "084370",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-04-29",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429001116",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "131970",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2026-04-28",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260428900892",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "064760",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-04-28",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260428900313",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "166090",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-04-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260427900819",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095340",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-04-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260427900108",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "080220",
+      "title": "주요사항보고서(신주인수권부사채매수선택권행사자지정)",
+      "publishedAt": "2026-04-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260427000401",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003240",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-04-23",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800289",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "166090",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-04-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260420900751",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005930",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-04-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260413800802",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005290",
+      "title": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "publishedAt": "2026-04-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260413001191",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003240",
+      "title": "[기재정정]신규시설투자등(자율공시)",
+      "publishedAt": "2026-04-10",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260410800826",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "096760",
+      "title": "투자판단관련주요경영사항(자회사의 주요경영사항)",
+      "publishedAt": "2026-04-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260408801312",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001060",
+      "title": "투자판단관련주요경영사항",
+      "publishedAt": "2026-04-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260408801297",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "096760",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-04-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260407800168",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009150",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-04-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260406800556",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095340",
+      "title": "[기재정정]자기주식처분결과보고서",
+      "publishedAt": "2026-04-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260406004300",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095340",
+      "title": "[기재정정]자기주식처분결과보고서",
+      "publishedAt": "2026-04-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260406004276",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005930",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-04-03",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260403801246",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "180060",
+      "title": "주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-03-31",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331003532",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "166090",
+      "title": "[기재정정]최대주주변경을수반하는주식담보제공계약체결",
+      "publishedAt": "2026-03-30",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260330901714",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "096760",
+      "title": "[기재정정]단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-03-26",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260326803402",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009150",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-03-26",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260326803048",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005930",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-03-24",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324801547",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "121890",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-03-23",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323902187",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005930",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-03-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320800948",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "126340",
+      "title": "[기재정정]주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-03-19",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000390",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095610",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-03-17",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317900514",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095610",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-03-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313900104",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "126340",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2026-03-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001260",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095610",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-03-10",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310900617",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000990",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-03-10",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801560",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "950160",
+      "title": "주요사항보고서(유상증자결정)",
+      "publishedAt": "2026-03-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306000980",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "126340",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2026-03-03",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303900832",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "009150",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-03-03",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303800473",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "003240",
+      "title": "[기재정정]신규시설투자등(자율공시)",
+      "publishedAt": "2026-02-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260227802169",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005290",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-02-26",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260226900456",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "000990",
+      "title": "최대주주등소유주식변동신고서",
+      "publishedAt": "2026-02-26",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260226801032",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "240810",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-02-25",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260225901290",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "078350",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2026-02-25",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260225005510",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "078350",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-02-23",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260223003970",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "950160",
+      "title": "투자판단관련주요경영사항 (코오롱티슈진(주) 2심 무죄 판결)",
+      "publishedAt": "2026-02-06",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260206902474",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "064760",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-02-03",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260203900894",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095340",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2026-02-03",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260203900874",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "126340",
+      "title": "주요사항보고서(제3자의전환사채매수선택권행사)",
+      "publishedAt": "2026-01-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260127000315",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "084370",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2026-01-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260127000309",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "126340",
+      "title": "주요사항보고서(전환사채매수선택권행사자지정)",
+      "publishedAt": "2026-01-27",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260127000291",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095610",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2026-01-26",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260126900508",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "084370",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2026-01-21",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260121000411",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005290",
+      "title": "합병등종료보고서(분할)",
+      "publishedAt": "2026-01-02",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260102000066",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001820",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2025-12-29",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251229000449",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "019990",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-12-24",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251224900215",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "019990",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-12-24",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251224900213",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001820",
+      "title": "주요사항보고서(자기주식처분결정)",
+      "publishedAt": "2025-12-23",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251223000646",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "121890",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-12-18",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251218900240",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "064760",
+      "title": "[기재정정]신규시설투자등(자율공시)",
+      "publishedAt": "2025-12-17",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251217900285",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001060",
+      "title": "기타경영사항(자율공시) (배당기준일 변경 안내)",
+      "publishedAt": "2025-12-16",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251216800838",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "084370",
+      "title": "자기주식처분결과보고서",
+      "publishedAt": "2025-12-16",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251216000302",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "064760",
+      "title": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "publishedAt": "2025-12-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251212000506",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "121890",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-12-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251211900252",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "005290",
+      "title": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "publishedAt": "2025-12-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251208000067",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "121890",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-11-14",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251114900323",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "222800",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-11-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251107900487",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "240810",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-11-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251107900339",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "095340",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-11-05",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251105900097",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001060",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-11-03",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251103800357",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "064760",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-10-29",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251029900641",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "950160",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2025-09-12",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250912000305",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "019990",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-08-19",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250819900141",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "121890",
+      "title": "[기재정정]단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-08-18",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250818900118",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "222800",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-08-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250807900335",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "240810",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-08-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250807900187",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "222800",
+      "title": "주요사항보고서(제3자의신주인수권부사채매수선택권행사)",
+      "publishedAt": "2025-08-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250807000309",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "222800",
+      "title": "주요사항보고서(제3자의전환사채매수선택권행사)",
+      "publishedAt": "2025-08-07",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250807000306",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "019990",
+      "title": "단일판매ㆍ공급계약체결",
+      "publishedAt": "2025-08-04",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250804900058",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "001060",
+      "title": "영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-07-31",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250731800365",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "078350",
+      "title": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "publishedAt": "2025-07-16",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250716000170",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "078350",
+      "title": "주요사항보고서(자기주식취득신탁계약해지결정)",
+      "publishedAt": "2025-07-16",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250716000166",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "950160",
+      "title": "[기재정정]투자판단관련주요경영사항 (기술수출 계약 체결(당사의 라이센시인 코오롱생명과학㈜ 주요경영사항))",
+      "publishedAt": "2025-07-14",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250714900441",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "019990",
+      "title": "최대주주변경",
+      "publishedAt": "2025-07-11",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250711900624",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "180060",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2025-07-10",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250710600553",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "180060",
+      "title": "단일판매ㆍ공급계약체결(자율공시)",
+      "publishedAt": "2025-07-01",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250701600683",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "357780",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2025-05-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250520900431",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "240810",
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)",
+      "publishedAt": "2025-05-08",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250508900347",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "357780",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2025-04-30",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250430900630",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "357780",
+      "title": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "publishedAt": "2025-04-15",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250415000327",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "357780",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2025-03-31",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250331903369",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "131970",
+      "title": "합병등종료보고서(합병)",
+      "publishedAt": "2025-03-04",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250304000545",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "950160",
+      "title": "주요사항보고서(전환사채권발행결정)",
+      "publishedAt": "2025-02-19",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250219001923",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "131970",
+      "title": "[기재정정]주요사항보고서(회사합병결정)",
+      "publishedAt": "2024-12-26",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241226000252",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "078350",
+      "title": "주요사항보고서(자기주식취득신탁계약체결결정)",
+      "publishedAt": "2024-12-24",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241224000192",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "131970",
+      "title": "주요사항보고서(회사합병결정)",
+      "publishedAt": "2024-12-20",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241220000421",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "357780",
+      "title": "[기재정정]신규시설투자등",
+      "publishedAt": "2024-12-13",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241213901216",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    },
+    {
+      "ticker": "131970",
+      "title": "신규시설투자등",
+      "publishedAt": "2024-07-04",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240704900405",
+      "source": "DART · 로컬 DB",
+      "type": "disclosure"
+    }
+  ]
+}
