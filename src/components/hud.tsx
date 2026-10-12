@@ -14,6 +14,7 @@ import type { Garden, StoredGarden, Weather } from "@/lib/types";
 import { useGardens } from "@/components/garden-context";
 import { countRangeEffects } from "@/lib/range-effects";
 import { riskGardenNotice } from "@/lib/risk-caveat";
+import { DataStatusLink } from "./data-status-link";
 
 const GardenDashboard = dynamic(() => import("./garden-dashboard").then(m => m.GardenDashboard));
 
@@ -85,6 +86,7 @@ export function Hud({
           <div>
             <p className="font-display text-xs tracking-wide text-[#8a7362]">그루밭</p>
             <h1 className="font-display text-2xl leading-none text-[#3e342b]">{garden.name}</h1>
+            <DataStatusLink />
           </div>
           <div className="flex shrink-0 gap-2">
             <button

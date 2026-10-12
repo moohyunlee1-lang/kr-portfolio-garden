@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "data-status:build": "python3 scripts/build-data-status.py",
+    "data-status:inspect": "node scripts/inspect-data-status.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.9",

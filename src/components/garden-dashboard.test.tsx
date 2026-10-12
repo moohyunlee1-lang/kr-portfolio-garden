@@ -61,6 +61,7 @@ it("does not start analysis on load; captures on click, freezes rerenders, expli
   expect(screen.queryByRole("dialog")).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "대시보드 생성하기" }));
   expect(screen.getByRole("dialog")).toBeTruthy();
+  expect(screen.getByRole("link", { name: /데이터 상태\/근거/ }).getAttribute("href")).toBe("/data-status");
   expect(screen.getAllByText("+50.00%").length).toBeGreaterThan(0);
   rerender(
     <GardenDashboard

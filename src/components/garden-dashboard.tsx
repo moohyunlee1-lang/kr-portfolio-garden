@@ -19,6 +19,7 @@ import type { ExportFormat } from "../lib/dashboard-export";
 import { loadQuoteBatches } from "../lib/quote-batches";
 import type { LiveQuote } from "../lib/market/types";
 import styles from "./garden-dashboard.module.css";
+import { DataStatusLink } from "./data-status-link";
 
 const baseNotice = industryNotice + " " +
   "시세 출처: 기본 시세 스냅샷 또는 /api/quotes (KIS→Yahoo→pykrx→Naver). 정원에 현재 적용된 시세의 사본입니다. 개별 공급자 및 기본 시세의 가격 시각은 원본 미제공이며, 세션 조회 시세도 지연될 수 있습니다. 생성 시각은 거래 시각이 아닙니다. 새로고침은 이 정원의 심긴 종목만 조회합니다.";
@@ -327,6 +328,7 @@ export function GardenDashboard({
                   </button>
                 )}
               </nav>
+              <DataStatusLink />
               <p className={styles.note}>{notice}</p>
               <p className={styles.note}>
                 매수원금 기준 수익률 · 배당/수수료/세금 제외 · 금액: 억원(소수

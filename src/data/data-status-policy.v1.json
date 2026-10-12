@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "expectedMarketDate": null,
+  "calendar": "Asia/Seoul 달력일 (KRX 거래일 달력 미연동)",
+  "maxAgeDays": { "quotes": 0, "memberships": 90, "industry": 90, "disclosures": 7, "ma": 0, "cross": 0, "high52-dual": 0 }
+}

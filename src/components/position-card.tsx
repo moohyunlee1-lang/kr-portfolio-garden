@@ -30,6 +30,7 @@ import {
 import { harvestKey } from "@/lib/storage";
 import { classifyTree } from "@/lib/tree-traits";
 import { riskPositionNotice } from "@/lib/risk-caveat";
+import { DataStatusLink } from "./data-status-link";
 
 const PlantHero = dynamic(() => import("@/components/plant-hero"), { ssr: false });
 
@@ -98,6 +99,7 @@ export function PositionCard({
         </p>
         <h1 className="font-display text-4xl">{position.name}</h1>
         <p className="text-[#8a7362]">{position.ticker}</p>
+        <DataStatusLink ticker={position.ticker} />
       </header>
       {riskPositionNotice(gardenId, position.ticker) && (
         <p className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-900" role="note">

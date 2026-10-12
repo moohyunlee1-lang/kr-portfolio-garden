@@ -1,0 +1,27 @@
+.page { max-width: 1120px; margin: auto; padding: 24px 18px 60px; color: #3e342b; }
+.page h1 { font-size: 2.6rem; margin: 20px 0 8px; }
+.page h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+.page h3 { font-size: 1.4rem; font-weight: 700; }
+.page h4 { margin-top: 18px; font-weight: 700; }
+.page p { margin: 8px 0; line-height: 1.7; }
+.page a { color: #2e6548; text-decoration: underline; text-underline-offset: 3px; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.card { padding: 20px; background: #fffaf2; border: 1px solid #eadcc6; border-radius: 22px; margin-bottom: 16px; min-width: 0; scroll-margin-top: 20px; }
+.card dl { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 6px; margin-top: 16px; font-size: .92rem; }
+.card dt { color: #716355; }
+.card dd { overflow-wrap: anywhere; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 16px; background: #eee9df; font-size: .85rem; margin: 0 6px 6px 0; }
+.badge[data-status="partial"], .badge[data-status="stale"] { background: #fff0cd; color: #775017; }
+.badge[data-status="fresh"] { background: #e0efdf; color: #285236; }
+.muted { color: #776a5b; font-size: .9rem; }
+.code { overflow-wrap: anywhere; font-family: monospace; font-size: .8rem; }
+.page details { margin-top: 15px; }
+.page summary { cursor: pointer; padding: 8px 0; }
+.page label { display: block; margin: 12px 0; }
+.page input, .page select { display: block; width: 100%; padding: 12px; border: 1px solid #c8bdab; border-radius: 10px; margin-top: 6px; background: white; }
+.page button { min-height: 44px; border: 1px solid #cbd8c6; background: #edf2e6; color: #2e543a; border-radius: 12px; padding: 10px 14px; text-align: left; cursor: pointer; }
+.page button[aria-expanded="true"] { background: #d9e9d4; }
+.results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 12px 0; }
+.detail { margin-top: 20px; padding: 20px 0 0; border-top: 1px solid #c8bdab; }
+.detail li { padding: 8px 0; overflow-wrap: anywhere; }
+@media(max-width: 650px) { .grid { grid-template-columns: 1fr; } .results { grid-template-columns: 1fr; } .page h1 { font-size: 2.1rem; } .card { padding: 16px; } }
