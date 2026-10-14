@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { BootScreen } from "@/components/boot";
@@ -45,6 +45,14 @@ export function GardenView({
   merged?: boolean;
 }) {
   const router = useRouter();
+  // Manual navigation cancels the URL request as well as the camera lock.
+  // A later click on the same tree is then a fresh focusId transition.
+  const cancelFocus = useCallback(() => {
+    const url = new URL(window.location.href);
+    if (!url.searchParams.has("focus")) return;
+    url.searchParams.delete("focus");
+    router.replace(`${url.pathname}${url.search}${url.hash}`, { scroll: false });
+  }, [router]);
   const reduced = useReducedMotion() ?? false;
   const { ready, view, remember, createGarden, addSample, harvested, markHarvested, applyLive } =
     useGardens();
@@ -152,12 +160,13 @@ export function GardenView({
 
   return (
     <div className="relative flex h-dvh overflow-hidden bg-[#d7ebf6]">
-      <div className="relative min-w-0 flex-1">
+      <div data-garden-viewport className="relative min-w-0 flex-1">
       <GardenScene
         plants={plants}
         weather={weather.regime}
         kosdaqReturn1d={weather.kosdaqReturn1d}
         reduced={reduced}
+        onCancelFocus={cancelFocus}
         onOpen={(positionId) => router.push(`/garden/${gardenId}/plant/${positionId}`)}
         onEmpty={(plotIndex) =>
           router.push(`/garden/${gardenId}/plant/new?plot=${plotIndex}`)

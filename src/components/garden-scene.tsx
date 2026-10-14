@@ -3,12 +3,17 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { CanvasTexture, Object3D, SRGBColorSpace, type Group, type InstancedMesh } from "three";
+import { Box3, CanvasTexture, Object3D, Vector3, type PerspectiveCamera, SRGBColorSpace, type Group, type InstancedMesh } from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
+import { MinhwaTree } from "./minhwa-tree";
+import { MinhwaClouds } from "./minhwa-clouds";
+import { MinhwaLandscape } from './minhwa-landscape';
 import { PlantBody, canopyPeakY } from "@/components/plants";
+import { RimMeadow, useGroundPigment } from "@/components/garden-brushwork";
 import { Butterflies, CrossCrownMark, DarkAura, Flame, Thunder } from "@/components/garden-fx";
 import { sceneFogDistances } from "@/lib/scene-fog";
-import { focusCameraPose } from "@/lib/scene-focus";
+import { fitFocusBounds, focusSafeRect } from "@/lib/scene-focus";
+import { islandProfile, overviewPose } from "@/lib/scene-diorama";
 import type { CrossMark } from "@/lib/cross-seed";
 import { CELL, layoutFromPositions, plotPosition, type PlotLayout } from "@/lib/plots";
 import type { FruitTone, GrowthStage, WeatherRegime } from "@/lib/types";
@@ -36,9 +41,10 @@ const LOD_DISTANCE = 18;
 
 function useSceneFar(threshold: number) {
   const camera = useThree((state) => state.camera);
+  const controls = useThree((state) => state.controls) as OrbitControlsImpl | null;
   const [far, setFar] = useState(false);
   useFrame(() => {
-    const next = camera.position.length() > threshold;
+    const next = (controls ? camera.position.distanceTo(controls.target) : camera.position.length()) > threshold;
     setFar((current) => (current === next ? current : next));
   });
   return far;
@@ -82,12 +88,14 @@ function makeSignTexture(name: string, ticker: string, twoLine: boolean): HTMLCa
   const ctx = canvas.getContext("2d");
   if (!ctx) return canvas;
   ctx.clearRect(0, 0, 512, 256);
-  roundRect(ctx, 18, 36, 476, 184, 36);
+  roundRect(ctx, 18, 36, 476, 184, 8);
   ctx.fillStyle = "#f6e6c8";
   ctx.fill();
   ctx.lineWidth = 8;
-  ctx.strokeStyle = "#d7b48a";
+  ctx.strokeStyle = "#69654d";
   ctx.stroke();
+  ctx.fillStyle = "#a65642";
+  ctx.fillRect(456, 48, 22, 24);
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   if (twoLine) {
@@ -147,6 +155,7 @@ function Signboard({
       scale={0.72}
       onClick={(event) => {
         event.stopPropagation();
+        if (event.delta > 2) return;
         onOpen();
       }}
     >
@@ -176,18 +185,14 @@ function Signboard({
 
 function PlotBed({ highlight, onClick }: { highlight: boolean; onClick: () => void }) {
   return (
-    <group onClick={(event) => { event.stopPropagation(); onClick(); }}>
-      <mesh position={[0, 0.04, 0]} receiveShadow>
-        <boxGeometry args={[1.72, 0.08, 1.72]} />
-        <meshLambertMaterial color="#8fbf6c" />
+    <group onClick={(event) => { event.stopPropagation(); if (event.delta <= 2) onClick(); }}>
+      <mesh position={[0, 0.08, 0]} receiveShadow>
+        <cylinderGeometry args={[0.75, 0.8, 0.16, 16]} />
+        <meshLambertMaterial color="#69745c" />
       </mesh>
-      <mesh position={[0, 0.14, 0]} receiveShadow castShadow>
-        <boxGeometry args={[1.28, 0.16, 1.28]} />
-        <meshLambertMaterial color="#c9a36b" />
-      </mesh>
-      <mesh position={[0, 0.23, 0]} receiveShadow>
-        <boxGeometry args={[1.12, 0.05, 1.12]} />
-        <meshLambertMaterial color="#d7b483" />
+      <mesh position={[0, 0.18, 0]} receiveShadow>
+        <cylinderGeometry args={[0.68, 0.74, 0.08, 16]} />
+        <meshLambertMaterial color="#c5b489" />
       </mesh>
       {highlight && (
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.28, 0]}>
@@ -212,54 +217,11 @@ function SimplePlant({
   tone: FruitTone;
   traits: TreeTraits;
 }) {
-  const dark = traits.tone === "dark";
-  const color = dark ? "#3d5c42" : "#74c46c";
-  if (stage === "seed") {
-    return (
-      <mesh position={[0, 0.12, 0]}>
-        <sphereGeometry args={[0.1, 8, 6]} />
-        <meshLambertMaterial color="#b88858" />
-      </mesh>
-    );
-  }
-  const radius = traits.size === "large" ? 0.36 : traits.size === "small" ? 0.26 : 0.28;
-  const height = traits.size === "large" ? 1.05 : traits.size === "small" ? 0.36 : 0.72;
-  return (
-    <group>
-      <mesh position={[0, traits.size === "small" ? 0.12 : 0.22, 0]}>
-        <cylinderGeometry args={[0.05, 0.08, traits.size === "large" ? 0.55 : 0.28, 6]} />
-        <meshLambertMaterial color={dark ? "#4a3428" : "#c4894f"} />
-      </mesh>
-      {traits.size === "large" ? (
-        <mesh position={[0, height, 0]}>
-          <coneGeometry args={[radius, 0.72, 6]} />
-          <meshLambertMaterial color={color} />
-        </mesh>
-      ) : traits.size === "small" ? (
-        <mesh position={[0, height, 0]} scale={[1.25, 0.7, 1.15]}>
-          <sphereGeometry args={[radius, 8, 6]} />
-          <meshLambertMaterial color={color} />
-        </mesh>
-      ) : (
-        <mesh position={[0, height, 0]}>
-          <sphereGeometry args={[radius, 8, 6]} />
-          <meshLambertMaterial color={color} />
-        </mesh>
-      )}
-      {traits.foliage === "dense" && (
-        <mesh position={[0.14, height + 0.12, 0.04]}>
-          <sphereGeometry args={[0.1, 6, 6]} />
-          <meshLambertMaterial color={dark ? "#4a6a50" : "#9dd87a"} />
-        </mesh>
-      )}
-      {tone !== "none" && (
-        <mesh position={[0.12, height + 0.18, 0.06]}>
-          <sphereGeometry args={[0.06, 6, 6]} />
-          <meshLambertMaterial color={tone === "vivid" ? "#e07a55" : "#e3c4b2"} />
-        </mesh>
-      )}
-    </group>
-  );
+  if(stage === "seed") return <mesh position={[0,0.12,0]}><sphereGeometry args={[0.1,8,6]} /><meshLambertMaterial color="#b88858" /></mesh>;
+  return <group scale={stage==='sapling'?0.78:stage==='lush'?1.08:stage==='sprout'?0.35:1}>
+    <MinhwaTree traits={traits} far />
+    {tone !== "none" && <mesh position={[0.12,canopyPeakY(traits,stage),0.06]}><sphereGeometry args={[0.06,6,6]} /><meshLambertMaterial color={tone==='vivid'?'#e07a55':'#e3c4b2'} /></mesh>}
+  </group>;
 }
 
 function GardenPlant({
@@ -305,7 +267,7 @@ function GardenPlant({
   }, [plant.harvestDue, plant.id, reduced, onHarvested]);
 
   return (
-    <group position={plotPosition(plant.plotIndex, layout.cols, layout.rows)}>
+    <group name={`focus-plant:${plant.id}`} position={plotPosition(plant.plotIndex, layout.cols, layout.rows)}>
       <PlotBed highlight={plant.highlight} onClick={() => onOpen(plant.id)} />
       <Signboard
         name={plant.name}
@@ -319,6 +281,7 @@ function GardenPlant({
         position={[0, 0.24, 0]}
         onClick={(event) => {
           event.stopPropagation();
+          if (event.delta > 2) return;
           onOpen(plant.id);
         }}
       >
@@ -380,6 +343,7 @@ function EmptyPlot({
   return (
     <group position={plotPosition(index, layout.cols, layout.rows)} onClick={(event) => {
       event.stopPropagation();
+      if (event.delta > 2) return;
       onEmpty(index);
     }}>
       <PlotBed highlight={false} onClick={() => onEmpty(index)} />
@@ -397,54 +361,50 @@ function EmptyPlot({
   );
 }
 
-function Island({ radius }: { radius: number }) {
+function Island({ radius, depth }: { radius: number; depth: number }) {
+  // A single mipmapped pigment texture and two static instanced meadow draws.
+  const pigment = useGroundPigment(radius);
   return (
     <group>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.12, 0]} receiveShadow>
-        <circleGeometry args={[radius * 1.5, 40]} />
-        <meshLambertMaterial color="#b7d4ea" />
+      <RimMeadow radius={radius} />
+      <mesh name="painted-island-ground" position={[0, -0.22, 0]}>
+        <cylinderGeometry args={[radius, radius * 0.98, 0.4, 48]} />
+        <meshStandardMaterial map={pigment} roughness={1} flatShading />
       </mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.08, 0]} receiveShadow>
-        <circleGeometry args={[radius * 1.05, 36]} />
-        <meshLambertMaterial color="#b7d59a" />
+      <mesh name="rounded-planet" position={[0, -0.41, 0]} scale={[1, depth * 2.1 / radius, 1]}>
+        <sphereGeometry args={[radius * 0.985, 64, 24, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2]} />
+        <meshStandardMaterial color="#a58a62" roughness={1} />
       </mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.05, 0]} receiveShadow>
-        <circleGeometry args={[radius * 0.82, 32]} />
-        <meshLambertMaterial color="#8fbf6c" />
-      </mesh>
+      {[0.12, 0.3, 0.48].map((a,i)=><mesh key={a} rotation={[-Math.PI/2,0,0]} position={[0,-0.41-Math.sin(a)*depth*2.1,0]}>
+        <torusGeometry args={[radius*0.986*Math.cos(a),0.024,4,80]} />
+        <meshBasicMaterial color={i%2?'#786e54':'#c6b283'} />
+      </mesh>)}
+      <MinhwaLandscape radius={radius} />
+      {Array.from({ length: 18 }, (_, i) => {
+        const angle = i * Math.PI * 2 / 18;
+        const r = radius * (0.91 + (i % 3) * 0.015);
+        const size = Math.min(0.48, radius * 0.045) * (0.7 + (i % 4) * 0.16);
+        return (
+          <group key={i} position={[Math.cos(angle) * r, 0, Math.sin(angle) * r]} rotation={[0, angle, 0]}>
+            <mesh position={[0, size * 0.18, 0]} scale={[1.3, 0.65, 0.85]}>
+              <dodecahedronGeometry args={[size, 0]} />
+              <meshStandardMaterial color={i % 2 ? "#d2c3a0" : "#849071"} roughness={1} flatShading />
+            </mesh>
+            <mesh position={[size, 0.1, -size * 0.3]} rotation={[0, angle, 0]}>
+              <coneGeometry args={[0.09, 0.32, 4]} />
+              <meshLambertMaterial color="#71865b" />
+            </mesh>
+          </group>
+        );
+      })}
     </group>
   );
 }
 
 function Fence({ radius }: { radius: number }) {
-  const reach = radius * 0.98;
-  const posts = useMemo(() => {
-    const spots: [number, number, number][] = [];
-    const count = Math.max(14, Math.round(reach * 2.4));
-    for (let i = 0; i < count; i += 1) {
-      const angle = (i / count) * Math.PI * 2;
-      spots.push([Math.cos(angle) * reach, 0.16, Math.sin(angle) * reach]);
-    }
-    return spots;
-  }, [reach]);
-  return (
-    <group>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.2, 0]}>
-        <torusGeometry args={[reach, 0.028, 6, 48]} />
-        <meshLambertMaterial color="#d7b48a" />
-      </mesh>
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.36, 0]}>
-        <torusGeometry args={[reach, 0.022, 6, 48]} />
-        <meshLambertMaterial color="#e4c49a" />
-      </mesh>
-      {posts.map((position, index) => (
-        <mesh key={index} position={position}>
-          <cylinderGeometry args={[0.045, 0.055, 0.44, 6]} />
-          <meshLambertMaterial color="#d7b48a" />
-        </mesh>
-      ))}
-    </group>
-  );
+ return <group name="ink-boundary">{[0,0.09].map((offset,i)=><mesh key={i} rotation={[-Math.PI/2,0,0]} position={[0,0.015,0]}>
+  <torusGeometry args={[radius-offset,0.018,4,80]} /><meshBasicMaterial color={i?'#b3b080':'#526453'} />
+ </mesh>)}</group>;
 }
 
 function Clouds({ regime, reduced }: { regime: WeatherRegime; reduced: boolean }) {
@@ -504,18 +464,19 @@ function Rain() {
 }
 
 function Lights({ regime, span }: { regime: WeatherRegime; span: number }) {
-  const sky = regime === "bull" ? "#c5e6f8" : regime === "bear" ? "#c9d8e4" : "#d7e6f0";
+  const sky = regime === "bull" ? "#eee6cf" : regime === "bear" ? "#ccd4d0" : "#e6e3d3";
   return (
     <>
       <color attach="background" args={[sky]} />
       <fog attach="fog" args={[sky, ...sceneFogDistances(span)]} />
-      <ambientLight color="#fff6e8" intensity={regime === "bear" ? 0.8 : 0.64} />
-      <hemisphereLight args={["#f7fbff", "#b7d59a", 0.42]} />
+      <ambientLight color="#fff6e8" intensity={regime === "bear" ? 0.65 : 0.5} />
+      <hemisphereLight args={["#f5f3df", "#646c69", 0.65]} />
       <directionalLight
-        position={[5.5, 9.5, 3.2]}
+        position={[-8, 12, 7]}
         intensity={regime === "bull" ? 1.25 : regime === "bear" ? 0.88 : 1.02}
         color={regime === "bear" ? "#e8eef3" : "#fff1d2"}
       />
+      <directionalLight position={[8, 4, -6]} intensity={0.55} color="#d6e6ed" />
       {regime === "bull" && (
         <mesh position={[5.2, 7.4, -3.5]}>
           <sphereGeometry args={[0.42, 16, 12]} />
@@ -534,7 +495,10 @@ function Scene({
   onOpen,
   onEmpty,
   onHarvested,
+  onCancelFocus,
+  command,
 }: {
+  command: { kind: "home" | "in" | "out"; serial: number };
   plants: ScenePlant[];
   weather: WeatherRegime;
   kosdaqReturn1d: number;
@@ -542,27 +506,86 @@ function Scene({
   onOpen: (id: string) => void;
   onEmpty: (index: number) => void;
   onHarvested: (id: string) => void;
+  onCancelFocus: () => void;
 }) {
   const layout = layoutFromPositions(plants);
   const occupied = new Map(plants.map((plant) => [plant.plotIndex, plant]));
   const plots = Array.from({ length: layout.count }, (_, index) => index);
-  const radius = ((Math.max(layout.cols, layout.rows) - 1) * CELL) / 2 + 1.2;
+  const { radius, depth, fenceRadius } = islandProfile(layout);
   const span = Math.max(layout.cols, layout.rows) * CELL;
   const [fontReady, setFontReady] = useState(false);
-  const far = useSceneFar(LOD_DISTANCE);
+  const far = useSceneFar(plants.length > 100 ? LOD_DISTANCE : Math.max(LOD_DISTANCE, radius * 4));
   const camera = useThree((state) => state.camera);
   const controls = useRef<OrbitControlsImpl>(null);
+  const scene = useThree((state) => state.scene);
+  const gl = useThree((state) => state.gl);
   const focused = plants.find((plant) => plant.highlight);
   const focusId = focused?.id;
-  const focusPlotIndex = focused?.plotIndex;
+  const activeFocus = useRef(focusId);
+  useEffect(() => { activeFocus.current = focusId; }, [focusId]);
+  const size = useThree((state) => state.size);
+  const overview = useMemo(() => overviewPose(radius, size.width / size.height), [radius, size.width, size.height]);
+  const destination = useRef<{ position: Vector3; target: Vector3 } | null>(null);
+  const handledCommand = useRef(0);
+  // Resize/garden changes fit immediately; explicit navigation eases without auto-orbit.
   useEffect(() => {
-    if (focusId === undefined || focusPlotIndex === undefined || !controls.current) return;
+    if (!controls.current || activeFocus.current) return;
+    camera.position.fromArray(overview.position);
+    controls.current.target.fromArray(overview.target);
+    controls.current.update();
+    destination.current = null;
+  }, [camera, overview]);
+  useEffect(() => {
+    if (!controls.current || command.serial === 0 || handledCommand.current === command.serial) return;
+    handledCommand.current = command.serial;
+    activeFocus.current = undefined;
+    onCancelFocus();
     const orbit = controls.current;
-    const pose = focusCameraPose(focusPlotIndex, layout, camera.position, orbit.target);
-    orbit.target.copy(pose.target);
-    camera.position.copy(pose.position);
+    if (command.kind === "home") {
+      destination.current = { position: new Vector3(...overview.position), target: new Vector3(...overview.target) };
+    } else {
+      const offset = camera.position.clone().sub(orbit.target);
+      const distance = Math.max(3.2, Math.min(overview.distance * 1.7, offset.length() * (command.kind === "in" ? 0.78 : 1.28)));
+      destination.current = { position: orbit.target.clone().add(offset.setLength(distance)), target: orbit.target.clone() };
+    }
+  }, [camera, command, overview, onCancelFocus]);
+  useFrame((_, delta) => {
+    const pose = destination.current;
+    const orbit = controls.current;
+    if (!pose || !orbit) return;
+    const alpha = reduced ? 1 : 1 - Math.exp(-delta * 7);
+    camera.position.lerp(pose.position, alpha);
+    orbit.target.lerp(pose.target, alpha);
     orbit.update();
-  }, [camera, focusId, focusPlotIndex, layout.cols, layout.rows]);
+    if (camera.position.distanceToSquared(pose.position) < 0.0001 && orbit.target.distanceToSquared(pose.target) < 0.0001) destination.current = null;
+  });
+  useEffect(() => {
+    const canvas = gl.domElement;
+    const host = canvas.closest("[data-garden-viewport]");
+    const hud = host?.querySelector("header");
+    const navigation = host?.querySelector("[data-focus-navigation]");
+    let frame = 0;
+    const fit = () => {
+      if (!activeFocus.current || activeFocus.current !== focusId || !controls.current) return;
+      const plant = scene.getObjectByName(`focus-plant:${focusId}`);
+      if (!plant) return;
+      const rect = canvas.getBoundingClientRect();
+      const safe = focusSafeRect(rect, hud?.getBoundingClientRect(), navigation?.getBoundingClientRect());
+      // An open overlay can consume the whole canvas; refit when it closes.
+      if (safe.bottom <= safe.top || safe.right <= safe.left) return;
+      scene.updateMatrixWorld(true);
+      // Includes the actual canopy, sign, fire, aura and crown marks. Padding
+      // covers flame flicker, wind and billboard rotation between frames.
+      const bounds = new Box3().setFromObject(plant).expandByScalar(0.3);
+      destination.current = fitFocusBounds(bounds, camera.position.clone().sub(controls.current.target),
+        { width: rect.width, height: rect.height }, safe, (camera as PerspectiveCamera).fov);
+    };
+    const schedule = () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(fit); };
+    const observer = new ResizeObserver(schedule);
+    [canvas, hud, navigation].forEach((element) => { if (element) observer.observe(element); });
+    schedule();
+    return () => { observer.disconnect(); cancelAnimationFrame(frame); };
+  }, [camera, scene, gl, focusId, size.width, size.height, far]);
   useEffect(() => {
     let cancelled = false;
     document.fonts.load('700 64px Gaegu').finally(() => {
@@ -574,10 +597,11 @@ function Scene({
   }, []);
   return (
     <>
-      <Lights regime={weather} span={span} />
-      <Island radius={radius} />
-      <Fence radius={radius} />
+      <Lights regime={weather} span={Math.max(span, overview.distance * 1.4)} />
+      <Island radius={radius} depth={depth} />
+      <Fence radius={fenceRadius} />
       <Clouds regime={weather} reduced={reduced} />
+      <MinhwaClouds radius={radius} />
       {weather === "bear" && !reduced && <Rain />}
       {kosdaqReturn1d > 0 && !reduced && <Butterflies reduced={reduced} radius={radius} />}
       {kosdaqReturn1d < 0 && !reduced && <Thunder reduced={reduced} />}
@@ -593,7 +617,7 @@ function Scene({
             plant={plant}
             weather={weather}
             reduced={reduced}
-            far={far || reduced}
+            far={far}
             fontReady={fontReady}
             layout={layout}
             onOpen={onOpen}
@@ -607,13 +631,13 @@ function Scene({
         enableRotate
         enablePan
         enableZoom
-        enableDamping
+        enableDamping={!reduced}
+        onStart={() => { destination.current = null; activeFocus.current = undefined; onCancelFocus(); }}
         dampingFactor={0.12}
         rotateSpeed={0.7}
         zoomSpeed={0.85}
         minDistance={3.2}
-        maxDistance={Math.max(22, span * 1.4)}
-        target={[0, 0.35, 0]}
+        maxDistance={overview.distance * 1.7}
         minPolarAngle={0.18}
         maxPolarAngle={Math.PI / 2 - 0.08}
       />
@@ -629,22 +653,36 @@ export default function GardenScene(props: {
   onOpen: (id: string) => void;
   onEmpty: (index: number) => void;
   onHarvested: (id: string) => void;
+  onCancelFocus: () => void;
 }) {
+  const [command, setCommand] = useState<{ kind: "home" | "in" | "out"; serial: number }>({ kind: "home", serial: 0 });
   const layout = layoutFromPositions(props.plants);
   const span = Math.max(layout.cols, layout.rows) * CELL;
   return (
+    <div className="absolute inset-0">
     <Canvas
       dpr={[1, 1.2]}
       camera={{
         position: [0.1, Math.max(6.8, span * 0.38), Math.max(8.6, span * 0.5)],
         fov: 42,
         near: 0.1,
-        far: Math.max(80, span * 5),
+        far: Math.max(240, span * 18),
       }}
       gl={{ antialias: false, powerPreference: "high-performance" }}
       style={{ width: "100%", height: "100%", touchAction: "none" }}
     >
-      <Scene {...props} />
+      <Scene {...props} command={command} />
     </Canvas>
+    <svg aria-hidden="true" className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.055]" xmlns="http://www.w3.org/2000/svg"><filter id="hanji-grain"><feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" stitchTiles="stitch" /></filter><rect width="100%" height="100%" filter="url(#hanji-grain)" /></svg>
+    <div aria-hidden="true" className="pointer-events-none absolute bottom-8 right-6 hidden text-right sm:block"><span className="font-display text-sm tracking-[0.25em] text-[#596c5a]">民畵 · 작은 별의 정원</span><span className="ml-2 inline-block border border-[#a35643] px-1 font-display text-xs text-[#a35643]">그루밭</span></div>
+    <div data-focus-navigation className="absolute bottom-20 left-4 z-20 flex flex-col items-start gap-2 lg:bottom-6 lg:left-6">
+      <p className="pointer-events-none hidden rounded-full bg-[#fffaf2]/90 px-3 py-1 text-xs text-[#615b48] sm:block">드래그로 둘러보기 · 휠 / 두 손가락으로 확대</p>
+      <div role="group" aria-label="정원 시점 조작" className="flex gap-1 rounded-2xl border border-[#d9c8aa] bg-[#fffaf2]/95 p-1 shadow-lg backdrop-blur-sm">
+        {([{ kind: "home", label: "정원 전체 보기", text: "전체 보기" }, { kind: "in", label: "정원 확대", text: "+" }, { kind: "out", label: "정원 축소", text: "−" }] as const).map(({ kind, label, text }) => (
+          <button key={kind} type="button" aria-label={label} title={label} onClick={() => setCommand((old) => ({kind, serial: old.serial + 1}))} className="min-h-11 min-w-11 rounded-xl px-3 font-display text-lg text-[#43553b] hover:bg-[#e7eddb] focus-visible:outline-2 focus-visible:outline-[#547e41]">{text}</button>
+        ))}
+      </div>
+    </div>
+    </div>
   );
 }
