@@ -20,6 +20,7 @@ python3 ../stock-sanctuary/scripts/export-static.py public/sanctuary-web
 npm test
 npm run build
 # Run against a started server or the actual production URL:
+node scripts/verify-sanctuary-entry.mjs https://kr-portfolio-garden.vercel.app
 node scripts/verify-sanctuary.mjs https://kr-portfolio-garden.vercel.app
 ```
 
