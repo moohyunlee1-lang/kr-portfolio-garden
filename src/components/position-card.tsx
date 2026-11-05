@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
@@ -101,6 +102,17 @@ export function PositionCard({
         <p className="text-[#8a7362]">{position.ticker}</p>
         <DataStatusLink ticker={position.ticker} />
       </header>
+      <section className="rounded-[24px] border border-[#cdd9bc] bg-[#f1f4e8] p-4">
+        <h2 className="font-semibold">이 종목을 바라보는 사람들의 쉼터</h2>
+        <p className="mt-1 text-sm text-[#6b5344]">나의 방식으로 기도하고 명상하는 독립 공간입니다. 기도는 수익을 보장하지 않습니다.</p>
+        <Link
+          href={`/sanctuary/${encodeURIComponent(position.ticker)}`}
+          prefetch={false}
+          className="mt-3 inline-flex min-h-11 items-center rounded-2xl bg-[#43674e] px-4 text-sm text-white"
+        >
+          기도원 들어가기 →
+        </Link>
+      </section>
       {riskPositionNotice(gardenId, position.ticker) && (
         <p className="rounded-2xl bg-amber-50 px-4 py-3 text-sm text-amber-900" role="note">
           {riskPositionNotice(gardenId, position.ticker)}
