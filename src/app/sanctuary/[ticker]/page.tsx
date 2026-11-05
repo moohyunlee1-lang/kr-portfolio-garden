@@ -1,15 +1,14 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { sanctuaryUrl } from "@/lib/sanctuary";
+import { sanctuaryEntryUrl } from "@/lib/sanctuary";
 
 export const dynamic = "force-dynamic";
 
 export default async function SanctuaryEntry({ params }: { params: Promise<{ ticker: string }> }) {
   const { ticker } = await params;
   if (!/^\d{6}$/.test(ticker)) notFound();
-  const origin = process.env.SANCTUARY_ORIGIN ||
-    (process.env.NODE_ENV === "development" ? "http://127.0.0.1:8787" : undefined);
-  const url = sanctuaryUrl(ticker, origin);
+  const origin = process.env.SANCTUARY_ORIGIN || undefined;
+  const url = sanctuaryEntryUrl(ticker, origin);
   if (url) redirect(url);
   return (
     <main className="mx-auto flex min-h-dvh max-w-xl flex-col justify-center gap-5 p-6">

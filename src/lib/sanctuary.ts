@@ -1,3 +1,8 @@
+/** Same-origin preview fallback; a configured independent service still takes priority. */
+export function sanctuaryEntryUrl(ticker: string, origin: string | undefined): string | null {
+ if (!/^\d{6}$/.test(ticker)) return null;
+ return origin ? sanctuaryUrl(ticker, origin) : `/sanctuary-web/rooms/KRX/${ticker}`;
+}
 /** Public link contract: KRX ticker only. Never send portfolio or religious data. */
 export function sanctuaryUrl(ticker: string, origin: string | undefined): string | null {
   if (!/^\d{6}$/.test(ticker) || !origin) return null;

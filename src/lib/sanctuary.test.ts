@@ -1,6 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { sanctuaryUrl } from './sanctuary';
+import { sanctuaryUrl, sanctuaryEntryUrl } from './sanctuary';
 describe('independent sanctuary link',()=>{
+ it('uses bundled Vercel experience only when no external server is configured',()=>{
+  expect(sanctuaryEntryUrl('005930',undefined)).toBe('/sanctuary-web/rooms/KRX/005930');
+  expect(sanctuaryEntryUrl('005930','https://sanctuary.example')).toBe('https://sanctuary.example/rooms/KRX/005930');
+  expect(sanctuaryEntryUrl('5930',undefined)).toBeNull();
+  expect(sanctuaryEntryUrl('005930','bad')).toBeNull();
+ });
  it('preserves leading zeros and sends no portfolio or religion',()=>{
   expect(sanctuaryUrl('005930','https://sanctuary.example')).toBe('https://sanctuary.example/rooms/KRX/005930');
  });

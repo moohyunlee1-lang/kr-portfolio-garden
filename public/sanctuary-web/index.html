@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>머무는 숲 · 종목별 기도원</title><link rel="stylesheet" href="/sanctuary-web/style.css"><script type="module" src="/sanctuary-web/app.mjs"></script></head>
+<body>
+<header class="mast"><a href="/sanctuary-web" class="brand">◌ 머무는 숲 <span>종목별 기도원</span></a><span class="badge">Vercel 체험판 · 공유 서버 미연결</span></header>
+<main>
+<section id="lobby"><p class="eyebrow">A PLACE TO PAUSE</p><h1>시세는 잠시 내려놓고,<br>나의 방식으로 머무세요.</h1><p>종목을 함께 바라보는 사람들이 쉬어가는 독립 공간입니다.<br>기도는 주가나 수익을 보장하지 않습니다.</p><label for="search">종목명 또는 6자리 코드</label><input id="search" type="search" placeholder="예: 삼성전자 또는 005930" maxlength="80"><div id="rooms" class="room-list"></div></section>
+<section id="room" hidden>
+<div class="room-heading"><div><p class="eyebrow">STOCK SANCTUARY / KRX</p><h1 id="room-title">기도원</h1><p id="room-code"></p></div><p id="presence" role="status">방문자 서버 연결 중…</p></div>
+<div class="layout"><section class="experience" aria-label="Unity 3D 공간">
+<div class="scene-wrap"><canvas id="unity-canvas" width="960" height="600" tabindex="0" aria-label="3D 기도원. 드래그 또는 방향키로 시점을 회전합니다."></canvas><div id="load-panel"><p id="load-status" role="status">3D 공간은 입장 버튼을 누르면 불러옵니다.</p><button id="enter">3D 공간 입장</button><button id="retry" hidden>페이지 새로고침</button></div><span class="scene-label">ENGINEERING PROTOTYPE · 최종 미술 아님</span></div>
+<nav class="spaces" aria-label="공간 이동"><button data-place="courtyard" aria-pressed="true">마당</button><button data-place="hall" aria-pressed="false">기도 공간</button><button data-place="forest" aria-pressed="false">숲길</button></nav>
+<div class="scene-settings"><label>시간대 <select id="day"><option value="0.25">아침</option><option value="0.5" selected>낮</option><option value="0.78">해질녘</option><option value="0.95">밤</option></select></label><label><input type="checkbox" id="sound"> 소리 켜기</label><label>음량 <input id="volume" type="range" min="0" max="1" step="0.05" value="0.35"></label><label><input id="reduced" type="checkbox"> 움직임 줄이기</label></div><p class="hint">캔버스 드래그·방향키: 시점 회전 · 공간 버튼: 이동 · 합성 바람·새·풍경·목탁 음향은 사용자 동작 후 재생됩니다.</p>
+</section>
+<aside class="practice"><p class="eyebrow">YOUR OWN WAY</p><h2>오늘의 머무는 방식</h2><label for="mode">방식 선택 <small>서버에 저장하지 않음</small></label><select id="mode"><option value="secular">비종교 · 호흡 명상</option><option value="buddhist">불교 · 염주와 합장</option><option value="protestant">개신교 · 묵상 기도</option><option value="catholic">천주교 · 묵주와 기도</option></select><p id="guidance"></p>
+<div id="breath" class="breath"><span id="breath-text">편안히 쉬세요</span></div><output id="timer">03:00</output><label for="duration">머무는 시간</label><select id="duration"><option value="60">1분</option><option value="180" selected>3분</option><option value="300">5분</option><option value="600">10분</option></select><div class="actions"><button id="start">시작</button><button id="reset" class="secondary">초기화</button></div>
+<button id="ritual" class="ritual">호흡 한 번 기록</button><button id="bow" class="secondary" hidden>합장·절하기</button><p class="count">이번 머무름 <strong id="count">0</strong>회</p><p class="hint">염주·묵주는 버튼을 누르거나 좌우로 밀어 기록합니다. 횟수는 기도 성과가 아니며 의례 교육을 대체하지 않습니다.</p>
+<label class="privacy"><input id="save-local" type="checkbox"> 완료 기록을 이 브라우저에만 보관</label><p id="session-status" role="status"></p><details><summary>이 기기의 완료 기록</summary><ul id="history"></ul><button id="clear-history" class="secondary">이 기기 기록 삭제</button></details>
+</aside></div>
+<section class="guestbook"><div><p class="eyebrow">LEAVE A QUIET NOTE</p><h2>이 종목의 방명록</h2><p>종교·보유량·연락처를 남기지 마세요. 로그인 없는 익명 게시판입니다.<br>같은 서버에 접속한 방문자에게 공개됩니다. 최신 50개를 표시합니다.</p></div><form id="message-form"><label for="message">남길 말</label><textarea id="message" rows="3" maxlength="500" required placeholder="잠시 쉬어가는 마음을 남겨주세요."></textarea><label><input type="checkbox" id="consent" required> 이 글을 방명록에 공개하는 데 동의합니다.</label><button type="submit">공개 글 남기기</button></form><p id="book-status" role="status"></p><button id="refresh" class="secondary">새 글 확인</button><ul id="messages"></ul></section>
+</section><p id="error" role="alert"></p>
+</main><footer>투자 조언·수익 보장·종교 간 비교를 하지 않습니다. 개인 기도 방식은 서버에 전송하지 않습니다.<br>정식 종교 미술·의례 감수 전의 기능 시제품입니다. 실시간 아바타 위치 공유는 포함하지 않습니다.</footer>
+</body></html>

@@ -1,0 +1,50 @@
+import assert from 'node:assert/strict';
+import { chromium } from 'playwright';
+const origin = process.argv[2] || 'http://127.0.0.1:3002';
+const browser = await chromium.launch({headless:true});
+const page = await browser.newPage({viewport:{width:1280,height:900}});
+const errors=[];const badResponses=[];
+page.on('pageerror',e=>errors.push(e.message));
+page.on('response',r=>{if(r.status()>=400&&r.url().includes('/sanctuary-web/'))badResponses.push(`${r.status()} ${r.url()}`);});
+try {
+ await page.goto(`${origin}/sanctuary/005930`);
+ await page.locator('#room-title').waitFor({state:'visible',timeout:15000});
+ assert.equal(await page.locator('#room-title').textContent(),'삼성전자 기도원');
+ assert.match(await page.locator('#presence').textContent(),/미연결/);
+ assert.equal(await page.locator('#message-form button').isDisabled(),true);
+ await page.locator('#enter').click();
+ await page.locator('#load-panel').waitFor({state:'hidden',timeout:120000});
+ for(const mode of ['buddhist','protestant','catholic','secular']) {
+  await page.locator('#mode').selectOption(mode);
+  await page.locator('#ritual').click();
+ }
+ assert.equal(await page.locator('#count').textContent(),'4');
+ await page.locator('#mode').selectOption('buddhist');
+ await page.locator('[data-place="hall"]').click();
+ await page.locator('#bow').click();
+ assert.equal(await page.locator('#count').textContent(),'5');
+ await page.locator('#duration').selectOption('60');
+ await page.locator('#save-local').check();
+ await page.locator('#start').click();
+ await page.waitForTimeout(1500);
+ assert.notEqual(await page.locator('#timer').textContent(),'01:00');
+ await page.locator('#start').click();
+ const paused=await page.locator('#timer').textContent();
+ await page.waitForTimeout(1200);
+ assert.equal(await page.locator('#timer').textContent(),paused);
+ await page.locator('#start').click();
+ await page.waitForFunction(()=>document.querySelector('#start').textContent==='완료',{},{timeout:75000});
+ assert.equal(await page.locator('#history li').count(),1);
+ await page.locator('#clear-history').evaluate(b=>b.click());
+ assert.equal(await page.locator('#history li').count(),0);
+ await page.setViewportSize({width:390,height:844});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,'mobile layout overflow');
+ if(process.env.SANCTUARY_SCREENSHOT) await page.screenshot({path:process.env.SANCTUARY_SCREENSHOT,fullPage:true});
+ assert.deepEqual(errors,[]);assert.deepEqual(badResponses,[]);
+ await page.goto(`${origin}/sanctuary-web`);
+ await page.locator('#search').fill('005930');
+ await page.getByRole('link',{name:/삼성전자/}).click();
+ await page.locator('#room-title').waitFor({state:'visible'});
+ assert.equal(await page.locator('#room-title').textContent(),'삼성전자 기도원');
+ console.log(JSON.stringify({origin,unityLoaded:true,modes:4,ritualAndBow:true,timerPauseResume:true,localRecordSavedAndDeleted:true,mobileLayout:true,lobbyLink:true,errors,badResponses}));
+} finally {await browser.close();}
