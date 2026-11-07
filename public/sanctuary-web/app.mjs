@@ -74,7 +74,7 @@ $('enter').onclick=async()=>{
   const script=document.createElement('script');script.src=asset('/unity/Build/unity.loader.js');
   await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('로더 응답 시간이 초과되었습니다.')),20000);script.onload=()=>{clearTimeout(timer);resolve();};script.onerror=()=>{clearTimeout(timer);reject(new Error('Unity Web 빌드가 없거나 서버에서 읽을 수 없습니다.'));};document.head.append(script);});
   unity=await window.createUnityInstance($('unity-canvas'),{dataUrl:asset('/unity/Build/unity.data.gz'),frameworkUrl:asset('/unity/Build/unity.framework.js.gz'),codeUrl:asset('/unity/Build/unity.wasm.gz'),streamingAssetsUrl:asset('/unity/StreamingAssets'),companyName:'StockSanctuary',productName:'머무는 숲',productVersion:'0.1.0',devicePixelRatio:Math.min(devicePixelRatio,1.5)},p=>{$('load-status').textContent=`Unity 공간 불러오는 중 ${Math.round(p*100)}%`;});
-  $('load-panel').hidden=true;sync();send('Go',place);
+  $('load-panel').hidden=true;document.querySelector('.scene-wrap').classList.add('ready');sync();send('Go',place);
  } catch(e) {$('load-status').textContent=`3D 공간을 열지 못했습니다: ${String(e.message??e)} 개인 타이머는 계속 사용할 수 있습니다.`;$('retry').hidden=false;}
 };
 $('retry').onclick=()=>location.reload();

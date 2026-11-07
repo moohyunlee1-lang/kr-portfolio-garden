@@ -5,6 +5,7 @@ const browser = await chromium.launch({headless:true});
 const page = await browser.newPage({viewport:{width:1280,height:900}});
 const errors=[];const badResponses=[];
 page.on('pageerror',e=>errors.push(e.message));
+page.on('console',m=>{if(/Sanctuary\/StillWater.*not supported|Shader error in/.test(m.text()))errors.push(m.text());});
 page.on('response',r=>{if(r.status()>=400&&r.url().includes('/sanctuary-web/'))badResponses.push(`${r.status()} ${r.url()}`);});
 try {
  await page.goto(`${origin}/sanctuary/005930`);
@@ -26,7 +27,7 @@ try {
  await page.locator('#duration').selectOption('60');
  await page.locator('#save-local').check();
  await page.locator('#start').click();
- await page.waitForTimeout(1500);
+ await page.waitForFunction(()=>document.querySelector('#start').textContent==='일시정지' && document.querySelector('#timer').textContent!=='01:00',{},{timeout:10000});
  assert.notEqual(await page.locator('#timer').textContent(),'01:00');
  await page.locator('#start').click();
  const paused=await page.locator('#timer').textContent();
